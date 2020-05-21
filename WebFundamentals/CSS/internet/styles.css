@@ -1,0 +1,241 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100%;
+    margin: 0px auto;
+}
+.head-orange{
+    background-color: orange;
+}
+.head-blue{
+    background-color: rgb(57, 81, 192);
+}
+/* header start  */
+
+header img{
+    height: 80px;
+}
+header h1,
+header img{
+    position: relative;
+    display: inline;
+}
+header h1{
+    font-size: 60px;
+    font-weight: 300;
+}
+header h2{
+    font-size: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+header h1 span{
+    color: rgb(57, 81, 192);
+}
+header h2{
+    font-weight: 300;
+    color: white;
+    background-color: rgb(57, 81, 192);
+}
+/* header end  */
+
+main {
+    position: relative;
+}
+/* sidebar start  */
+aside{ 
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+}
+.internet{
+    position: relative;
+}
+.internet h3,
+.internet p{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.internet h3{
+    font-size: 26px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.internet p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.internet h3 span{
+    color: red;
+}
+.internet p span{
+    color: rgb(31, 192, 255);
+}
+.internet button{
+    color: white;
+    font-weight: 600;
+    border: black;
+    border-radius: 5px;
+    width: 80%;
+    height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+.black-line{
+    position: relative;
+    height: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    background-color: gray;
+}
+.reinvent{
+    margin-top: 20px;
+    background-image: url(images/ad_background.png);
+    height: 480px;
+}
+.reinvent h2{
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+.reinvent img,
+.reinvent button{
+    display: block;     /* remember me  */
+    margin-left: auto;  /* remember me  */
+    margin-right: auto;  /* remember me  */
+}
+.reinvent img{
+    width: 50%;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    
+}
+.reinvent button{
+    background-color: rgb(31, 192, 255);
+    color: white;
+    font-weight: 600;
+    border: black;
+    border-radius: 5px;
+    width: 80%;
+    height: 40px;
+}
+/* sidebar End  */
+
+/* Main Body start  */
+.content {
+    margin-left: 20%;
+}
+.heading{
+    height: 70px;
+    margin-bottom: 10px;
+}
+.head-left{
+    position: relative;
+    float: left;
+    display: inline-flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.head-left img{
+    height: 40px;
+}
+.head-left h3{
+    margin-top: 5px;
+    font-size: 30px;
+}
+.head-right{
+    float: right;
+    display: inline-flex;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.head-right img{
+    height: 60px;
+    margin-right: 20px;
+}
+.head-right h2{
+    color: rgb(31, 192, 255);
+    font-size: 25px;
+    margin-left: -10px;
+}
+.head-right p{
+    font-size: 12px;
+}
+.information{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.information h1{
+    margin-top: 10px;
+    color: rgb(57, 81, 192);
+}
+.information p{
+    margin-top: 10px;
+}
+.information span{
+    color: rgb(31, 192, 255);
+}
+.information ul{
+    margin-left: 30px;
+}
+.information ul li{
+    margin-top: 10px;
+}
+.information ol{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+.information ol li{
+    margin-top: 10px;
+}
+.over{
+    width: 100%;
+}
+.information img{
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-div{
+    margin-left: 30px;
+}
+.footer{
+    display: inline-flex;
+    width: 95%;
+    border-top: 3px solid blue;
+    border-right: 3px solid blue; 
+    border-left: 3px solid blue;
+}
+.footer img{
+    margin-top: 25px;
+    padding-left: 10px;
+    height: 100px;
+}
+
+
+
+/* Main body End  */
+
+
+footer {
+    background: #98C407;  
+    height: 100px;
+}
+
+
+

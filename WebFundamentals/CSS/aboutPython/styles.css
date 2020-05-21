@@ -1,0 +1,232 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100%;
+    background-color: rgb(45, 87, 126);
+    margin: 0px auto;
+}
+/* header start */
+.header{
+    height: 130px;
+    position: relative;
+    background-color: rgb(45, 87, 126);
+}
+.header img{
+    height: 120px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.adjustments{
+    float: right;
+}
+.resizing{
+    position: relative;
+    display: flex;
+    color: white;
+    margin-top: 10px;
+    justify-content: center;
+}
+.resizing p{
+    margin-right: 5px;
+}
+.spacer{
+    margin-left: 5px;
+    color: black;
+}
+.resizing a{
+    color: gold;
+}
+.search{
+    background-color: rgb(28, 35, 49);
+    height: 75px;
+    width: 300px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+.find-info{
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    padding-top: 20px;
+}
+.find-info button{
+    height: 30px;
+    width: 50px;
+    background-color: rgb(45, 87, 126);
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.find-info input{
+    height: 30px;
+    width: 200px;
+    text-align: center;
+}
+/* header end */
+/* nav-bar start  */
+.nav-bar{
+    background-color: rgb(45, 87, 126);
+    height: 100px;
+}
+.navigation{
+    width: 80%;
+    height: 70px;
+    border-radius: 10px;
+    border: solid 3px black;
+    background-color: rgb(20, 98, 172);
+    float: right;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-right: 60px;
+}
+.nav-text{
+    display: inline-flex;
+    
+}
+.nav-text h2{
+    color: white;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+/* nav-bar end  */
+/* bio start  */
+.bio{
+    height: 380px;
+    background-color: rgb(45, 87, 126);
+}
+.underlines{
+    height: 380px;
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+.underlines ul{
+    list-style: none;
+    margin-left: 50px;
+}
+.underlines ul li{
+    margin-top: 10px;
+}
+.underlines ul li::before{
+    content: ">>";
+    color: gold;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    padding-right: 10px;
+    margin-left: -1em;
+}
+.underlines ul li u{
+    font-size: 1.2rem;
+    color: white;
+}
+.quick-info{
+    height: 380px;
+    width: 70%;
+    float: right;
+}
+.knowing{
+    text-align: center;
+    color: white;
+}
+.knowing p{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.knowing h2,
+.knowing h3{
+    margin-top: 20px;
+}
+.knowing h2{
+    color: gold;
+}
+/* bio end  */
+/* information start  */
+.line-up{
+    background-color: white;
+    height: 15px;
+}
+.long-line{
+    margin-left: 100px;
+    display: inline-flex;
+    background-color: rgb(52, 113, 226);
+    margin-top: 5px;
+    height: 5px;
+    width: 40%;
+}
+.information{
+    background-color: white;
+    height: 300px;
+}
+.info-started{
+    margin-right: 100px;
+}
+.shaper{
+    margin-top: 20px;
+    width: 50%;
+    text-align: center;
+}
+.left-shaper{
+    float: left;
+}
+.right-shaper{
+    float: right;
+}
+.shaper h3{
+    margin-bottom: 10px;
+}
+.shaper p{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.shaper span{
+    color: rgb(52, 113, 226);
+}
+.shaper ul{
+    list-style: none;
+    margin-left: 50px;
+}
+.shaper ul li{
+    margin-top: 10px;
+    color: rgb(52, 113, 226);;
+}
+.shaper ul li::before{
+    content: "\2043";
+    font-weight: bold;
+    color: black;
+    display: inline-block; 
+    width: 1em;
+    padding-right: 10px;
+    margin-left: -1em;
+}
+/* information end  */
+/* footer start  */
+.footer{
+    background-color: rgb(45, 87, 126);
+}
+.assist{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.assist h2{
+    color: rgb(202, 202, 224);
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: normal;
+}
+.footer p{
+    color: rgb(202, 202, 224);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* footer end  */

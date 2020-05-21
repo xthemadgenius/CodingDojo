@@ -1,0 +1,88 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    width: 970px;
+    background-color: rgb(38, 46, 156);
+    margin: 0px auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#header{
+    height: 60px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: red;
+}
+h1{
+    color: lightgray;
+    position: fixed;
+    display: inline-block;
+}
+.nerd-up{
+    display: inline-flex;
+}
+#navigation{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(13, 186, 209);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.fixed-list {
+    list-style: none;
+}
+
+.fixed-list .loner::before {
+    content: "\2022";
+    color: white;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+.short-list{
+    color: white;
+}
+
+#main_content{
+    height: 450px;
+    width: 710px;
+    border-radius: 10px;
+    background-color: rgb(5, 3, 31);
+}
+h2{
+    color: lightgray;
+    padding: 10px;
+    margin: 10px;
+}
+.change-text{
+    color: lightgray;
+    padding: 10px;
+}
+
+.push-right{
+    margin-left: 30px;
+}
+a{
+    color: lime;
+}
+span{
+    color: turquoise;
+}
+#footer{
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: darkgrey;
+}

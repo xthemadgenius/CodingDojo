@@ -1,0 +1,151 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    width: 970px;
+    background-color: lightgray;
+    margin: 0px auto;
+}
+
+.heading{
+    background-color: grey;
+    color: white;
+    font-size: 40px;
+    height: 50px;
+}
+
+#header{
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    background-color: lightgray;
+}
+#header h1{
+    float: left;
+}
+
+#header h2{
+    float: right;
+}
+
+.bio{
+    background-color: brown;
+    display: inline-flex;
+}
+.profile{
+    padding-right: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.bio .profile img{
+    height: 290px;
+    border: 5px solid gray;
+}
+
+.bio-info{
+    background-color: white;
+    height: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.bio-info .border p,
+.bio-info .border u{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.bio-info .border h2{
+    background-color: gray;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.information{
+    background-color: brown;
+    height: 630px;
+    width: 970px;
+    display: inline-flex;
+}
+.section{
+    width: 290px;
+    margin-left: 25px;
+    height: 600px;
+    background-color: rgb(192, 189, 191);
+}
+
+.section h2{
+    background-color: gray;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 30px;
+}
+
+.section img{
+    width: 290px;
+}
+
+.section p{
+    height: 200px;
+    margin-left: 10px;
+}
+
+.tech img{
+    height: 40px;
+    width: 40px;
+    margin: 7px
+}
+
+#button{
+    text-align: center;
+}
+
+.btn{  
+    color: white;
+    background-color: green;
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+    text-indent: 5px;
+}
+
+.footer{
+    align-items: center;
+    align-content: center;
+    position: relative;
+    background-color: lightgray;
+    float: center;
+}
+.footer p{
+    padding-bottom: 25px;
+    background-color: white;
+}
+#bottom{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 10;
+    top: 50%;
+    left: 30%;
+}
+
+.contact{
+    text-align: center;
+}
+
+.socials{
+    display: inline-flex;
+    align-items: center;
+    float: center;
+}
+.socials u{
+    min-width: 70px;
+}
+.socials img{
+    height: 30px;
+    width: 30px;
+}
