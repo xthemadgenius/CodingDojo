@@ -11,12 +11,26 @@ body{
 /* header start  */
 header{
     color: white;
-    background: gold;
-    height: 200px;
+    background: blue;
+}
+header h1{
+    position: relative;
 }
 header span{
     color: rgb(67, 143, 243);
 }
+.nav{
+    display: inline-flex;
+    float: right;
+    position: relative;
+    margin-bottom: 20px;
+}
+.nav h2{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: blueviolet;
+}
+
 /* header end  */
 /* main start  */
 main{
@@ -55,17 +69,22 @@ main{
     margin-bottom: 20px;
 }
 .title{
-    display: inline-flex;
     position: relative;
     height: 40px;
+    display: inline;
 }
 .title img{
+    display: block;
+    margin-left: 10px;
     height: 60px;
     width: 60px;
     float: left;
 }
 .title h2{
-    margin-top: 20px;
+    display: block;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 35px;
     margin-left: 10px;
 }
 .service p{
@@ -75,7 +94,7 @@ main{
 }
 .service button{
     background: rgb(45,58,175);
-background: linear-gradient(90deg, rgba(45,58,175,1) 0%, rgba(13,83,172,1) 14%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(45,58,175,1) 0%, rgba(13,83,172,1) 14%, rgba(0,212,255,1) 100%);
     color: white;
     border: none;
     height: 30px;
@@ -90,11 +109,50 @@ background: linear-gradient(90deg, rgba(45,58,175,1) 0%, rgba(13,83,172,1) 14%, 
 .context{
     display: inline-flex;
     height: 300px;
+    margin-bottom: 20px;
 }
 .section{
-    background-color: bisque;
+    background-color: white;
     color: black;
-    
+}
+.section h2{
+    margin-top: 20px;
+    font-size: 25px;
+}
+.section img{
+    margin-top: 20px;
+    width: 100%;
+}
+.body-text{
+    margin-top: 65px;
+}
+.body-text p{
+    margin-bottom: 15px;
+}
+.section h3{
+    margin-top: 30px;
+    color: rgb(73, 100, 187);
+}
+.speech-bubble{
+    margin-top: 20px;
+	position: relative;
+	background: rgb(96, 180, 248);
+    padding: 30px;
+    margin-bottom: 50px;
+}
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: rgb(96, 180, 248);
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
 }
 /* main end  */
 
@@ -102,10 +160,13 @@ background: linear-gradient(90deg, rgba(45,58,175,1) 0%, rgba(13,83,172,1) 14%, 
     width: 95%;
     background-color: rgb(96, 180, 248);
     margin-bottom: 10px;
-    color: white;
+    color: rgb(73, 100, 187);
+    margin-left: auto;
+    margin-right: auto;
 }
 .footer ul{
-    display: inline-flex;
+    justify-content: center;
+    display: flex;
 }
 .footer ul li{
     list-style: none;
@@ -115,5 +176,5 @@ background: linear-gradient(90deg, rgba(45,58,175,1) 0%, rgba(13,83,172,1) 14%, 
     margin-bottom: 20px;
 }
 .footer ul li span{
-    color: blue;
+    color: white;
 }
