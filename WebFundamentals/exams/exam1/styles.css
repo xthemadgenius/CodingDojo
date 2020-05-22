@@ -186,6 +186,7 @@ main{
 /* main end  */
 /* footer start  */
 .footer{
+    border-top: 1px solid black;
     width: 95%;
     background-color: rgb(96, 180, 248);
     margin-bottom: 10px;
