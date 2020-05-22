@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100%;
+    margin: 0px auto;
+    background-color: white;
+    background-color: rgb(23, 23, 88)
+}
+/* header start  */
+header{
+    color: white;
+    background: gold;
+    height: 200px;
+}
+header span{
+    color: rgb(67, 143, 243);
+}
+/* header end  */
+/* main start  */
+main{
+    width: 95%;
+    background-color: white;
+    display: block; 
+    margin-left: auto;  
+    margin-right: auto;
+}
+.overview,
+.footer{
+    display: block; 
+    margin-left: auto;  
+    margin-right: auto;
+}
+.overview img{
+    display: block; 
+    margin-left: auto;  
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 95%;
+}
+.services,
+.context{
+    display: inline-flex;
+
+}
+.service,
+.section{
+    background-color: rgb(36, 106, 185);
+    width: 30%;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+.title{
+    display: inline-flex;
+    position: relative;
+    height: 40px;
+}
+.title img{
+    height: 60px;
+    width: 60px;
+    float: left;
+}
+.title h2{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.service p{
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: 120px;
+}
+.service button{
+    background: rgb(45,58,175);
+background: linear-gradient(90deg, rgba(45,58,175,1) 0%, rgba(13,83,172,1) 14%, rgba(0,212,255,1) 100%);
+    color: white;
+    border: none;
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.context{
+    display: inline-flex;
+    height: 300px;
+}
+.section{
+    background-color: bisque;
+    color: black;
+    
+}
+/* main end  */
+
+.footer{
+    width: 95%;
+    background-color: rgb(96, 180, 248);
+    margin-bottom: 10px;
+    color: white;
+}
+.footer ul{
+    display: inline-flex;
+}
+.footer ul li{
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footer ul li span{
+    color: blue;
+}
