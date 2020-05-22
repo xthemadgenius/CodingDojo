@@ -46,7 +46,7 @@ main{
     margin-left: auto;  
     margin-right: auto;
 }
-.overview img{
+.main-img{
     display: block; 
     margin-left: auto;  
     margin-right: auto;
@@ -69,36 +69,37 @@ main{
     margin-bottom: 20px;
 }
 .title{
+    padding-top: 10px;
+    padding-bottom: 10px;
     position: relative;
-    height: 40px;
-    display: inline;
 }
 .title img{
     display: block;
     margin-left: 10px;
-    height: 60px;
-    width: 60px;
+    margin-top: 5px;
+    height: 45px;
+    width: 45px;
     float: left;
 }
 .title h2{
     display: block;
     font-size: 40px;
     font-weight: 500;
-    margin-top: 35px;
-    margin-left: 10px;
+    margin-top: 5px;
+    padding-left: 60px;
 }
+
 .service p{
     margin-left: 20px;
     margin-right: 20px;
     min-height: 120px;
 }
 .service button{
-    background: rgb(45,58,175);
-    background: linear-gradient(90deg, rgba(45,58,175,1) 0%, rgba(13,83,172,1) 14%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(#64c1e6, #5270d3);
     color: white;
     border: none;
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 150px;
     font-size: 20px;
     margin-top: 20px;
     margin-left: 10px;
@@ -124,7 +125,7 @@ main{
     width: 100%;
 }
 .body-text{
-    margin-top: 65px;
+    margin-top: 4.2rem;
 }
 .body-text p{
     margin-bottom: 15px;
@@ -155,7 +156,7 @@ main{
 	margin-bottom: -20px;
 }
 /* main end  */
-
+/* footer start  */
 .footer{
     width: 95%;
     background-color: rgb(96, 180, 248);
@@ -178,3 +179,5 @@ main{
 .footer ul li span{
     color: white;
 }
+
+/* footer end  */
