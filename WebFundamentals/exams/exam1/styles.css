@@ -64,19 +64,19 @@ nav ul li a:hover{
 main{
     width: 95%;
     background-color: white;
-    display: block; 
-    margin-left: auto;  
+    display: block;
+    margin-left: auto;
     margin-right: auto;
 }
 .overview,
 .footer{
-    display: block; 
-    margin-left: auto;  
+    display: block;
+    margin-left: auto;
     margin-right: auto;
 }
 .main-img{
-    display: block; 
-    margin-left: auto;  
+    display: block;
+    margin-left: auto;
     margin-right: auto;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -91,8 +91,8 @@ main{
 .section{
     background-color: rgb(36, 106, 185);
     width: 30%;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
     color: white;
     margin-bottom: 20px;
 }
