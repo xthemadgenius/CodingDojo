@@ -9,3 +9,9 @@ body{
 .header{
     height: 120px;
 }
+.footer{
+    height: 120px;
+}
+.box-width{
+    width: 45%;
+}
