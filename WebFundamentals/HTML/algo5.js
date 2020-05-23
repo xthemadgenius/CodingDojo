@@ -5,7 +5,7 @@ function greaterY(arr, Y) {
             count++;
         }
     });
-    return count; 
+    return count;
 }
 
 function maxMinAvg(arr) {
