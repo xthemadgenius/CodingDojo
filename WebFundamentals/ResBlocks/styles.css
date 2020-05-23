@@ -1,0 +1,82 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100%;
+    margin: 0px auto;
+}
+.head-block,
+.left-block,
+.right-block,
+.top-block,
+.bottom-block{
+    margin: 10px;
+}
+.head-block{
+    background-color: green;
+}
+.left-block{
+    background-color: blue;
+}
+.right-block{
+    background-color: red;
+}
+.top-block{
+    background-color: yellow;
+}
+.bottom-block{
+    background-color: blueviolet;
+}
+
+@media only screen and (max-width: 480px){
+    .head-block{
+        background-color: green;
+    }
+    .left-block{
+        background-color: blue;
+    }
+    .right-block{
+        background-color: red;
+    }
+    .top-block{
+        background-color: yellow;
+    }
+    .bottom-block{
+        background-color: blueviolet;
+    }
+}
+@media only screen and (min-width: 480px){
+    .head-block{
+        background-color: green;
+    }
+    .left-block{
+        display: none;
+    }
+    .right-block{
+        background-color: red;
+    }
+    .top-block{
+        background-color: yellow;
+    }
+    .bottom-block{
+        background-color: blueviolet;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .head-block{
+        background-color: green;
+    }
+    .left-block{
+        display: none;
+    }
+    .right-block{
+        background-color: red;
+    }
+    .top-block{
+        background-color: yellow;
+    }
+    .bottom-block{
+        background-color: blueviolet;
+    }
+}
