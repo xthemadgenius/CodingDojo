@@ -123,5 +123,14 @@ function shiftArrayToRight(arr, places) {
 console.log(shiftArrayToRight([1,2,3,4,5,6,7],1));
 
 // problem #13 
+function turnDojo(arr){
+    for (var i=0;i<arr.length;i++){
+        if(arr[i] < 0){
+            arr[i] = 'Dojo';
+        }
+    }
+    return arr;
+}
+console.log(turnDojo([-1,3,5,-5]));
 
 
