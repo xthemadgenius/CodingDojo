@@ -113,4 +113,15 @@ function random(num){
 }
 console.log(random([1,2,3,4,5,6,7]));
 
+// problem #12
+function shiftArrayToRight(arr, places) {
+    for (var i = 0; i < places; i++) {
+        arr.unshift(arr.pop());
+    }
+    return arr;
+}
+console.log(shiftArrayToRight([1,2,3,4,5,6,7],1));
+
+// problem #13 
+
 
