@@ -6,77 +6,71 @@ body{
     width: 100%;
     margin: 0px auto;
 }
-.head-block,
-.left-block,
-.right-block,
-.top-block,
-.bottom-block{
+.green{
+    height: 100px;
+    background-color: green;
     margin: 10px;
 }
-.head-block{
-    background-color: green;
-}
-.left-block{
+.blue{
+    float: left;
     background-color: blue;
+    height: 300px;
+    width: 30%;
+    margin: 10px;
 }
-.right-block{
+.red{
+    float: right;
     background-color: red;
+    height: 500px;
+    width: 65%;
+    margin: 10px;
 }
-.top-block{
+.row{
+    position: relative;
+}
+.yellow{
+    display: inline-flex;
     background-color: yellow;
+    margin: 10px;
+    height: 80px;
+    width: 30%;
 }
-.bottom-block{
-    background-color: blueviolet;
+.purple{
+    background-color: purple;
+    height: 80px;
+    margin: 10px;
 }
 
 @media only screen and (max-width: 480px){
-    .head-block{
-        background-color: green;
+    .blue{
+        display: none;
     }
-    .left-block{
-        background-color: blue;
+    .red{
+        width: 95%;
     }
-    .right-block{
-        background-color: red;
-    }
-    .top-block{
-        background-color: yellow;
-    }
-    .bottom-block{
-        background-color: blueviolet;
+    .yellow{
+        width: 90%;
     }
 }
 @media only screen and (min-width: 480px){
-    .head-block{
-        background-color: green;
-    }
-    .left-block{
+    .blue{
         display: none;
     }
-    .right-block{
-        background-color: red;
+    .red{
+        width: 95%;
     }
-    .top-block{
-        background-color: yellow;
-    }
-    .bottom-block{
-        background-color: blueviolet;
+    .yellow{
+        width: 45%;
     }
 }
 @media only screen and (min-width: 1024px){
-    .head-block{
-        background-color: green;
+    .blue{
+        display: block;
     }
-    .left-block{
-        display: none;
+    .red{
+        width: 65%;
     }
-    .right-block{
-        background-color: red;
+    .yellow{
+        width: 30%;
     }
-    .top-block{
-        background-color: yellow;
-    }
-    .bottom-block{
-        background-color: blueviolet;
-    }
-}
+} 
