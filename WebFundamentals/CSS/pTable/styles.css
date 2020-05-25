@@ -1,0 +1,29 @@
+h2,
+h6{
+    margin: 2px;
+    text-align: center;
+    color: rgb(49, 29, 105);
+}
+.box-blue{
+    background-color: rgb(76, 100, 233);
+    width: 50px;
+    height: 70px;
+}
+.box-red{
+    background-color: rgb(226, 108, 108);
+    width: 50px;
+    height: 70px;
+}
+.box-yellow{
+    background-color: gold;
+    width: 50px;
+    height: 70px;
+}
+.box-green{
+    background-color: rgb(32, 180, 3);
+    width: 50px;
+    height: 70px;
+}
+.right-box{
+    float: right;
+}
