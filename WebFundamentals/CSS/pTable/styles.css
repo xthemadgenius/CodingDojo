@@ -28,4 +28,25 @@ h6{
     width: 50px;
     height: 70px;
 }
-
+h3{
+    color: red;
+}
+header{
+    display: inline-flex;
+}
+h4{
+    width: 70px;
+    text-align: center;
+    color: red;
+}
+aside{
+    float: left;
+    position: absolute;
+}
+aside h4{
+    margin-top: 55px;
+    height: 20px;
+}
+main{
+    float: right;
+}
