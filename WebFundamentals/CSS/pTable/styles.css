@@ -1,3 +1,6 @@
+table{
+    width: 1200px;
+}
 h2,
 h6{
     margin: 2px;
@@ -23,7 +26,4 @@ h6{
     background-color: rgb(32, 180, 3);
     width: 50px;
     height: 70px;
-}
-.right-box{
-    float: right;
 }
