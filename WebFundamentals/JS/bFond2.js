@@ -131,9 +131,43 @@ function addSevenToMost(arr) {
 addSevenToMost([1,2,3]);
 
 // problem #10
+var addSevenToMost = arr => arr.reverse();
+addSevenToMost([1,2,3]);
+
 // problem #11
+var outlookNeg = arr => arr.map(val => -Math.abs(val))
+outlookNeg([1,4,3]);
+
 // problem #12
+function alwaysHungry(arr) {
+    var counter = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == 'food') {
+            console.log('yummy');
+            counter += 1;
+        }
+    }
+    if (counter === 0) {
+        console.log("I'm hungry");
+    }
+    return;
+}
+alwaysHungry([1,4,3,'food',5]);
+
 // problem #13
+function swapTowardsCenter(arr) {
+    var temp = arr[0];
+    for (var i = 0, x = (arr.length - 1); i < x; i++, x--) {
+        if (i === 0 || i % 2 === 0) {
+            temp = arr[i];
+            arr[i] = arr[x];
+            arr[x] = temp;
+        } 
+    }
+    return arr;
+}
+swapTowardsCenter([1,4,3,'food',5]);
+
 // problem #14
 function scaleArray(arr, num) {
     for (var i = 0; i < arr.length; i++) {
