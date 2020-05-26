@@ -93,10 +93,52 @@ var newArr = evensAndOdds(arr)
 console.log(newArr)
 
 // problem #7
+function secondIncrement(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (i % 2 != 0) {
+            arr[i] = arr[i] + 1;
+        }
+        console.log(arr[i]);
+    }
+    return arr;
+}
+var arr = [1,2,6,4,12,6,7];
+secondIncrement(arr)
+
 // problem #8
+function previousLengths(arr) {
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        newArr[i] = arr[i].length;
+    }
+    for (var j = 1, k = 0; j < arr.length; j++, k++) {
+        arr[j] = newArr[k];
+    }
+    return arr;
+}
+var arr = ["hello", "dojo", "awesome"];
+previousLengths(arr);
+
 // problem #9
+function addSevenToMost(arr) {
+    var newarr = [];
+    newarr[0] = arr[0];
+    for (var i = 0; i < arr.length; i++) {
+        newarr[i] = arr[i] + 7;
+    }
+    return newarr;
+}
+addSevenToMost([1,2,3]);
+
 // problem #10
 // problem #11
 // problem #12
 // problem #13
 // problem #14
+function scaleArray(arr, num) {
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * num;
+    }
+    return arr;
+}
+scaleArray([1,2,3], 3);
