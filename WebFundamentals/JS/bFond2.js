@@ -176,3 +176,5 @@ function scaleArray(arr, num) {
     return arr;
 }
 scaleArray([1,2,3], 3);
+
+//there was a few of my solutions that I had assistance in from both peers here with and from github since I was struggling for hours figuring out the solution to some of these equations hope that is not too much of a problem
