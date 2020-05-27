@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+}
+h1 {
+    color: green;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+h2 {
+    text-align: center;
+    color: hotpink;
+}
+.magic {
+    width: 750px;
+    vertical-align:  top;
+    margin: 5px 14px;
+    
+}
+.magic button {
+    background-color: rgb(118, 24, 224);
+    color: white;
+    width: 120px;
+    margin: 5px;
+}
+.magic p {
+    display: inline-block;
+    color: goldenrod;
+    width: 600px;
+
+}
+.red {
+    background-color: red;
+}
+img.attr {
+    width: 250px;
+    margin-left:250px;
+}
+.magic input {
+    width: 250px;
+    background-color: lightgrey;
+}

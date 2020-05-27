@@ -5,30 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="main.js"></script>
+    <script src="jquery.3.5.1.js"></script>
 </head>
 <body>
-    <div>
-        <button>AddClass</button>
-        <div>
-            <h1>AddClass</h1>
-            <p>Click the button to add class 'red' to the paragraph</p>
-        </div>
+    <h1>x-x-x-x-x JQuery Sampler x-x-x-x-x</h1>
+    <hr>
+    <h2>AddClass and Click</h2>
+    <div class='magic'>
+        <button class='addClass'>AddClass</button>
+        <p class='addClass'>Click the button to add class 'red' to this paragraph</p>
     </div>
-    <div>
-        <button>Slidetoggle</button>
-        <div>
-            <h1>Slidetoggle</h1>
-            <p>Click the button to slidetoggle a hidden image</p>
+    <hr>
+    <h2>After</h2>
+    <div class='magic'>
+            <button class='after'>After</button>
+            <p class='after'>Click the button to insert text after this paragraph</p>
         </div>
+    <hr>
+    <h2>Append</h2>
+    <div class='magic'>
+        <button class='append'>Append</button>
+        <p class='append'>Click the button to append a new paragraph</p>
     </div>
-    <div>
-        <button>Append</button>
-        <div>
-            <h1>Append</h1>
-            <p>Click the button to append a new paragraph!</p>
-        </div>
+    <hr>
+    <h2>Attr</h2>
+    <div class='magic'>
+        <button class='attr'>Attr</button>
+        <p class='attr'>Click the button to set alt tag on the image</p>
+        <img class='attr' src='bob-ross.jpg' alt=''>
     </div>
-    <script src="main.js"></script>
+    <hr>
+    <h2>Before</h2>
+    <div class='magic'>
+        <button class='before'>Before</button>
+        <p class='before'>Click the button to insert text before this paragraph</p>
+    </div>
+    <hr>
+    <h2>Data</h2>
+    <div class='magic'>
+        <button class='data1'>Set Data</button>
+        <button class='data2'>Get Data</button>
+        <p class='data'>Click the "Set Data" button to add data. Then click the "Get Data" button to see what was set.</p>
+        <div class='data'></div>
+    </div>
+    <hr>
+    <h2>FadeOut and FadeIn</h2>
+    <div class='magic'>
+        <button class='fadeout'>FadeOut</button>
+        <button class='fadein'>FadeIn</button>
+        <p class='fadeTarget'>Click the FadeOut button to see this paragraph fade out, then click the FadeIn button to see it fade back in.</p>
+    </div>
+    <hr>
+    <h2>Hide and Show</h2>
+    <div class='magic'>
+        <button class='hide'>Hide</button>
+        <button class='show'>Show</button>
+        <p class='hideShowTarget'>Click the Hide button to hide this paragraph, then click the Show button to bring it back.</p>
+    </div>
+    <hr>
+    <h2>HTML</h2>
+    <div class='magic'>
+        <button class='html'>HTML</button>
+        <p class='html'>Click the button to update this text with new HTML</p>
+    </div>
+    <hr>
+    <h2>SlideDown and SlideUp</h2>
+    <div class='magic'>
+        <button class='slideUp'>SlideUp</button>
+        <button class='slideDown'>SlideDown</button>
+        <p class='slideTarget'>Click the SlideUp button to make this text slide up. Then, click the SlideDown button to make the text slide back down.</p>
+    </div>
+    <hr>
+    <h2>SlideToggle</h2>
+    <div class='magic'>
+        <button class='slideToggle'>Slidetoggle</button>
+        <p class='flip'>Click the button to slidetoggle a hidden image</p>
+        <div id='shrug'>¯\_(ツ)_/¯</div>
+    </div>
+    <hr>
+    <h2>Text</h2>
+    <div class='magic'>
+        <button class='text'>Text</button>
+        <p class='text'>Click the button change this text.</p>
+    </div>
+    <hr>
+    <h2>Toggle</h2>
+    <div class='magic'>
+        <button class='toggle'>Toggle</button>
+        <p class='toggle'>Click the button to toggle visibility of this text without any change to the content area.</p>
+    </div>
+    <hr>
+    <h2>Val</h2>
+    <div class='magic'>
+        <button class='val'>Val</button>
+        <p>Name:  <input type='text' name='user'></p>
+        <p>Click the button to add a value to the input box.</p>
+    </div>
+    <hr>
 </body>
 </html>
