@@ -16,24 +16,20 @@ div .brick{
     background-color: blueviolet;
 }
 div .coin{
-    background: url('coin.gif');
+    background: url('img/coin.gif');
     background-repeat: no-repeat;
     background-position: center;
 }
 div .cherry{
-    background: url('cherry.png');
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url('img/cherry.png') no-repeat center;
     background-size: cover;
 }
 div .ghost{
-    background: url('ghost.png');
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url('img/ghost.png') no-repeat center;
     background-size: cover;
 }
 #pacman{
-    background: url('Pacman.gif') no-repeat center;
+    background: url('img/Pacman.gif') no-repeat center;
     background-size: cover;
     width: 20px;
     height: 20px;
