@@ -6,10 +6,16 @@ var world = [
     [2,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,2,2,1,2],
     [2,1,1,2,2,2,1,2,1,2,1,1,1,2,2,1,2,1,1,2],
     [2,1,2,2,1,1,1,2,1,1,1,1,2,2,1,1,2,1,2,2],
+    [2,1,1,1,1,1,1,1,1,2,1,1,3,1,1,2,2,1,1,2],
+    [2,2,2,2,1,1,1,2,1,1,1,1,1,1,1,2,1,1,1,2],
+    [2,1,2,1,1,1,1,2,1,2,1,1,2,2,1,1,1,1,1,2],
+    [2,1,2,2,2,1,1,1,1,2,1,1,4,2,1,1,2,2,2,2],
+    [2,1,1,1,2,2,1,2,1,1,1,1,1,1,1,2,2,1,1,2],
     [2,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,2],
     [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
 ];
 var score = 0;
+var lives = 3;
 
 var pacman = {
     x: 1,
@@ -24,6 +30,10 @@ function displayWorld(){
                 output += "<div class='brick'></div>";
             } else if(world[i][j] == 1){
                 output += "<div class='coin'></div>";
+            } else if(world[i][j] == 3){
+            output += "<div class='cherry'></div>";
+            } else if(world[i][j] == 4){
+                output += "<div class='ghost'></div>";
             } else if(world[i][j] == 0){
                 output += "<div class='empty'></div>";
             }
@@ -40,9 +50,14 @@ function displayPacman(){
 function displayScore(){
     document.getElementById('score').innerHTML = score;
 }
+function displayLives(){
+    document.getElementById('lives').innerHTML = lives;
+}
 displayWorld();
 displayPacman();
 displayScore();
+displayLives();
+
 document.onkeydown = function(e){
     if(e.keyCode == 37 && world[pacman.y][pacman.x-1] != 2){
         document.getElementById('pacman').style.transform = "rotate(-180deg)";
@@ -62,6 +77,24 @@ document.onkeydown = function(e){
         score += 10;
         displayWorld();
         displayScore();
+    } else if (world[pacman.y][pacman.x] == 3) {
+        world[pacman.y][pacman.x] = 0;
+        score+=50;
+        displayWorld();
+        displayScore();
+    } else if (world[pacman.y][pacman.x] == 4) {
+        world[pacman.y][pacman.x] = 4;
+        score-= 100;
+        lives -= 1;
+        if(score <= 0){
+            score = 0;
+        }
+        if(lives === 0){
+            lives = 0;
+        }
+        displayWorld();
+        displayScore();
+        displayLives();
     }
     displayPacman();
 }
