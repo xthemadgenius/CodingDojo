@@ -7,6 +7,7 @@
     <style>
         body{
             background-color: black;
+            margin: 0px;
         }
         .row div{
             width: 20px;
@@ -21,17 +22,26 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-        div #pacman{
+        #pacman{
             background: url('Pacman.gif') no-repeat center;
             background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
         }
         div .empty{
 
         }
+        #world{
+            position: relative;
+        }
     </style>
 </head>
 <body>
-    <div id="world"></div>
+    <div class="container">
+        <div id="world"></div>
+        <div id="pacman"></div>
+    </div>
     <!-- 
 
     List all Features to build:
@@ -54,24 +64,51 @@
             [2,1,1,1,1,1,1,1,1,2],
             [2,2,2,2,2,2,2,2,2,2]
         ];
+
+        var pacman = {
+            x: 0,
+            y: 0
+        }
         function displayWorld(){
             var output = '';
             for(var i = 0; i < world.length; i++){
-                output += "\n<div class='row'>";
+                output += "\n<div class='row'>\n";
                 for(var j = 0; j < world[i].length; j++){
                     if(world[i][j] == 2){
-                        output += "\n\t<div class='brick'></div>";
+                        output += "<div class='brick'></div>";
                     } else if(world[i][j] == 1){
-                        output += "\n\t<div class='coin'></div>";
+                        output += "<div class='coin'></div>";
                     } else if(world[i][j] == 0){
-                        output += "\n\t<div class='empty'></div>";
+                        output += "<div class='empty'></div>";
                     }
                 }
                 output += "\n</div>";
             }
             document.getElementById('world').innerHTML = output;
         }
-        displayWorld()
+
+        function displayPacman(){
+            document.getElementById('pacman').style.top = pacman.y*24 + "px";
+            document.getElementById('pacman').style.left = pacman.x*20 + "px";
+        }
+        displayWorld();
+        displayPacman();
+        document.onkeydown = function(e){
+            if(e.keyCode == 37){
+                pacman.x--;
+            } else if(e.keyCode == 39){
+                pacman.x++;
+            }else if(e.keyCode == 38){
+                pacman.y--;
+            }else if(e.keyCode == 40){
+                pacman.y++;
+            }
+            if(world[pacman.y][pacman.x] == 1){
+                world[pacman.y][pacman.x] = 0;
+                displayWorld()
+            }
+            displayPacman();
+        }
     </script>
 </body>
 </html>
