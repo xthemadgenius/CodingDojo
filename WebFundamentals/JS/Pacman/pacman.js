@@ -83,13 +83,13 @@ document.onkeydown = function(e){
         displayWorld();
         displayScore();
     } else if (world[pacman.y][pacman.x] == 4) {
-        world[pacman.y][pacman.x] = 4;
+        world[pacman.y][pacman.x] = 0;
         score-= 100;
         lives -= 1;
         if(score <= 0){
             score = 0;
         }
-        if(lives === 0){
+        if(lives <= 0){
             lives = 0;
         }
         displayWorld();
