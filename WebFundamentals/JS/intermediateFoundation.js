@@ -33,7 +33,7 @@ function fibonacci(n) {
     }
     return curr;
 }
-fibonacci([21,3,24])
+fibonacci(12)
 
 // question #4
 function secToLast(arr) {
