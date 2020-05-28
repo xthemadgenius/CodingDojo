@@ -1,34 +1,27 @@
 
-body
-{
-	background-image: url('dough.jpg');
+body{
+	background-image: url('img/dough.jpg');
 	font-family: sans-serif;
 }
-
-h2, h1, a
-{
+h2, 
+h1, 
+a{
 	color: white;
 }
-
-#wrapper
-{
+#wrapper{
 	background-color: rgba(2,2,2, .5);
 	width: 1200px;
 	margin: 0px auto;
 }
-
-#top_headers, #survey, ul, h3
-{
+#top_headers, #survey,
+ul, 
+h3{
 	display: inline-block;
 }
-
-li
-{
+li{
 	max-width: 350px;
 }
-
-#left_content
-{
+#left_content{
 	width: 650px;
 	display: inline-block;
 	background-color: rgba(220, 0, 0, .6);
@@ -36,26 +29,20 @@ li
 	vertical-align: top;
 	margin-left: 40px;
 }
-
-#right_content
-{
+#right_content{
 	width: 450px;
 	display: inline-block;
 	background-color: rgba(0, 220, 0, .6);
 	height: 520px;
 	vertical-align: top;
 }
-
-.box
-{
+.box{
 	vertical-align: top;
 	display: inline-block;
 	width: 300px;
 	padding: 10px;
 }
-
-img
-{
+img{
 	width: 310px;
 	height: 200px;
 	display: block;
