@@ -35,10 +35,10 @@ h2 {
     background-color: red;
 }
 img.attr {
-    width: 250px;
-    margin-left:250px;
+    width: 300px;
+    margin-left:200px;
 }
 .magic input {
-    width: 250px;
+    width: 300px;
     background-color: lightgrey;
 }
