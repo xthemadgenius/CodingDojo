@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    width: 100%;
+}
+h1 {
+    color: rgb(167, 59, 230);
+    text-align: center;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.deWay{
+    left: 50%;
+    top: 50%;
+}
+img{
+    height: 300px;
+    width: 300px;
+}
+button{
+    border: none;
+    background-color: rgb(17, 192, 17);
+    color: white;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: auto;
+}
