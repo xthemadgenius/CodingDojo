@@ -12,6 +12,7 @@ using
 if first removed the repo from my main Repo Coding Dojo
 
 then I removed git files in the repo using 
+
 rm -rf .git 
 
 and then I renamed the Repo Folder
