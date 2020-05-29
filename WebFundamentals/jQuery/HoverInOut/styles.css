@@ -2,3 +2,13 @@
     margin: 0px;
     width: 100%;
 }
+
+h1{
+    color: crimson;
+    text-align: center;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+}
