@@ -8,16 +8,4 @@ $(document).ready(function(){
     $(function(){
         $('img.change').hover(changeImg, changeImg);
     });
-    //!!!! DE Second Way !!!!!\\
-    
-    // $('img').hover(function(){
-    //     var src = $(this).attr("src");
-    //     $(this).attr("src", $(this).attr("data-alt-src"));
-    //     $(this).attr("data-alt-src", src);
-    // },
-    // function(){
-    //     var src = $(this).attr("src");
-    //     $(this).attr("src", $(this).attr("data-alt-src"));
-    //     $(this).attr("data-alt-src", src);
-    // });
 });
