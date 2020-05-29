@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    var delay=1000, setTimeoutConst;
     var changeImg = function(){
         var $this = $(this);
         var funnyImg = $this.data('alt-src');
