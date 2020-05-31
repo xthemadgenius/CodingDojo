@@ -9,13 +9,16 @@ function random_color(){
 }
 $(document).ready(function(){
     $('#large_box').click(function(){
-        alert('you clicked the big box!');  
+        // alert('you clicked the big box!');  
+        $(this).children('div').css('background-color', random_color);
         //comment this out when you have figured out what event.stopPropagation is used for
     });
     $('.side_box').click(function(event){
+        $(this).sibling().css('background-color', random_color)
         event.stopPropagation();
     });
     $('.middle_box').click(function(event){
+        $(this).parent().css('background-color', random_color);
         event.stopPropagation();
     })
 });
