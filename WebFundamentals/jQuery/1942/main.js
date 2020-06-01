@@ -3,8 +3,17 @@ var hero = {x:500,y:450}
 var enemies = []
 var bullets = []
 var explosions = []
-var explosionDict = ["-140px -30px","-110px -30px","-85px -40px","-65px -40px","-45px -40px"]
-var enemyDict = ["-30px -10px","-128px -135px"]
+var explosionDict = [
+    "-140px -30px",
+    "-110px -30px",
+    "-85px -40px",
+    "-65px -40px",
+    "-45px -40px"
+];
+var enemyDict = [
+    "-30px -10px",
+    "-128px -135px"
+];
 var lives = 5
 var level = 5000
 
@@ -26,7 +35,7 @@ function displayHero(){
 function displayLives(){
     var output = ""
     for(var i=0;i<lives;i++){
-        output+="<div class='life' style='left: "+ (28*i) +"px;'></div>"
+        output+="<div class='life' style='left: "+ (30*i) +"px;'></div>"
     }
     document.getElementById("lives").innerHTML=output
 }
@@ -112,7 +121,6 @@ function detectCollision(){
     for(var i=0;i<bullets.length;i++){
         for(var j=0;j<enemies.length;j++){
             if(Math.abs(bullets[i].x-enemies[j].x)<20 && Math.abs(bullets[i].y-enemies[j].y)<20){
-                //console.log("bullet "+i+" and enemy "+j+" collided")
                 var audio = new Audio("sounds/hit-02.wav")
                 audio.play()
                 killEnemy(j)
@@ -123,10 +131,9 @@ function detectCollision(){
     }
 }
 
-function detectPlayerCollision(){
+function playerHitDetected(){
     for(var i=0;i<enemies.length;i++){
         if(Math.abs(enemies[i].x-hero.x)<40 && Math.abs(enemies[i].y-hero.y)<40){
-            //console.log("hero and enemy "+i+" collided")
             var audio = new Audio("sounds/hit-01.wav")
             audio.play()
             killEnemy(i)
@@ -185,7 +192,7 @@ function gameLoop(){
         moveBullets()
         displayBullets()
         detectCollision()
-        detectPlayerCollision()
+        playerHitDetected()
         displayScore()
         displayExplosions()
         displayLives()
@@ -198,3 +205,6 @@ function gameLoop(){
         document.getElementById("game-over").innerText = "GAME OVER! SCORE: "+score
     }
 }
+$(document).ready(function(){
+    gameLoop();
+})

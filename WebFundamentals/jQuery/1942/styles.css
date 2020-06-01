@@ -16,6 +16,8 @@ body{
     width: 28px;
     height: 28px;
     position: absolute;
+    top:450px; 
+    left:500px;
 }
 .enemy1{
     background: url('1942.gif');
