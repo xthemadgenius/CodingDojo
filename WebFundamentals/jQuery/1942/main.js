@@ -1,5 +1,8 @@
 var score = 0
-var hero = {x:500,y:450}
+var hero = {
+    x:500,
+    y:450
+};
 var enemies = []
 var bullets = []
 var explosions = []
@@ -21,7 +24,7 @@ var background = new Audio("sounds/background.mp3")
 var interval = null
 
 function start(){
-    background.volume = 0.5
+    background.volume = 0.4
     background.loop = true
     background.play()
     interval =  setInterval(gameLoop, 20)
@@ -58,18 +61,18 @@ function displayEnemies(){
 function displayExplosions(){
     var output = ""
     for(var i=0;i<explosions.length;i++){
-        if(explosions[i].state>4){
+        if(explosions[i].state > 4){
             explosions.splice(i, 1)
         }else{
             var style = ""
-            if(explosions[i].state>1){
+            if(explosions[i].state > 1){
                 style += "width:20px;height:20px;"
-                style += "top:"+(explosions[i].y+5)+"px; left:"+(explosions[i].x+5)+"px;"
+                style += "top:"+(explosions[i].y+5) + "px; left:"+(explosions[i].x+5)+"px;"
             }else{
-                style += "top:"+explosions[i].y+"px; left:"+explosions[i].x+"px;"
+                style += "top:"+explosions[i].y + "px; left:"+explosions[i].x+"px;"
             }
-            style+="background-position:"+explosionDict[explosions[i].state]+";"
-            output+="<div class='explosion' style='"+style+"'></div>"
+            style +="background-position:"+explosionDict[explosions[i].state]+";"
+            output += "<div class='explosion' style='"+ style + "'></div>"
             explosions[i].state++
         }
     }
@@ -122,10 +125,11 @@ function detectCollision(){
         for(var j=0;j<enemies.length;j++){
             if(Math.abs(bullets[i].x-enemies[j].x)<20 && Math.abs(bullets[i].y-enemies[j].y)<20){
                 var audio = new Audio("sounds/hit-02.wav")
+                audio.volume = 0.4;
                 audio.play()
                 killEnemy(j)
                 bullets.splice(i,1)
-                score+=15
+                score+=100
             }
         }
     }
@@ -135,9 +139,10 @@ function playerHitDetected(){
     for(var i=0;i<enemies.length;i++){
         if(Math.abs(enemies[i].x-hero.x)<40 && Math.abs(enemies[i].y-hero.y)<40){
             var audio = new Audio("sounds/hit-01.wav")
+            audio.volume = 0.4;
             audio.play()
             killEnemy(i)
-            score-=50
+            score-=500
             lives--
         }
     }
@@ -155,27 +160,24 @@ document.onkeydown = function(e){
         switch(e.keyCode){
             case 37:
                 document.getElementById("hero").style.backgroundPosition="-55px -205px"
-                if(hero.x>10)
-                    hero.x-=10 
+                if(hero.x>10) hero.x-=10 
                 break
             case 39:
                 document.getElementById("hero").style.backgroundPosition="-110px -205px"
-                if(hero.x<970)
-                    hero.x+=10
+                if(hero.x<970) hero.x+=10
                 break
             case 40:
                 document.getElementById("hero").style.backgroundPosition="-85px -230px"
-                if(hero.y<520)
-                    hero.y+=10
+                if(hero.y<520) hero.y+=10
                 break
             case 38:
                 document.getElementById("hero").style.backgroundPosition = "-85px -180px"
-                if(hero.y>10)
-                    hero.y-=10
+                if(hero.y>10) hero.y-=10
                 break
             case 32:
                 document.getElementById("hero").style.backgroundPosition = "-85px -180px"
                 var audio = new Audio("sounds/gun-shot.mp3")
+                audio.volume = 0.4;
                 audio.play()
                 bullets.push({x:hero.x+8,y:hero.y-15})
                 displayBullets()
@@ -199,6 +201,7 @@ function gameLoop(){
     }else{
         clearInterval(interval)
         var audio = new Audio("sounds/explosion.wav")
+        audio.volume = 0.4;
         audio.play()
         document.getElementById("game-over").style.display = "block"
         document.getElementById("score").style.display = "none"
