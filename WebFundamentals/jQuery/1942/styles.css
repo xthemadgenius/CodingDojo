@@ -1,0 +1,79 @@
+body{
+    background-color:black;
+}
+#container{
+    background: url('background.jpg');
+    width:1000px;
+    height:550px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+#hero{
+    background: url('1942.gif');
+    background-position: -85px -180px;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+}
+.enemy1{
+    background: url('1942.gif');
+    background-position: -30px -10px;
+    transform: rotate(180deg);
+    width:28px;
+    height:28px;
+    position:absolute;
+}
+.bullet{
+    background: url('1942.gif');
+    background-position: -185px -400px;
+    width:18px;
+    height:18px;
+    position:absolute;
+}
+.explosion{
+    background: url('1942.gif');
+    background-position: -140px -30px;
+    width:30px;
+    height:30px;
+    position:absolute;
+}
+#score{
+    position:absolute;
+    border:5px solid red;
+    border-radius: 10px;
+    top:20px;
+    right:20px;
+    background-color:white;
+    padding:10px;
+    font-size:30px;
+    font-family: Arial;	
+}
+#lives{
+    position: absolute;
+    width: 1000px;
+    bottom: -28px;
+    height: 28px;
+}
+.life{
+    position: absolute;
+    background: url('1942.gif');
+    background-position: -85px -180px;
+    width: 28px;
+    height: 28px;
+}
+#game-over{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border:5px solid red;
+    border-radius: 10px;
+    background-color:white;
+    padding:10px;
+    font-size:30px;
+    font-family: Arial;	
+    text-align: center;
+    display: none;
+}
