@@ -2,7 +2,7 @@ body{
     background-color:black;
 }
 #container{
-    background: url('background.jpg');
+    background: url('BobRoss.jpg');
     width:1000px;
     height:550px;
     transform: translate(-50%, -50%);
