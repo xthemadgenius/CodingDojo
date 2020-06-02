@@ -31,3 +31,12 @@ for f in range (2018, 1, -4):
 counter = { "lowNum": "3", "HighNum": "6", "mult": "9" }
 for k in counter.values():
     print(k)
+
+def countdown(int):
+    listy_list = []
+    for i in range(int, -1, -1):
+        listy_list.append(i)
+        print(listy_list)
+    return listy_list
+
+print(countdown(5))
