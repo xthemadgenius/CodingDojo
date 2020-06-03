@@ -14,15 +14,19 @@ class BankAccount:
         return self
 
     def display_account_info(self):
-        info = self.int_rate, self.balance, self.int_rate
+        self.int_rate().balance().name()
         return self
 
     def yield_interest(self):
         self.balance += (self.balance *self.int_rate)
 
-b1 = BankAccount('Obi Ezeakachi', 5000, 1111)
-b2 = BankAccount('Tasha St.Patrick', 80000, 2222)
-b3 = BankAccount('Tommy Egan', 7000, 3333)
+b1 = BankAccount('Obi Ezeakachi', 5000, .05)
+b2 = BankAccount('Tasha St.Patrick', 80000, .09)
+
 print(b1.name)
+b1.deposit(400).deposit(600).deposit(101).withdraw(204).yield_interest()
+print(b1.balance)
+
 print(b2.name)
-print(b3.name)
+b2.deposit(3000).deposit(6500).withdraw(24).withdraw(80).withdraw(103).withdraw(22).yield_interest()
+print(b2.balance)
