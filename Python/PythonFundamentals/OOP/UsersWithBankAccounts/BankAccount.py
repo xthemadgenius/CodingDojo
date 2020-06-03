@@ -1,7 +1,7 @@
+
 class BankAccount:
 
-    def __init__(self, name, balance, int_rate):
-        self.name = name
+    def __init__(self, balance, int_rate):
         self.balance =balance
         self.int_rate = int_rate
     
@@ -14,20 +14,9 @@ class BankAccount:
         return self
 
     def display_account_info(self):
-        print(f"{self.name}, Your Balance is {self.balance} with an Interest Rate {self.int_rate * 100}%")
+        print(f"Your Balance is {self.balance} with an Interest Rate {self.int_rate * 100}%")
         return self
 
     def yield_interest(self):
         self.balance += (self.balance *self.int_rate)
         return self
-
-b1 = BankAccount('Obi Ezeakachi', 5000, .05)
-b2 = BankAccount('Tasha St.Patrick', 80000, .09)
-
-print(b1.name)
-b1.deposit(400).deposit(600).deposit(101).withdraw(204).yield_interest()
-print(b1.balance)
-
-print(b2.name)
-b2.deposit(3000).deposit(6500).withdraw(24).withdraw(80).withdraw(103).withdraw(22).yield_interest().display_account_info()
-print(b2.balance)
