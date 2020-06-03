@@ -1,12 +1,34 @@
+class BankAccount:
+
+    def __init__(self, name, balance, int_rate):
+        self.name = name
+        self.balance =balance
+        self.int_rate = int_rate
+    
+    def deposit(self, amount):
+        self.balance += amount
+        return self
+
+    def withdraw(self, amount):
+        self.balance -= amount
+        return self
+
+    def display_account_info(self):
+        print(f"{self.name}, Your Balance is {self.balance} with an Interest Rate {self.int_rate * 100}%")
+        return self
+
+    def yield_interest(self):
+        self.balance += (self.balance *self.int_rate)
+        return self
+
 class User:
     def __init__(self, name, email):
         self.name = name
         self.email = email
-        self.account_balance = 0
+        self.account_balance = BankAccount(name="Savings",int_rate=0.02, balance=0)
 
-        # adding the deposit method
-    def make_deposit(self, amount):	# takes an argument that is the amount of the deposit
-        self.account_balance += amount	# the specific user's account increases by the amount of the value received
+    def make_deposit(self, amount):
+        self.account_balance += amount
     
     def make_withdrawl(self, amount):
         self.account_balance -= amount
