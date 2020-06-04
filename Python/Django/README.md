@@ -35,9 +35,39 @@ Framework is a big box, a big pile of files premade for you
         a. add (after import render), HttpResponse
         b. add def index(request):
             i. Return HttpResponse(“woo! We made a new route!!’)
-            
+
     12. go to urls.py (in app level directory)
         a. add from . import views (under from django.urls)
         b. add , views.index (after path( ‘ ‘ )
 
+        
+
+ORM - Object Relational Mapper
+MVC - Model View Controller
+MTV - Model Template View
+
+Create Python Enviorment
+    Mac
+        python3 -m venv {name of yoru proj}
+
+    windows
+        python - m venv {name of proj}
+
+Activate enviorment
+    Mac/Linux
+        source djangoPy3Env/bin/activate                         
+    
+    Windows (command prompt)
+        call djangoPy3Env\Scripts\activate       
+
+    Windows (git bash)
+        source djangoPy3Env/Scripts/activate   
+
+Deactivate(stop) enviorment
+    deactivate
+
+
+Install Django
+    (djangoPy3Env) Windows/Mac
+        pip install Django==2.2.4    
 
