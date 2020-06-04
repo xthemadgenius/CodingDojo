@@ -41,7 +41,7 @@
 
 class Store:
     def __init__(self, name, list_of_products=[]):
-        self.item = name
+        self.store = name
         self.products = list_of_products
 
     def update_price(self, percent_change, is_increased):
@@ -56,12 +56,12 @@ class Store:
         return self
 
     def add_product(self, new_product):
+        self.products.extend(new_product)
         return self
-    #- takes a product and adds it to the store
 
     def sell_product(self, id):
-    #- remove the product from the store's list of products given the id 
-    # (assume id is the index of the product in the list) and print its info.
+        self.products = id.remove()
+        return self
 
     def inflation(self, percent_increase):
     #- increases the price of each product by the percent_increase given 
