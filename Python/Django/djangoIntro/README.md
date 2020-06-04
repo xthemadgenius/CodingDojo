@@ -13,6 +13,7 @@ Create Project
 
         Adjust these pages
         your_project_name_here/your_project_name_here/settings.py
+        
             INSTALLED_APPS = [
                 'your_app_name_here', # added this line. Don't forget the comma!!
                 'django.contrib.admin',
@@ -25,6 +26,7 @@ Create Project
 
         your_project_name_here/your_project_name_here/urls.py
             from django.urls import path, include           # import include
+
             # from django.contrib import admin              # comment out, or just delete
             urlpatterns = [
                 path('', include('your_app_name_here.urls')),	   
@@ -33,6 +35,7 @@ Create Project
 
         Next, let's create a new urls.py file in the your_app_name_here folder. Put the following code
             your_project_name_here/your_app_name_here/urls.py
+
             from django.urls import path     
             from . import views
             urlpatterns = [
@@ -40,6 +43,7 @@ Create Project
             ]
 
         your_project_name_here/your_app_name_here/views.py
+        
             from django.shortcuts import render, HttpResponse
             def index(request):
                 return HttpResponse("this is the equivalent of @app.route('/')!")
