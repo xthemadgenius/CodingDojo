@@ -14,7 +14,7 @@ class BankAccount:
         return self
 
     def display_account_info(self):
-        print(f"Your Balance is {self.balance} with an Interest Rate {self.int_rate * 100}%")
+        print(f"Your Balance is {self.balance} with an Interest Rate {round(self.int_rate,2) * 100}%")
         return self
 
     def yield_interest(self):
