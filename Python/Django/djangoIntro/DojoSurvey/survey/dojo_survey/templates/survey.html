@@ -6,6 +6,15 @@
     <title>Survey</title>
 </head>
 <body>
+    <form action='/users' method='post'>
+        {% csrf_token %}
+        Name: <input type='text' name='name'>
+        Dojo Location: <input type='text' name='location'>
+        Favorite Languge: <input type='text' name='languge'>
+        Comment(optional):
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button type='submit'>Submit</button>
+    </form>
     
 </body>
 </html>
