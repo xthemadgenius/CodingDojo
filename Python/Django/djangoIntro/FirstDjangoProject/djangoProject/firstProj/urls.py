@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.index),
     path('new', views.new),
     path('new/<int:ranNumbers>', views.randomNum),
-    path('create', views.changeWays),  
+    path('new/<int:newNumbers>/delete', views.deleteNum),
+    path('create', views.change_ways),  
 ]

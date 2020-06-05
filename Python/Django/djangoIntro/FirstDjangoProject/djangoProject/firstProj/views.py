@@ -9,8 +9,11 @@ def new(request):
     return HttpResponse(word)
 
 def randomNum(request, ranNumbers):
-    return HttpResponse(f'I have {ranNumbers} in my list!')
+    return HttpResponse(f'placeholder to edit blog {ranNumbers}')
 
-def changeWays(request):
+def change_ways(request):
     print('Im starting an new page!')
-    return redirect('/')
+    return redirect('/new')
+
+def deleteNum(request, newNumbers):
+    return redirect(f'/{newNumbers}/destroy')
