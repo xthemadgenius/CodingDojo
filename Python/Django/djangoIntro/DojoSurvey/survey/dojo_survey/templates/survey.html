@@ -11,16 +11,37 @@
     <form action='/users' method='post'>
         {% csrf_token %}
         <label for="name">Name:</label>
-        <input type="text" id="fname" name="fname">
+        <input type="text" id="name" name="name">
         <br>
-        <label for="Location">Dojo Location:</label>
-        <input type="text" id="lname" name="lname">
+        <!-- <label for="Location">Dojo Location:</label>
+        <input type="text" id="location" name="location">
+        <br> -->
+        <p>Dojo Location:</p>
+        <input type="radio" id="location" name="location" value="Seattle">
+        <label for="loc1">Seattle</label>
         <br>
+        <input type="radio" id="location" name="location" value="San-Francisco">
+        <label for="loc2">San Francisco</label>
+        <br>  
+        <input type="radio" id="location" name="location" value="New-York">
+        <label for="loc3">New York</label>
+        <br>
+        <!-- <label for="language">Favoite Language:</label>
+        <input type="text" id="language" name="language">
+        <br> -->
         <label for="language">Favoite Language:</label>
-        <input type="text" id="lname" name="lname">
+        <br>
+        <input type="checkbox" id="language" name="language" value="JS">
+        <label for="lang1">JavaScript</label>
+        <br>
+        <input type="checkbox" id="language" name="language" value="PY">
+        <label for="lang2">Python</label>
+        <br>
+        <input type="checkbox" id="language" name="language" value="SW">
+        <label for="lang3">Swift</label>
         <br>
         <label for="comment">Comment(Optional):</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
         <button type='submit'>Submit</button>
     </form>
     

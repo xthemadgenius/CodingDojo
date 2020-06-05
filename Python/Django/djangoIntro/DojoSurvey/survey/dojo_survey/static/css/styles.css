@@ -17,7 +17,14 @@ textarea{
     margin-bottom: 20px;
 }
 button{
-    width: 60px;
+    width: 90px;
     margin-right: 3.5rem;
     float: right;
+}
+
+
+.info{
+    width: 1200px;
+    background-color: aqua;
+    display: block;
 }

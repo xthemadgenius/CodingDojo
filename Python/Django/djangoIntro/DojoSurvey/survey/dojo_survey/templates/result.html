@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <h1>Submitted Info</h1>
-    <div>
-        <p>Name:</p>
-        <p></p>
+    <div class="info">
+        <h2>Name:</h2>
+        <p>{{ name_user }}</p>
     </div>
-    <div>
-        <p>Dojo Location:</p>
-        <p></p>
+    <div class="info">
+        <h2>Dojo Location:</h2>
+        <p>{{ location_user }}</p>
     </div>
-    <div>
-        <p>Favorite Language:</p>
-        <p></p>
+    <div class="info">
+        <h2>Favorite Language:</h2>
+        <p>{{ lang_user }}</p>
     </div>
-    <div>
-        <p>Comment:</p>
-        <p></p>
+    <div class="info">
+        <h2>Comment:</h2>
+        <p>{{ com_user }}</p>
     </div>
     <button type='submit'>Go Back</button>
 </body>
