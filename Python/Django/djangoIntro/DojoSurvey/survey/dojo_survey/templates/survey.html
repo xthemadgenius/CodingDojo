@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <form action='/users' method='post'>
         {% csrf_token %}
-        Name: <input type='text' name='name'>
-        Dojo Location: <input type='text' name='location'>
-        Favorite Languge: <input type='text' name='languge'>
-        Comment(optional):
+        <label for="name">Name:</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <label for="Location">Dojo Location:</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <label for="language">Favoite Language:</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <label for="comment">Comment(Optional):</label>
         <textarea name="" id="" cols="30" rows="10"></textarea>
         <button type='submit'>Submit</button>
     </form>

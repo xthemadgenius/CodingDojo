@@ -1,0 +1,23 @@
+*{
+    width: 95%;
+}
+
+form{
+    margin-left: 20px;
+    margin-right: 100px;
+}
+
+input{
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+textarea{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+button{
+    width: 60px;
+    margin-right: 3.5rem;
+    float: right;
+}

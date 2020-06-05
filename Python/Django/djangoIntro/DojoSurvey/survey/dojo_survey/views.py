@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
 
 def index(request):
-    return HttpResponse("my words")
+    return render(request, "survey.html")
 
