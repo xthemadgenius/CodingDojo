@@ -1,0 +1,11 @@
+*{
+    width: 100%;
+    color: white;
+    background-color: #272727;
+    text-align: center;
+}
+
+h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
