@@ -6,13 +6,13 @@
     <title>CheckOut</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
-    <link rel="stylesheet" href="../static/css/checkout.css">
+    <!-- <link rel="stylesheet" href="../static/css/checkout.css"> -->
 </head>
 <body>
     <h1>Thank You For Your Order</h1>
     <p class="pp">
-        We ordered ## 5 items for you and charged your student
-        student accont ##-- Date & time --##
+        We ordered {{ addUp }} items for you and charged your student
+        student account {{ date }} {{ time }}
     </p>
     <h2>You've Ordered</h2>
     <table>
@@ -22,23 +22,23 @@
         </tr>
         <tr>
             <td>Strawberry</td>
-            <td>Number</td>
+            <td>{{ strawberry }}</td>
         </tr>
         <tr>
             <td>Raspberry</td>
-            <td>Number</td>
+            <td>{{ raspberry }}</td>
         </tr>
         <tr>
             <td>Apple</td>
-            <td>Number</td>
+            <td>{{ apple }}</td>
         </tr>
     </table>
     <h2><u>Your Information</u></h2>
     <label for="name">Name:</label>
-    <p class="move">Name</p>
+    <p class="move">{{ name }}</p>
     <br>
     <label for="name">Your Student ID</label>
-    <p class="move">Number</p>
+    <p class="move">{{ identification }}</p>
     <br>
 </body>
 </html>
