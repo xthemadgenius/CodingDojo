@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckOut</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+    <link rel="stylesheet" href="../static/css/checkout.css">
 </head>
 <body>
-    
+    <h1>Thank You For Your Order</h1>
+    <p class="pp">
+        We ordered ## 5 items for you and charged your student
+        student accont ##-- Date & time --##
+    </p>
+    <h2>You've Ordered</h2>
+    <table>
+        <tr>
+            <th>Fruit Name</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>Strawberry</td>
+            <td>Number</td>
+        </tr>
+        <tr>
+            <td>Raspberry</td>
+            <td>Number</td>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>Number</td>
+        </tr>
+    </table>
+    <h2><u>Your Information</u></h2>
+    <label for="name">Name:</label>
+    <p class="move">Name</p>
+    <br>
+    <label for="name">Your Student ID</label>
+    <p class="move">Number</p>
+    <br>
 </body>
 </html>

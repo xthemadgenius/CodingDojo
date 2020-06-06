@@ -1,23 +1,63 @@
 *{
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
-
-table {
+.buy_me{
+    width: 60%;
+    height: 770px;
+    float: left;
+}
+.buy_me table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 20px;
 }
-
-td, th {
+.buy_me td,
+.buy_me th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
+.push-input1{
+    margin-left: 8rem;
+}
+.push-input2{
+    margin-left: 4.1rem;
+}
 
-tr:nth-child(even) {
+.buy_me tr:nth-child(even) {
     background-color: #dddddd;
+}
+.buy_me h1{
+    margin-bottom: 20px;
+}
+.buy_me h2{
+    margin-right: 7rem;
+    margin-bottom: 20px;
+}
+.buy_me input{
+    width: 200px;
+}
+.buy_me label{
+    width: 400px;
+}
+.buy_me button{
+    margin-top: 20px;
+    width: 100px;
+    float: right;
 }
 
 .about{
     background-color: rgb(203, 120, 252);
+    width: 40%;
+    height: 770px;
+    float: right;
+}
+
+.about h2{
+    margin-bottom: 20px;
+}
+.about p{
+    margin-bottom: 20px;
 }

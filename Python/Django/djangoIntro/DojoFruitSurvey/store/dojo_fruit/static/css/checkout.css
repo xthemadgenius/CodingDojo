@@ -1,3 +1,39 @@
 *{
+    width: 80%;
+    margin: auto;
+}
+.pp{
+    margin-bottom: 20px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
     width: 100%;
+    margin-bottom: 20px;
+}
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+h1{
+    margin-bottom: 20px;
+}
+h2{
+    margin-right: 7rem;
+    margin-bottom: 20px;
+}
+input{
+    width: 200px;
+}
+label{
+    width: 400px;
+}
+.move{
+    float: right;
 }
