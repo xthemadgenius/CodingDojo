@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <form action='/users' method='post'>
+    <form action='/process' method='post'>
         {% csrf_token %}
         <label for="name">Name:</label>
         <input type="text" id="name" name="name">
@@ -29,15 +29,15 @@
         <!-- <label for="language">Favoite Language:</label>
         <input type="text" id="language" name="language">
         <br> -->
-        <label for="language">Favoite Language:</label>
+        <p>Favoite Language:</p>
         <br>
-        <input type="checkbox" id="language" name="language" value="JS">
+        <input type="checkbox" id="language" name="language" value="JavaScript">
         <label for="lang1">JavaScript</label>
         <br>
-        <input type="checkbox" id="language" name="language" value="PY">
+        <input type="checkbox" id="language" name="language" value="Python">
         <label for="lang2">Python</label>
         <br>
-        <input type="checkbox" id="language" name="language" value="SW">
+        <input type="checkbox" id="language" name="language" value="Swift">
         <label for="lang3">Swift</label>
         <br>
         <label for="comment">Comment(Optional):</label>
