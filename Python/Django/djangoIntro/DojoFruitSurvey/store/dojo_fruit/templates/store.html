@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/store.css' %}">
 </head>
 <body>
-    <div class="buy_me"></div>
+    <div class="buy_me">
+        <h1>Dojo Fruit Store</h1>
+        <form action="/process" method="POST">
+        {%csrf_token%}
+        <h2><u>What would you like to buy</u></h2>
+            <table>
+                <tr>
+                    <th>Fruit Name</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Strawberry</td>
+                    <td>
+                        <input type="number" id="strawberry" name="strawberry">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Raspberry</td>
+                    <td>
+                        <input type="number" id="apple" name="apple">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>
+                        <input type="number" id="apple" name="apple">
+                    </td>
+                </tr>
+            </table>
+            <h2><u>Your Information</u></h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <label for="name">Your Student ID</label>
+            <input type="text" id="identification" name="identification">
+            <br>
+            <button type='submit'>Submit</button>
+        </form>
+    </div>
     <div class="about">
         <h1>Welcome to Dojo Fruit Store!</h1>
         <p>
