@@ -1,5 +1,5 @@
-import unittest
-class MathDojo(object):
+# import unittest
+class MathDojo:
 	def __init__(self): 
 		self.total = 0
 
@@ -25,3 +25,12 @@ class MathDojo(object):
 		print(self.total)
 
 md = MathDojo().add([1],3,4).add([3, 5, 7, 8], [2, 4.3, 1.25]).subtract(2, [2,3], [1.1, 2.3]).result()
+addUp = MathDojo().add(1,2,3,4,5).result()
+setUp(addUp)
+assertEqual(addUp, 15)
+assertIn(addUp, 15)
+
+minusDown = MathDojo().subtract(55,33,2).result()
+setUp(miusDown)
+assertEqual(minusDown, -90)
+assertIn(minusDown, -90)
