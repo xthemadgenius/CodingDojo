@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="wrapper">
-        <h3>Random Word (Attempt #{{ random_count }})</h3><br>
+        <h3>Random Word (Attempt #{{ request.session.random_count }})</h3><br>
         <h1>{{ random_number }}</h1><br>
-        <form action="/random_word" method = "POST">
+        <form action="/random" method = "POST">
             {% csrf_token %}
             <input type="submit" value='Generate'>
         </form>
