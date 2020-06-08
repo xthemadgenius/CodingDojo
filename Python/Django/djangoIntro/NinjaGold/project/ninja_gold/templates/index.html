@@ -8,6 +8,47 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h2>Ninja Gold</h2>
+    <h1>Ninja Gold</h1>
+    <div class="gold-total">
+        <h2>Your Gold: #######</h2>
+    </div>
+    <div class="row">
+        <form action="/process_money" method="POST">
+            {% csrf_token %}
+            <div class="well">
+                <h4>Farm</h4>
+                <h4>10 - 20 GOLD</h4>
+                <input type="hidden" name="building" value="farm" />
+                <input type="submit" class="btn btn-success pull-right" value="Find Gold!">
+            </div>
+        </form>
+        <form action="/process_money" method="POST">
+            {% csrf_token %}
+            <div class="well">
+                <h4>Cave</h4>
+                <h4>5 - 10 GOLD</h4>
+                <input type="hidden" name="building" value="cave" />
+                <input type="submit" class="btn btn-success pull-right" value="Find Gold!"> 
+            </div>
+        </form>
+        <form action="/process_money" method="POST">
+            {% csrf_token %}
+            <div class="well">
+                <h4>House</h4>
+                <h4>2 - 5 GOLD</h4>
+                <input type="hidden" name="building" value="house" />
+                <input type="submit" class="btn btn-success pull-right" value="Find Gold!">
+            </div>
+        </form>
+        <form action="/process_money" method="POST">
+            {% csrf_token %}
+            <div class="well">
+                <h4>Casino Earn/Lose</h4>
+                <h4>0 - 50 GOLD</h4>
+                <input type="hidden" name="building" value="casino" />
+                <input type="submit" class="btn btn-success pull-right" value="Find Gold!">
+            </div>
+        </form>
+    </div>
 </body>
 </html>

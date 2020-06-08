@@ -1,0 +1,10 @@
+*{
+    width: 100%;
+}
+.gold_total{
+    position: relative;
+}
+.well{
+    background-color: aqua;
+    color: aquamarine;
+}
