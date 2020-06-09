@@ -29,3 +29,6 @@ def reset(request):
     request.session['count'] = 0
     request.session['box'] = []
     return redirect('/')
+
+
+    # Ron , Casey, Keith, Steven, Daniel, Jerome
