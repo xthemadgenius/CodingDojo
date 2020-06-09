@@ -8,43 +8,68 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h2>Useres With Templates</h2>
+    <h2>All The Users</h2>
     <table>
         <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
         </tr>
         <tr>
+            <td>1</td>
             <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
+            <td>Maria@Anders.com</td>
+            <td>23</td>>
         </tr>
         <tr>
+            <td>2</td>
             <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
+            <td>Mexico@folwer.com</td>
+            <td>45</td>
         </tr>
         <tr>
-            <td>Ernst Handel</td>
-            <td>Roland Mendel</td>
-            <td>Austria</td>
+            <td>3</td>
+            <td>Centro comercial Moctezuma</td>
+            <td>Centro@tacobender.org</td>
+            <td>59</td>
         </tr>
         <tr>
-            <td>Island Trading</td>
-            <td>Helen Bennett</td>
-            <td>UK</td>
+            <td>4</td>
+            <td>Centro comercial Moctezuma</td>
+            <td>Centro@realaize.io</td>
+            <td>101</td>
         </tr>
         <tr>
-            <td>Laughing Bacchus Winecellars</td>
-            <td>Yoshi Tannamuri</td>
-            <td>Canada</td>
+            <td>5</td>
+            <td>Centro comercial Moctezuma</td>
+            <td>Centro@popl.biz</td>
+            <td>24</td>
         </tr>
         <tr>
-            <td>Magazzini Alimentari Riuniti</td>
-            <td>Giovanni Rovelli</td>
-            <td>Italy</td>
+            <td>6</td>
+            <td>Centro comercial Moctezuma</td>
+            <td>Centro@coders.business</td>
+            <td>30</td>
         </tr>
     </table>
+    <form id="add-user" action='new', method='POST'>
+        {% csrf_token %}
+        <div class="center-items">
+            <div class="form-item">
+                <label for="first_name">First Name:</label>
+                <input type='text'id='first_name' name='first_name'>
+                <label for="last_name">Last Name:</label>
+                <input type='text' id='last_name' name='last_name'>
+            </div>
+            <div class="form-item">
+                <label for="email">Email Address:</label>
+                <input type='text' id="email" name='email'>
+                <label for="age">Age:</label>
+                <input type='number' id="age" name='age'>
+            </div>
+            <input class="btn" type='submit' name="formAction" value='ADD'>
+        </div>
+    </form>
 </body>
 </html>

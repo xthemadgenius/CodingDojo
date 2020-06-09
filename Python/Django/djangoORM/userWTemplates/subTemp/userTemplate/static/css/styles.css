@@ -1,4 +1,8 @@
 *{
+    position: relative;
+}
+h2{
+    text-align: center;
 }
 table {
     font-family: arial, sans-serif;
@@ -12,4 +16,23 @@ td, th {
 }
 tr:nth-child(odd) {
     background-color: #dddddd;
+}
+.center-items{
+    margin-top: 20px;
+    position: absolute;
+    left: 20%;
+}
+.form-item{
+    width: 800px;
+    height: 40px;
+}
+.label-item{
+    color: goldenrod;
+}
+.form-item input{
+    width: 300px;
+}
+.btn{
+    left: 45%;
+    position: absolute;
 }
