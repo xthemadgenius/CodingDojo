@@ -10,7 +10,7 @@
 <body>
     <h1>Ninja Gold</h1>
     <div class="gold-total">
-        <h2>Your Gold: #######</h2>
+        <h2>Your Gold: {{ request.session.count }}</h2>
     </div>
     <div>
     <form action="/reset" method="POST">
@@ -59,8 +59,10 @@
     <div class="row">
         <h3>Activities:</h3>
         <div class="box">
-            <h4 class="text-danger"></h4>
-            <h4 class="text-success"></h4>
+            <ul>{% for i in request.session.box %}
+                <li class="{{ i.class }}">{{ i.log }}</li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </body>

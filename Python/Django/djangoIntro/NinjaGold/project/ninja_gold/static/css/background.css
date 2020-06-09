@@ -40,3 +40,11 @@
     height: 300px;
     overflow: scroll;
 }
+
+
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
