@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/process_dojo" method="POST">
+        {% csrf_token %}
+        <label for="name">Dojo</label>
+        <input type="text" name="name" id="name">
+        <label for="city">City</label>
+        <input type="text" name="city" id="city">
+        <label for="state">State</label>
+        <input type="text" name="state" id="state">
+        <input type="submit" value="Add Dojo">
+    </form>
+
+    <form action="/process_ninja" method="POST">
+        {% csrf_token %}
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name" id="first_name">
+        <label for="last_name">Lat Name</label>
+        <input type="text" name="last_name" id="last_name">
+        <label for="dojo">Dojo</label>
+        <select name="dojo" id="dojo">
+            {% for dojo in all_dojos %}
+            <option value="{{dojo.id}}">{{ dojo.name }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="Add Ninja">
+    </form>
+
+    <h1>Ninjas area at the dojo</h1>
+    {% for dojo in all_dojos %}
+    <p>{{ dojo.name }} - {{ dojo.state }}</p>
+    <p>{{dojo.ninjas.all}}</p>
+    {% endfor %}
+    
+    <h1>Ninjas area at the dojo</h1>
+    {% for ninja in all_ninjas %}
+    <p>{{ ninja.first_name }} - {{ ninja.last_name }}</p>
+    {% endfor %}
+
+</body>
+</html>
