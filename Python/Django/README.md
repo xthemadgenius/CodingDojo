@@ -10,13 +10,14 @@ Framework is a big box, a big pile of files premade for you
             Models
             Link to Database
 
-(In Django dir)(check if Django is installed= pip list) 
+(In Django dir)(check if Django is installed= pip list)
     1. pip install django==2.2
     2. django-admin startproject (enter desired name here)
     3. cd (project name)
     4. python manage.py runserver
     5. (stop server)
-    6. python manage.py startapp (enter desired app name) ----never name your app and   project the same thing----
+    6. python manage.py startapp (enter desired app name) never name your app and   project the same thing
+    
     7. go to settings.py in code editor
         a. find INSTALLED APPS
         b. add in ‘(app name)’,
@@ -24,7 +25,7 @@ Framework is a big box, a big pile of files premade for you
     8. go to urls.py in code editor
         a. from django.urls import path, (add) include
         b. under urlpatters
-            i. add: path( ‘ ‘ ), include(‘(app name).urls’)) 
+            i. add: path( ‘ ‘ ), include(‘(app name).urls’))
 
     9. add a new file under in the apps folder named urls.py
     10. copy code from urls.py from project level directory and paste it in urls.py in app level directory
@@ -40,7 +41,7 @@ Framework is a big box, a big pile of files premade for you
         a. add from . import views (under from django.urls)
         b. add , views.index (after path( ‘ ‘ )
 
-        
+
 
 ORM - Object Relational Mapper
 MVC - Model View Controller
@@ -56,7 +57,7 @@ Create Python Enviorment
 Activate enviorment
     Mac/Linux
         source djangoPy3Env/bin/activate                         
-    
+
     Windows (command prompt)
         call djangoPy3Env\Scripts\activate       
 
@@ -70,4 +71,3 @@ Deactivate(stop) enviorment
 Install Django
     (djangoPy3Env) Windows/Mac
         pip install Django==2.2.4    
-

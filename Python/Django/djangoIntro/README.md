@@ -25,11 +25,7 @@ Create Project
             ]    # the trailing comma after the last item in a list, tuple, or dictionary is commonly accepted in Python
 
         your_project_name_here/your_project_name_here/urls.py
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 9174efc06f41ea2d6246628b14fe9929f14c7d09
             from django.urls import path, include           # import include
             # from django.contrib import admin              # comment out, or just delete
             urlpatterns = [
