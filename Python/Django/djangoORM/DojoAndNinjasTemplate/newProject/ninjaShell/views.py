@@ -22,5 +22,6 @@ def process_ninja(request):
         first_name=request.POST['first_name'],
         last_name =request.POST['last_name'],
         school=this_dojo
+
     )
     return redirect('/')

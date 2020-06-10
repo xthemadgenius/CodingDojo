@@ -3,47 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dojo Ninja</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/background.css' %}">
 </head>
 <body>
-    
-    <form action="/process_dojo" method="POST">
-        {% csrf_token %}
-        <label for="name">Dojo</label>
-        <input type="text" name="name" id="name">
-        <label for="city">City</label>
-        <input type="text" name="city" id="city">
-        <label for="state">State</label>
-        <input type="text" name="state" id="state">
-        <input type="submit" value="Add Dojo">
-    </form>
+    <div class="dojo-class">
+        <form action="/process_dojo" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="name">Dojo</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="city">City</label>
+                <input type="text" name="city" id="city">
+            </div>
+            <div>
+                <label for="state">State</label>
+                <input type="text" name="state" id="state">
+            </div>
+            <input type="submit" value="Add Dojo">
+        </form>
+    </div>
+    <div class="ninja-student">
+        <form action="/process_ninja" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name">
+            </div>
+            <div>
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name">
+            </div>
+            <div>
+            <label for="dojo">Dojo</label>
+                <select name="dojo" id="dojo">
+                    {% for dojo in all_dojos %}
+                    <option value="{{dojo.id}}">{{ dojo.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <input type="submit" value="Add Ninja">
+        </form>
+    </div>
+    <hr>
+    <h1>All the Dojos</h1>
+    <ul>
+        {% for dojo in all_dojos %}
+        <li>
+            <h3>Ninjas at the {{ dojo.name }} in {{ dojo.state }}</h3>
 
-    <form action="/process_ninja" method="POST">
-        {% csrf_token %}
-        <label for="first_name">First Name</label>
-        <input type="text" name="first_name" id="first_name">
-        <label for="last_name">Lat Name</label>
-        <input type="text" name="last_name" id="last_name">
-        <label for="dojo">Dojo</label>
-        <select name="dojo" id="dojo">
-            {% for dojo in all_dojos %}
-            <option value="{{dojo.id}}">{{ dojo.name }}</option>
-            {% endfor %}
-        </select>
+                {% for ninja in dojo.ninjas.all %}
+                <p>{{ ninja.first_name }} - {{ ninja.last_name }}</p>
+                {% endfor %}
 
-        <input type="submit" value="Add Ninja">
-    </form>
-
-    <h1>Ninjas area at the dojo</h1>
-    {% for dojo in all_dojos %}
-    <p>{{ dojo.name }} - {{ dojo.state }}</p>
-    <p>{{dojo.ninjas.all}}</p>
-    {% endfor %}
-    
-    <h1>Ninjas area at the dojo</h1>
-    {% for ninja in all_ninjas %}
-    <p>{{ ninja.first_name }} - {{ ninja.last_name }}</p>
-    {% endfor %}
+        </li>
+        {% endfor %}
+    </ul>
 
 </body>
 </html>

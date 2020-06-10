@@ -1,0 +1,32 @@
+*{
+    background-color: white;
+    text-align: center;
+}
+.dojo-class,
+.ninja-student{
+    float: left;
+    width: 50%;
+    display: block;
+    height: 200px;
+}
+.dojo-class{
+    float: left;
+}
+.ninja-student{
+    float: right;
+}
+input,
+select{
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+select{
+    margin-left: 90px;
+}
+h1{
+    text-align: center;
+}
+ul li{
+    list-style: none;
+}
