@@ -16,44 +16,16 @@
             <th>Email</th>
             <th>Age</th>
         </tr>
+        {% for User in all_users %}
         <tr>
-            <td>1</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria@Anders.com</td>
-            <td>23</td>>
+            <td>{{ User.id }}</td>
+            <td>{{ User.first_name }} {{ User.last_name }}</td>
+            <td>{{ User.email }}</td>
+            <td>{{ User.age }}</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Mexico@folwer.com</td>
-            <td>45</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Centro@tacobender.org</td>
-            <td>59</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Centro@realaize.io</td>
-            <td>101</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Centro@popl.biz</td>
-            <td>24</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Centro@coders.business</td>
-            <td>30</td>
-        </tr>
+        {% endfor %}
     </table>
-    <form id="add-user" action='new', method='POST'>
+    <form id="add-user" action='process', method='POST'>
         {% csrf_token %}
         <div class="center-items">
             <div class="form-item">
