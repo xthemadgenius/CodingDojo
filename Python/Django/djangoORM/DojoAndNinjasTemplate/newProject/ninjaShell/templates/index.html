@@ -56,7 +56,7 @@
             <h3>Ninjas at the {{ dojo.name }} in {{ dojo.state }}</h3>
 
                 {% for ninja in dojo.ninjas.all %}
-                <p>{{ ninja.first_name }} - {{ ninja.last_name }}</p>
+                <p>{{ ninja.first_name }} {{ ninja.last_name }}</p>
                 {% endfor %}
 
         </li>
