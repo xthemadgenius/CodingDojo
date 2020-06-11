@@ -1,0 +1,38 @@
+python manage.py shell
+
+from ninjaShell.models import *
+
+Dojo.objects.create(name="Tyromes Land", city="Seattle", state="WA")
+Dojo.objects.create(name="Flovors", city="Orange County", state="CA")
+Dojo.objects.create(name="Sour Patch", city="San Francisco", state="CA")
+
+Dojo.objects.get(id=1).delete()
+Dojo.objects.get(id=2).delete()
+Dojo.objects.get(id=3).delete()
+
+Dojo.objects.create(name="Nerds World", city="New York", state="NY")
+Dojo.objects.create(name="Hoochie land", city="Houston", state="TX")
+Dojo.objects.create(name="Freedom", city="Miami", state="FL")
+
+first_dojo = Dojo.objects.get(id=4)
+Ninja.objects.create(first_name="Corn World", last_name="Heights", school=first_dojo)
+Ninja.objects.create(first_name="Flowers", last_name="Athens", school=first_dojo)
+Ninja.objects.create(first_name="Code Pub", last_name="Tampa", school=first_dojo)
+
+second_dojo = Dojo.objects.get(id=5)
+Ninja.objects.create(first_name="Cody", last_name="Klein", school=second_dojo)
+Ninja.objects.create(first_name="Steve", last_name="Stein", school=second_dojo)
+Ninja.objects.create(first_name="Fredon", last_name="Flay", school=second_dojo)
+
+third_dojo = Dojo.objects.get(id=6)
+Ninja.objects.create(first_name="CSoda", last_name="Todd", school=third_dojo)
+Ninja.objects.create(first_name="frod", last_name="Greg", school=third_dojo)
+Ninja.objects.create(first_name="Cobb", last_name="Fred", school=third_dojo)
+
+Dojo.objects.first().ninjas.all()
+
+Dojo.objects.last().ninjas.all()
+
+Ninja.objects.last().school
+
+Dojo.objects.create(name="Old Dojo",city="Bay Area",state="CA",desc="Nerds belong inside")
