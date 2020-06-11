@@ -1,0 +1,51 @@
+python manage.py shell
+
+from booksAuthors.models import *
+
+Book.objects.create(title="C Sharp",desc="Hard Code")
+Book.objects.create(title="Java",desc="medium Code")
+Book.objects.create(title="Python",desc="Hard Code")
+Book.objects.create(title="PHP",desc="Nerd Here")
+Book.objects.create(title="Ruby",desc="Some stuff")
+
+Author.objects.create(first_name="Jane", last_name="Austen")
+Author.objects.create(first_name="Emily", last_name="Dickinson")
+Author.objects.create(first_name="Fyodor", last_name="Dostoevsky")
+Author.objects.create(first_name="William", last_name="Shakespeare")
+Author.objects.create(first_name="Lau", last_name="Tzu")
+
+csharp = Book.objects.get(title="C Sharp")
+csharp.title = "C#"
+csharp.save()
+
+bill = Author.objects.get(id=4)
+bill.first_name = "Bill"
+bill.save()
+
+first_author = Author.objects.first()
+first_author.books.add(Book.objects.get(id=1))
+first_author.books.add(Book.objects.get(id=2))
+
+second_author = Author.objects.get(id=2)
+second_author.books.add(Book.objects.first())
+second_author.books.add(Book.objects.get(id=2))
+second_author.books.add(Book.objects.get(id=3))
+
+third_author = Author.objects.get(id=3)
+third_author.books.add(Book.objects.get(id=1))
+third_author.books.add(Book.objects.get(id=2))
+third_author.books.add(Book.objects.get(id=3))
+third_author.books.add(Book.objects.get(id=4))
+
+fourth_author = Author.objects.get(id=4)
+fourth_author.books.add(Book.objects.first(),Book.objects.get(id=2),Book.objects.get(id=3),Book.objects.get(id=4),Book.objects.last())
+
+Book.objects.get(id=3).author.all()
+
+Book.objects.get(id=3).author.remove(Book.objects.get(id=3).author.first())
+
+Book.objects.get(id=2).author.add(Author.objects.get(id=5))
+
+Author.objects.get(id=3).books.all()
+
+Book.objects.get(id=5).author.all()
