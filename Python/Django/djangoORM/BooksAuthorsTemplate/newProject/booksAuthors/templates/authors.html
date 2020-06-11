@@ -29,7 +29,7 @@
                 <button type="submit" class="btn btn-primary">Add</button>
             </form>
         </div>
-        <div class="list-of-authors">
+        <div class="authors-list">
             <table class="table">
                 <thead>
                     <tr>
@@ -39,6 +39,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for author in all_authors %}
+                    <tr>
+                        <th>{{author.id}}</th>
+                        <th>{{author.first_name}} {{author.last_name}}</th>
+                        <th><a href="/authors/{{author.id}}">View</a></th>
+                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

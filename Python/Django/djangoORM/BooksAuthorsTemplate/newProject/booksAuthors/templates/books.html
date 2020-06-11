@@ -25,7 +25,7 @@
                 <button type="submit" class="btn btn-primary">Add</button>
             </form>
         </div>
-        <div class="list-of-books">
+        <div class="books-list">
             <table class="table">
                 <thead>
                     <tr>
@@ -34,6 +34,15 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {% for book in all_books %}
+                    <tr>
+                        <th>{{book.id}}</th>
+                        <th>{{book.title}}</th>
+                        <th><a href="/books/{{book.id}}">View</a></th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
             </table>
         </div>
     </div>
