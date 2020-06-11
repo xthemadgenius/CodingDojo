@@ -52,16 +52,17 @@
     <h1>All the Dojos</h1>
     <ul>
         {% for dojo in all_dojos %}
-        <li>
-            <h3>Ninjas at the {{ dojo.name }} in {{ dojo.state }}</h3>
-
+        <form action="/deleteDojo/{{dojo.id}}" method="POST">
+            {% csrf_token %}
+            <li>
+                <h3>Ninjas at the {{ dojo.name }} in {{ dojo.state }}</h3>
+                <button type="submit">Delete</button>
                 {% for ninja in dojo.ninjas.all %}
                 <p>{{ ninja.first_name }} {{ ninja.last_name }}</p>
                 {% endfor %}
-
-        </li>
+            </li>
+        </form>
         {% endfor %}
     </ul>
-
 </body>
 </html>

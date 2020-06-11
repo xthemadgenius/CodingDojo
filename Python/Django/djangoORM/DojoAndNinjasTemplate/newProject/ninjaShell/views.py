@@ -25,3 +25,7 @@ def process_ninja(request):
 
     )
     return redirect('/')
+
+def deleteDojo(request, dojo_id):
+    Dojo.objects.get(id = dojo_id).delete()
+    return redirect('/')
