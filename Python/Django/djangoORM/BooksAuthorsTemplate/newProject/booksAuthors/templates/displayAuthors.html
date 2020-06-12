@@ -23,12 +23,14 @@
         <form action="/authors/{{author.id}}/add_book" method="POST">
             {% csrf_token %}
             <div class="form-group">
-                <select name="book-to-add" class="form-control">
-                    {% for book in all_books %}
-                    <option value="{{book.id}}">{{book.title}}</option>
-                    {% endfor %}
-                </select>
-                <button type="submit" class="btn btn-primary">Add</button>
+                <div class="selectWrapper">
+                    <select name="book-to-add" class="selectBox">
+                        {% for book in all_books %}
+                        <option value="{{book.id}}">{{book.title}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="button">Add</button>
             </div>
         </form>
     </div>

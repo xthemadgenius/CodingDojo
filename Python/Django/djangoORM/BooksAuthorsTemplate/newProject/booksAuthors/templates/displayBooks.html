@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Books</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/displayBooks.css'%}">
+    <link rel="stylesheet" href="{% static 'css/displayBooks.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
@@ -23,12 +23,14 @@
         <form action="/books/{{book.id}}/add_author" method="POST">
             {% csrf_token %}
             <div class="form-group">
-                <select name="author-to-add" class="form-control">
-                    {% for author in all_authors %}
-                    <option value="{{author.id}}">{{author.first_name}} {{author.last_name}}</option>
-                    {% endfor %}
-                </select>
-                <button type="submit" class="btn btn-primary">Add</button>
+                <div class="selectWrapper">
+                    <select name="author-to-add" class="selectBox">
+                        {% for author in all_authors %}
+                        <option value="{{author.id}}">{{author.first_name}} {{author.last_name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="button">Add</button>
             </div>
         </form>
     </div>

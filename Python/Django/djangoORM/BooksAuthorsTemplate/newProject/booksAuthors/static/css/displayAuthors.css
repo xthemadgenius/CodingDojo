@@ -1,0 +1,25 @@
+.selectWrapper{
+    border-radius:10px;
+    display:inline-block;
+    overflow:hidden;
+    background:#cccccc;
+    border:1px solid #cccccc;
+}
+.selectBox{
+    text-align: center;
+    width:350px;
+    height:40px;
+    border:0px;
+    outline:none;
+}
+
+.button{
+    margin-left: 20px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    background-color: blueviolet;
+    color: white;
+}
