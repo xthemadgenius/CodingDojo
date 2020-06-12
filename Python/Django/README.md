@@ -1,45 +1,63 @@
-Notes
 
-Framework is a big box, a big pile of files premade for you
-    Django is a full MTV style framework: specifically designed to work on Python
-        Models Templates Views
-            Templates - What our users see
-                HTML
-            Views - What our server is doing
-                Logic
-            Models
-            Link to Database
+Create Project
+    django-admin startproject your_project_name_here
 
-(In Django dir)(check if Django is installed= pip list)
-    1. pip install django==2.2
-    2. django-admin startproject (enter desired name here)
-    3. cd (project name)
-    4. python manage.py runserver
-    5. (stop server)
-    6. python manage.py startapp (enter desired app name) never name your app and   project the same thing
-    
-    7. go to settings.py in code editor
-        a. find INSTALLED APPS
-        b. add in ‘(app name)’,
+        #Navigate into the folder that was just created. A new Django project has just been created--let's run it!
 
-    8. go to urls.py in code editor
-        a. from django.urls import path, (add) include
-        b. under urlpatters
-            i. add: path( ‘ ‘ ), include(‘(app name).urls’))
+        django_intro> cd your_project_name_here
+        your_project_name_here> python manage.py runserver
 
-    9. add a new file under in the apps folder named urls.py
-    10. copy code from urls.py from project level directory and paste it in urls.py in app level directory
-        a. get rid of admin, and we don’t need include
-        b. don’t need admin function under urls patterns or include
+        Create an app in the project
+        your_project_name_here> python manage.py startapp your_app_name_here
 
-    11. in views.py via code editor
-        a. add (after import render), HttpResponse
-        b. add def index(request):
-            i. Return HttpResponse(“woo! We made a new route!!’)
+        Adjust these pages
+        your_project_name_here/your_project_name_here/settings.py
 
-    12. go to urls.py (in app level directory)
-        a. add from . import views (under from django.urls)
-        b. add , views.index (after path( ‘ ‘ )
+            INSTALLED_APPS = [
+                'your_app_name_here', # added this line. Don't forget the comma!!
+                'django.contrib.admin',
+                'django.contrib.auth',
+                'django.contrib.contenttypes',
+                'django.contrib.sessions',
+                'django.contrib.messages',
+                'django.contrib.staticfiles',
+            ]    # the trailing comma after the last item in a list, tuple, or dictionary is commonly accepted in Python
+
+        your_project_name_here/your_project_name_here/urls.py
+
+            from django.urls import path, include           # import include
+            # from django.contrib import admin              # comment out, or just delete
+            urlpatterns = [
+                path('', include('your_app_name_here.urls')),	   
+                # path('admin/', admin.sites.urls)         # comment out, or just delete
+            ]
+
+        Next, let's create a new urls.py file in the your_app_name_here folder. Put the following code
+            your_project_name_here/your_app_name_here/urls.py
+
+            from django.urls import path     
+            from . import views
+            urlpatterns = [
+                path('', views.index),	   
+            ]
+
+        your_project_name_here/your_app_name_here/views.py
+
+            from django.shortcuts import render, HttpResponse
+            def index(request):
+                return HttpResponse("this is the equivalent of @app.route('/')!")
+
+
+        and Finally do this
+
+        your_project_name_here> python manage.py runserver
+
+        follow the video to help you create a Py server
+        http://learn.codingdojo.com/m/119/6152/42897
+
+
+        Test-Driven Development
+        Traditional Development Cycle
 
 
 
