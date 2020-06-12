@@ -6,10 +6,31 @@
     <title>Display Authors</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/displayAuthors.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <div class="container">
+        <h1>{{author.first_name}} {{author.last_name}}</h1>
+        <h3>ID: {{author.id}}</h3>
+        <h3 class="d-inline-block">Notes:</h3>
+        <p class="d-inline-block">{{author.notes}}</p>
+        <h3>Books:</h3>
+        <ul>
+            {% for book in author.books.all %}
+            <li>{{book.title}}</li>
+            {% endfor %}
+        </ul>
+        <form action="/authors/{{author.id}}/add_book" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <select name="book-to-add" class="form-control">
+                    {% for book in all_books %}
+                    <option value="{{book.id}}">{{book.title}}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
