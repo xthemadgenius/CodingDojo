@@ -4,10 +4,10 @@ from . import views
 urlpatterns = [	
     path('', views.createBooks), 
     path('authors', views.createAuthors),
-    path('process_book', views.process_book),
-    path('process_author', views.process_author),
-    path('books/<int:book_id>', views.display_book),
-    path('authors/<int:author_id>', views.display_author),
-    path('books/<int:book_id>/add_author', views.add_author),
-    path('authors/<int:author_id>/add_book', views.add_book),
+    path('process_book', views.processBook),
+    path('process_author', views.processAuthor),
+    path('books/<int:book_id>', views.displayBook),
+    path('authors/<int:author_id>', views.displayAuthor),
+    path('books/<int:book_id>/add_author', views.addAuthor),
+    path('authors/<int:author_id>/add_book', views.addBook),
 ]

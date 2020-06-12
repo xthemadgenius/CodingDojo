@@ -16,14 +16,14 @@ def createAuthors(request):
     }
     return render(request, 'authors.html', context)
 
-def process_book(request):
+def processBook(request):
     Book.objects.create(
         title = request.POST['book-title'],
         desc = request.POST['book-description']
     )
     return redirect('/')
 
-def process_author(request):
+def processAuthor(request):
     Author.objects.create(
         first_name = request.POST['author-first-name'],
         last_name = request.POST['author-last-name'],
@@ -31,7 +31,7 @@ def process_author(request):
     )
     return redirect('/authors')
 
-def display_book(request, book_id):
+def displayBook(request, book_id):
     the_books = Book.objects.get(id=book_id)
     all_authors = Author.objects.exclude(books__id=book_id)
     context = {
@@ -40,7 +40,7 @@ def display_book(request, book_id):
     }
     return render(request, 'displayBooks.html', context)
 
-def display_author(request, author_id):
+def displayAuthor(request, author_id):
     the_authors = Author.objects.get(id=author_id)
     all_books = Book.objects.exclude(author__id=author_id)
     context ={
@@ -49,12 +49,12 @@ def display_author(request, author_id):
     }
     return render(request, 'displayAuthors.html', context)
 
-def add_author(request, book_id):
+def addAuthor(request, book_id):
     this_author = Author.objects.get(id=request.POST['author-to-add'])
     Book.objects.get(id=book_id).author.add(this_author)
     return redirect(f'/books/{book_id}')
 
-def add_book(request, author_id):
+def addBook(request, author_id):
     this_book = Book.objects.get(id=request.POST['book-to-add'])
     Author.objects.get(id=author_id).books.add(this_book)
     return redirect(f'/authors/{author_id}')
