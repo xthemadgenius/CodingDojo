@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse, redirect
 
-# Create your views here.
+def index(request):
+    response = "displays new survey created"
+    return HttpResponse(response)
+
+def new(request):
+    response = "shows another path for the surveys"
+    return HttpResponse(response)
