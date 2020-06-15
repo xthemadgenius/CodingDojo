@@ -13,71 +13,25 @@
     <table>
         <tr>
             <th>ID</th>
+            <th>Title</th>
             <th>Network</th>
             <th>Relase Date</th>
             <th>Action</th>
         </tr>
+        {% for show in all_shows %}
         <tr>
-            <td>1</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
+            <td>{{show.id}}</td>
+            <td>{{show.title}}</td>
+            <td>{{show.tv_network}}</td>
+            <td>{{show.release_date}}</td>
             <td>
-                <a href="">Show</a>
-                <a href="">Edit</a>
-                <a href="">Delete</a>
+                <a href="/{{show.id}}">Show</a>
+                <a href="/{{show.id}}/edit">Edit</a>
+                <a href="/destroy/{{show.id}}">Delete</a>
             </td>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>September 99, 9999</td>
-            <td>
-                <a href="">Show</a>
-                <a href="">Edit</a>
-                <a href="">Delete</a>
-            </td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ernst Handel</td>
-            <td>September 99, 9999</td>
-            <td>
-                <a href="">Show</a>
-                <a href="">Edit</a>
-                <a href="">Delete</a>
-            </td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Island Trading</td>
-            <td>September 99, 9999</td>
-            <td>
-                <a href="">Show</a>
-                <a href="">Edit</a>
-                <a href="">Delete</a>
-            </td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Laughing Bacchus Winecellars</td>
-            <td>September 99, 9999</td>
-            <td>
-                <a href="">Show</a>
-                <a href="">Edit</a>
-                <a href="">Delete</a>
-            </td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Magazzini Alimentari Riuniti</td>
-            <td>September 99, 9999</td>
-            <td>
-                <a href="">Show</a>
-                <a href="">Edit</a>
-                <a href="">Delete</a>
-            </td>
-        </tr>
+        {% endfor %}
     </table>
-    <a href=""><h2>Add New Show</h2></a>
+    <a href="/new"><h2>Add New Show</h2></a>
 </body>
 </html>
