@@ -27,8 +27,21 @@ def about(request, id):
     }
     return render(request, "about.html", context)
 
-def edit(request):
-    return render(request, "edit.html")
+def edit(request, id):
+    context = {
+        "show": Show.objects.get(id=id)
+    }
+    return render(request, "edit.html", context)
+
+def update(request, id):
+    updated = Show.objects.get(id=id)
+    updated.title = request.POST['updated_title']
+    updated.tv_network = request.POST['updated_tv_network']
+    updated.release_date = request.POST['updated_release_date']
+    updated.desc = request.POST['updated_desc']
+    updated.save()
+    return redirect(f'/{id}')
+
 
 def destroy(request, id):
     Show.objects.get(id=id).delete()
