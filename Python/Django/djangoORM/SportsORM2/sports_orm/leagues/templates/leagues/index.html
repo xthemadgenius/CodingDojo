@@ -58,5 +58,23 @@
 				<li>{{team.location}} {{team.team_name}}</li>
 			{% endfor %}
 		</ol>
+		<h1>10. All players, past and present, with the Manitoba Tiger-Cats</h1>
+		<ol>
+			{% for player in tigerCatsWhere %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>11. All players who were formerly with the Wichita Vikings</h1>
+		<ol>
+			{% for player in wasViking %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>12. Every team that Jacob Gray played for before he joined the Oregon Colts</h1>
+		<ol>
+			{% for team in jacobWhere %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
 	</body>
 </html>

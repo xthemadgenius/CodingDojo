@@ -19,6 +19,9 @@ def index(request):
 		"leagueWSophia": theLeague.filter(teams__curr_players__first_name__contains="Sophia"),
 		"floresNotRough": thePlayer.filter(Q(last_name__contains="Flores"), ~Q(curr_team__location__contains="Washington", curr_team__team_name__contains="Roughriders")),
 		"samsHistory": theTeam.filter(all_players__first_name__contains="Samuel", all_players__last_name__contains="Evans"),
+		"tigerCatsWhere":thePlayer.filter(all_teams__location__contains="Manitoba", all_teams__team_name__contains="Tiger-Cats"),
+		"wasViking": thePlayer.filter(Q(all_teams__location__contains="Wichita", all_teams__team_name__contains="Vikings"), ~Q(curr_team__location__contains="Wichita", curr_team__team_name__contains="Vikings")),
+		"jacobWhere": theTeam.exclude(team_name="Colts", location="Oregon").filter(all_players__first_name__contains="Jacob", all_players__last_name__contains="Gray"),
 	}
 	return render(request, "leagues/index.html", context)
 
