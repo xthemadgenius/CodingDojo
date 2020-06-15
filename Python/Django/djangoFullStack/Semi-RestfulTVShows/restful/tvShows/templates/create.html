@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="{% static 'css/create.css' %}">
 </head>
 <body>
-    <h2>Add a New Show</h2>
+    <a href=""><h2>Go Back</h2></a>
+    <h1>Add a New Show</h1>
+    <div class="container">
+        <form action="">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Your title..">
+            <label for="tv_network">Network</label>
+            <input type="text" id="tv_network" name="tv_network" placeholder="Your Network..">
+            <label for="release_date">Release Date</label>
+            <input type="date" id="release_date" name="release_date" placeholder="Your release date..">
+            <label for="desc">Description</label>
+            <textarea id="desc" name="desc" placeholder="Write something.." style="height:200px"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
