@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sports Leagues</title>
+	</head>
+	<body>
+		<h1>1. All Teams in the Atlantic Soccer COnference</h1>
+		<ol>
+			{% for teams in atlanticTeams %}
+				<li>{{teams.location}} {{teams.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>2. All Players in the Boston Peguins</h1>
+		<ol>
+			{% for player in penguinPlayers %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>3. All players in the International Collegiate Baseball Conference</h1>
+		<ol>
+			{% for player in IntBaseballPlayers %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+	</body>
+</html>
