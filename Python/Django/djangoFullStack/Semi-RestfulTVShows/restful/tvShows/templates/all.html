@@ -25,13 +25,13 @@
             <td>{{show.tv_network}}</td>
             <td>{{show.release_date}}</td>
             <td>
-                <a href="/{{show.id}}">Show</a>
-                <a href="/{{show.id}}/edit">Edit</a>
-                <a href="/{{show.id}}/destroy">Delete</a>
+                <a href="/shows/{{show.id}}">Show</a>
+                <a href="/shows/{{show.id}}/edit">Edit</a>
+                <a href="/shows/{{show.id}}/destroy">Delete</a>
             </td>
         </tr>
         {% endfor %}
     </table>
-    <a href="/new"><h2>Add New Show</h2></a>
+    <a href="/shows/new"><h2>Add New Show</h2></a>
 </body>
 </html>

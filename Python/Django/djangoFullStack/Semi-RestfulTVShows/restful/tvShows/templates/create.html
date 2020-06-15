@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{% static 'css/create.css' %}">
 </head>
 <body>
-    <a href="/"><h2>Go Back</h2></a>
+    <a href="/shows"><h2>Go Back</h2></a>
     <h1>Add a New Show</h1>
     <div class="container">
-        <form action="/new/create" method="POST">
+        <form action="/shows/new/create" method="POST">
             {% csrf_token %}
             <label for="title">Title</label>
             <input type="text" id="title" name="title" placeholder="Your title..">

@@ -18,7 +18,7 @@ def create(request):
         release_date = request.POST['release_date'],
         desc = request.POST['desc'],
     )
-    return redirect("/")
+    return redirect("/shows")
 
 
 def about(request, id):
@@ -40,9 +40,12 @@ def update(request, id):
     updated.release_date = request.POST['updated_release_date']
     updated.desc = request.POST['updated_desc']
     updated.save()
-    return redirect(f'/{id}')
+    return redirect(f'/shows/{id}')
 
 
 def destroy(request, id):
     Show.objects.get(id=id).delete()
-    return redirect('/')
+    return redirect('/shows')
+
+def home(request):
+    return redirect('/shows')
