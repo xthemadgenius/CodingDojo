@@ -40,5 +40,23 @@
 				<li>{{team.location}} {{team.team_name}}</li>
 			{% endfor %}
 		</ol>
+		<h1>7. all leagues with a player named "Sophia"</h1>
+		<ol>
+			{% for league in leagueWSophia %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>8. Everyone with the last name "Flores" who DOESN'T play for the Washington Roughriders</h1>
+		<ol>
+			{% for player in floresNotRough %}
+				<li>{{player.first_name}} {{players.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>9. All teams, past and present, that Samuel Evans has played with</h1>
+		<ol>
+			{% for team in samsHistory %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
 	</body>
 </html>

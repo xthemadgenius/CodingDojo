@@ -16,6 +16,9 @@ def index(request):
 		"lopezAmericanFooteball": thePlayer.filter(curr_team__league__name__contains="American Conference of Amateur Football", last_name__contains="Lopez"),
 		"footballPlayers": thePlayer.filter(curr_team__league__sport__contains="football"),
 		"findSophia": theTeam.filter(curr_players__first_name__contains="Sophia"),
+		"leagueWSophia": theLeague.filter(teams__curr_players__first_name__contains="Sophia"),
+		"floresNotRough": thePlayer.filter(Q(last_name__contains="Flores"), ~Q(curr_team__location__contains="Washington", curr_team__team_name__contains="Roughriders")),
+		"samsHistory": theTeam.filter(all_players__first_name__contains="Samuel", all_players__last_name__contains="Evans"),
 	}
 	return render(request, "leagues/index.html", context)
 
