@@ -18,13 +18,13 @@
 		</ol>
 		<h1>3. All players in the International Collegiate Baseball Conference</h1>
 		<ol>
-			{% for player in IntBaseballPlayers %}
+			{% for player in intBaseballPlayers %}
 				<li>{{player.first_name}} {{player.last_name}}</li>
 			{% endfor %}
 		</ol>
 		<h1>4. All players in the American Conference of Amateur Football with last name "Lopez"</h1>
 		<ol>
-			{% for player in lopezAmericanFooteball %}
+			{% for player in lopezFooteball %}
 				<li>{{player.first_name}} {{player.last_name}}</li>
 			{% endfor %}
 		</ol>
@@ -74,6 +74,24 @@
 		<ol>
 			{% for team in jacobWhere %}
 				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>13. Everyone named "Joshua" who has ever played in the Atlantic Federation of Amateur Baseball Players</h1>
+		<ol>
+			{% for player in joshuaPlays %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>14. All teams that have had 12 or more players, past and present</h1>
+		<ol>
+			{% for team in tweleveOrMore %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>15. All players and count of teams played for, sorted by the number of teams they've played for</h1>
+		<ol>
+			{% for player in teamArgByNum %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
 			{% endfor %}
 		</ol>
 	</body>
