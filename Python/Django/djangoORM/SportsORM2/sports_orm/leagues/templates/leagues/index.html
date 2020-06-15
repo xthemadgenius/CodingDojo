@@ -22,5 +22,23 @@
 				<li>{{player.first_name}} {{player.last_name}}</li>
 			{% endfor %}
 		</ol>
+		<h1>4. All players in the American Conference of Amateur Football with last name "Lopez"</h1>
+		<ol>
+			{% for player in lopezAmericanFooteball %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>5. All Football Players</h1>
+		<ol>
+			{% for player in footballPlayers %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>6. All teams with a player named "Sophia"</h1>
+		<ol>
+			{% for team in findSophia %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
 	</body>
 </html>

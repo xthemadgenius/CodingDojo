@@ -13,6 +13,9 @@ def index(request):
 		"atlanticTeams": theTeam.filter(league__name__contains="Atlantic Soccer Conference"),
 		"penguinPlayers": thePlayer.filter(curr_team__team_name__contains="Penguin", curr_team__location__contains="Boston"),
 		"IntBaseballPlayers": thePlayer.filter(curr_team__league__name__contains="International Collegiate Baseball Conference"),
+		"lopezAmericanFooteball": thePlayer.filter(curr_team__league__name__contains="American Conference of Amateur Football", last_name__contains="Lopez"),
+		"footballPlayers": thePlayer.filter(curr_team__league__sport__contains="football"),
+		"findSophia": theTeam.filter(curr_players__first_name__contains="Sophia"),
 	}
 	return render(request, "leagues/index.html", context)
 
