@@ -25,7 +25,17 @@
         </form>
     </div>
     <div class="center">
-        <a href="/shows/{{show.id}}/update"><h2>Go To Show</h2></a>
+        <a href="/shows/{{show.id}}"><h2>Go To Show</h2></a>
     </div>
+
+    {% if messages %}
+    <ul class="messages">    
+        {% for message in messages %}    
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                <p style="color: red;">{{ message }}</p>
+            </li>    
+        {% endfor %}
+    </ul>
+    {% endif %}
 </body>
 </html>
