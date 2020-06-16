@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 .container {
     height: 100%;
     width: 100%;
@@ -6,6 +8,13 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+h1,
+h2,
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold; 
 }
 h3{
     color: rgb(19, 204, 19);
