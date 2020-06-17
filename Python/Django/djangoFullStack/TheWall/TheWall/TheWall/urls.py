@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('login.urls')),
-    path('messages', include('wall.urls')),
+    path('wall/', include('wall.urls')),
 ]
