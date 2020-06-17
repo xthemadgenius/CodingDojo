@@ -31,24 +31,6 @@ class UserManager(models.Manager):
         return errors
 
 
-    def login_validator(self, post_data):
-        errors ={}
-        user = User.objects.filter(email=post_data['email_login'])
-        logged_user = user[0]
-        EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
-        if not EMAIL_REGEX.match(post_data['email_log']):
-            errors['email_log'] = "Invalid Email"
-        if user:
-            if bcrypt.checkpw(post_data['password_log'].encode(), logged_user.encode()) == False:
-                errors['password_log'] = "The password is Incorrect!"
-        else:
-            errors['password_log'] = "The password is Incorrect!"
-        return errors
-
-
-
-
-
 class User(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)

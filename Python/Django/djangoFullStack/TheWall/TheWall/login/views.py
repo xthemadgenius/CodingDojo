@@ -3,7 +3,6 @@ from django.contrib import messages
 from .models import User
 import bcrypt
 
-
 # Create your views here.
 def index(request):
     return render(request, 'login.html')
@@ -32,8 +31,6 @@ def register(request):
         )
         request.session['user_id'] = this_user.id
         return redirect('/success')
-
-
 
 def login(request):
     users = User.objects.filter(email=request.POST['email'])
