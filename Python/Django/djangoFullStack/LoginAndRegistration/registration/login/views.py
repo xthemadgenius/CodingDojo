@@ -14,16 +14,25 @@ def register(request):
         for error in errors.values():
             messages.error(request, error)
         return redirect('/')
-    this_user = User.objects.create(
-        first_name = request.POST['first_name'],
-        last_name = request.POST['last_name'],
-        email = request.POST['email'],
-        # birthday = request.POST['birthday'],
-        password = request.POST['password'],
-        confirm_password = request.POST['confirm_password'],
-    )
-    request.session['user_id'] = this_user.id
-    return redirect('/success')
+    else:
+        password = request.POST['password']
+        pw_hash = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
+        confirmPassword = request.POST['confirm_password']
+        confirm_hash = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
+        print(password)
+        print(pw_hash)
+        print(confirmPassword)
+        print(confirm_hash)
+        this_user = User.objects.create(
+            first_name = request.POST['first_name'],
+            last_name = request.POST['last_name'],
+            email = request.POST['email'],
+            # birthday = request.POST['birthday'],
+            password = pw_hash,
+            confirm_password = confirm_hash,
+        )
+        request.session['user_id'] = this_user.id
+        return redirect('/success')
 
 def success(request):
     context = {
