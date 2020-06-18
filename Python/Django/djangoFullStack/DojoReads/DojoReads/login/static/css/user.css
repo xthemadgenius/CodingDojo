@@ -30,6 +30,7 @@ nav li a {
 }
 nav li a:hover {
     text-decoration: underline;
+    color: yellow;
 }
 /* end of nav bar code */
 h2,
@@ -47,7 +48,7 @@ h5{
 }
 
 .user-box{
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-left: auto;
     margin-right: auto;
     width: 400px;
@@ -55,4 +56,10 @@ h5{
     background-color: #a92cb9;
     border: black 2px solid;
     color: white;
+}
+hr{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+    width: 500px;
 }

@@ -29,6 +29,7 @@ nav li a {
 }
 nav li a:hover {
     text-decoration: underline;
+    color: yellow;
 }
 /* end of nav bar code */
 
