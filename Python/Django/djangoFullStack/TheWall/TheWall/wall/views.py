@@ -35,10 +35,10 @@ def deletePost(request, messageId):
     errors = Messages.objects.message_validator(request.POST)
     if len(errors) > 0:
         for key, value in errors.items():
-            messages.errors(request, value, extra_tags=key)
+            messages.error(request, value, extra_tags = key)
         return redirect('/wall')
     else:
-        Messages.objects.get(id=messageId).delete()
+        Messages.objects.get(id = messageId).delete()
         return redirect('/wall')
 
 def logout(request):

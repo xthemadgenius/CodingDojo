@@ -41,13 +41,3 @@ def login(request):
             return redirect('/wall')
     messages.error(request, "Email/password not found")
     return redirect('/')
-
-# def success(request):
-#     context = {
-#         'user': User.objects.get(id=request.session['user_id'])
-#     }
-#     return render(request, 'success.html', context)
-
-# def logout(request):
-#     request.session.flush()
-#     return redirect('/')

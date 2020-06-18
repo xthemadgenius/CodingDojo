@@ -8,11 +8,9 @@ class MessageManager(models.Manager):
     def message_validator(self, post_data):
         errors = {}
         timeLimit = timezone.now() - timedelta(minutes = 30)
-        print((Messages.objects.filter(id = post_data['messageId'])[0].created_at - timezone.now()), timedelta(minutes = 30))
         if Messages.objects.filter(id = post_data['messageId'])[0].created_at < timeLimit:
-            errors[post_data['messageId']] = "Time limit to delete the comment has been exceeded!"
-            print(f"Error message created for {post_data['messageId']}")
-            print(errors[post_data['messageId']])
+            errors[post_data['messageId']] = "Cannot delete the Comment anymore! Remember you only have 30mins to delete the post before it becomes permenant"
+            print(f"Error message created: {post_data['messageId']}")
         return errors
 
 class Messages(models.Model):
