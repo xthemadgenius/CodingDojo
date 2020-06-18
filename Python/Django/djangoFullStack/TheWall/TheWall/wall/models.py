@@ -6,17 +6,18 @@ from django.utils import timezone
 # Create your models here.
 class MessageManager(models.Manager):
     def message_validator(self, post_data):
-        errors ={}
-        timelimit = timezone.now() - timedelta(minutes=30)
-        print((Messages.objects.filter(id=post_data['message_id'])[0].created_at - timezone.now()), timedelta(minutes=30))
-        if Messages.objects.filter(id=post_data['message_id'])[0].created_at < timelimit:
-            print(f"error message created: {post_data['message_id']}")
-            print(errors[post_data['message_id']])
+        errors = {}
+        timeLimit = timezone.now() - timedelta(minutes = 30)
+        print((Messages.objects.filter(id = post_data['messageId'])[0].created_at - timezone.now()), timedelta(minutes = 30))
+        if Messages.objects.filter(id = post_data['messageId'])[0].created_at < timeLimit:
+            errors[post_data['messageId']] = "Time limit to delete the comment has been exceeded!"
+            print(f"Error message created for {post_data['messageId']}")
+            print(errors[post_data['messageId']])
         return errors
 
 class Messages(models.Model):
-    users = models.ForeignKey(User, related_name="messages", on_delete=models.CASCADE)
-    messages = models.TextField()
+    user = models.ForeignKey(User, related_name="messages", on_delete=models.CASCADE)
+    message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = MessageManager()

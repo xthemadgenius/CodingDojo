@@ -16,14 +16,14 @@ def wall(request):
         }
         return render(request, 'comments.html',context)
 
-def messagePost(request):
+def postMessage(request):
     Messages.objects.create(
         message = request.POST['message'],
-        user = User.objects.get(id=request.session['user_id']),
+        user = User.objects.get(id = request.session['user_id'])
     )
     return redirect('/wall')
 
-def comment_post(request, messageId):
+def postComment(request, messageId):
     Comments.objects.create(
         message = Messages.objects.get(id=messageId),
         user = User.objects.get(id=request.session['user_id']),
@@ -31,7 +31,7 @@ def comment_post(request, messageId):
     )
     return redirect('/wall')
 
-def delete_post(request, messageId):
+def deletePost(request, messageId):
     errors = Messages.objects.message_validator(request.POST)
     if len(errors) > 0:
         for key, value in errors.items():
@@ -39,7 +39,7 @@ def delete_post(request, messageId):
         return redirect('/wall')
     else:
         Messages.objects.get(id=messageId).delete()
-        return redirect('/')
+        return redirect('/wall')
 
 def logout(request):
     request.session.flush()
