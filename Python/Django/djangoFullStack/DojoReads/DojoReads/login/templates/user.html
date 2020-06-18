@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/user.css' %}">
 </head>
@@ -21,13 +22,18 @@
         </nav>
     </header>
     <main>
-        <!-- star code  -->
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-        <!-- star code end -->
+        <div class="user-box">
+            <h5>UserName:</h5>
+            <h2>YOUR USERNAME</h2>
+            <h5>Name:</h5>
+            <h2>YOUR FULLNAME</h2>
+            <h5>Email:</h5>
+            <h2>YOUR EMAIL</h2>
+            <h5>Total Reviews:</h5>
+            <h2>NUMBERS</h2>
+        </div>
+        <h3>Posted Reviews in Following Books:</h1>
+        <a href=""><h4>THE BOOKS YOU REVIEWED</h4></a>
     </main>
 </body>
 </html>
