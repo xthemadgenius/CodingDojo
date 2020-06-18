@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <section>
+        <h2>Login In or Sign Up</h2>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <!-- python Here -->
+                <form action="/login" method="POST">
+                {% csrf_token %}
+                    <h1>Sign in</h1>
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                    <input type="password" name="password" id="password" placeholder="Password" />
+                    <a href="#">Forgot your password?</a>
+                    <input type="submit" value="Sign In">
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <!-- python Here -->
+                <form action="/register" method="POST">
+                    {% csrf_token %}
+                    <h1>Create Account</h1>
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name"/>
+                    <input type="text" name="last_name" id="last_name" placeholder="Last Name"/>
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                    <input type="password" name="password" id="password" placeholder="Password" />
+                    <input type="password"name="confirm_password" id="confirm_password" placeholder="Confirm Password" />
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button class="ghost" id="signIn">Sign Up</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="signUp">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                    <p style="color: red;">{{ message }}</p>
+                </li>    
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </section>
+<script src="static/js/login.js"></script>
+</body>
+</html>
