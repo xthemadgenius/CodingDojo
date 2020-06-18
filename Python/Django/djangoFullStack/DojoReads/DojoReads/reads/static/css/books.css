@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+}
+header {
+    background-color: #a92cb9;
+    width: 100%;
+    height: 70px;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 20px;
+    justify-content: flex-end; 
+    margin: 0px; 
+    color: white;
+}
+nav li {
+    margin: 20px;
+    font-family: Arial;
+}
+#title {
+    margin-right: auto;
+}
+nav li a {
+    color: white;
+    text-decoration: none; 
+}
+nav li a:hover {
+    text-decoration: underline;
+}
