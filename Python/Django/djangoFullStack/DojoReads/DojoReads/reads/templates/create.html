@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/create.css' %}">
 </head>
@@ -11,15 +12,55 @@
     <header>
         <nav> 
             <ul>
-                <li id="title">Add new Book title and a Review</li>
-                <li></li>
                 <li><a href="logout">Home </a></li>
                 <li><a href="logout">Logout </a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Create Book</h1>
+        <form class="my-form">
+            <div class="container">
+                <ul>
+                    <h1>Add new Book title and a Review</h1>
+                    <li>
+                        <input type="text" placeholder="Book Title"> 
+                    </li>
+                    <h1>Author:</h1>
+                    <li>
+                        <select>
+                            <option selected disabled>Choose Author from List</option>
+                            <option>Request Quote</option>
+                            <option>Send Resume</option>
+                            <option>Other</option>      
+                        </select>
+                    </li>
+                    <li>
+                        <div class="grid grid-2">
+                            <input type="text" placeholder="Add a new Author">  
+                            <select>
+                                <option selected disabled>Star Rating</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>      
+                            </select>
+                        </div>
+                    </li>    
+                    <li>
+                        <textarea placeholder="Write your review"></textarea>
+                    </li>  
+                    <li>
+                        <div class="grid grid-3">
+                            <button class="btn-grid" type="submit">
+                                <span class="back">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+                                </span>
+                                <span class="front">SUBMIT</span>
+                            </button>
+                        </div>
+                    </li>    
+                </ul>
+            </div>
+        </form>
     </main>
 </body>
 </html>
