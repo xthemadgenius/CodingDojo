@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap');
+
 body {
     margin: 0px;
 }
@@ -30,3 +32,38 @@ nav li a:hover {
 }
 /* end of nav bar code */
 
+.make-right{
+    float: right;
+    width: 40%;
+    margin-right: 20px;
+}
+h1,
+h2{
+    margin-left: 20px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.make-left{
+    float: left;
+    margin-left: 20px;
+    width: 40%;
+}
+.push-ratings{
+    margin-left: 40px;
+}
+.set-ratings{
+    display: inline-flex;
+}
+.push-stars{
+    margin-left: 15px;
+}
+span{
+    margin-top: 2.5rem;
+}
+.checked{
+    color: orange;
+}
+h4,
+h5{
+    margin-right: 20px;
+}
