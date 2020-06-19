@@ -13,7 +13,7 @@
     <header>
         <nav> 
             <ul>
-                <li id="title">Welcome USERNAME</li>
+                <li id="title">{{user.username}}</li>
                 <li></li>
                 <li><a href="add">Add Book and Review </a></li>
                 <li><a href="logout">Logout </a></li>
@@ -21,7 +21,7 @@
         </nav>
     </header>
     <main>
-        <h1>Welcome, USERNAME</h1>
+        <h1>Welcome, {{user.username}}</h1>
         <div class="make-left">
             <h2>Recent Book Reviews:</h2>
             <div class="push-ratings">
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="make-right">
-            <h3>Add a Review:</h3>
+            <h3>Other Books with Reviews:</h3>
             <div class="ex3">
                 <a href=""><h3>Your Book Title</h3></a>
                 <a href=""><h3>Your Book Title</h3></a>

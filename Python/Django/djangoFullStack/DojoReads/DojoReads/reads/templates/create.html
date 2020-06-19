@@ -18,27 +18,28 @@
         </nav>
     </header>
     <main>
-        <form class="my-form">
+        <form class="my-form" action="/books/create" method="POST">
+            {% csrf_token %}
             <div class="container">
                 <ul>
                     <h1>Add new Book title and a Review</h1>
                     <li>
-                        <input type="text" placeholder="Book Title"> 
+                        <input type="text" name="book_title" placeholder="Book Title"> 
                     </li>
                     <h1>Author:</h1>
                     <li>
-                        <select>
-                            <option selected disabled>Choose Author from List</option>
-                            <option>Request Quote</option>
-                            <option>Send Resume</option>
-                            <option>Other</option>      
+                        <select name="author_select">
+                            <option value="">Choose Author from List</option>
+                            {% for author in all_authors %}
+                                <option value="{{author.name}}">{{author.name}}</option>
+                            {% endfor%}
                         </select>
                     </li>
                     <li>
                         <div class="grid grid-2">
-                            <input type="text" placeholder="Add a new Author">  
+                            <input type="text" name="book_author" placeholder="Add a new Author">  
                             <select>
-                                <option selected disabled>Star Rating</option>
+                                <option>Add an Author</option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -63,6 +64,15 @@
                 </ul>
             </div>
         </form>
+        {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                    <p style="color: red;">{{ message }}</p>
+                </li>    
+            {% endfor %}
+        </ul>
+        {% endif %}
     </main>
 </body>
 </html>
