@@ -25,11 +25,12 @@
                 <form action="/register" method="POST">
                     {% csrf_token %}
                     <h1>Create Account</h1>
-                    <input type="text" name="first_name" id="first_name" placeholder="First Name"/>
-                    <input type="text" name="last_name" id="last_name" placeholder="Last Name"/>
+                    <input type="text" name="name" id="name" placeholder="Full Name"/>
+                    <input type="text" name="username" id="username" placeholder="UserName"/>
                     <input type="email" name="email" id="email" placeholder="Email" />
-                    <input type="password" name="password" id="password" placeholder="Password" />
-                    <input type="password"name="confirm_password" id="confirm_password" placeholder="Confirm Password" />
+                    <input type="password" name="password" id="password" placeholder="Password"/>
+                    <label for="password">Password must be at least 8 characters long</label>
+                    <input type="password"name="confirm_password" id="confirm_password" placeholder="Confirm Password"/>
                     <input type="submit" value="Sign Up">
                 </form>
             </div>
