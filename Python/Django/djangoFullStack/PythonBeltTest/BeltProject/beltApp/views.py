@@ -39,6 +39,23 @@ def edit(request, tripId):
     }
     return render(request, 'edit.html', context)
 
+def update(request, tripId):
+    if 'user_id' not in request.session:
+        return redirect('/')
+    errors = Trip.objects.edit_validators(request.POST)
+    if len(errors):
+        for error in errors.values():
+            messages.error(request, error)
+        return redirect(f'/dashboard/edit/{tripId}')
+    else:
+        updated = Trip.objects.get(id=tripId)
+        updated.destination = request.POST['updated_destination']
+        updated.start_date = request.POST['updated_start_date']
+        updated.end_date = request.POST['updated_end_date']
+        updated.plan = request.POST['updated_plan']
+        updated.save()
+        return redirect(f'/dashboard')
+
 def add(request):
     if 'user_id' not in request.session:
         return redirect('/')

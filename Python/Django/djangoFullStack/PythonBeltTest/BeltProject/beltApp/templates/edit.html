@@ -7,19 +7,23 @@
 </head>
 <body>
     <nav>
-        <h1>Hello NAMENAMENAME! Lets Edit your Trip!</h1>
-        <a href="/logout">Logout</a>
+        <h1>Hello {{user.first_name}} {{user.last_name}}! Lets Edit your Trip!</h1>
+        <a href="/dashboard/logout">Logout</a>
     </nav>
     <div>
-        <form action="">
-            <label for="">Destination</label>
-            <input type="text"><br><br>
-            <label for="">Start Date</label>
-            <input type="date"><br><br>
-            <label for="">End Date</label>
-            <input type="date"><br><br>
-            <label for="">Plan</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
+        <form action="/dashboard/update/{{trips.id}}" method="POST">
+            {% csrf_token %}
+            <label for="updated_destination">Destination</label>
+            <input type="text" name="updated_destination" id="updated_destination" value="{{trips.destination}}"><br><br>
+
+            <label for="updated_start_date">Start Date</label>
+            <input type="date" name="updated_start_date" id="updated_start_date" value="{{trips.start_date| date:'Y-m-d' }}"><br><br>
+
+            <label for="updated_end_date">End Date</label>
+            <input type="date" name="updated_end_date" id="updated_end_date" value="{{trips.end_date| date:'Y-m-d'}}"><br><br>
+
+            <label for="updated_plan">Plan</label><br><br>
+            <textarea name="updated_plan" id="updated_plan" cols="30" rows="10">{{trips.plan}}</textarea><br><br>
             <a href="/dashboard">Cancel</a>
             <input type="submit" value="Submit">
         </form>
