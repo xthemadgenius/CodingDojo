@@ -31,7 +31,7 @@ def register(request):
             confirm_password = confirm_hash,
         )
         request.session['user_id'] = this_user.id
-        return redirect('/home')
+        return redirect('/dashboard')
 
 def login(request):
     users = User.objects.filter(email=request.POST['email'])
@@ -39,16 +39,6 @@ def login(request):
         logging_user = users[0]
         if bcrypt.checkpw(request.POST['password'].encode(), logging_user.password.encode()):
             request.session['user_id'] = logging_user.id
-            return redirect('/home')
+            return redirect('/dashboard')
     messages.error(request, "Email/password not found")
-    return redirect('/')
-
-def success(request):
-    context = {
-        'user': User.objects.get(id=request.session['user_id'])
-    }
-    return render(request, 'success.html', context)
-
-def logout(request):
-    request.session.flush()
     return redirect('/')

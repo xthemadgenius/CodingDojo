@@ -17,5 +17,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('loginApp.urls')),
-    path('home/', include('beltApp.urls')),
+    path('dashboard/', include('beltApp.urls')),
 ]

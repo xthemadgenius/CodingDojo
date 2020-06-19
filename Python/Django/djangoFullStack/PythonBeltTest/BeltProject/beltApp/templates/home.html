@@ -5,10 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homes.css' %}">
 </head>
 <body>
-    <h1>Home</h1>
-    <a href="logout">Logout</a>
+    <nav>
+        <h1>Hello Name</h1>
+        <a href="/logout">Logout</a>
+        <a href="add">Create a new Trip</a>
+    </nav>
+    <h2>Your Trips</h2>
+    <div>
+        <table>
+            <tr>
+                <th>Destination</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Plan</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td><a href="trips">Mexico</a></td>
+                <td>X/XX/XX</td>
+                <td>X/XX/XX</td>
+                <td>Lets Fight</td>
+                <td>
+                    <a href="">Remove</a>
+                    <a href="edit">edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="">Mexico</a></td>
+                <td>X/XX/XX</td>
+                <td>X/XX/XX</td>
+                <td>Lets Fight</td>
+                <td>
+                    <a href="">Remove</a>
+                    <a href="">edit</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="">Mexico</a></td>
+                <td>X/XX/XX</td>
+                <td>X/XX/XX</td>
+                <td>Lets Fight</td>
+                <td>
+                    <a href="">Remove</a>
+                    <a href="">edit</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
