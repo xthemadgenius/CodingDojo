@@ -23,6 +23,13 @@
             <a href="/dashboard">Cancel</a>
             <input type="submit" value="Submit">
         </form>
+        <div class="errors">
+			{% if messages %}
+                {% for message in messages %}
+                    <p style="color: red;">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 </body>
 </html>

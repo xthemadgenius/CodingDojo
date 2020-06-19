@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <h1>Hello Name</h1>
+        <h1>Hello {{user.first_name}} {{user.last_name}}</h1>
         <a href="/logout">Logout</a>
         <a href="add">Create a new Trip</a>
     </nav>
@@ -23,36 +23,22 @@
                 <th>Plan</th>
                 <th>Actions</th>
             </tr>
+            {% for trip in trips%}
             <tr>
-                <td><a href="trips">Mexico</a></td>
-                <td>X/XX/XX</td>
-                <td>X/XX/XX</td>
-                <td>Lets Fight</td>
+                <td><a href="/dashboard/trips/{{trip.id}}">{{trip.destination}}</a></td>
+                <td>{{trip.start_date}}</td>
+                <td>{{trip.end_date}}</td>
+                <td>{{trip.plan}}</td>
                 <td>
-                    <a href="">Remove</a>
-                    <a href="edit">edit</a>
+                    <form action="/dashboard/delete/{{trip.id}}" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="tripId" value="{{trip.id}}">
+                        <button type="submit">Remove</button>
+                    </form>
+                    <a href="/dashboard/edit/{{trip.id}}">edit</a>
                 </td>
             </tr>
-            <tr>
-                <td><a href="">Mexico</a></td>
-                <td>X/XX/XX</td>
-                <td>X/XX/XX</td>
-                <td>Lets Fight</td>
-                <td>
-                    <a href="">Remove</a>
-                    <a href="">edit</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="">Mexico</a></td>
-                <td>X/XX/XX</td>
-                <td>X/XX/XX</td>
-                <td>Lets Fight</td>
-                <td>
-                    <a href="">Remove</a>
-                    <a href="">edit</a>
-                </td>
-            </tr>
+            {% endfor %}
         </table>
     </div>
 

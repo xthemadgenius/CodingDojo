@@ -12,13 +12,13 @@
         <a href="/logout">Logout</a>
     </nav>
     <div>
-        <h1>TRIPNAME</h1><br><br>
-        <h3>Start Date: STARTDATE</h3>
-        <h3>END Date: ENDDATE</h3>
-        <h3>Created On: CREATEDDATE</h3>
-        <h3>Last Updated: UPDATED-DATE</h3>
+        <h1>{{trips.destination}}</h1><br><br>
+        <h3>Start Date: {{trips.start_date}}</h3>
+        <h3>END Date: {{trips.end_date}}</h3>
+        <h3>Created On: {{trips.created_at}}</h3>
+        <h3>Last Updated: {{trips.updated_at}}</h3>
         <h3>Plan: SOME-PLAN</h3>
-        <h3>Created by: NAME</h3>
+        <h3>Created by: {{user.first_name}} {{user.last_name}}</h3>
     </div>
 </body>
 </html>

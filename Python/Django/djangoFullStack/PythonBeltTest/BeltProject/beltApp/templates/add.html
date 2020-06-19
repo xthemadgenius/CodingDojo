@@ -11,18 +11,26 @@
         <a href="/logout">Logout</a>
     </nav>
     <div>
-        <form action="">
-            <label for="">Destination</label>
-            <input type="text"><br><br>
-            <label for="">Start Date</label>
-            <input type="date"><br><br>
-            <label for="">End Date</label>
-            <input type="date"><br><br>
-            <label for="">Plan</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
+        <form action="addtrip" method="POST">
+            {% csrf_token %}
+            <label for="destination">Destination</label>
+            <input type="text" name="destination" id="destination"><br><br>
+            <label for="start_date">Start Date</label>
+            <input type="date" name="start_date" id="start_date"><br><br>
+            <label for="end_date">End Date</label>
+            <input type="date" name="end_date" id="end_date"><br><br>
+            <label for="plan">Plan</label>
+            <textarea name="plan" id="plan" cols="30" rows="10"></textarea><br><br>
             <a href="/dashboard">Cancel</a>
             <input type="submit" value="Submit">
         </form>
+    </div>
+    <div class="errors">
+			{% if messages %}
+                {% for message in messages %}
+                    <p style="color: red;">{{message}}</p>
+                {% endfor %}
+        {% endif %}
     </div>
 </body>
 </html>
