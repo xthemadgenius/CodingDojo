@@ -1,5 +1,5 @@
 from django.db import models
-from login.models import User
+from loginApp.models import User
 
 class BookManager(models.Manager):
     def book_validator(self, post_data):
@@ -36,7 +36,7 @@ class Book(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     objects = BookManager()
 
-class Reviews(models.Model):
+class Review(models.Model):
     review = models.TextField()
     rating = models.IntegerField()
     user = models.ForeignKey(User, related_name="review", on_delete=models.CASCADE)

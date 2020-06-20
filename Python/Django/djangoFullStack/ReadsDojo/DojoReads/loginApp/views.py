@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
 from .models import User
-from reads.models import Author, Book, Reviews
+from readsApp.models import Author, Book, Review
 import bcrypt
 
 # Create your views here.
@@ -44,7 +44,7 @@ def login(request):
     return redirect('/')
 
 def user(request, user_id):
-    get_review = Book.objects.filter(review__user__id=user_id).distinct()
+    get_review = Book.objects.filter(review__user__id=user_id)
     context = {
         'user': User.objects.filter(id=user_id)[0],
         'reviewed_books':get_review,

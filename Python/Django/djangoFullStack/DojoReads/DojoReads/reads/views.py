@@ -8,11 +8,10 @@ def index(request):
     if 'user_id' not in request.session:
         return redirect('/')
     else:
-        user = User.objects.filter(id=request.session['user_id'])[0]
+        user = User.objects.get(id=request.session['user_id'])
         context = {
             'user': user,
-            'all_book_reviews': Book.objects.filter(reviews__isnull=False).distinct(),
-            'recent_book_reviews': Reviews.objects.filter(user_reviewed=user).order_by('-created_at').distinct()[:3],
+            'review': Reviews.objects.all().order_by('-book_id')[:3],
             'all_books': Book.objects.all(),
         }
         return render(request, 'books.html', context)
@@ -22,32 +21,39 @@ def add(request):
         return redirect('/')
     else:
         context = {
-            'all_authors': Author.objects.all().distinct()
+            'all_authors': Author.objects.all()
         }
         return render(request, 'create.html', context)
 
 def create(request):
     if 'user_id' not in request.session:
         return redirect('/')
-
-    if request.method == "GET":
-        return redirect('/books')
-    book = Book.objects.filter(title = request.POST['book_title'])
     errors = Book.objects.book_validator(request.POST)
-    # still needs more code
+    if len(errors) > 0:
+        for error in errors.values():
+            messages.error(request, error)
+        return redirect('/books/add')
+    if len(request.POST['add_author']) == 0:
+        author = Author.objects.get(id=request.POST['author'])
+    else:
+        author = Author.objects.create(name=request.POST['add_author'])
+    book = Book.objects.create(
+        title = request.POST['title'],
+        author = author,
+    )
+    user = User.objects.get(id=request.session['user_id'])
+    Reviews.objects.create(
+        review = request.POST['review'],
+        rating = request.POST['rating'],
+        book = book,
+        user = user,
+    )
+    return redirect('/books')
 
-    
-    return redirect(f'/books')
-
-def rating(request, book_id):
+def rating(request):
     if 'user_id' not in request.session:
         return redirect('/')
-    selected_book = Book.objects.filter(id=book_id)[0]
-    context = {
-        'book': selected_book,
-        'all_reviews': Reviews.objects.filter(book_reviewed=selected_book).all(),
-    }
-    return render(request, 'ratings.html', context)
+    return render(request, 'ratings.html')
 
 def createReview(request, bookId):
     if 'user_id' not in request.session:
