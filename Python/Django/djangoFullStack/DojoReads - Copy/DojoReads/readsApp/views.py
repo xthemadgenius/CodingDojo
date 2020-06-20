@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
-from .models import Book, Review
+from .models import Book, Author, Review
 from loginApp.models import User
 
 # Create your views here.
@@ -21,30 +21,14 @@ def add(request):
         return redirect('/')
     else:
         context = {
-            'authors' : Book.objects.values_list('author', flat=True)
+            'all_authors': Author.objects.all()
         }
         return render(request, 'create.html', context)
 
 def create(request):
     if 'user_id' not in request.session:
-        if 'author_select' in request.POST:
-            newBook = Book.objects.create(
-                title = request.POST['author'],
-                name = request.POST['author_select'],
-            )
-        elif request.POST['author_input'] != '':
-            newBook = Book.objects.create(
-                title = request.POST['title'],
-                author = request.POST['author_input'],
-            )
-        Review.objects.create(
-            review = request.POST['review'],
-            rating = request.POST['rating'],
-            user = User.objects.get(id=request.session['user_id']),
-            book = Book.objects.get(id=newBook.id),
-        )
-        return redirect('/books')
-    return redirect('/')
+        return redirect('/')
+    return redirect('/books')
 
 def rating(request):
     if 'user_id' not in request.session:

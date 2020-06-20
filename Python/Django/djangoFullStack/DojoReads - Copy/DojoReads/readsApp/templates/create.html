@@ -28,21 +28,18 @@
                     </li>
                     <h1>Author:</h1>
                     <li>
-                        <select name="author_select">
-                            <option value="none">Choose Author from List</option>
-                            {% for author in authors %}
-                                <option value="{{author}}">{{author}}</option>
-                            {% endfor %}
+                        <select name="author">
+                            <option value="">Choose Author from List</option>
+                                <option value="AUTHOR">AUTHOR</option>
                         </select>
                     </li>
                     <li>
-                        <input type="text" name="author_input" placeholder="Add a new Author">
+                        <input type="text" name="add_author" placeholder="Add a new Author">
                     </li>
                     <li>
                         <div class="grid grid-2">
                             <h2>Rating</h2>
                             <select name="rating">
-                                <option value="none" selected disabled hidden>Choose Rating</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
