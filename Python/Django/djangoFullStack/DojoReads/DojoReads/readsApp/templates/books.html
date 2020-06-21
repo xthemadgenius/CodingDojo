@@ -13,7 +13,7 @@
     <header>
         <nav> 
             <ul>
-                <li id="title">USERNAME</li>
+                <li id="title">{{user.name}}</li>
                 <li></li>
                 <li><a href="add">Add Book and Review </a></li>
                 <li><a href="logout">Logout </a></li>
@@ -21,52 +21,36 @@
         </nav>
     </header>
     <main>
-        <h1>Welcome, USERNAME</h1>
+        <h1>Welcome, {{user.username}}</h1>
         <div class="make-left">
             <h2>Recent Book Reviews:</h2>
             <div class="push-ratings">
                 <hr>
-                <a href=""><h2>BOOK TITLE</h2></a>
-                <div class="set-ratings">
-                    <h3>Rating</h3>
-                    <div class="push-stars">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                    </div>
-                </div>
-                <h4><a href="">Name</a> write your wild comment</h4>
-                <h5>Show me the Date when it was posted</h5>
+                <ul>
+                    {% for review in reviews %}
+                    <li style="list-style: none;">
+                        <a href="{{review.book.id}}"><h2>{{review.book.title}}</h2></a>
+                        <div class="set-ratings">
+                            <h3>Rating</h3>
+                            <div class="push-stars">
+                                {% for i in review.rating %}
+                                <span class="fa fa-star checked"></span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <h4><a href="">{{review.user.name}} - </a>{{review.review}}</h4>
+                        <h5>Reviewed on {{review.created_at}}</h5>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
         <div class="make-right">
             <h3>Other Books with Reviews:</h3>
             <div class="ex3">
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
-                <a href=""><h3>Your Book Title</h3></a>
+                {% for book in all_books %}
+                <a href="{{book.id}}"><h3>{{book.title}}</h3></a>
+                {% endfor %}
             </div>
         </div>
     </main>

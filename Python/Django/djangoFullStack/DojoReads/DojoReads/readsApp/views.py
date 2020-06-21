@@ -11,11 +11,12 @@ def index(request):
         user = User.objects.get(id=request.session['user_id'])
         context = {
             'user': user,
-            'review': reversed(Review.objects.all()),
+            'reviews': reversed(Review.objects.all()),
             'all_books': Book.objects.all(),
         }
         return render(request, 'books.html', context)
 
+# add a book and review
 def add(request):
     if 'user_id' not in request.session:
         return redirect('/')
@@ -24,12 +25,13 @@ def add(request):
             'all_authors': Author.objects.all()
         }
         return render(request, 'create.html', context)
-
+#add books works 
 def create(request):
     if 'user_id' not in request.session:
         return redirect('/')
     return redirect('/books')
 
+# view all books with reviews and ratings
 def rating(request):
     if 'user_id' not in request.session:
         return redirect('/')
