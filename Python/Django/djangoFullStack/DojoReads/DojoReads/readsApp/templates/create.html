@@ -28,13 +28,15 @@
                     </li>
                     <h1>Author:</h1>
                     <li>
-                        <select name="author">
-                            <option value="">Choose Author from List</option>
-                                <option value="AUTHOR">AUTHOR</option>
+                        <select name="authors_dropdown">
+                            <option value="none" disabled>Choose Author from List</option>
+                            {% for author in all_authors %}
+                                <option value="{{author.id}}">{{author.name}}</option>
+                            {% endfor %}
                         </select>
                     </li>
                     <li>
-                        <input type="text" name="add_author" placeholder="Add a new Author">
+                        <input type="text" name="new_author" placeholder="Add a new Author">
                     </li>
                     <li>
                         <div class="grid grid-2">

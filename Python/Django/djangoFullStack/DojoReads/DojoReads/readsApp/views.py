@@ -29,7 +29,24 @@ def add(request):
 def create(request):
     if 'user_id' not in request.session:
         return redirect('/')
-    return redirect('/books')
+    else:
+        user = User.objects.get(id=request.session['user_id'])
+        if (len(request.POST['new_author']) == 1):
+            author = Author.objects.get(name=request.POST['new_author'])
+        else:
+            author = Author.objects.get(id=request.POST['authors_dropdown'])
+        book = Book.objects.create(
+            title=request.POST['title'],
+            author=author)
+        book_id = Book.objects.last().id
+        review = Review.objects.create(
+            review=request.POST['review'], 
+            rating=request.POST['rating'], 
+            book=book, 
+            author=author
+            )
+        book.reviews.add(review)
+        return redirect('/books')
 
 # view all books with reviews and ratings
 def rating(request):
