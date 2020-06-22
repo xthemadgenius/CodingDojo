@@ -35,7 +35,9 @@
                 </div>
                 <h4><a href="/users/{{review.user.id}}">{{review.user.name}}</a> {{review.review}}</h4>
                 <h5>{{review.created_at}}</h5>
+                {% if request.session.user_id == review.user.id %}
                 <a href="/books/{{book.id}}/deleteReview/{{review.id}}">Delete this Review</a>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
