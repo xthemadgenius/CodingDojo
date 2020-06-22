@@ -76,9 +76,11 @@ def postRating(request, bookId):
 def delete(request, bookId, reviewId):
     if 'user_id' not in request.session:
         return redirect('/')
-    review = Review.object.filter(id=reviewId)[0]
-    if review.user_reviewed.id != request.session['user.id']:
+    review = Review.objects.filter(id=reviewId)[0]
+    if review.user.id != request.session['user_id']:
         return redirect(f'/books/{bookId}')
+    review.delete()
+    return redirect(f'/books/{bookId}')
 
 def logout(request):
     request.session.flush()

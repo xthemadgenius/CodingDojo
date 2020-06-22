@@ -24,9 +24,9 @@
         <h2>Author: {{book.author.name}}</h2>
         <div class="make-left">
             <h1>Reviews</h1>
+            {% for review in reviews %}
             <div class="push-ratings">
                 <hr>
-                {% for review in reviews %}
                 <div class="set-ratings">
                     <h3>Rating</h3>
                     <div class="push-stars">
@@ -35,8 +35,9 @@
                 </div>
                 <h4><a href="/users/{{review.user.id}}">{{review.user.name}}</a> {{review.review}}</h4>
                 <h5>{{review.created_at}}</h5>
-                {% endfor %}
+                <a href="/books/{{book.id}}/deleteReview/{{review.id}}">Delete this Review</a>
             </div>
+            {% endfor %}
         </div>
         <div class="make-right">
             <form action="/books/{{book.id}}/addReview" method="POST">
