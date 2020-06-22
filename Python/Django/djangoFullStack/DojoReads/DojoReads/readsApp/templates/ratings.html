@@ -20,43 +20,44 @@
         </nav>
     </header>
     <main>
-        <h1>BOOK TITLE</h1>
-        <h2>Author: AUTHORS FULLNAME</h2>
+        <h1>{{book.title}}</h1>
+        <h2>Author: {{book.author.name}}</h2>
         <div class="make-left">
             <h1>Reviews</h1>
             <div class="push-ratings">
                 <hr>
+                {% for review in reviews %}
                 <div class="set-ratings">
                     <h3>Rating</h3>
                     <div class="push-stars">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star checked">{{review.rating}}</span>
                     </div>
                 </div>
-                <h4><a href="">Name</a> write your wild comment</h4>
-                <h5>Show me the Date when it was posted</h5>
+                <h4><a href="/users/{{review.user.id}}">{{review.user.name}}</a> {{review.review}}</h4>
+                <h5>{{review.created_at}}</h5>
+                {% endfor %}
             </div>
         </div>
         <div class="make-right">
-            <h3>Add a Review:</h3>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Rating</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Write a Review</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit Review</button>
+            <form action="/books/{{book.id}}/addReview" method="POST">
+                {% csrf_token %}
+                <h3>Add a Review:</h3>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <select name="rating" class="form-control" id="review">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="review">Write a Review</label>
+                    <textarea class="form-control" name="review" id="review" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+            </form>
         </div>
     </main>
 </body>

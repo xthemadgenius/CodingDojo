@@ -33,12 +33,10 @@
                         <div class="set-ratings">
                             <h3>Rating</h3>
                             <div class="push-stars">
-                                {% for i in review.rating %}
-                                <span class="fa fa-star checked"></span>
-                                {% endfor %}
+                                <span class="fa fa-star checked">{{review.rating}}</span>
                             </div>
                         </div>
-                        <h4><a href="">{{review.user.name}} - </a>{{review.review}}</h4>
+                        <h4><a href="/users/{{review.user.id}}">{{review.user.name}} - </a>{{review.review}}</h4>
                         <h5>Reviewed on {{review.created_at}}</h5>
                     </li>
                     {% endfor %}

@@ -41,16 +41,37 @@ def create(request):
         Review.objects.create(
             review=request.POST['review'], 
             rating=request.POST['rating'], 
-            book=book, 
+            book=book,
+            user=user, 
             )
         # book.reviews.add(review)
         return redirect('/books')
 
 # view all books with reviews and ratings
-def rating(request):
+def rating(request, bookId):
     if 'user_id' not in request.session:
         return redirect('/')
-    return render(request, 'ratings.html')
+    context = {
+        'book': Book.objects.get(id=bookId),
+        'reviews': Book.objects.get(id=bookId).review.all(),
+    }
+    return render(request, 'ratings.html', context)
+
+def postRating(request, bookId):
+    if 'user_id' not in request.session:
+        return redirect('/')
+    else:
+        user = User.objects.get(id=request.session['user_id'])
+        book = Book.objects.filter(id=bookId)[0]
+        Review.objects.create(
+            review=request.POST['review'],
+            rating=request.POST['rating'],
+            book=book,
+            user=user,
+        )
+        return redirect(f'/books/{bookId}')
+
+# end of Ratings Page Actions
 
 def delete(request, bookId, reviewId):
     if 'user_id' not in request.session:

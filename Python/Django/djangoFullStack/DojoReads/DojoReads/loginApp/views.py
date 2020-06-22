@@ -44,10 +44,10 @@ def login(request):
     return redirect('/')
 
 def user(request, user_id):
-    get_review = Book.objects.filter(review__user__id=user_id)
+    get_review = User.objects.get(id=user_id).review.all(),
     context = {
         'user': User.objects.filter(id=user_id)[0],
-        'reviewed_books':get_review,
+        'reviews':get_review,
     }
     return render(request, 'user.html', context)
 
