@@ -44,7 +44,7 @@ def login(request):
     return redirect('/')
 
 def user(request, user_id):
-    get_review = User.objects.get(id=user_id).review.all(),
+    get_review =  Book.objects.filter(review__user__id = user_id).distinct()
     context = {
         'user': User.objects.filter(id=user_id)[0],
         'reviews':get_review,

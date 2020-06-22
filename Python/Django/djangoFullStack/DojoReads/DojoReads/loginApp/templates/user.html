@@ -34,9 +34,9 @@
         </div>
         <h3>Posted Reviews in Following Books:</h1>
         <hr>
-        <ul>
+        <ul style="list-style: none;">
             {% for review in reviews %}
-            <li><a href="books/{{review.books.id}}"><h4>{{review.books.id}}</h4></a></li>
+            <li><a href="/books/{{review.id}}"><h4>{{review.title}}</h4></a></li>
             {% endfor %}
         </ul>
     </main>
