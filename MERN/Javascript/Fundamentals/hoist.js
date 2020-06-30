@@ -43,6 +43,7 @@ var mean = function() {
 }
 console.log(food);
 // console logs: chicken, Fish
+
 //6
 console.log(genre);
 var genre = "disco";
