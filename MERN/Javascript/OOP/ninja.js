@@ -1,5 +1,4 @@
-class Ninja{
-    constructor(name){
+function Ninja (name) {
         this.name = name;
         this.health = 100;
         this.speed = 3;
