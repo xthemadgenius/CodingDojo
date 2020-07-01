@@ -24,4 +24,8 @@ class Sensei extends Ninja{
         this.speed = 10;
         this.wisdom = 10
     }
+    speakWisdom(){
+        super.drinkSake();
+        console.log("Bugs only exist in the mind, errors exist in people");
+    }
 }
