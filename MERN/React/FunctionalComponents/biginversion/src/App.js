@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import BigInversion from './components/BigInversion'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BigInversion firstName="Bob" lastName="Sagot" age="43" hairColor="Black"/>
+      <BigInversion firstName="Romney" lastName="Mit" age="53" hairColor="Gray"/>
+      <BigInversion firstName="Trump" lastName="Donald" age="64" hairColor="Blonde"/>
+      <BigInversion firstName="Fish" lastName="Moon" age="22" hairColor="Rainbow"/>
     </div>
   );
 }
