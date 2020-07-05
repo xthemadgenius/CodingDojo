@@ -1,5 +1,5 @@
 import React from 'react';
-import App from '../App';
+import './styles.css';
 
 const HookForm = props => {
     const { input, setInput } = props;
