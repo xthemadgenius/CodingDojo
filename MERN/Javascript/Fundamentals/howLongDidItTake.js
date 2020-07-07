@@ -39,3 +39,10 @@ console.log(iFib(20));
 // ran tests on the on the code on repl and console iterative was faster at processing the result since
 //  it is more code and has more more specific methods in play to ensure that the function locates,
 //  mitigates, and breaks out a solution. 
+
+// 3 Reverse a String
+const story = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident culpa nihil repellat nulla laboriosam maxime, quia aliquam ipsam reprehenderit delectus reiciendis molestias assumenda aut fugit tempore laudantium tempora aspernatur? Repellendus consequatur expedita doloribus soluta cupiditate quae fugit! Aliquid, repellat animi, illum molestias maiores, laboriosam vero impedit iusto mollitia optio labore asperiores!";
+const reversed1 = story.split("").reverse().join("");
+console.log(reversed1)
+const reversed2 = str =>[...str].reverse().join("");
+console.log(reversed2(story))
