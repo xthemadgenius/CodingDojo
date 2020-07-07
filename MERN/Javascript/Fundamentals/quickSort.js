@@ -19,3 +19,5 @@ var unsorted = [23, 45, 16, 37, 3, 99, 22, 122];
 var sorted = quickSort(unsorted);
 
 console.log(sorted);
+
+// Im kind of confused with the bonuses to the assignment so I will not attempt them
