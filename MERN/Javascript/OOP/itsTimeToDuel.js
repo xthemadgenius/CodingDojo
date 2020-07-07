@@ -10,9 +10,6 @@ class Unit extends Card{
         this.power = power;
         this.res = res;
     }
-    attack(target){
-
-    }
 }
 class DuelCards extends Unit{
     constructor(name, cost, power, res){
@@ -43,6 +40,9 @@ class DuelCards extends Unit{
         this.power += 2;
         console.log(`Increse target's Power by 3`)
     }
+    attack(target){
+        console.log(`${this.name} has attacked doing a damage of ${this.power} to ${target.name}`)
+    }
 }
 const player1 = new DuelCards("Jaxx");
 player1.redBeltNinja()
@@ -52,4 +52,3 @@ player2.blackBeltNinja();
 player2.blackBeltNinja().unhandledPromiseRejection();
 player1.redBeltNinja().pairProgramming();
 player1.attack(player2)
-// solution I am turing in for now
