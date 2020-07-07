@@ -9,6 +9,15 @@ class NinjaModel{
     fullName(){
         return this.firstName + " " + this.lastName;
     }
+    sayName(){
+        console.log(`My name is ${this.name}`);
+    }
+    showStats(){
+        console.log(`Name: ${this.name}, Strength: ${this.strength}, Speed: ${this.speed}, Health: ${this.health}`);
+    }
+    drinkSake(){
+        this.health += 10;
+    }
 }
 
 export default NinjaModel;

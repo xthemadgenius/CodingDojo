@@ -6,21 +6,21 @@
 
 const Ninja = (props, parentNode) => {
     const container = document.createElement("div");
-    
-    const title = document.createElement("h1");
-    title.innerText = `Name: ${props.player.fullName()}`;
+
+    const title = document.createElement("h2");
+    title.innerText = `Name: ${props.ninja.fullName()}`;
     container.appendChild(title);
 
-    const health = document.createElement("h2");
-    title.innerText = `Health: ${props.player.health}`;
+    const health = document.createElement("h3");
+    health.innerText = `Health: ${props.ninja.health}`;
     container.appendChild(health);
 
-    const power = document.createElement("h3");
-    title.innerText = `Power: ${props.player.power}`;
+    const power = document.createElement("h4");
+    power.innerText = `Power: ${props.ninja.power}`;
     container.appendChild(power);
 
     const speed = document.createElement("h4");
-    title.innerText = `Speed: ${props.player.speed}`;
+    speed.innerText = `Speed: ${props.ninja.speed}`;
     container.appendChild(speed);
 
     container.appendChild(document.createElement("hr"));

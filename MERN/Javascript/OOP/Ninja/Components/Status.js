@@ -3,7 +3,7 @@ import Ninja from "./Ninja.js";
 const Status = (props, parentNode) => {
     const container = document.createElement("div");
 
-    const heading = document.createElement("h2");
+    const heading = document.createElement("h1");
     heading.innerText = props.headingText;
     container.appendChild(heading);
 
@@ -12,7 +12,6 @@ const Status = (props, parentNode) => {
             ninja: props.ninjas[i],
         }, container);
     };
-    parentNode.appendChild(container)
-}
-
+    parentNode.appendChild(container);
+};
 export default Status;
