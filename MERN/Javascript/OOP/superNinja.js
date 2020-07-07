@@ -18,14 +18,20 @@ class Ninja{
 
 class Sensei extends Ninja{
     constructor(name){
-        this.name = name;
-        this.health = 200;
-        this.strength = 10;
-        this.speed = 10;
-        this.wisdom = 10
+        super(name, 200, 10, 10);
+        this.wisdom = 10;
     }
     speakWisdom(){
         super.drinkSake();
         console.log("Bugs only exist in the mind, errors exist in people");
     }
 }
+
+let ninja = new Ninja("Donatello", 100);
+ninja.showStats();
+ninja.drinkSake();
+ninja.showStats();
+let sensei = new Sensei("Master Splinter");
+sensei.showStats();
+sensei.speakWisdom();
+sensei.showStats();

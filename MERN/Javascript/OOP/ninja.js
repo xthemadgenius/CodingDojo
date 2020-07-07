@@ -21,22 +21,27 @@ function Ninja (name) {
     // }
 
     // or
+}
 
-    class Ninja{
-        constructor(name){
-            this.name = name;
-            this.health = 100;
-            this.strength = 3;
-            this.speed = 3;
-        }
-        sayName(){
-            console.log(`My name is ${this.name}`);
-        }
-        showStats(){
-            console.log(`Name: ${this.name}, Strength: ${this.strength}, Speed: ${this.speed}, Health: ${this.health}`);
-        }
-        drinkSake(){
-            this.health += 10;
-        }
+class Ninja{
+    constructor(name){
+        this.name = name;
+        this.health = 100;
+        this.strength = 3;
+        this.speed = 3;
+    }
+    sayName(){
+        console.log(`My name is ${this.name}`);
+    }
+    showStats(){
+        console.log(`Name: ${this.name}, Strength: ${this.strength}, Speed: ${this.speed}, Health: ${this.health}`);
+    }
+    drinkSake(){
+        this.health += 10;
     }
 }
+
+let ninja = new Ninja("Keyrow", 100);
+ninja.showStats();
+ninja.drinkSake();
+ninja.showStats();
