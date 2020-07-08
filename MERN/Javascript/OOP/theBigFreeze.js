@@ -19,3 +19,11 @@ console.log(notNeceCelery);
 const items = Object.freeze(["carrots", "onions", "celery", "mushrooms", "butter", "thyme"]);
 const sortedItems = [...items].sort();
 console.log(sortedItems);
+
+const numbers = [10, 5, 3, 12, 22, 8];
+numbers.sort();
+console.log(numbers);
+
+const sortedGroceries = [...groceryList].sort( (a, b) => a.item > b.item );
+console.log(sortedGroceries);
+
