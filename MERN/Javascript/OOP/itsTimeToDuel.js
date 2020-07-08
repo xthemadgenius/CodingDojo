@@ -16,28 +16,28 @@ class DuelCards extends Unit{
         super(name, cost, power, res);
     }
     redBeltNinja(){
-        this.cost -= 3;
+        this.cost = cost - 3;
         this.power = 3;
         this.resiliance = 4;
     }
     blackBeltNinja(){
-        this.cost -= 4;
+        this.cost = cost - 4;
         this.power = 5;
         this.resiliance = 4;
     }
     hardAlgorithm(){
-        this.cost -= 2;
-        this.resiliance += 3;
+        this.cost = cost - 2;
+        this.resiliance = resiliance + 3;
         console.log(`Increase target's resiliance by 3`)
     }
     unhandledPromiseRejection(){
-        this.cost -= 1;
-        this.resiliance -= 2;
+        this.cost = cost - 1;
+        this.resiliance = resiliance - 2;
         console.log(`Reduce target's resiliance by 2`)
     }
     pairProgramming(){
-        this.cost -= 3;
-        this.power += 2;
+        this.cost = cost - 3;
+        this.power = power + 2;
         console.log(`Increse target's Power by 3`)
     }
     attack(target){
