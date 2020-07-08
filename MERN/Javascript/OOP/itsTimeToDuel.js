@@ -4,41 +4,45 @@ class Player{
     }
 }
 class Ninja extends Player{
-    constructor(name, cost, power, res){
+    constructor(name){
         super(name);
-        this.cost = 10;
+        this.coins = 10;
         this.power = 10;
         this.res = 10;
+        this.cost = 0;
     }
     redBeltNinja(){
-        var price = 3
-        if (this.cost >= this.cost - price){ 
-            this.cost -= price;
+        this.cost = 3
+        if (this.coins >= this.coins - this.cost){ 
+            this.coins -= this.cost;
             this.power += 3;
             this.res += 4;
+            console.log(`${this.name} played Red Belt Ninja`);
         } else {
             console.log("Can not afford card");
         }
     }
     blackBeltNinja(){
-        var price = 4
-        if (this.cost >= this.cost - price){ 
-            this.cost -= price;
+        this.cost = 4
+        if (this.coins >= this.coins - this.cost){ 
+            this.coins -= this.cost;
             this.power += 5;
             this.res += 4;
+            console.log(`${this.name} played Black Belt Ninja`);
         } else {
             console.log("Can not afford card");
         }
     }
 }
 class DuelCards extends Ninja{
-    constructor(name, cost, power, res){
+    constructor(name){
         super(name, 10, 10, 10);
+        this.cost = 0;
     }
     hardAlgorithm(){
-        var price = 2;
-        if (this.cost >= this.cost - price){
-            this.cost -= price;
+        this.cost = 2;
+        if (this.coins >= this.coins - this.cost){
+            this.coins -= this.cost;
             this.res += 3;
             console.log(`${this.name} increaded their resiliance by 3`)
         } else {
@@ -46,9 +50,9 @@ class DuelCards extends Ninja{
         }
     }
     unhandledPromiseRejection(target){
-        var price = 1;
-        if (this.cost >= this.cost - price){
-            this.cost -= price;
+        this.cost = 1;
+        if (this.coins >= this.coins - this.cost){
+            this.coins -= this.cost;
             target.res -= 2;
             console.log(`${this.name} reduced ${target.name}'s resiliance by 2`)
         } else {
@@ -56,9 +60,9 @@ class DuelCards extends Ninja{
         }
     }
     pairProgramming(){
-        var price = 3;
-        if (this.cost >= this.cost - price){
-            this.cost -= price;
+        this.cost = 3;
+        if (this.coins >= this.coins - this.cost){
+            this.coins -= this.cost;
             this.power += 2;
             console.log(`${this.name} incresed their Power by 3`)
         } else {
@@ -77,6 +81,7 @@ class DuelCards extends Ninja{
 }
 // #1
 const player1 = new DuelCards("Roshi");
+console.log(player1);
 player1.redBeltNinja();
 console.log(player1);
 // #2
@@ -84,6 +89,7 @@ player1.hardAlgorithm();
 console.log(player1);
 // #3
 const player2 = new DuelCards("Crane");
+console.log(player2);
 player2.blackBeltNinja();
 console.log(player2);
 // #4
