@@ -6,9 +6,9 @@ class Player{
 class Ninja extends Player{
     constructor(name, cost, power, res){
         super(name);
-        this.cost = cost;
-        this.power = power;
-        this.res = res;
+        this.cost = 10;
+        this.power = 10;
+        this.res = 10;
     }
     redBeltNinja(){
         var price = 3
@@ -33,7 +33,7 @@ class Ninja extends Player{
 }
 class DuelCards extends Ninja{
     constructor(name, cost, power, res){
-        super(name, cost, power, res);
+        super(name, 10, 10, 10);
     }
     hardAlgorithm(){
         var price = 2;
@@ -75,28 +75,22 @@ class DuelCards extends Ninja{
         }
     }
 }
-//#1
-const player1 = new Player("Jaxx");
-const red = new Ninja(player1.name, 10, 10, 10)
-console.log(red);
-red.redBeltNinja()
-console.log(red);
+// #1
+const player1 = new DuelCards("Roshi");
+player1.redBeltNinja();
+console.log(player1);
 // #2
-const fighter1 = new DuelCards(red.name, red.cost,red.power, red.res);
-fighter1.hardAlgorithm(fighter1)
-console.log(fighter1);
+player1.hardAlgorithm();
+console.log(player1);
 // #3
-const player2 = new Player("Nacho");
-const black = new Ninja(player2.name,10, 10, 10);
-console.log(black);
-black.blackBeltNinja();
-console.log(black);
+const player2 = new DuelCards("Crane");
+player2.blackBeltNinja();
+console.log(player2);
 // #4
-const fighter2 = new DuelCards(black.name, black.cost,black.power, black.res);
-fighter2.unhandledPromiseRejection(fighter1);
-console.log(fighter1);
+player2.unhandledPromiseRejection(player1);
+console.log(player1);
 // #5
-fighter1.pairProgramming();
-console.log(fighter1);
+player1.pairProgramming()
+console.log(player1);
 // #6
-fighter1.attack(fighter2);
+player1.attack(player2);
