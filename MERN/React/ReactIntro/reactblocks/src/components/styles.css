@@ -1,0 +1,37 @@
+.header{
+    background-color: #6aa84f;
+    height: 100px;
+}
+.navigation{
+    background-color: #6fa8dc;
+    float: left;
+    width: 20%;
+    height: 600px;
+}
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+    background-color: #e06666;
+    height: 800px;
+    width: 80%;
+    
+}
+.con{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.subcontent{
+    margin: 20px 20px 20px 20px;
+    background-color: #ffd966;
+    height: 500px;
+    width: 30%;
+}
+
+.advertisment{
+    background-color: #b4a7d6;
+    margin:20px 20px 20px 20px ;
+    height: 200px;
+    width: 95%;
+}
