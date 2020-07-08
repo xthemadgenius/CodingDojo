@@ -22,41 +22,42 @@ const pokémon = Object.freeze([
         { "id": 145, "name": "Zapdos",     "types": ["electric", "flying"] },
         { "id": 146, "name": "Moltres",    "types": ["fire", "flying"] },
         { "id": 148, "name": "Dragonair",  "types": ["dragon"] }
-]);
+    ]);
     
-const bListPkmn = pokémon.filter( p => p.name[0] === "B" );
-console.log(bListPkmn);
-
-const pkmnIds = pokémon.map( p => p.id )
-console.log(pkmnIds);
-
-const div3 = pokémon.filter( p => p.id % 3 === 0);
-console.log(div3);
-
-const fireType = [...pokémon].filter(items => items.types.includes("fire"));
-console.log(fireType);
-
-const moreThanOne = pokémon.filter(items => items.types.length % 2 === 0)
-console.log(moreThanOne)
-
-const namePoke = pokémon.map(items => items.name)
-console.log(namePoke)
-
-const bigId = pokémon.filter(items => items.id >= 99)
-console.log(bigId)
-
-// still need to Fix
-const poisonPoke = [...pokémon].filter(function(items){
-    return items.types.includes("poison");
-});
-console.log(poisonPoke);
-
-const flyingPoke = [...pokémon].filter(function(items){
-    return items.types.includes("flying");
-});
-console.log(flyingPoke);
-
-const normalPoke = [...pokémon].filter(function(items){
-    return items.types.includes("normal");
-});
-console.log(normalPoke);
+    const bListPkmn = pokémon.filter( p => p.name[0] === "B" );
+    console.log(bListPkmn);
+    
+    const pkmnIds = pokémon.map( p => p.id )
+    console.log(pkmnIds);
+    
+    const div3 = pokémon.filter( p => p.id % 3 === 0);
+    console.log(div3);
+    
+    const fireType = [...pokémon].filter(items => items.types.includes("fire"));
+    console.log(fireType);
+    
+    const moreThanOne = pokémon.filter(items => items.types.length % 2 === 0)
+    console.log(moreThanOne)
+    
+    const namePoke = pokémon.map(items => items.name)
+    console.log(namePoke)
+    
+    const bigId = pokémon.filter(items => items.id >= 99)
+    console.log(bigId)
+    
+    console.log("*****more work below halfway done*****");
+    // still need to Fix
+    const poisonPoke = [...pokémon].filter(function(items){
+        return items.types.includes("poison");
+    });
+    console.log(poisonPoke);
+    
+    const flyingPoke = [...pokémon].filter(function(items){
+        return items.types.includes("flying");
+    });
+    console.log(flyingPoke);
+    
+    const normalPoke = [...pokémon].filter(function(items){
+        return items.types.includes("normal");
+    });
+    console.log(normalPoke);
