@@ -23,41 +23,47 @@ const pokémon = Object.freeze([
         { "id": 146, "name": "Moltres",    "types": ["fire", "flying"] },
         { "id": 148, "name": "Dragonair",  "types": ["dragon"] }
     ]);
-    
+    // #sample
     const bListPkmn = pokémon.filter( p => p.name[0] === "B" );
     console.log(bListPkmn);
-    
+    // #sample
     const pkmnIds = pokémon.map( p => p.id )
     console.log(pkmnIds);
+    // #sample
+
     
     const div3 = pokémon.filter( p => p.id % 3 === 0);
     console.log(div3);
-    
+    // #1
     const fireType = [...pokémon].filter(items => items.types.includes("fire"));
     console.log(fireType);
-    
+    // #2
     const moreThanOne = pokémon.filter(items => items.types.length % 2 === 0)
     console.log(moreThanOne)
-    
+    // #3
     const namePoke = pokémon.map(items => items.name)
     console.log(namePoke)
-    
+    // #4
     const bigId = pokémon.filter(items => items.id >= 99)
     console.log(bigId)
-    
-    console.log("*****more work below halfway done*****");
-    // still need to Fix
-    const poisonPoke = [...pokémon].filter(function(items){
-        return items.types.includes("poison");
-    });
-    console.log(poisonPoke);
-    
-    const flyingPoke = [...pokémon].filter(function(items){
-        return items.types.includes("flying");
-    });
-    console.log(flyingPoke);
-    
-    const normalPoke = [...pokémon].filter(function(items){
-        return items.types.includes("normal");
-    });
-    console.log(normalPoke);
+    // #5
+    const psnNames = new Array();
+    pokémon.filter(pkmn => {
+        if (pkmn.types[0] == "poison" || pkmn.types[1] == "poison")
+            psnNames.push(pkmn.name);
+    })
+    console.log(psnNames)
+    // #6
+    const flyPoke = new Array();
+    pokémon.filter(pkmn => {
+        if (pkmn.types[0] == "flying" || pkmn.types[1] == "flying")
+            flyPoke.push(pkmn);
+    })
+    console.log(flyPoke)
+    // #7
+    const normalPoke = new Array();
+    pokémon.filter(pkmn => {
+        if (pkmn.types[0] == "poison" || pkmn.types[1] == "poison")
+                normalPoke.push(pkmn);
+    })
+    console.log(normalPoke.length)
