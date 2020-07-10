@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Form from './components/Form';
 
 
 function App() {
   return (
     <div className="App">
-      <FontAwesomeIcon icon={faThumbsUp} />
+      <Form/>
     </div>
   );
 }
