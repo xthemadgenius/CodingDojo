@@ -13,6 +13,5 @@ const userValidation = (values) =>{
         errors.password = "Passsword must be 8 characters or longer";
     }
     return errors;
-
-    export default userValidation;
 }
+export default userValidation;
