@@ -1,6 +1,7 @@
 import React from 'react';
 import useForm from './useForm';
 import userValidation from './UserValidation';
+import { TheForm, FillLabel, FormGroup, MainInput, Danger, RoundedBtn } from './Styles';
 
 const MainForm = () => {
     const login = () => {
@@ -13,35 +14,42 @@ const MainForm = () => {
         handleSubmit,
     } = useForm(login, userValidation);
     return (
-        <div className="section is-fullheight">
-      <div className="container">
-        <div className="column is-4 is-offset-4">
-          <div className="box">
-            <form onSubmit={handleSubmit} noValidate>
-              <div className="field">
-                <label className="label">Email Address</label>
-                <div className="control">
-                  <input autoComplete="off" className={`input ${errors.email && 'is-danger'}`} type="email" name="email" onChange={handleChange} value={values.email || ''} required />
-                  {errors.email && (
-                    <p className="help is-danger">{errors.email}</p>
-                  )}
-                </div>
-              </div>
-              <div className="field">
-                <label className="label">Password</label>
-                <div className="control">
-                  <input className={`input ${errors.password && 'is-danger'}`} type="password" name="password" onChange={handleChange} value={values.password || ''} required />
-                </div>
-                {errors.password && (
-                  <p className="help is-danger">{errors.password}</p>
+        <div>
+            <h2>Make an Account</h2>
+            <TheForm onSubmit={handleSubmit} noValidate>
+                <FormGroup>
+                    <FillLabel>First Name:{" "}</FillLabel>
+                    <MainInput className={`input ${errors.firstName && 'is-danger'}`} type="firstName" name="firstName" onChange={handleChange} value={values.firstName || ''} required />
+                </FormGroup>
+                <FormGroup>
+                    <FillLabel>Last Name:{" "}</FillLabel>
+                    <MainInput className={`input ${errors.lastName && 'is-danger'}`} type="lastName" name="lastName" onChange={handleChange} value={values.lastName || ''} required />
+                </FormGroup>
+                <FormGroup>
+                    <FillLabel>Email Address:{" "}</FillLabel>
+                    <MainInput autoComplete="off" className={`input ${errors.email && 'is-danger'}`} type="email" name="email" onChange={handleChange} value={values.email || ''} required />
+                </FormGroup>
+                <FormGroup>
+                    <FillLabel>Password:{" "}</FillLabel>
+                    <MainInput className={`input ${errors.password && 'is-danger'}`} type="password" name="password" onChange={handleChange} value={values.password || ''} required />
+                </FormGroup>
+                
+                <RoundedBtn type="submit">Login</RoundedBtn>
+
+                {errors.firstName && (
+                    <Danger>{errors.firstName}</Danger>
                 )}
-              </div>
-              <button type="submit" className="button is-block is-info is-fullwidth">Login</button>
-            </form>
-          </div>
+                {errors.lastName && (
+                    <Danger>{errors.lastName}</Danger>
+                )}
+                {errors.email && (
+                    <Danger>{errors.email}</Danger>
+                )}
+                {errors.password && (
+                    <Danger>{errors.password}</Danger>
+                )}
+            </TheForm>
         </div>
-      </div>
-    </div>
     )
 }
 
