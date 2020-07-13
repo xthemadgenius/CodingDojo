@@ -1,5 +1,5 @@
-  
 import React from 'react';
+import { TheTask, MainBtn, CheckMark } from './Styles';
 import style from './Lists.module.css'
 
 const Lists = (props) => {
@@ -10,20 +10,19 @@ const Lists = (props) => {
             return list.filter(task => list.indexOf(task) !== index)
         })
     }
-
     const onChange = () => {
         list[index].isComplete = !list[index].isComplete;
         setList([...list]);
     }
 
     return (
-        <div className="container">
+        <CheckMark>
             {task.isComplete ?
-                <h4 className={style.isComplete}>{task.name}</h4> :
-                <h4 className="d-inline mr-2">{task.name}</h4>}
+                <TheTask className={style.isComplete}>{task.name}</TheTask> :
+                <TheTask>{task.name}</TheTask>}
             <input type="checkbox" onChange={onChange} checked={task.isComplete} />
-            <button onClick={onClick}>X</button>
-        </div>
+            <MainBtn onClick={onClick}>X</MainBtn>
+        </CheckMark>
     )
 }
 

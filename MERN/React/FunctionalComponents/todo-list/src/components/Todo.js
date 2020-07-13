@@ -1,4 +1,5 @@
 import React from 'react';
+import  { CreateTask, MainBtn } from './Styles';
 
 const Todo = (props) => {
     const { list, setList } = props;
@@ -18,12 +19,12 @@ const Todo = (props) => {
 
     return (
         <div>
-            <h1>ToDo List</h1>
-            <input
+            <h1>To Do List</h1>
+            <CreateTask
                 type="text"
                 name="task"
                 onChange={onChange} />
-            <button onClick={onClick}>Add Task</button>
+            <MainBtn onClick={onClick}>Add Task</MainBtn>
         </div>
     )
 }

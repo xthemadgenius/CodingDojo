@@ -22,6 +22,9 @@ export const TheTask = styled.label`
     color: black;
     font-weight: 600;
 `;
+export const CheckMark = styled.div`
+    margin-top: 20px;
+`;
 
 export const CreateTask = styled.textarea`
     width: 100%;
