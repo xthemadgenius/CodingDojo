@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {MainButton, Poke} from './Styles';
 import axios from 'axios';
 
@@ -13,6 +13,7 @@ const AxiosPoke = (props) => {
     };
     return (
         <div>
+            <h1>Show me the Pokemon</h1>
             <MainButton onClick={onClick}>Whose That Pokemon?</MainButton>
             {pokeData.map((poke, i) =>
                 <Poke key={i}>{poke.name}</Poke>
