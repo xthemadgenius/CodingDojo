@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import FormContext from '../context/FormContext';
 import { TheForm, FillLabel, FormGroup, MainInput } from './Styles';
 
-export default () => {
+const Form = () => {
     const { name, setName } = useContext(FormContext);
 
     return (
@@ -14,3 +14,4 @@ export default () => {
         </TheForm>
     )
 }
+export default Form;

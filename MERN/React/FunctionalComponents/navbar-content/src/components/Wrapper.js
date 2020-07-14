@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import FormContext from '../context/FormContext';
 
-export default ({ children }) => {
-    const [name, setName] = useState("John Doe");
+const Wrapper = ({ children }) => {
+    const [name, setName] = useState("Billy Bob");
 
     return (
         <FormContext.Provider value={{ name, setName }}>
@@ -10,3 +10,5 @@ export default ({ children }) => {
         </FormContext.Provider>
     )
 }
+
+export default Wrapper;

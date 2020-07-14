@@ -22,7 +22,7 @@ export const FillLabel = styled.label`
     width: 160px;
     text-align: left;
     color: white;
-    margin-right: 20px;
+    padding-left: 40px;
     font-size: 20px;
 `;
 export const MainInput = styled.input`
@@ -34,7 +34,7 @@ export const MainInput = styled.input`
     border-radius: 0px 5px 5px 0px;
 `;
 export const Navbar = styled.div`
-    background: green;
+    background: rgb(179, 34, 236);
     display: flex;
     padding: 20px;
     align-items: center;

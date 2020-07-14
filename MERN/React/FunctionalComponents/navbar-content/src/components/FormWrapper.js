@@ -1,8 +1,10 @@
 import React from 'react';
 import Form from './Form';
 
-export default () => (
+const FormWrapper = () => (
     <>
         <Form />
     </>
 )
+
+export default FormWrapper;
