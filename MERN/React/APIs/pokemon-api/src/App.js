@@ -8,9 +8,10 @@ import Time from './components/Time';
 function App() {
   return (
     <div className="App">
+      <h1>Wanna see all the Pokemon?</h1>
       <Pokemon/>
-      <SWars/>
-      <Time/>
+      {/* <SWars/>
+      <Time/> */}
     </div>
   );
 }
