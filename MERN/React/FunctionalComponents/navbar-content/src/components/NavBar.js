@@ -5,6 +5,5 @@ import {Navbar} from './Styles'
 
 export default () => {
     const { name } = useContext(FormContext);
-
     return <Navbar>Hi {name}!</Navbar>;
 };

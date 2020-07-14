@@ -38,7 +38,7 @@ export const Navbar = styled.div`
     display: flex;
     padding: 20px;
     align-items: center;
-    justify-content: flex-end,
-    color: white,
+    justify-content: flex-end;
+    color: white;
     fontWeight: 600;
 `;
