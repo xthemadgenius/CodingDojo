@@ -12,6 +12,10 @@ const PageOne = () =>{
             <hr/>
             <Link to='/route-two'>GO to Page Two</Link>
             <br/>
+            <Link to = "/dashboard">Dashboard </Link>
+            <br/>
+            <Link to = "/login"> Login</Link>
+            <br/>
             <button onClick={onClick}>Programmatically Navigate</button>
         </div>
     )

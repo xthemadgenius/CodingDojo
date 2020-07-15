@@ -6,7 +6,11 @@ const PageTwo = () =>{
         <div>
             This is Page 2
             <hr/>
-            <Link to='/route-one'>GO to Page One</Link>
+            <Link to='/'>GO to Page One</Link>
+            <br/>
+            <Link to = "/dashboard">Dashboard </Link>
+            <br/>
+            <Link to = "/login"> Login</Link>
         </div>
     )
 }
