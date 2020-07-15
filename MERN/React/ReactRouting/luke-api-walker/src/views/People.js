@@ -46,7 +46,7 @@ const People = ({ id }) => {
             </SSDiv>
             <SSDiv>
                 <SSText>Weight:</SSText>
-                <h3>{people.height} kg</h3>
+                <h3>{people.mass} kg</h3>
             </SSDiv>
             <SSDiv>
                 <SSText>Hair Color:</SSText>

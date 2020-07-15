@@ -11,5 +11,5 @@ export const EHed = styled.h2`
 
 export const EBad = styled.img`
     margin-top: 20px;
-    width: 250px;
+    width: 750px;
 `;
