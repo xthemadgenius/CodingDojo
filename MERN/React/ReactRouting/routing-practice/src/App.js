@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 
-import MakePages from './test/MakePages'
+// import MakePages from './test/MakePages'
+import MixIt from './components/MixIt';
 
 
 function App() {
   return (
     <div className="App">
-          <MakePages/>
+          {/* <MakePages/> */}
+          <MixIt/>
     </div>
   );
 }
