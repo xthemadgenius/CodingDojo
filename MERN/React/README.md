@@ -30,6 +30,10 @@ npm i -S @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @forta
 
 https://www.digitalocean.com/community/tutorials/how-to-use-font-awesome-5-with-react
 
+to find icons 🔽
+
+https://fontawesome.com/
+
 # Favorite Packages for Redirects/Fetch
 npm install axios
 
