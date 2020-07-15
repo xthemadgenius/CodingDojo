@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css';
-import {Rounter, Link} from '@reach/router';
+
+import MakePages from './test/MakePages'
+
 
 function App() {
   return (
     <div className="App">
-      <div>
-        <Link to = "/dashboard">Dashboard</Link> 
-        <Link to = "/login">Login</Link>
-      </div>
+          <MakePages/>
     </div>
   );
 }
