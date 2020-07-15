@@ -4,34 +4,34 @@ import axios from 'axios';
 import { SSBox, SSDiv, SSHead, SSText } from '../styles/SpecStyles';
 
 const People = ({ id }) => {
-    const [responseData, setResponseData] = useState([]);
-    const [homeWorldState, setHomeWorldState] = useState({ name: "Loading..." });
+    const [people, setPeople] = useState([]);
+    const [home, setHome] = useState({ name: "Loading..." });
 
     useEffect(() => {
         axios
             .get('https://swapi.dev/api/people/' + id)
-            .then(res => { setResponseData(res.data) })
+            .then(res => { setPeople(res.data) })
             .catch(() => navigate('/error'));
     }, [id], 2500);
 
     useEffect(() => {
         axios
-            .get(responseData.homeworld)
+            .get(people.homeworld)
             .then(res => {
-                setHomeWorldState(res.data);
+                setHome(res.data);
             })
             .catch(console.log);
-    }, [id, responseData]);
+    }, [id, people]);
 
     const getHomeWorldId = () => {
-        if (homeWorldState.url) {
-            const url = homeWorldState.url;
-            let i = url.length - 2;
+        if (home.url) {
+            const url = home.url;
+            let path = url.length - 2;
             let HwId = "";
 
-            while (url[i] !== "/") {
-                HwId = url[i] + HwId;
-                i--;
+            while (url[path] !== "/") {
+                HwId = url[path] + HwId;
+                path--;
             }
             return HwId;
         }
@@ -39,34 +39,34 @@ const People = ({ id }) => {
 
     return (
         <SSBox>
-            <SSHead>{responseData.name}</SSHead>
+            <SSHead>{people.name}</SSHead>
             <SSDiv>
                 <SSText>Height:</SSText>
-                <h3>{responseData.height} cm</h3>
+                <h3>{people.height} cm</h3>
             </SSDiv>
             <SSDiv>
                 <SSText>Weight:</SSText>
-                <h3>{responseData.height} kg</h3>
+                <h3>{people.height} kg</h3>
             </SSDiv>
             <SSDiv>
                 <SSText>Hair Color:</SSText>
-                <h3>{responseData.hair_color}</h3>
+                <h3>{people.hair_color}</h3>
             </SSDiv>
             <SSDiv>
                 <SSText>Skin Color:</SSText>
-                <h3>{responseData.skin_color}</h3>
+                <h3>{people.skin_color}</h3>
             </SSDiv>
             <SSDiv>
                 <SSText>Eye Color:</SSText>
-                <h3>{responseData.eye_color}</h3>
+                <h3>{people.eye_color}</h3>
             </SSDiv>
             <SSDiv>
                 <SSText>Birth Year:</SSText>
-                <h3>{responseData.birth_year}</h3>
+                <h3>{people.birth_year}</h3>
             </SSDiv>
             <SSDiv>
                 <SSText>Home World:</SSText>
-                <h3> <Link to={`/planets/${getHomeWorldId()}`}>{homeWorldState.name}</Link></h3>
+                <h3> <Link to={`/planets/${getHomeWorldId()}`}>{home.name}</Link></h3>
             </SSDiv>
         </SSBox>
     )

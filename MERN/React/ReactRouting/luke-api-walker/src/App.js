@@ -12,9 +12,9 @@ function App() {
     <div className="App">
       <Searchbar/>
       <Router>
-          <People path="/people/:id"/>
-          <Planet path="/planets/:id"/>
-          <Starships path="/starships/:id"/>
+          <People path="/people/:id/"/>
+          <Planet path="/planets/:id/"/>
+          <Starships path="/starships/:id/"/>
           <Errors path="/error/"/>
       </Router>
     </div>
