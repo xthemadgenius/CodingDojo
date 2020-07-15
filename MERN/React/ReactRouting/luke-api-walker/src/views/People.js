@@ -1,34 +1,37 @@
-import React, {useState, useEffect} from 'react';
-import {navigate, Link} from '@reach/router';
+import React, { useState, useEffect } from 'react';
+import { navigate, Link } from '@reach/router';
 import axios from 'axios';
 import { SSBox, SSDiv, SSHead, SSText } from '../styles/SpecStyles';
 
-const People = ({id}) => {
-    const [responseData, setResponseData] = useState({});
-    const [homeWorldState, setHomeWorldState] = useState({name: "Loading..."});
+const People = ({ id }) => {
+    const [responseData, setResponseData] = useState([]);
+    const [homeWorldState, setHomeWorldState] = useState({ name: "Loading..." });
 
     useEffect(() => {
         axios
-        .get('https//swapi.dev/api/people/' + id)
-        .then(res => {setResponseData(res.data)})
-        .catch(() => navigate('/error'));
-    }, [id]);
+            .get('https://swapi.dev/api/people/' + id)
+            .then(res => { setResponseData(res.data) })
+            .catch(() => navigate('/error'));
+    }, [id], 2500);
 
     useEffect(() => {
         axios
-        .get(responseData.homeWorld)
-        .then(res =>{setHomeWorldState(res.data)})
-        .catch(console.log);
+            .get(responseData.homeworld)
+            .then(res => {
+                setHomeWorldState(res.data);
+            })
+            .catch(console.log);
     }, [id, responseData]);
 
     const getHomeWorldId = () => {
-        if(homeWorldState.url){
+        if (homeWorldState.url) {
             const url = homeWorldState.url;
-            let path = url.length -2;
+            let i = url.length - 2;
             let HwId = "";
-            while (url(path) != "/"){
-                HwId = url[path] + HwId;
-                path--;
+
+            while (url[i] !== "/") {
+                HwId = url[i] + HwId;
+                i--;
             }
             return HwId;
         }
@@ -43,7 +46,7 @@ const People = ({id}) => {
             </SSDiv>
             <SSDiv>
                 <SSText>Weight:</SSText>
-                <h3>{responseData.weight} kg</h3>
+                <h3>{responseData.height} kg</h3>
             </SSDiv>
             <SSDiv>
                 <SSText>Hair Color:</SSText>
@@ -67,7 +70,6 @@ const People = ({id}) => {
             </SSDiv>
         </SSBox>
     )
-
 }
 
 export default People;

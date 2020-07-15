@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
-import {navigate} from '@reach/router';
+import { navigate } from '@reach/router';
 import { SLabel, SForm, SSelect, SInput, SBox, SBtn } from '../styles/SearchStyles';
 
-const Searchbar = (props) => {
-    const [search, setSearch] = useState({
+const Searchbar = props => {
+    const [formState, setFormState] = useState({
         category: "people",
-        id:"",
+        id: ""
     });
-    const onChange = (e) => {
-        setSearch({
-            ...search,
-            [e.target.name]: e.target.value,
+
+    const onChange = e => {
+        setFormState({
+            ...formState,
+            [e.target.name]: e.target.value
         });
-    };
-    const onSubmit = (e) => {
-        e.preventDefault();
-        navigate(`/${search.category}/${search.id}`) 
     }
+
+    const onSubmit = e => {
+        e.preventDefault();
+        navigate('/' + formState.category + '/' + formState.id);
+    }
+
     return (
         <div>
             <h1>Luke API Walker</h1>
@@ -42,7 +45,6 @@ const Searchbar = (props) => {
             </SForm>
         </div>
     )
-
 }
 
 export default Searchbar;
