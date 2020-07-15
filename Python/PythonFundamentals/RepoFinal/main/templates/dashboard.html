@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/dashboards.css' %}">
+</head>
+<body style="background-color:black">
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li>
+                    <a class="cta" href="/shop"><button>Shop</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/character"><button>Character Select</button></a>
+                </li>
+                <li> 
+                    <a class="cta" href="/chosen"><button class="select">Create Pieces</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/gamePlay"><button>Return to Game</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/logout"><button>Logout</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-info">
+        <h1>Hello {{user.first_name}}!</h1>
+        <h2>Characters:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Health</th>
+                        <th>Ability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for character in all_characters %}
+                    <tr>
+                        <th>
+                            <img src="{{character.link}}" alt="" style="max-height:50px; max-width:50px;">
+                        </th>
+                        <th>{{character.name}}</th>
+                        <th>{{character.attack}}</th>
+                        <th>{{character.health}}</th>
+                        <th>{{character.ability}}</th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h2 class="raise">Items:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Health</th>
+                        <th>Ability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in all_items %}
+                    <tr>
+                        <th>
+                            <img src="{{item.link}}" alt="" height="50px" width="50px">
+                        </th>
+                        <th>{{item.item_name}}</th>
+                        <th>{{item.attack}}</th>
+                        <th>{{item.health}}</th>
+                        <th>{{item.special_ability}}</th>
+                    {% endfor %}
+                    </tr>
+            </tbody>
+            </table>
+            <div class="link">
+                <a href="/character"><button> View</button></a>
+            </div>
+        </div>
+</body>
+</html>

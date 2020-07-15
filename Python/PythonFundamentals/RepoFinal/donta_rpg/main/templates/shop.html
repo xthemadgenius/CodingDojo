@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Status</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/shop.css' %}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body style="background-color: black;">
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li>
+                    <a class="cta" href="/shop"><button class="select">Market</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/character"><button>Player Select</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/viewPlayer"><button>Hero Status</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/gamePlay"><button>Return to Game</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/logout"><button>Logout</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="market">
+        <div class="profile">
+            <div class="user-img">
+                <img src="../static/Images/goku.png" alt="">
+                <h1>Goku</h1>
+                <p>Special Ability</p>
+                <h3>Ultra Instinct</h3>
+            </div>
+            <div class="stats row">
+                <div class="abilities col-sm">
+                    <h4>Health</h4>
+                    <p>44,500</p>
+                </div>
+                <div class="abilities col-sm">
+                    <h4>Attack</h4>
+                    <p>9,000</p>
+                </div>
+                <div class="abilities col-sm">
+                    <h4>Defense</h4>
+                    <p>18,000</p>
+                </div>
+                <div class="abilities col-sm">
+                    <h4>Coins</h4>
+                    <p>1,240</p>
+                </div>
+            </div>
+            <div class="buy-gear">
+                <form action="/dashboard">
+                    <h1>Child Support</h1>
+                    <hr>
+                    <img src="../static/Images/child-support.png" alt="">
+                    <div >
+                        <p style="margin-top: 2px; margin-bottom: 2px;">All minions leave Field in Terror</p>
+                        <p style="margin-top: 2px; margin-bottom: 2px;">Special: Fear</p>
+                        <p style="margin-top: 2px; margin-bottom: 2px;">Attack: 99,999</p>
+                        <p style="margin-top: 2px; margin-bottom: 2px;">Cost: $40</p>
+                    </div>
+                    <button onclick="confirmation()" style="width: 200px; margin-top: 20px;">Buy</button>
+                    <script>
+                        function confirmation(){
+                            confirm("You bought this for free!");
+                        }
+                    </script>
+                </form>
+            </div>
+        </div>
+        <div class="shop">
+            <div class="product">
+                <img src="../static/Images/scythe.png" alt="">
+                <div class="prouduct-info">
+                    <h1>Scythe</h1>
+                    <h4>Basic Weapon</h4>
+                    <p>+120</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../static/Images/rpg.png" alt="">
+                <div class="prouduct-info">
+                    <h1>RPG</h1>
+                    <h4>Weapon</h4>
+                    <p>+20,000</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../static/Images/tank.png" alt="">
+                <div class="prouduct-info">
+                    <h1>Scythe</h1>
+                    <h4>Weaponized Vehicle</h4>
+                    <p>+30,000</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../static/Images/child-support.png" alt="">
+                <div class="prouduct-info">
+                    <h1>Child Support</h1>
+                    <h4>Psychological Weapon</h4>
+                    <p>+99,999</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../static/Images/machinegun.png" alt="">
+                <div class="prouduct-info">
+                    <h1>Machine Gun</h1>
+                    <h4>Weapon</h4>
+                    <p>+12,000</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../static/Images/hulkbuster.png" alt="">
+                <div class="prouduct-info">
+                    <h1>Hulk Buster</h1>
+                    <h4>Weaponized Body Armor</h4>
+                    <p>+120,000</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../static/Images/driodgun.webp" alt="">
+                <div class="prouduct-info">
+                    <h1>Droid Gun</h1>
+                    <h4>Alien Weapon</h4>
+                    <p>+3,020</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../static/Images/aztec.webp" alt="">
+                <div class="prouduct-info">
+                    <h1>Aztec Sword</h1>
+                    <h4>Historical Weapon</h4>
+                    <p>+5200</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../static/Images/alien.png" alt="">
+                <div class="prouduct-info">
+                    <h1>Alien</h1>
+                    <h4>Genetic Weapon</h4>
+                    <p>+20,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

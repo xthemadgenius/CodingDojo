@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+*{
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.navigation-bar li,
+.navigation-bar a,
+.navigation-bar button{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+.navigation-bar h1{
+    font-family: 'Raleway', sans-serif;
+    background-color: #242424;
+    font-weight: 600;
+    font-size: 20px;
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+/* nav bar start */
+.navigation-bar{
+    background-color: #242424;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.logo:hover{
+    color: rgb(134, 23, 212);
+}
+
+.navigation-bar button{
+    padding: 9px 25px;
+    background-color: rgb(135, 28, 211, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.navigation-bar button:hover{
+    background-color: rgb(135, 28, 211, 0.8);
+}
+/* nav bar end */
+main h1{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    text-align: center;
+}
+main h1 span{
+    color: #b67dec;
+}
+hr{
+    background-color: gray;
+    margin-top: 20px;
+    margin-left: 30rem;
+    margin-right: 30rem;
+}
+.row{
+    margin-top: 20px;
+}
+
+.center-form{
+    text-align: center;
+    margin-top: 20px;
+}
+form h2{
+    margin-top: 20px;
+}
+form{
+    margin-bottom: 20px;
+    border: #b67dec solid 1px;
+    border-radius: 20px;
+    height: 400px;
+    width: 600px;
+}
+
+.url-info{
+    color: gray;
+    font-size: 10px;
+}
+
+input[type=submit]{
+    padding: 9px 25px;
+    background-color: rgb(135, 28, 211, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+input[type=submit]:hover{
+    background-color: rgb(135, 28, 211, 0.8);
+}
+input[type=text],
+input[type=number]{
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 300px;
+}
+
+.enemy {
+    background-image: linear-gradient( rgba(0,0,0,.7), rgba(0,0,0,.7) ), url('https://theplaylist.net/wp-content/uploads/2012/11/tumblr_m7l49kpii81rtdzauo5_r1_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: 600px 400px;
+    transition: ease-out 1s;
+}
+.enemy:hover{
+    background-image: linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4) ), url('https://theplaylist.net/wp-content/uploads/2012/11/tumblr_m7l49kpii81rtdzauo5_r1_1280.jpg');
+}
+.gear{
+    background-image: linear-gradient( rgba(0,0,0,.7), rgba(0,0,0,.7) ), url('https://upload.wikimedia.org/wikipedia/commons/c/c8/Captain_Video_weapons_and_gear.JPG');
+    background-repeat: no-repeat;
+    background-size: 600px 400px;
+    transition: ease-out 1s;
+}
+.gear:hover{
+    background-image: linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4) ), url('https://upload.wikimedia.org/wikipedia/commons/c/c8/Captain_Video_weapons_and_gear.JPG');
+}
+.hero {
+    background-image: linear-gradient( rgba(0,0,0,.7), rgba(0,0,0,.7) ), url('https://townsquare.media/site/442/files/2020/02/jl-snyder-cut.jpg?w=980&q=75');
+    background-repeat: no-repeat;
+    background-size: 600px 400px;
+    transition: ease-out 1s;
+}
+.hero:hover{
+    background-image: linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4) ), url('https://townsquare.media/site/442/files/2020/02/jl-snyder-cut.jpg?w=980&q=75');
+}
+.obstacle{
+    background-image: linear-gradient( rgba(0,0,0,.7), rgba(0,0,0,.7) ), url('https://www.navysealmuseum.org/wp-content/uploads/navysealmuseum.org-hero-o-course-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: 600px 400px;
+    transition: ease-out 1s;
+}
+.obstacle:hover{
+    background-image: linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,.4) ), url('https://www.navysealmuseum.org/wp-content/uploads/navysealmuseum.org-hero-o-course-mobile.jpg');
+}
+.form-group{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}

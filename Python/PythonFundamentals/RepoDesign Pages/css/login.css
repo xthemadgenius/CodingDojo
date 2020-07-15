@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #000000;
+}
+
+.background{
+    background: url('https://wallpapercave.com/wp/wp2611061.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+}
+/* tacos are good */
+.text,
+.box,
+.box2{
+    margin-top: 33vh;
+    flex: 1;
+}
+
+.text{
+    margin-left: 10%;
+    font-weight: 300px;
+}
+.box{
+    margin-left: 10%;
+}
+.box2{
+    margin-top: 15vh;
+    flex: 1;
+    margin-left: 15%;
+}
+.text h1{
+    font-size: 70px;
+    color: #ffffff;
+    font-weight: 500;
+}
+h1{
+    color: white;
+}
+
+.text p{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 300;
+}
+.text p a{
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.form{
+    background: transparent;
+    color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+input{
+    margin: 20px 0;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.email,
+.name,
+.username,
+.password{
+    border-bottom: 1px solid white;
+}
+
+input[type=submit]{
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 18px;
+}
+input[type=submit]:hover{
+    background-color: white;
+    color: black;
+}

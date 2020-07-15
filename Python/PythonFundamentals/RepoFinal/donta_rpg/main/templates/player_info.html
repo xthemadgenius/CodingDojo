@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Status</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/player_info.css' %}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body style="background-color: black;">
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li>
+                    <a class="cta" href="/shop"><button>Market</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/character"><button>Player Select</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/viewPlayer"><button class="select">Hero Status</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/gamePlay"><button>Return to Game</button></a>
+                </li>
+                <li>
+                    <a class="cta" href="/logout"><button>Logout</button></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="the-player" style="background-color: black; color: white;">
+        <form action="">
+            <!-- info box -->
+            <div class="status">
+                <div class="user-stats">
+                    <div>
+                        <label for="">UserName</label>
+                        <input type="text" name="username" id="">
+                    </div>
+                    <div>
+                        <label for="">Special Ability</label>
+                        <input type="text" name="first_name" id="">
+                    </div>
+                </div>
+                <!-- Weapons -->
+                <div class="gear-info">
+                    <!-- selected Wapon -->
+                    <div class="picked-gear">
+                        <div class="main-img">
+                            <img src="../static/Images/alien.png" alt="">
+                            <h1>XenoMorph</h1>
+                            <h3>Power</h3>
+                            <p>1200</p>
+                        </div>
+                    </div>
+                    <!-- waepon select -->
+                    <div class="gear">
+                        <div class="row ">
+                            <label class="col-sm">
+                                <input type="radio" name="test" value="small" checked>
+                                <img src="../static/Images/driodgun.webp" alt="">
+                                <p>Blaster</p>
+                            </label>
+                            <label class="col-sm">
+                                <input type="radio" name="test" value="big">
+                                <img src="../static/Images/rpg.png" alt="">
+                                <p>RPG</p>
+                            </label>
+                            <label class="col-sm">
+                                <input type="radio" name="test" value="big">
+                                <img src="../static/Images/machinegun.png" alt="">
+                                <p>Machine Gun</p>
+                            </label>
+                            <label class="col-sm">
+                                <input type="radio" name="test" value="big">
+                                <img src="../static/Images/hulkbuster.png" alt="">
+                                <p>Hulk Buster</p>
+                            </label>
+                        </div>
+                        <div class="row ">
+                            <label class="col-sm">
+                                <input type="radio" name="test" value="big">
+                                <img src="../static/Images/child-support.png" alt="">
+                                <p>Child Support</p>
+                            </label>
+                            <label class="col-sm">
+                                <input type="radio" name="test" value="big">
+                                <img src="../static/Images/sword.png" alt="">
+                                <p>Sword</p>
+                            </label>
+                            <label class="col-sm">
+                                <input type="radio" name="test" value="big">
+                                <img src="../static/Images/aztec.webp" alt="">
+                                <p>Aztec Sword</p>
+                            </label>
+                            <label class="col-sm">
+                                <input type="radio" name="test" value="big">
+                                <img src="../static/Images/tank.png" alt="">
+                                <p>Military Tank</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile box -->
+            <div class="profile">
+                <div class="user-img">
+                    <img src="../static/Images/goku.png" alt="">
+                    <h1>Goku</h1>
+                    <p>Special Ability</p>
+                    <h3>Ultra Instinct</h3>
+                </div>
+                <div class="stats row">
+                    <div class="abilities col-sm">
+                        <h4>Health</h4>
+                        <p>44,550</p>
+                    </div>
+                    <div class="abilities col-sm">
+                        <h4>Attack</h4>
+                        <p>9,000</p>
+                    </div>
+                    <div class="abilities col-sm">
+                        <h4>Defense</h4>
+                        <p>18,000</p>
+                    </div>
+                    <div class="abilities col-sm">
+                        <h4>Coins</h4>
+                        <p>1,240</p>
+                    </div>
+                </div>
+            </div>
+            <!-- About Player box -->
+            <div class="bio">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="btns">
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html

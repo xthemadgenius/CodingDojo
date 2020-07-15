@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Select</title>
+    {% load static %}
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static '/css/character.css' %}">
+</head>
+<body style="background-color: black;">
+    <header>
+        <div class="navigation-bar">
+            <a href="/dashboard" style="text-decoration: none;"><h1 class="logo">Dashboard</h1></a>
+            <a class="cta" href="/logout"><button>Logout</button></a>
+        </div>
+    </header>
+    <main>
+        <div class="pick-character">
+            <form action="/gamePlay">
+                {% csrf_token %}
+                <h1>Character Select</h1>
+                <hr>
+                    {% for character in all_characters %}
+                    <label class="col-sm">
+                        <div class="stable-box">
+                            <input type="radio" name="test" value="small" checked>
+                            <img src="{{character.link}}" alt="" class="align-top">
+                        </div>
+                        <button type="submit" class="align-bottom">Select Character</button>
+                    </label>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

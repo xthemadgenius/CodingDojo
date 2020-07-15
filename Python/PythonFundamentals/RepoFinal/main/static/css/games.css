@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@445&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+}
+.row {
+    line-height: 0;
+}
+.wall {
+    background-color: rgb(144,123,38); 
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+.breakable_rock {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    background-image: url("/static/images/breakable_rock.png");
+    background-color: rgb(75 109 73);
+    background-size: contain;
+}
+.solid_rock {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    background-image: url("/static/images/solid_rock.png");
+    background-color: rgb(75 109 73);
+    background-size: contain;
+}	
+.fruit {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    background-image: url("../Images/George.png");
+    background-color: rgb(75 109 73);
+    background-size: contain;
+    background-repeat: no-repeat;
+}	
+.grass {
+    background-color: rgb(13,9,10); 
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    background-image: url("/static/images/grass_tile.png");
+}
+.dirt {
+    background-color: rgb(13,9,10); 
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    background-image: url("/static/images/dirt_tile.png");
+}
+#donta {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-image: url("/static/images/user_sprite_moving/donta_front_walking.gif");
+}
+
+#droma1 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-image: url("/static/images/enemy_sprite_moving/enemy_front_moving.gif");
+}
+
+#droma2 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-image:  url("/static/images/enemy_sprite_moving/enemy_front_moving.gif");
+}
+
+#droma3 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-image:  url("/static/images/enemy_sprite_moving/enemy_front_moving.gif");
+}
+
+#droma4 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-image:  url("/static/images/enemy_sprite_moving/enemy_front_moving.gif");
+}
+
+
+#score {
+    background-color: rgb(13,9,10); 
+    color: rgb(133,68,45);
+    border: 4px rgb(185,208,56) solid;
+    font-weight: bold;
+    font: 20px 'Raleway', sans-serif;
+    height: 40px;
+    width: 196px;
+    display: inline-block;
+    clear: left;
+}
+#lives {
+    background-color: rgb(13,9,10); 
+    color:  rgb(133,68,45);
+    border: 4px  rgb(185,208,56) solid;
+    font-weight: bold;
+    font: 20px "Times New Roman", times, serif;
+    height: 40px;
+    width: 184px;
+    display: inline-block;
+    clear: right;
+}
+
+/* Weapon Select Popup end */
+/* Brick Control Start */
+.body {
+    background: url('../Images/grass_tile.png');
+    margin: 0px;
+}
+div#world {
+    position: relative;
+}
+
+div.row div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    font-size: 0px;
+}
+div.brick {
+    background: url('../Images/solid_rock.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.empty {
+    background: url('../Images/grass_tile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.coin {
+    background: url('../Images/fruit.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.cherry {
+    background: url('../Images/chimichanga.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div#pacman {
+    margin-top: 110px;
+    background: url('../Images/user_sprite/donta_back_pickup.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+/* Brick Control End */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a, button{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+/* nav bar start */
+footer{
+    background-color: #242424;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.logo:hover{
+    color: rgb(134, 23, 212);
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    text-align: center;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: rgb(134, 23, 212);
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgb(135, 28, 211, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: rgb(135, 28, 211, 0.8);
+}
+
+.life{
+    color: red;
+}
+
+.hit{
+    color: gray;
+}
+/* nav bar end */
+
+
+/* Weapon Select Popup Start */
+#modalContainer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    text-align: center;
+    background-color: #242424;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+hr{
+    background-color: gainsboro;
+    margin-bottom: 40px;
+}
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* IMAGE STYLES */
+[type=radio] + img {
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: .5s;
+}
+  /* CHECKED STYLES */
+[type=radio] + img:hover {
+    filter: grayscale(0);
+}
+[type=radio]:checked + img {
+    filter: grayscale(0);
+}
+img{
+    height: 90px;
+    width: 90px;
+}
+label{
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: .5s;
+    color: gray;
+}
+label:hover{
+    color: white;
+}
+.col-sm{
+    text-align: center;
+}
+.center{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+form button{
+    margin-top: 30px;
+}
+.modal-row{
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: #242424;
+}
+/* Weapon Select Popup end */

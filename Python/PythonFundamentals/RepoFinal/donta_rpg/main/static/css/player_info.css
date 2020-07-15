@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+*{
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+li,
+a,
+button{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: ghostwhite;
+    text-decoration: none;
+}
+/* nav bar start */
+header{
+    background-color: #242424;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 10%;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    text-align: center;
+    display: inline-block;
+    padding: 0px 30px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: rgb(134, 23, 212);
+}
+button{
+    padding: 9px 25px;
+    background-color: rgb(135, 28, 211, 1);
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: white;
+    color: rgb(135, 28, 211, 1);
+}
+
+.select{
+    background-color: white;
+    color: rgb(135, 28, 211, 1);
+    transition: all 0.3s ease 0s;
+}
+.select:hover{
+    background-color: rgb(135, 28, 211, 1);
+    color: white;
+}
+/* nav bar end */
+/* player Info start */
+.the-player{
+    font-family: 'Raleway', sans-serif;
+    width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* left box start*/
+.status {
+    background-color: black;
+    float: left;
+    height: 800px;
+    width: 50%;
+}
+.user-stats{
+    margin-top: 20px;
+    height: 120px;
+}
+.user-stats label{
+    float: left;
+    font-size:23px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.user-stats input {
+    float: right;
+    background-color: #242424;
+    color: white;
+    border: none;
+	padding: 12px 15px;
+    margin: 8px 0;
+    margin-right: 20px;
+	width: 70%;
+}
+/* weapons box start */
+.picked-gear{
+    width: 100%;
+    height: 350px;
+}
+.main-img{
+    justify-content: center;
+    text-align: center;
+}
+.picked-gear img{
+    height: 200px;
+    width: 200px;
+}
+/* weapons box end */
+.gear{
+    border:1px solid rgb(167, 143, 143);
+    background-color: black;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+
+.gear [type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* IMAGE STYLES */
+.gear [type=radio] + img {
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: .5s;
+}
+  /* CHECKED STYLES */
+.gear [type=radio] + img:hover {
+    filter: grayscale(0);
+}
+.gear [type=radio]:checked + img {
+    filter: grayscale(0);
+}
+.gear img{
+    height: 100px;
+    width: 100px;
+}
+.gear .col-sm{
+    text-align: center;
+}
+.gear .center{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.gear label{
+    transition: .5s;
+    color: gray;
+}
+.gear label:hover{
+    color: white;
+}
+/* left box end*/
+/* right box start*/
+.profile {
+    float: right;
+    height: 800px;
+    width: 50%;
+}
+.user-img{
+    text-align: center;
+}
+.user-img img{
+    border-radius: 50%;
+    margin-top: 20px;
+    height: 500px;
+    width: 250px;
+    background-color: #242424;
+}
+.user-img h1,
+.user-img p,
+.user-img h3{
+    font-family: 'Raleway', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.stats{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.bio{
+    margin-left: auto;
+    margin-right: auto;
+}
+.bio textarea{
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    width: 95%;
+}
+.btns{
+    margin-left: 30px;
+    padding-bottom: 20px;
+}
+
+textarea{
+    background-color: #242424;
+    color: white;
+}

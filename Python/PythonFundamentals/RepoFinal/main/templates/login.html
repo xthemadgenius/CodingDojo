@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static '/css/login_reg.css' %}">
+</head>
+<body>
+    <main>
+        <div class="background">
+            <div class="text">
+                <h1>Welcome to Project Week</h1>
+            </div>
+            <div class="box">
+                <h1>Login</h1>
+                <form action="/login" method="POST" class="form">
+                    {% csrf_token %}
+                    <input type="email" name="email" id="email" class="email" placeholder="Email">
+                    <input type="password" name="password" id="password" class="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+            <div class="box2">
+                <h1>Sign Up</h1>
+                <form action="/register" method="POST" class="form">
+                    {% csrf_token %}
+                    <input type="text" name="first_name" id="first_name" class="name" placeholder="First Name">
+                    <input type="text" name="last_name" id="last_name" class="name" placeholder="Last Name">
+                    <input type="email" name="email" id="email" class="email" placeholder="Email">
+                    <input type="password" name="password" id="password" class="password" placeholder="Password">
+                    <input type="password" name="confirm_password" id="comfirm_password" class="password" placeholder="Confirm Password">
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

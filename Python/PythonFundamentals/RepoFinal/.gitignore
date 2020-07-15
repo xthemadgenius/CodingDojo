@@ -1,0 +1,6 @@
+.DS_Store
+.vscode/
+djangoPy3Env/
+*.pyc
+db.sqlite3
+donta_rpg/main/migrations/*

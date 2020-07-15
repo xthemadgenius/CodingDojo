@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Game Component</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body style="background-color: black;">
+    <header>
+        <div class="navigation-bar">
+            <a href="/dashboard" style="text-decoration: none;"><h1 class="logo">Dashboard</h1></a>
+            <a class="cta" href="/logout"><button>Logout</button></a>
+        </div>
+    </header>
+    <main>
+        <h1>Congratulations Chosen One. <span>{{user.first_name}}</span>, you are now blessed with the power to Create a New Game Component!</h1>
+        <hr>
+
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div class="center-form">
+                    <form action="/create/character" method="POST" class="hero">
+                        {% csrf_token %}
+                        <h2>Create a Character</h2>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="ability">Ability:</label>
+                            <input type="text" name="ability" id="ability">
+                        </div>
+                        <div class="form-group">
+                            <label for="attack">Attack:</label>
+                            <input type="number" name="attack" id="attack">
+                        </div>
+                        <div class="form-group">
+                            <label for="health">Health:</label>
+                            <input type="number" name="health" id="health">
+                        </div>
+                        <div class="form-group">
+                            <label for="link">Url:</label>
+                            <input type="text" name="link" id="link">
+                        </div>
+                        <p class="url-info">Ex:(../static/Images/user_sprite/donta_front_stand.png)</p>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="center-form">
+                    <form action="/create/item" method="POST" class="gear">
+                        {% csrf_token %}
+                        <h2>Create an Item</h2>
+                        <div class="form-group">
+                            <label for="item_name">Title:</label>
+                            <input type="text" name="item_name" id="item_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="attack">Attack:</label>
+                            <input type="number" name="attack" id="attack">
+                        </div>
+                        <div class="form-group">
+                            <label for="health">health:</label>
+                            <input type="number" name="health" id="health">
+                        </div>
+                        <div class="form-group">
+                            <label for="special_ability">Special Ability:</label>
+                            <input type="text" name="special_ability" id="special_ability">
+                        </div>
+                        <div class="form-group">
+                            <label for="link">Url:</label>
+                            <input type="text" name="link" id="link">
+                        </div>
+                        <p class="url-info">Ex:(../static/Images/user_sprite/donta_front_stand.png)</p>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div class="center-form">
+                    <form action="/create/obstacle" method="POST" class="obstacle">
+                        {% csrf_token %}
+                        <h2>Create an Obstacle</h2>
+                        <div class="form-group">
+                            <label for="obstacle_name">Title:</label>
+                            <input type="text" name="obstacle_name" id="obstacle_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="health">Health:</label>
+                            <input type="number" name="health" id="health">
+                        </div>
+                        <div class="form-group">
+                        <label for="link">Url:</label>
+                            <input type="text" name="link" id="link">
+                        </div>
+                        <p class="url-info">Ex:(../static/Images/user_sprite/donta_front_stand.png)</p>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="center-form">
+                    <form action="/create/enemy" method="POST" class="enemy">
+                        {% csrf_token %}
+                        <h2>Create an Enemy</h2>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="attack">Attack:</label>
+                            <input type="text" name="attack" id="attack">
+                        </div>
+                        <div class="form-group">
+                            <label for="health">Health:</label>
+                            <input type="number" name="health" id="health">
+                        </div>
+                        <div class="form-group">
+                            <label for="link">Url:</label>
+                            <input type="text" name="link" id="link">
+                        </div>
+                        <p class="url-info">Ex:(../static/Images/user_sprite/donta_front_stand.png)</p>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

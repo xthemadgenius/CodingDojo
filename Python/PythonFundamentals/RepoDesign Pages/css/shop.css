@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+li,
+a,
+button{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: ghostwhite;
+    text-decoration: none;
+}
+/* nav bar start */
+header{
+    background-color: #242424;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 10%;
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    text-align: center;
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: rgb(134, 23, 212);
+}
+button{
+    padding: 9px 25px;
+    background-color: rgb(135, 28, 211, 1);
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: white;
+    color: rgb(135, 28, 211, 1);
+}
+.select{
+    background-color: white;
+    color: rgb(135, 28, 211, 1);
+    transition: all 0.3s ease 0s;
+}
+.select:hover{
+    background-color: rgb(135, 28, 211, 1);
+    color: white;
+}
+
+/* the Market */
+.market{
+    font-family: 'Raleway', sans-serif;
+    width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.profile {
+    float: left;
+    background-color: #555555;
+    height: 1040px;
+    width: 50%;
+    border-right: 1px solid gray;
+}
+.user-img{
+    text-align: center;
+}
+.user-img img{
+    border-radius: 50%;
+    margin-top: 20px;
+    height: 400px;
+    width: 200px;
+    background-color: #242424;
+}
+.user-img h1,
+.user-img p,
+.user-img h3{
+    font-family: 'Raleway', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.stats{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.buy-gear{
+    background-color: #242424;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+}
+.buy-gear h1{
+    text-align: center;
+}
+hr{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.buy-gear img{
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    background-color: lightcyan;
+    border-radius: 50%;
+}
+.buy-gear button{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.buy-gear h3,
+.buy-gear p{
+    margin-top: 5px;
+}
+
+
+
+.shop{
+    background-color: #555555;
+    float: right;
+    height: 1040px;
+    width: 50%;
+}
+
+.product{
+    border-top: 1px solid gray;
+    background-color: #242424;
+    height: 105px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    display: inline-block;
+}
+.product img{
+    height: 95px;
+    width: 95px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    float: left;
+}
+.prouduct-info{
+    text-align: center;
+}
+.prouduct-info h1,
+.prouduct-info h4,
+.prouduct-info p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
