@@ -9,3 +9,5 @@ const Errors = () => {
         </EDiv>
     )
 }
+
+export default Errors;

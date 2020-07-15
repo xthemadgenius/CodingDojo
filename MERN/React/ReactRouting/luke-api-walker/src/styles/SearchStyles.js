@@ -18,7 +18,7 @@ export const SSelect = styled.select`
 
 export const SInput = styled.input`
     height: 40px;
-    width: 120px;
+    width: 125px;
     border-radius: 5px;
 `;
 export const SBox = styled.div`

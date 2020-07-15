@@ -9,6 +9,7 @@ export const EHed = styled.h2`
     text-align: center;
 `;
 
-export const EBad= styled.img`
+export const EBad = styled.img`
+    margin-top: 20px;
     width: 250px;
 `;
