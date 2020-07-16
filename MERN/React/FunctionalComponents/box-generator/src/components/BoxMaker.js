@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { TheForm, FormGroup, FillLabel, MainInput, RoundedBtn } from './FormStyles';
-import { BoxSetUp, Colorful } from './BoxStyle';
 
 import BoxPlace from './BoxPlace';
 
