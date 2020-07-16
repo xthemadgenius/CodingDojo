@@ -36,3 +36,6 @@ npm install -g nodemon          // haha nodemon🤣🤣
 
 //Mac global install
 sudo npm install -g nodemon     // haha nodemon🤣🤣 too funny
+
+# use nodemon instead to runserver
+nodemon server.js (is better than node server.js)
