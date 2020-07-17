@@ -9,10 +9,10 @@ const JokesSchema = new mongoose.Schema({
     punchline: {
         type: String,
         required: [true, "Punchline is required."],
-        required: [10, "Punchline must be at least 10 characters long."]
+        required: [3, "Punchline must be at least 3 characters long."]
     }
-})
+});
 
 const Joke = mongoose.model("Joke", JokesSchema);
 
-module.exports = Joke
+module.exports = Joke;
