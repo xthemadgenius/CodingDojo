@@ -124,3 +124,5 @@ This will remove all instances of VALUE from the documents with the array specif
 npm init -y 
 
 npm install mongoose express
+
+install express cors
