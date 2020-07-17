@@ -118,3 +118,9 @@ $addToSet	It functions just like $push.  However, $addToSet only adds to the spe
 $pull	    Removes a specified value from an array, unlike $pop, which removes by location. Ex:db.COLLECTION.update({QUERY}, {$pull: {array_key: VALUE}})
   
 This will remove all instances of VALUE from the documents with the array specified by the array_key that match QUERY.
+
+# Install Mongoose
+
+npm init -y 
+
+npm install mongoose express
