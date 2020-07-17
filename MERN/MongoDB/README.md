@@ -60,7 +60,7 @@ use DB_NAME
 
 db.dropDatabase() //deletes their current database
 
-use DBNAME.db.dropDatabase() //deetes another database
+use DBNAME.db.dropDatabase() //deletes another database
 
 show collections // show collections in database
 
@@ -69,3 +69,52 @@ db.createCollection("COLLECTIONNAME") // create collection
 db.COLLECTIONNAME.drop() //deletes collection
 
 db.COLLECTIONNAME.insert({MAKE: "MAKE"}) // insert objects in collections
+
+db.COLLECTIONNAME.find()
+
+db.COLLECTIONNAME.find({name: "NAME"})
+
+db.COLLECTIONNAME.find({})
+
+db.COLLECTIONNAME.find().pretty()
+
+db.ninjas.find({_id: ObjectId("5462a78e514e258182f4c69a")})// Notice: You can't just pass the string of characters, you must pass it as an ObjectId.
+
+db.COLLECTION_NAME.remove({YOUR_QUERY_DOCUMENT}, BOOLEAN)
+
+db.ninjas.remove({belt: "yellow"})
+
+db.ninjas.remove({belt: "yellow"}, false) // this query would have the same effect as the one above.
+
+
+db.COLLECTIONNAME.update(name:"NAME" , {belt:"BELT"}),
+
+de.COLLECTIONNAME.update(name:"NAME", {$set:{location: "NAME"}})
+
+# Operators
+
+name	description
+
+$gt     (greater than)	Use to query selectively on numerical-valued fields
+
+$gte    (greater than or equal to)	Use to query selectively on numerical-valued fields
+
+$lt     (less than)	Use to query selectively on numerical-valued fields
+
+$lte    (less than or equal to)	Use to query selectively on numerical-valued fields
+
+$in     (in array)	Use to find documents who have a particular value within an array.
+
+https://docs.mongodb.com/manual/reference/operator/
+
+$push	Push to an array contained within a document.
+
+$pop	Removes either the first or last element from an array. EX: db.COLLECTION.update({QUERY}, {$pop: {array_key: (1 or -1)}})
+  
+Use 1 for the last item in the array, -1 for the first item.
+
+$addToSet	It functions just like $push.  However, $addToSet only adds to the specified array if the value doesn't already exist (thereby preventing duplicate entries).
+
+$pull	    Removes a specified value from an array, unlike $pop, which removes by location. Ex:db.COLLECTION.update({QUERY}, {$pull: {array_key: VALUE}})
+  
+This will remove all instances of VALUE from the documents with the array specified by the array_key that match QUERY.
