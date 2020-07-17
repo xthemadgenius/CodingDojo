@@ -40,3 +40,32 @@ ps -ax | grep mongo
 sudo kill *that_number*
 
 // And you'll be good.  The kill command tells a process ID to terminate.  Intense terminal stuff, huh?
+
+
+# Basic Mongo DB Commands
+
+// shows all database
+
+show dbs
+
+//show current database
+
+db
+
+//change/create database
+
+use DB_NAME
+
+// delete database
+
+db.dropDatabase() //deletes their current database
+
+use DBNAME.db.dropDatabase() //deetes another database
+
+show collections // show collections in database
+
+db.createCollection("COLLECTIONNAME") // create collection
+
+db.COLLECTIONNAME.drop() //deletes collection
+
+db.COLLECTIONNAME.insert({MAKE: "MAKE"}) // insert objects in collections
