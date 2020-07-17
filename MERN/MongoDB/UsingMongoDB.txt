@@ -1,0 +1,55 @@
+use my_first_db
+
+db.createCollection("students")
+
+db.students.insert(name: "Frodo", home_state: "York", luck_number:5, birthday:{month: 3, day: 22, year: 1995})
+
+db.students.insert(name: "Hugh", home_state: "Udaho", luck_number:7, birthday:{month: 4, day: 4, year: 1972})
+
+db.students.insert(name: "Boyd", home_state: "Ozark", luck_number:23, birthday:{month: 5, day: 13, year: 1985})
+
+db.students.insert(name: "Ron", home_state: "Nevada", luck_number:500, birthday:{month: 6, day: 20, year: 2001})
+
+db.students.insert(name: "Steve", home_state: "Corgi", luck_number:8, birthday:{month: 7, day: 31, year: 1968})
+
+db.students.find().pretty()
+
+db.students.find({home_state: "Udaho"})
+
+db.students.find({$or: [{home_state: "Califronia}, {home_state: "Washington"}]})
+
+db.students.find({month:{$gt: 3}}).pretty()
+
+db.students.find({month:{$gt: 10}}).pretty()
+
+db.students.find({$and: [{luck_number: {$gte: 1}}, {luck_number: {$lte: 9}}]}).pretty()
+
+db.students.updateMany({}, ($set: {interests: ['coding', 'brunch', 'Sleeping']}))
+
+db.students.update({name: "Frodo}, {$addToSet: {interests: "Herding Cows"}})
+
+db.students.update({name: "Hugh}, {$addToSet: {interests: "Stealing Pigs"}})
+
+db.students.update({name: "Boyd}, {$addToSet: {interests: "Eating Corn"}})
+
+db.students.update({name: "Ron}, {$addToSet: {interests: "Sleeping with pigs"}})
+
+db.students.update({name: "Steve}, {$addToSet: {interests: "Staring at himself in the mirror"}})
+
+db.students.update({name: "Boyd"}, {$addToSet: {interests: 'taxes'}})
+
+db.students.update({name: "Steve"}, {$pull: {interests: 'taxes'}})
+
+db.students.remove({home_state: 'California'})
+
+db.students.remove({name: 'Steven'})
+
+db.students.remove({luck_number: 5}, true)
+
+db.students.updateMany({home_state: "Washington"}, {$inc: {number_of_belts: 1}})
+
+db.students.updateMany({}, {$rename: {'number_of_belts': 'belts_earned'}})
+
+db.students.updateMany({}, {$unset: {luck_number: ''}})
+
+db.students.updateMany({}, {$currentDate: {updated_on: true}})
