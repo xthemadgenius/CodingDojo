@@ -14,6 +14,9 @@ Mac: touch server.js
 
 Windows: copy num server.js
 
+create folder called server with 4 folders inside of it named config, contollers, modules, & routes
+
+
 <!-- type this in server.js -->
 
 const express = require('express');
