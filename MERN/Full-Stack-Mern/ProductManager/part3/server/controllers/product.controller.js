@@ -22,3 +22,9 @@ module.exports.findProd = (req, res) => {
     .then(prod => res.json(res.json(prod)))
     .catch(err => res.json(res.json(err)));
 };
+
+module.exports.showProduct = (req, res) => {
+    Product.findOne({_id: req.params.id})
+    .then(prod => res.json(prod))
+    .catch(err => res.json(err));
+}
