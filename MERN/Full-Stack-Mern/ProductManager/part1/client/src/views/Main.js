@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import React from 'react'
+import ProductForm from '../components/ProductForm';
 
-export default () => {
-    const [ message, setMessage ] = useState("Loading...")
-
-    useEffect(()=>{
-        axios.get("http://localhost:8000/api")
-            .then(res=>setMessage(res.data.message))       
-    }, []);
-    
+export default () =>{
     return (
         <div>
-            <h2>Message from the backend: {message}</h2>
+            <ProductForm/>
         </div>
     )
 }

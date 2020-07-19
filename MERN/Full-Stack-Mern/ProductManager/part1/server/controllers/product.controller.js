@@ -16,3 +16,9 @@ module.exports.createProduct = (req, res) => {
     .then(product => res.json(product))
     .catch(err => res.json(err));
 }
+
+module.exports.findProd = (req, res) => {
+    Product.find()
+    .then(prod => res.json(res.json(prod)))
+    .catch(err => res.json(res.json(err)));
+};
