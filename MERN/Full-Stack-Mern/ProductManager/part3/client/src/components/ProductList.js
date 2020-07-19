@@ -4,7 +4,6 @@ import {Link} from '@reach/router';
 
 export default props => {
     
-    
     return (
         <div>
             {props.product.map((product, idx) => {
