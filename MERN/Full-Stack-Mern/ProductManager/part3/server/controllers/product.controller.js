@@ -31,12 +31,12 @@ module.exports.showProduct = (req, res) => {
 
 module.exports.updateProduct = (req, res) => {
     Product.findOneAndUpdate({_id: req.params.id}, req.body, {new:true})
-    .then(updateProduct => res.json(updateProduct))
+    .then(updatedProduct => res.json(updatedProduct))
     .catch(err => res.json(err));
 }
 
 module.exports.deleteProduct = (req, res) => {
-    Product.deleteMany({_id: req.params.id})
+    Product.deleteOne({_id: req.params.id})
     .then(deleteConfirmation => res.json(deleteConfirmation))
     .catch(err => res.json(err));
 }
