@@ -1,4 +1,5 @@
 const { Person } = require('../models/person.model');
+const { response } = require('express');
 module.exports.index = (request, response) => {
     response.json({
         message: "Hello World"
@@ -15,8 +16,14 @@ module.exports.createPerson = (request, response) => {
         .catch(err => response.json(err));
 }
 
-module.exports.findNames = (req, res) => {
-    Person.find()
-    .then(names => res.json(res.json(names)))
-    .catch(err => res.json(res.json(err)));
+module.exports.getAllPeople = (req, res) => {
+    Person.find({})
+    .then(person => res.json(person))
+    .catch(err => res.json(err));
 };
+
+module.exports.getPerson = (req, res) => {
+    Person.findOne({_id:req.params.id})
+        .then(person =>res.json(person))
+        .catch(err =>res.json(err))
+}
