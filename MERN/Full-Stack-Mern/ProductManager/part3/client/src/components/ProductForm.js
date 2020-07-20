@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { TheForm, FillLabel, FormGroup, MainInput, RoundedBtn } from '../style/Styles';
 
 export default() => {
     const [title, setTitle] = useState("");
@@ -18,21 +19,21 @@ export default() => {
     }
 
     return (
-        <form onSubmit={onSubmit}>
-            <div>
-                <label>Title</label><br/>
-                <input type="text" onChange={(e) => setTitle(e.target.value)}/>
-            </div>
-            <div>
-                <label>Price</label><br/>
-                <input type="number" onChange={(e) => setPrice(e.target.value)}/>
-            </div>
-            <div>
-                <label>Description</label><br/>
-                <input type="text" onChange={(e) => setDescription(e.target.value)}/>
-            </div>
-            <br/>
-            <input type="submit"/>
-        </form>
+        <TheForm onSubmit={onSubmit}>
+            <h2>Create a Product</h2>
+            <FormGroup>
+                <FillLabel>Title</FillLabel>
+                <MainInput type="text" onChange={(e) => setTitle(e.target.value)}/>
+            </FormGroup>
+            <FormGroup>
+                <FillLabel>Price</FillLabel>
+                <MainInput type="number" onChange={(e) => setPrice(e.target.value)}/>
+            </FormGroup>
+            <FormGroup>
+                <FillLabel>Description</FillLabel>
+                <MainInput type="text" onChange={(e) => setDescription(e.target.value)}/>
+            </FormGroup>
+            <RoundedBtn type="submit">Submit</RoundedBtn>
+        </TheForm>
     )
 }

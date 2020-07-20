@@ -17,7 +17,7 @@ export default () => {
     });
 
     const removeFromDom = (personId) => {
-        setPeople(people.filter(person => person._id != personId));
+        setPeople(people.filter(person => person._id !== personId));
     }
 
     return (

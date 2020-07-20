@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { TheForm, FillLabel, FormGroup, MainInput, RoundedBtn } from '../style/Styles';
 import axios from 'axios';
 import {Link} from '@reach/router'
 
@@ -31,22 +32,22 @@ export default props => {
     return (
         <div>
             <h1>Update a Product</h1>
-            <form onSubmit={updateProduct}>
-                <div>
-                    <label>Title</label>
-                    <input type="text" name="title" value={title} onChange={(e) => {setTitle(e.target.value)}}/>
-                </div>
-                <div>
-                    <label>Title</label>
-                    <input type="number" name="price" value={price} onChange={(e) => {setPrice(e.target.value)}}/>
-                </div>
-                <div>
-                    <label>Title</label>
-                    <input type="text" name="description" value={description} onChange={(e) => {setDescription(e.target.value)}}/>
-                </div>
-                <input type="submit" onClick={event =>  window.location.href=`/${id}`}/>
-            </form>
-            <Link to={`/`}>Home</Link>
+            <TheForm onSubmit={updateProduct}>
+                <FormGroup>
+                    <FillLabel>Title</FillLabel>
+                    <MainInput type="text" name="title" value={title} onChange={(e) => {setTitle(e.target.value)}}/>
+                </FormGroup>
+                <FormGroup>
+                    <FillLabel>Title</FillLabel>
+                    <MainInput type="number" name="price" value={price} onChange={(e) => {setPrice(e.target.value)}}/>
+                </FormGroup>
+                <FormGroup>
+                    <FillLabel>Title</FillLabel>
+                    <MainInput type="text" name="description" value={description} onChange={(e) => {setDescription(e.target.value)}}/>
+                </FormGroup>
+                <RoundedBtn type="submit" onClick={event =>  window.location.href=`/${id}`}>Submit</RoundedBtn>
+            </TheForm>
+            <br/><br/><Link to={`/`}>Home</Link>
         </div>
     )
 }
