@@ -14,8 +14,7 @@ export default () =>{
             setProduct(res.data);
             setLoaded(true)
         })
-    })
-
+    }, [])
 
     const removeFromDom = (productId) => {
         setProduct(product.filter(prod => prod._id != productId));

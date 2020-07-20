@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { TheForm, FillLabel, FormGroup, MainInput, RoundedBtn } from '../style/Styles';
 import axios from 'axios';
-import {Link} from '@reach/router'
+import {Link, navigate} from '@reach/router'
 import ProductForm from '../components/ProductForm'
+import DeleteButton from '../components/DeleteButton';
 
 export default props => {
 
@@ -27,12 +28,18 @@ export default props => {
         <div>
             <h1>Update a Product</h1>
             {loaded && (
-                <ProductForm 
-                onSubmitProp={updateProduct}
-                initialTitle={product.title}
-                initialPrice={product.price}
-                initialDescription={product.description}
-                />
+                <div>
+                    <ProductForm 
+                    onSubmitProp={updateProduct}
+                    initialTitle={product.title}
+                    initialPrice={product.price}
+                    initialDescription={product.description}
+                    />
+                    <DeleteButton 
+                    productId={product._id} 
+                    successCallback={() => navigate("/")} 
+                    />
+                </div>
             )}
             <br/><br/><Link to={`/`}>Home</Link>
         </div>
