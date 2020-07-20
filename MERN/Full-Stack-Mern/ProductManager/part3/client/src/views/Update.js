@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import {Link} from '@reach/router'
 
 export default props => {
 
@@ -43,8 +44,9 @@ export default props => {
                     <label>Title</label>
                     <input type="text" name="description" value={description} onChange={(e) => {setDescription(e.target.value)}}/>
                 </div>
-                <input type="submit"/>
+                <input type="submit" onClick={event =>  window.location.href=`/${id}`}/>
             </form>
+            <Link to={`/`}>Home</Link>
         </div>
     )
 }
