@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import PersonForm from '../components/PersonForm';
+import {navigate} from '@reach/router';
+import DeleteButton from '../components/DeleteButton';
 
 export default props => {
 
@@ -23,13 +25,17 @@ export default props => {
 
     return (
         <div>
-        {loaded && (
-            <PersonForm 
-            onSubmitProp={updatePerson}
-            initialFirstName={person.firstName}
-            initialLastName={person.lastName}
-            />
-        )}
+            <h1>Update a Person</h1>
+            {loaded && (
+                <div>
+                    <PersonForm
+                        onSubmitProp={updatePerson}
+                        initialFirstName={person.firstName}
+                        initialLastName={person.lastName}
+                    />
+                    <DeleteButton personId={person._id} successCallback={() => navigate("/people")} />
+                </div>
+            )}
         </div>
     )
 }
