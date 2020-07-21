@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {navigate} from '@reach/router';
+import { TheForm, FillLabel, FormGroup, MainInput, RoundedBtn } from '../styles/Styles';
 
 export default props => {
     const {initialName, onSubmitProp} = props;
@@ -11,14 +12,14 @@ export default props => {
     }
     return (
         <div>
-            <form onSubmit={onSubmitHandler}>
-                <div>
-                    <label >Name</label>
-                    <input type="text" value={name} onChange={(e) => {setName(e.target.value)}}/>
-                </div>
-                <input type="submit"/>
-            </form>
-            <button onClick={()=> navigate("/")}>Cancel</button>
+            <TheForm onSubmit={onSubmitHandler}>
+                <FormGroup>
+                    <FillLabel>Name</FillLabel>
+                    <MainInput type="text" value={name} onChange={(e) => {setName(e.target.value)}}/>
+                </FormGroup>
+                <RoundedBtn type="submit">Submit</RoundedBtn>
+            </TheForm>
+            <RoundedBtn onClick={()=> navigate("/")}>Cancel</RoundedBtn>
         </div>
     )
 }

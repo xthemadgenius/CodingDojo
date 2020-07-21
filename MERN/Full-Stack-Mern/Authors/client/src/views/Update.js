@@ -7,9 +7,6 @@ export default (props) => {
     const {id} = props;
     const [author, setAuthor] = useState();
     const [loaded, setLoaded] = useState(false);
-    const [errors, setErrors] = useState([]);
-    const [noAuthor, setNoAuthor] = useState(false);
-
 
     console.log(id);
     useEffect(() => {
@@ -17,9 +14,6 @@ export default (props) => {
         .then(response => {
             setAuthor(response.data)
             setLoaded(true)
-        })
-        .catch(err => {
-            setNoAuthor(true)
         })
     },[]);
 
@@ -36,7 +30,7 @@ export default (props) => {
             <Link to="/">Home</Link>
             <div>
                 <h4>Edit this Author</h4>
-                {loaded && <AuthorForm onSubmitProp={editAuthor} initialName={author.name} errors={errors}/>}
+                {loaded && <AuthorForm onSubmitProp={editAuthor} initialName={author.name}/>}
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {UpdateBtn} from '../styles/Styles'
 
 
 export default props => {
@@ -10,6 +11,6 @@ export default props => {
         .then(res => successCallback(authorId));
     }
     return (
-        <button onClick={deleteAuthor}>Delete</button>
+        <UpdateBtn onClick={deleteAuthor}>Delete</UpdateBtn>
     )
 }

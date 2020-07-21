@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Router, Link} from '@reach/router';
+import {Router} from '@reach/router';
 import Main from './views/Main';
 import AddAuthor from './views/AddAuthor';
 import Update from './views/Update';

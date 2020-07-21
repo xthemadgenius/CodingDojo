@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {navigate, Link} from '@reach/router';
 import DeleteButton from './DeleteButton';
 import axios from 'axios';
+import {UpdateBtn} from '../styles/Styles'
+import styles from '../styles/Divert.module.css'
 
 export default props => {
     const [authors, setAuthors] =useState([]);
@@ -13,19 +15,17 @@ export default props => {
     return (
         <div>
             <table>
-                <thead>
-                    <tr>
-                        <th>Author</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
                 <tbody>
+                    <tr>
+                        <th><h1>Author</h1></th>
+                        <th><h1>Actions</h1></th>
+                    </tr>
                     {props.authors.sort((auth,index) => (auth.name.toLowerCase() > index.name.toLowerCase()) ? 1 : -1).map((author, idx) => {
                         return (
                         <tr key={idx}>
-                            <td><Link to={`/${author._id}`}>{author.name}</Link></td>
+                            <td><Link to={`/${author._id}`}><h1>{author.name}</h1></Link></td>
                             <td>
-                                <button onClick={(e) => navigate(`/${author._id}/edit`)}>Edit</button>
+                                <UpdateBtn onClick={(e) => navigate(`/${author._id}/edit`)}>Edit</UpdateBtn>
                                 <DeleteButton authorId={author._id} successCallback={()=>removeFromDom(author._id)}/>
                             </td>
                         </tr>
