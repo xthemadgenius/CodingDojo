@@ -1,19 +1,5 @@
 import React, {useState} from 'react';
-import {Paper, FormControl, InputLabel, OutlinedInput, Button} from '@material-ui/core';
-
-const styles = {
-    paper: {
-        width: "20rem",
-        padding: "1rem",
-        margin: "20px auto"
-    },
-    input: {
-        marginBottom: "1rem"
-    },
-    button: {
-        width: "100%"
-    }
-}
+import {navigate} from '@reach/router';
 
 export default props => {
     const {initialName, onSubmitProp} = props;
@@ -24,10 +10,15 @@ export default props => {
         onSubmitProp({name});
     }
     return (
-        <Paper elevation={3} style={styles.paper}>
-            <form onSubmit={onSubmitHandler} >
-
+        <div>
+            <form onSubmit={onSubmitHandler}>
+                <div>
+                    <label >Name</label>
+                    <input type="text" value={name} onChange={(e) => {setName(e.target.value)}}/>
+                </div>
+                <input type="submit"/>
             </form>
-        </Paper>
+            <button onClick={()=> navigate("/")}>Cancel</button>
+        </div>
     )
 }

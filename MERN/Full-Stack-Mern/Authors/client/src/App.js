@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Router, Link} from '@reach/router';
+import Main from './views/Main';
+import AddAuthor from './views/AddAuthor';
+import Update from './views/Update';
+import Detail from './views/Detail'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Favorite Authors</h1>
+      <Router>
+        <Main path="/" />
+        <AddAuthor path="/new" />
+        <Update path="/:id/edit" />
+        <Detail path="/:id" />
+      </Router>
     </div>
   );
 }
