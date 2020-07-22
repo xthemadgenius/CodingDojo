@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link, navigate} from '@reach/router';
 import axios from 'axios';
+import { TheForm, FillLabel, FormGroup, MainInput, RoundedBtn } from '../styles/Styles';
 
 export default props => {
     const {newPlayer, setNewPlayer, onSubmitProp} = props;
@@ -23,17 +24,17 @@ export default props => {
 
     return (
         <div>
-            <form onSubmit={onSubmitHandler}>
-                <div>
-                    <label>Name:</label>
-                    <input type="text" onChange={(e) => setName(e.target.value)}/>
-                </div>
-                <div>
-                    <label>Position:</label>
-                    <input type="text" onChange={(e) => setPosition(e.target.value)}/>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+            <TheForm onSubmit={onSubmitHandler}>
+                <FormGroup>
+                    <FillLabel>Name:</FillLabel>
+                    <MainInput type="text" onChange={(e) => setName(e.target.value)}/>
+                </FormGroup>
+                <FormGroup>
+                    <FillLabel>Position:</FillLabel>
+                    <MainInput type="text" onChange={(e) => setPosition(e.target.value)}/>
+                </FormGroup>
+                <RoundedBtn type="submit">Submit</RoundedBtn>
+            </TheForm>
         </div>
     )
 }

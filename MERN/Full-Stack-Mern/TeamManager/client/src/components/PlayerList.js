@@ -2,6 +2,8 @@ import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 import {Link} from '@reach/router';
 import DeleteBtn from './DeleteBtn';
+import LittleHead from './LittleHead';
+import styles from '../styles/PlayerTable.module.css'
 
 export default props => {
     const {player, setPlayer} = props;
@@ -17,24 +19,20 @@ export default props => {
 
     return (
         <div>
-            <div>
-                <Link to="/players/list"><h3>List</h3></Link>
-                <h3> | </h3>
-                <Link to="/players/addplayer"><h3>Add Player</h3></Link>
-            </div>
+            <LittleHead/>
             <table>
                 <tbody>
                     <tr>
-                        <th>Players</th>
-                        <th>Preferred Position</th>
-                        <th>Actions</th>
+                        <td> <h2>Players</h2></td>
+                        <td><h2>Preferred Position</h2></td>
+                        <td><h2>Actions</h2></td>
                     </tr>
                     {player.map((players,idx) => {
                         return (
                             <tr key={idx}>
-                                <th>{players.name}</th>
-                                <th>{players.position}</th>
-                                <th><DeleteBtn playerId={player._id} successCallback={() => removeFromDom(player._id)}/></th>
+                                <td>{players.name}</td>
+                                <td>{players.position}</td>
+                                <td><DeleteBtn playerId={players._id} successCallback={() => removeFromDom(players._id)}/></td>
                             </tr>
                         )
                     })}

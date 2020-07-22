@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link, navigate} from '@reach/router';
 import axios from 'axios';
 import PlayerForm from './PlayerForm';
+import LittleHead from './LittleHead';
 
 export default props => {
     const {player, setPlayer} = props;
@@ -38,11 +39,7 @@ export default props => {
 
     return (
         <div>
-            <div>
-                <Link to="/players/list"><h3>List</h3></Link>
-                <h3> | </h3>
-                <Link to="/players/addplayer"><h3>Add Player</h3></Link>
-            </div>
+            <LittleHead/>
             <div>
                 <h3>Add Player</h3>
                 <PlayerForm newPlayer={newPlayer}
