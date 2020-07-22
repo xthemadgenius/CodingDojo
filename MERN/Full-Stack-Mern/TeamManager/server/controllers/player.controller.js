@@ -1,7 +1,7 @@
-const Player = require('../models/player.model');
+const {Player} = require('../models/player.model');
 
-module.exports.createPlayer = (request, response) => {
-    const {name, position, game1, game2, game3} = request.body;
+module.exports.createPlayer = (req, res) => {
+    const {name, position, game1, game2, game3} = req.body;
     Player.create({
         name, 
         position,
@@ -11,38 +11,32 @@ module.exports.createPlayer = (request, response) => {
             game3
         }
     })
-    .then(player => response.json(player))
-    .catch(err => response.status(500).json(err))
+    .then(player => res.json(player))
+    .catch(err => res.status(500).json(err))
 };
 
-module.exports.findAllPlayers = (request, response) => {
+module.exports.findAllPlayers = (req, res) => {
     Player.find({})
-    .then(allPlayers => response.json(allPlayers))
-    .catch(err => response.status(500).json(err));
+    .then(allPlayers => res.json(allPlayers))
+    .catch(err => res.status(500).json(err));
 };
 
-module.exports.findOnePlayer = (request, response) => {
-    Player.findOne({_id: request.params.id})
-    .then(player => response.json(player))
-    .catch(err => response.status(500).json(err));
+module.exports.findOnePlayer = (req, res) => {
+    Player.findOne({_id: req.params.id})
+    .then(player => res.json(player))
+    .catch(err => res.status(500).json(err));
 };
 
-module.exports.deletePlayer = (request, response) => {
-    Player.deleteOne({_id:request.params.id})
-    .then(deleteConfirmation => response.json(deleteConfirmation))
-    .catch(err => response.json({message: "Something went wrong", error: err}));
+module.exports.deletePlayer = (req, res) => {
+    Player.deleteOne({_id:req.params.id})
+    .then(deleteConfirmation => res.json(deleteConfirmation))
+    .catch(err => res.json(err));
 };
 
-module.exports.updatePlayer = (request, response) => {
-
-    console.log(request.body);
-    Player.updateOne({_id:request.params.id}, request.body, {new:true})
+module.exports.updatePlayer = (req, res) => {
+    Player.updateOne({_id:req.params.id}, req.body, {new:true})
     .then(updatedPlayer => {
-        // console.log(updatedPlayer)
-        response.json(updatedPlayer)
+        res.json(updatedPlayer)
     })
-    .catch(err => {
-        console.log(err);
-        response.status(500).json(err)
-    })
+    .catch(err => res.status(500).json(err))
 };
