@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {Router, Link} from '@reach/router';
+import {Router} from '@reach/router';
 import './App.css';
-import axios from 'axios';
 import PlayerList from './components/PlayerList';
 import AddPlayer from './components/AddPlayer';
 import GameStatus from './components/GameStatus';

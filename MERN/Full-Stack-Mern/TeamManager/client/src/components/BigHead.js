@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Link} from '@reach/router';
+import {Link} from '@reach/router';
 import {StyledHead} from '../styles/Styles'
 
 export default props => {

@@ -1,6 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import {Link, navigate} from '@reach/router';
-import axios from 'axios';
+import React, {useState} from 'react';
 import { TheForm, FillLabel, FormGroup, MainInput, RoundedBtn } from '../styles/Styles';
 
 export default props => {

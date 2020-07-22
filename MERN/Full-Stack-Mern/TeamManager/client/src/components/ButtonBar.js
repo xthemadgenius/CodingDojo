@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import {BtnSets} from '../styles/Styles';
 
 export default (props) => {
     const {playerId, gameId} = props;
@@ -11,7 +12,7 @@ export default (props) => {
             setPlayer(response.data);
         })
     },[])
-    const onPlayingHandler = (statusNum) => {
+    const onPlayHandler = (statusNum) => {
         console.log("Inside onPlayingHandler");
         const updatedPlayer = {
             ...player,
@@ -31,18 +32,21 @@ export default (props) => {
 
     return(
         <div>
-            <button style={{backgroundColor:player && player.status[`game${gameId}`] === 1 ? "#4CAF50" : ""}} 
-            onClick={(e) => onPlayingHandler(1)}>
+            {/* <BtnSets style={{backgroundColor: player && player.status[`game${gameId}`] === 1 ? "#4CAF50" : ""}} 
+            onClick={(e) => onPlayHandler(1)}>
                 Playing
-            </button>
-            <button style={{backgroundColor:player && player.status[`game${gameId}`] === -1 ? "#FF0000" : ""}} 
-            onClick={(e) => onPlayingHandler(-1)}>
+            </BtnSets>
+            <BtnSets style={{backgroundColor: player && player.status[`game${gameId}`] === -1 ? "#FF0000" : ""}} 
+            onClick={(e) => onPlayHandler(-1)}>
                 Not Playing
-            </button>
-            <button style={{backgroundColor:player && player.status[`game${gameId}`] === 0 ? "#FFFF00" : ""}} 
-            onClick={(e) => onPlayingHandler(0)}>
+            </BtnSets>
+            <BtnSets style={{backgroundColor: player && player.status[`game${gameId}`] === 0 ? "#FFFF00" : ""}} 
+            onClick={(e) => onPlayHandler(0)}>
                 Undecided
-            </button>
+            </BtnSets> */}
+            <BtnSets>Playing</BtnSets>
+            <BtnSets>Not Playing</BtnSets>
+            <BtnSets>Undecided</BtnSets>
         </div>
     )
 }

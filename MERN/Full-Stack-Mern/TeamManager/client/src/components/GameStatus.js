@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import ButtonBar from './ButtonBar';
 import {Link} from '@reach/router';
-import styles from '../styles/PlayerTable.module.css'
+import '../styles/PlayerTable.module.css'
 import {StyledHead} from '../styles/Styles'
 
 export default props => {
@@ -33,7 +33,7 @@ export default props => {
                             <tr key={idx}>
                                 <td>{play.name}</td>
                                 <td>
-                                    {/* <ButtonBar playerId={play._id} gameId={gameId}/> */}
+                                    <ButtonBar playerId={play._id} gameId={gameId}/>
                                 </td>
                             </tr>
                         )}

@@ -1,9 +1,8 @@
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
-import {Link} from '@reach/router';
 import DeleteBtn from './DeleteBtn';
 import LittleHead from './LittleHead';
-import styles from '../styles/PlayerTable.module.css'
+import '../styles/PlayerTable.module.css'
 
 export default props => {
     const {player, setPlayer} = props;

@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {Link, navigate} from '@reach/router';
+import React, {useState} from 'react';
+import {navigate} from '@reach/router';
 import axios from 'axios';
 import PlayerForm from './PlayerForm';
 import LittleHead from './LittleHead';

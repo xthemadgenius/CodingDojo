@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const TheForm = styled.form`
@@ -50,14 +49,13 @@ export const BtnSets = styled.button`
     color: black;
     border-radius: 15px;
     height: 30px;
-    width: 90px;
+    width: 200px;
     border: none;
-    margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
     margin-right: 10px;
-    border: 1px solid black
+    border: 1px solid black;
 `;
 
 export const DestroyBtn = styled.button`
