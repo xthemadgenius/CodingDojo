@@ -32,21 +32,21 @@ export default (props) => {
 
     return(
         <div>
-            {/* <BtnSets style={{backgroundColor: player && player.status[`game${gameId}`] === 1 ? "#4CAF50" : ""}} 
+            <button style={{backgroundColor: player && player.status[`game${gameId}`] === 1 ? "#4CAF50" : ""}} 
             onClick={(e) => onPlayHandler(1)}>
                 Playing
-            </BtnSets>
-            <BtnSets style={{backgroundColor: player && player.status[`game${gameId}`] === -1 ? "#FF0000" : ""}} 
+            </button>
+            <button style={{backgroundColor: player && player.status[`game${gameId}`] === -1 ? "#FF0000" : ""}} 
             onClick={(e) => onPlayHandler(-1)}>
                 Not Playing
-            </BtnSets>
-            <BtnSets style={{backgroundColor: player && player.status[`game${gameId}`] === 0 ? "#FFFF00" : ""}} 
+            </button>
+            <button style={{backgroundColor: player && player.status[`game${gameId}`] === 0 ? "#FFFF00" : ""}} 
             onClick={(e) => onPlayHandler(0)}>
                 Undecided
-            </BtnSets> */}
-            <BtnSets>Playing</BtnSets>
+            </button>
+            {/* <BtnSets>Playing</BtnSets>
             <BtnSets>Not Playing</BtnSets>
-            <BtnSets>Undecided</BtnSets>
+            <BtnSets>Undecided</BtnSets> */}
         </div>
     )
 }
