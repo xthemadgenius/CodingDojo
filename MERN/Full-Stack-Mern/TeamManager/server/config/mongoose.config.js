@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 mongoose.connect("mongodb://localhost/teammanagerdb", {
@@ -5,5 +6,5 @@ mongoose.connect("mongodb://localhost/teammanagerdb", {
     useUnifiedTopology: true,
 })
 
-.then(()=> console.log("Established a connection to the database"))
-.catch((err) => console.log("Something went wrong when connecting to the server", err));
+    .then(() => console.log("Established a connection to the database"))
+    .catch(err => console.log("Something went wrong when connecing to the database", err));
