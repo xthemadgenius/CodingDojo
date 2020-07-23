@@ -20,11 +20,11 @@ Windows: copy num server.js
 
 create folder called server with 4 folders inside of it named config, contollers, modules, & routes
 
-+ add Sockets if you want to use HANDSHAKE calls 
+# add Sockets if you want to use HANDSHAKE calls 
 
 npm istall socket.io
 
-+ type this in server.js
+# type this in server.js
 
 const express = require('express');
 
@@ -36,7 +36,7 @@ app.listen(port, () => console.log(`Listening on port: ${port}`) );
 
 npx create-react-app client
 
-+ for client Side
+# for client Side
 
 npm install axios
 
