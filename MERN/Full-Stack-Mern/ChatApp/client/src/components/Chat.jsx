@@ -7,6 +7,7 @@ const Chat = (props) => {
     const [hasName, setHasName] = useState(false);
     const [messages, setMessages] = useState([]);
     const [currMessage, setCurrMessage] = useState("");
+    
     const [socket] = useState( () => io(":8000") );
 
     const onSubmitHandler = e => {
