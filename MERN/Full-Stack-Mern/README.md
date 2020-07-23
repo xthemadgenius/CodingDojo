@@ -47,3 +47,5 @@ npm install styled-components
 npm install react-boostrap boostrap
 
 npm install cors
+
+npm install socet.io-client
