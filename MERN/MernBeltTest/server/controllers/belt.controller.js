@@ -1,10 +1,14 @@
 const {Belt} = require('../models/belt.model');
 
 module.exports.createBelt = (req,res) => {
-    const {firstName, lastName} = req.body;
+    const {name, petType, description, skill1,skill2,skiil3} = req.body;
     Belt.create({
-        firstName,
-        lastName
+        name,
+        petType,
+        description,
+        skill1,
+        skill2,
+        skiil3
     })
     .then(belt => res.json(belt))
     .catch(err => res.status(400).json(err));

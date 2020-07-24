@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Router } from '@reach/router';
+import PetDashboard from './views/PetDashboard';
+import AddPet from './views/AddPet';
+import PetDetail from './views/PetDetail';
+import EditPet from './views/EditPet';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <PetDashboard path="/"/>
+        <AddPet path="/pets/new"/>
+        <PetDetail path="/pets/:id"/>
+        <EditPet path="/pets/:id/edit"/>
+      </Router>
     </div>
   );
 }
