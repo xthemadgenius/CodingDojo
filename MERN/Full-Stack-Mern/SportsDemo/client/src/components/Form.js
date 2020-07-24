@@ -1,26 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Form = (props) => {
+    const {onSubmitHandler, initialFirstName, initialLastName, initialSport, initialTeam} = props;
+
+    const [firstName, setFirstName] = useState(initialFirstName);
+    const [lastName, setLastName] = useState(initialLastName);
+    const [sport, setSport] = useState(initialSport);
+    const [team, setTeam] = useState(initialTeam);
+
     return (
         <div>
-            <form action="">
+            <form onSubmit={e => {onSubmitHandler(e, {firstName, lastName, sport, team})}}>
                 <div>
-                    <label htmlFor="">First Name</label>
-                    <input type="text" name="firstname"/>
+                    <label>First Name</label>
+                    <input type="text" name="firstName" value={firstName} onChange={e => {setFirstName(e.target.value)}}/>
                 </div>
                 <div>
-                    <label htmlFor="">Last Name</label>
-                    <input type="text" name="lastName"/>
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" value={lastName} onChange={e => {setLastName(e.target.value)}}/>
                 </div>
                 <div>
-                    <label htmlFor="">Sport</label>
-                    <input type="text" name="team"/>
+                    <label>Sport</label>
+                    <input type="text" name="sport" value={sport} onChange={e => {setSport(e.target.value)}}/>
                 </div>
                 <div>
-                    <label htmlFor="">Team</label>
-                    <input type="text" name="team"/>
+                    <label>Team</label>
+                    <input type="text" name="team" value={team} onChange={e => {setTeam(e.target.value)}}/>
                 </div>
-                <button type="submit">Submit</button>
+                <input type="submit"/>
             </form>
         </div>
     )
