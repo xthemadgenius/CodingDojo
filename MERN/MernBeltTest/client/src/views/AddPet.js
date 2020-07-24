@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PetForm from '../components/PetForm';
 import { Link, navigate } from '@reach/router';
 import Axios from 'axios';
 
 const AddPet = (props) => {
+
+    const [errors, setErrors] = useState([]);
 
     const onSubmitHandler = (e, data) => {
         e.preventDefault();
@@ -11,7 +13,15 @@ const AddPet = (props) => {
         .then(res => {
             navigate('/')
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+            console.log(err);
+            const errorResponse = err.response.data.errors;
+            const errorArr = [];
+            for(const key of Object.keys(errorResponse)){
+                errorArr.push(errorResponse[key].message);
+            }
+            setErrors(errorArr);
+        });
     }
     return (
         <div>
@@ -26,6 +36,11 @@ const AddPet = (props) => {
             initialSkill2=""
             initialSkill3=""
             />
+            {errors.map((err, idx) => {
+                return (
+                <p key={idx} style={{ color: "red" }}>{err}</p>
+                )
+            })}
         </div>
     )
 }

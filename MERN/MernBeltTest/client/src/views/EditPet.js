@@ -6,6 +6,8 @@ const EditPet = (props) => {
 
     const {id} = props;
 
+    const [errors, setErrors] = useState([]);
+
     const [pet, setPet] = useState({});
     const [loaded, setLoaded] = useState(false);
 
@@ -15,7 +17,15 @@ const EditPet = (props) => {
             setPet(res.data);
             setLoaded(true);
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+            console.log(err);
+            const errorResponse = err.response.data.errors;
+            const errorArr = [];
+            for(const key of Object.keys(errorResponse)){
+                errorArr.push(errorResponse[key].message);
+            }
+            setErrors(errorArr);
+        });
     })
 
     const onSubmitHandler = (e, data) => {
@@ -42,6 +52,11 @@ const EditPet = (props) => {
                 initialSkill3={pet.skill3}
                 />
             }
+            {errors.map((err, idx) => {
+                return (
+                <p key={idx} style={{ color: "red" }}>{err}</p>
+                )
+            })}
             
         </div>
     )
