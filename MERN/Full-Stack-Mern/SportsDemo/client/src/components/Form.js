@@ -5,7 +5,7 @@ const Form = (props) => {
         <div>
             <form action="">
                 <div>
-                    <label htmlFor="">FirstName</label>
+                    <label htmlFor="">First Name</label>
                     <input type="text" name="firstname"/>
                 </div>
                 <div>
