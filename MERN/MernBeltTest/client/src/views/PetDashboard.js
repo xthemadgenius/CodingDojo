@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from '@reach/router';
-import styles from '../styles/pet.module.css';
+import '../styles/pet.module.css';
 import axios from 'axios'
 
 const PetDashboard = (props) => {

@@ -24,7 +24,7 @@ const PetDetail = (props) => {
                 <p>Skills: {pet.skill1}</p>
                 <p>Skills: {pet.skill2}</p>
                 <p>Skills: {pet.skill3}</p>
-                <DeleteButton>Adopt PETNAME</DeleteButton>
+                <DeleteButton id={pet._id}>Adopt PETNAME</DeleteButton>
             </div>
         </div>
     )
