@@ -24,7 +24,7 @@ const PetDashboard = (props) => {
                         <td><h3>Type</h3></td>
                         <td><h3>Actions</h3></td>
                     </tr>
-                    {pets.map((pet,idx) => {
+                    {pets.sort((pez,index) => (pez.petType.toLowerCase() > index.petType.toLowerCase()) ? 1 : -1).map((pet, idx) => {
                         return (
                             <tr>
                                 <td>{pet.name}</td>

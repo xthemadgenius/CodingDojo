@@ -17,24 +17,33 @@ const EditPet = (props) => {
             setPet(res.data);
             setLoaded(true);
         })
-        .catch(err => {
-            console.log(err);
-            const errorResponse = err.response.data.errors;
-            const errorArr = [];
-            for(const key of Object.keys(errorResponse)){
-                errorArr.push(errorResponse[key].message);
-            }
-            setErrors(errorArr);
-        });
+        .catch(err => console.log(err));
     })
 
     const onSubmitHandler = (e, data) => {
         e.preventDefault();
         axios.put(`http://localhost:8000/api/belts/${id}`, data)
         .then(res => {
-            navigate('/')
+            console.log(res)
+            if(res.data.errors){
+                setErrors(res.data.errors)
+            }else{
+                navigate("/")
+            }
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+            console.log("catch me")
+            console.log(err);
+            const errorResponse = err.response.data.errors;
+            console.log(errorResponse);
+            const errorArr = [];
+            for(const key of Object.keys(errorResponse)){
+                console.log(errorResponse[key]);
+                errorArr.push(errorResponse[key].properties.message);
+            }
+            console.log(errorArr);
+            setErrors(errorArr);
+        });
     }
 
     return (
@@ -57,7 +66,6 @@ const EditPet = (props) => {
                 <p key={idx} style={{ color: "red" }}>{err}</p>
                 )
             })}
-            
         </div>
     )
 }

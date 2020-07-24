@@ -27,9 +27,9 @@ module.exports.getOneBelt = (req,res) => {
 }
 
 module.exports.updateBelt = (req,res) => {
-    Belt.updateOne({_id: req.params.id}, req.body, {new: true})
+    Belt.updateOne({_id: req.params.id}, req.body, {new: true, runValidators:true})
     .then(edit => res.json(edit))
-    .catch(err => res.json(err));
+    .catch(err => res.status(400).json(err));
 }
 
 module.exports.deleteBelt = (req,res) => {

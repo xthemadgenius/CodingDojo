@@ -12,14 +12,19 @@ const AddPet = (props) => {
         Axios.post(`http://localhost:8000/api/belts/`, data)
         .then(res => {
             navigate('/')
+            console.log("fight me")
         })
         .catch(err => {
+            console.log("catch me")
             console.log(err);
             const errorResponse = err.response.data.errors;
+            console.log(errorResponse);
             const errorArr = [];
             for(const key of Object.keys(errorResponse)){
-                errorArr.push(errorResponse[key].message);
+                console.log(errorResponse[key]);
+                errorArr.push(errorResponse[key].properties.message);
             }
+            console.log(errorArr);
             setErrors(errorArr);
         });
     }

@@ -21,9 +21,10 @@ const PetDetail = (props) => {
             <div>
                 <p>Pet Type: {pet.petType}</p>
                 <p>Description: {pet.description}</p>
-                <p>Skills: {pet.skill1}</p>
-                <p>Skills: {pet.skill2}</p>
-                <p>Skills: {pet.skill3}</p>
+                <h3>Skills</h3>
+                <p>{pet.skill1}</p>
+                <p>{pet.skill2}</p>
+                <p>{pet.skill3}</p>
                 <DeleteButton id={pet._id}>Adopt PETNAME</DeleteButton>
             </div>
         </div>
