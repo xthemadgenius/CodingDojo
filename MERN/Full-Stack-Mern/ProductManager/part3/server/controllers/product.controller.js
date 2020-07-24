@@ -14,7 +14,7 @@ module.exports.createProduct = (req, res) => {
         description
     })
     .then(product => res.json(product))
-    .catch(err => res.json(err));
+    .catch(err => res,status(400).json(err));
 }
 
 module.exports.findProd = (req, res) => {
