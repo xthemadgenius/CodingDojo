@@ -1,0 +1,37 @@
+.collab{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collab hr {
+    width: 200px;
+}
+
+.collab a{
+    font-weight: 600;
+    color: blue;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.collab a:hover{
+    color: rgb(0, 255, 76);
+}
+
+.collab form button{
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(188, 31, 228);
+    color: white;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.collab form button:hover{
+    border: 1px solid rgb(188, 31, 228);
+    background-color: white;
+    color: rgb(188, 31, 228);
+}

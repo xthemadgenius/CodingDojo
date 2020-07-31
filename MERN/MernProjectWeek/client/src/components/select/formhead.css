@@ -1,0 +1,24 @@
+.formHead{
+  margin-bottom: 20px;
+}
+
+.formHead a{
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: 1s;
+}
+
+.formHead a:hover{
+  color: rgb(19, 189, 56);
+  text-decoration: none;
+}
+
+.formHead hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+}

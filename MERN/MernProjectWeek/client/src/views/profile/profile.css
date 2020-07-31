@@ -1,0 +1,35 @@
+.profile img{
+    max-width: 200px;
+    max-height: 300px;
+}
+.profile .troll{
+    font-weight: 600;
+    color: blue;
+    text-decoration: none;
+    transition: .5s;
+}
+.profile .troll:hover{
+    color: rgb(0, 255, 76);
+}
+.profile .bro{
+    text-decoration: none;
+    background-color: rgb(188, 31, 228);
+    color: white;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.profile .bro:hover{
+    color:rgb(188, 31, 228);
+    background-color: white;
+    border: 1px solid rgb(188, 31, 228);
+}
+
+.reviews{
+    width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

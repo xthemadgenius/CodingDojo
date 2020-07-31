@@ -1,0 +1,31 @@
+.theTable{
+  justify-content: center;
+}
+.ops {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ops td,
+.ops th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.ops tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.ops tr:hover {
+  background-color: #ddd;
+}
+
+.ops th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #8748da;
+  color: white;
+}
