@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\FirstCSharp\\FirstCSharp.csproj": {}
+    "C:\\Users\\javie\\Desktop\\CodingDojo\\c#\\Hello.NetCore\\Hello.NetCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\FirstCSharp\\FirstCSharp.csproj": {
+    "C:\\Users\\javie\\Desktop\\CodingDojo\\c#\\Hello.NetCore\\Hello.NetCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\FirstCSharp\\FirstCSharp.csproj",
-        "projectName": "FirstCSharp",
-        "projectPath": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\FirstCSharp\\FirstCSharp.csproj",
+        "projectUniqueName": "C:\\Users\\javie\\Desktop\\CodingDojo\\c#\\Hello.NetCore\\Hello.NetCore.csproj",
+        "projectName": "Hello.NetCore",
+        "projectPath": "C:\\Users\\javie\\Desktop\\CodingDojo\\c#\\Hello.NetCore\\Hello.NetCore.csproj",
         "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\FirstCSharp\\obj\\",
+        "outputPath": "C:\\Users\\javie\\Desktop\\CodingDojo\\c#\\Hello.NetCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config"
