@@ -11,3 +11,16 @@ C:\Users\javie\Desktop\CodingDojo\C#\Fundamentals1\obj\Debug\netcoreapp3.1\Funda
 C:\Users\javie\Desktop\CodingDojo\C#\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.dll
 C:\Users\javie\Desktop\CodingDojo\C#\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.genruntimeconfig.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\bin\Debug\netcoreapp3.1\Fundamentals1.exe
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\bin\Debug\netcoreapp3.1\Fundamentals1.deps.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\bin\Debug\netcoreapp3.1\Fundamentals1.runtimeconfig.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\bin\Debug\netcoreapp3.1\Fundamentals1.runtimeconfig.dev.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\bin\Debug\netcoreapp3.1\Fundamentals1.dll
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\bin\Debug\netcoreapp3.1\Fundamentals1.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.AssemblyInfoInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.AssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.dll
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Fundamentals1\obj\Debug\netcoreapp3.1\Fundamentals1.genruntimeconfig.cache
