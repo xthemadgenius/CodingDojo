@@ -78,12 +78,17 @@ namespace Puzzles
             return ratio;
         }
 
+        // Names
+        public static List<string> Names()
+        {
+            List<string> names = new List<string> {"Todd", "Tiffany", "Charlie", "Geneva", "Sydney"};
+        }
 
         static void Main(string[] args)
         {
             // RandomArray();
             // CoinFlip();
-            TossMultipleCoins(8);
+            // TossMultipleCoins(8);
         }
     }
 }
