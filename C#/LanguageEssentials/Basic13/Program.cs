@@ -103,6 +103,44 @@ namespace Basic13
             return count;
         }
 
+        public static void SquareArrayValues(int[] numbers)
+        {
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] *= numbers[i];
+            }
+        }
+
+        public static void EliminateNegatives(int[] numbers)
+        {
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                if(numbers[i] < 0){
+                    numbers[i] = 0;
+                }
+            }
+        }
+
+        public static void MinMaxAverage(int[] numbers)
+        {
+            int min = int.MaxValue;
+            int max = int.MinValue;
+            int sum = 0;
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                if(numbers[i] < min)
+                {
+                    min = numbers[i];
+                }
+                if(numbers[i] > max)
+                {
+                    max = numbers[i];
+                }
+                sum += numbers[i];
+            }
+            float avg = sum/numbers.Length;
+            Console.WriteLine($"Min: {min} Max: {max} Average: {avg}");
+        }
 
         static void Main(string[] args)
         {
@@ -114,7 +152,10 @@ namespace Basic13
             // FindMax(numbers);
             // GetAvg(numbers);
             // OddArray();
-            Console.WriteLine(GreaterThanY(numbers, 2));
+            // Console.WriteLine(GreaterThanY(numbers, 2));
+            // SquareArrayValues(numbers);
+            // EliminateNegatives(numbers);
+            MinMaxAverage(numbers);
         }
     }
 }
