@@ -142,20 +142,53 @@ namespace Basic13
             Console.WriteLine($"Min: {min} Max: {max} Average: {avg}");
         }
 
+        public static void ShiftValues(int[] numbers)
+        {
+            for(int i = 0; i < numbers.Length - 1; i++)
+            {
+                numbers[i] = numbers[i + 1];
+            }
+            numbers[numbers.Length - 1] = 0;
+            foreach(int val in numbers)
+            {
+                Console.WriteLine(val);
+            }
+        }
+
+        public static object[] NumToString(int[] numbers)
+        {
+            object[] arr = new object[numbers.Length];
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                if(numbers[i] < 0)
+                {
+                    arr[i] = "Dojo";
+                }
+                else 
+                {
+                    arr[i] = numbers[i];
+                }
+            }
+            return arr;
+        }
+
         static void Main(string[] args)
         {
             int[] numbers = {1,2,3,4,5,-1};
-            // printNumbers();
-            // printOdd();
-            // PrintSum();
-            // LoopArr(numbers);
-            // FindMax(numbers);
-            // GetAvg(numbers);
-            // OddArray();
-            // Console.WriteLine(GreaterThanY(numbers, 2));
-            // SquareArrayValues(numbers);
-            // EliminateNegatives(numbers);
+            
+            printNumbers();
+            printOdd();
+            PrintSum();
+            LoopArr(numbers);
+            FindMax(numbers);
+            GetAvg(numbers);
+            OddArray();
+            Console.WriteLine(GreaterThanY(numbers, 2));
+            SquareArrayValues(numbers);
+            EliminateNegatives(numbers);
             MinMaxAverage(numbers);
+            ShiftValues(numbers);
+            NumToString(numbers);
         }
     }
 }
