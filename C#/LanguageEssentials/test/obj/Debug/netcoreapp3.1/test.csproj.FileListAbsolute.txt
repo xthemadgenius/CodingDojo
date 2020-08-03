@@ -1,0 +1,13 @@
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\bin\Debug\netcoreapp3.1\test.exe
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\bin\Debug\netcoreapp3.1\test.deps.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\bin\Debug\netcoreapp3.1\test.runtimeconfig.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\bin\Debug\netcoreapp3.1\test.runtimeconfig.dev.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\bin\Debug\netcoreapp3.1\test.dll
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\bin\Debug\netcoreapp3.1\test.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\obj\Debug\netcoreapp3.1\test.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\obj\Debug\netcoreapp3.1\test.AssemblyInfoInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\obj\Debug\netcoreapp3.1\test.AssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\obj\Debug\netcoreapp3.1\test.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\obj\Debug\netcoreapp3.1\test.dll
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\obj\Debug\netcoreapp3.1\test.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\test\obj\Debug\netcoreapp3.1\test.genruntimeconfig.cache
