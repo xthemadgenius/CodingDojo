@@ -77,7 +77,18 @@ namespace Basic13
             }
             return arr;
         }
-        
+        // or
+        // public static void OddArray() {
+        //     List<int> myList = new List<int>();
+
+        //     for(int i = 1; i < 256; i+=2) {
+        //             myList.Add(i);
+        //     }
+        //     int[] myArr = myList.ToArray();
+        //     foreach(int x in myArr) {
+        //         System.Console.WriteLine(x);
+        //     }
+        // }
 
         static void Main(string[] args)
         {
