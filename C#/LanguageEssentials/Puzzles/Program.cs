@@ -82,13 +82,42 @@ namespace Puzzles
         public static List<string> Names()
         {
             List<string> names = new List<string> {"Todd", "Tiffany", "Charlie", "Geneva", "Sydney"};
+            Random rand = new Random();
+            int count = names.Count;
+            string temp = "";
+            while(count > 1)
+            {
+                count--;
+                int i = rand.Next(count + 1);
+                temp = names[i];
+                names[i] = names[count];
+                names[count] = temp;
+            }
+            foreach(var name in names)
+            {
+                Console.WriteLine(name);
+            }
+            for(int i = 0; i < names.Count; i++)
+            {
+                if(names[i].Length < 5)
+                {
+                    names.Remove(names[i]);
+                }
+            }
+
+            return names;
         }
 
         static void Main(string[] args)
         {
-            // RandomArray();
-            // CoinFlip();
-            // TossMultipleCoins(8);
+            RandomArray();
+            CoinFlip();
+            TossMultipleCoins(8);
+            List<string> names = Names();
+            foreach(string name in names)
+            {
+                Console.WriteLine(name);
+            }
         }
     }
 }
