@@ -5,6 +5,7 @@ namespace Puzzles
 {
     class Program
     {
+        // Random Array
         public static int[] RandomArray()
         {
             int[] randArr = new int[10];
@@ -32,9 +33,31 @@ namespace Puzzles
             Console.WriteLine($"Min: {min} Max: {max} Sum: {sum}");
             return randArr;
         }
+
+        // Coin Flip
+        public static string CoinFlip()
+        {
+            Console.WriteLine("Tossing the Coin");
+            Random rand = new Random();
+            int result = rand.Next(2);
+            if(result == 0)
+            {
+                Console.WriteLine("Heads");
+                return "Heads";
+            }
+            else if (result == 1)
+            {
+                Console.WriteLine("Tails");
+                return "Tails";
+            }
+            return "Flip Failed";
+        }
+
+
         static void Main(string[] args)
         {
             RandomArray();
+            CoinFlip();
         }
     }
 }
