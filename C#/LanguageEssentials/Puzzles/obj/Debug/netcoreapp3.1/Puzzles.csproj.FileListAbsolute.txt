@@ -1,0 +1,13 @@
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.exe
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.deps.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.runtimeconfig.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.runtimeconfig.dev.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.dll
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\bin\Debug\netcoreapp3.1\Puzzles.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.AssemblyInfoInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.AssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.dll
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\Puzzles\obj\Debug\netcoreapp3.1\Puzzles.genruntimeconfig.cache
