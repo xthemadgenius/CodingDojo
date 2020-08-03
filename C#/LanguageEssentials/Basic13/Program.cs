@@ -90,6 +90,20 @@ namespace Basic13
         //     }
         // }
 
+        public static int GreaterThanY(int[] numbers, int y)
+        {
+            int count = 0;
+            foreach(int number in numbers)
+            {
+                if(number > y)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
         static void Main(string[] args)
         {
             int[] numbers = {1,2,3,4,5,-1};
@@ -99,7 +113,8 @@ namespace Basic13
             // LoopArr(numbers);
             // FindMax(numbers);
             // GetAvg(numbers);
-            OddArray();
+            // OddArray();
+            Console.WriteLine(GreaterThanY(numbers, 2));
         }
     }
 }
