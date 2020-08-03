@@ -1,0 +1,9 @@
+/* can't use hyphenated class or id names in this .module.css file */
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
