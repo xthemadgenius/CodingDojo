@@ -13,6 +13,19 @@ namespace CollectionPractice
 
             List<string> iceCreamFlavors = new List<string>{"Vanilla", "Chocolate", "Cookies and Cream", "Chocolate Chip", "Strawberry"};
             Console.WriteLine(iceCreamFlavors.Count);
+            Console.WriteLine(iceCreamFlavors[2]);
+            iceCreamFlavors.RemoveAt(2);
+            Console.WriteLine(iceCreamFlavors.Count);
+            Dictionary<string,string> userInfo= new Dictionary<string, string>{};
+            
+            for(int i = 0; i < stringArrays.Length; i++)
+            {
+                userInfo.Add(stringArrays[i], iceCreamFlavors[i]);
+            }
+            foreach(KeyValuePair<string,string> entry in userInfo)
+            {
+                Console.WriteLine($"{entry.Key}s favorite flavor is {entry.Value}");
+            }
 
         }
     }
