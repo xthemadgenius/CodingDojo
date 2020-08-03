@@ -57,23 +57,23 @@ namespace Puzzles
         {
             Random rand = new Random();
             int result = 0;
-            double countHeads = 0;
-            double countTails = 0;
+            double heads = 0;
+            double tails = 0;
             for(int i = 0; i < num; i++)
             {
                 result = rand.Next(2);
                 if(result == 0)
                 {
                     Console.WriteLine("Heads");
-                    countHeads++;
+                    heads++;
                 }
                 else if (result == 1)
                 {
                     Console.WriteLine("Tails");
-                    countTails++;
+                    tails++;
                 }
             }
-            double ratio = countHeads/countTails;
+            double ratio = heads/tails;
             Console.WriteLine(ratio);
             return ratio;
         }
