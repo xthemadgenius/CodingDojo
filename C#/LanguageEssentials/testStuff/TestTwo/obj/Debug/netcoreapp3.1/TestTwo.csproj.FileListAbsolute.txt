@@ -1,0 +1,13 @@
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\bin\Debug\netcoreapp3.1\TestTwo.exe
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\bin\Debug\netcoreapp3.1\TestTwo.deps.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\bin\Debug\netcoreapp3.1\TestTwo.runtimeconfig.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\bin\Debug\netcoreapp3.1\TestTwo.runtimeconfig.dev.json
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\bin\Debug\netcoreapp3.1\TestTwo.dll
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\bin\Debug\netcoreapp3.1\TestTwo.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\obj\Debug\netcoreapp3.1\TestTwo.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\obj\Debug\netcoreapp3.1\TestTwo.AssemblyInfoInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\obj\Debug\netcoreapp3.1\TestTwo.AssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\obj\Debug\netcoreapp3.1\TestTwo.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\obj\Debug\netcoreapp3.1\TestTwo.dll
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\obj\Debug\netcoreapp3.1\TestTwo.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\LanguageEssentials\testStuff\TestTwo\obj\Debug\netcoreapp3.1\TestTwo.genruntimeconfig.cache
