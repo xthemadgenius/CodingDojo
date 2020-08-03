@@ -53,11 +53,37 @@ namespace Puzzles
             return "Flip Failed";
         }
 
+        public static Double TossMultipleCoins(int num)
+        {
+            Random rand = new Random();
+            int result = 0;
+            double countHeads = 0;
+            double countTails = 0;
+            for(int i = 0; i < num; i++)
+            {
+                result = rand.Next(2);
+                if(result == 0)
+                {
+                    Console.WriteLine("Heads");
+                    countHeads++;
+                }
+                else if (result == 1)
+                {
+                    Console.WriteLine("Tails");
+                    countTails++;
+                }
+            }
+            double ratio = countHeads/countTails;
+            Console.WriteLine(ratio);
+            return ratio;
+        }
+
 
         static void Main(string[] args)
         {
-            RandomArray();
-            CoinFlip();
+            // RandomArray();
+            // CoinFlip();
+            TossMultipleCoins(8);
         }
     }
 }
