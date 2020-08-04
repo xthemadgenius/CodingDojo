@@ -27,7 +27,7 @@ namespace WizardNinjaSamurai
             health = life;
         }
 
-        public int Attack(Human target)
+        public virtual int Attack(Human target)
         {
             int dmg = Strength * 3;
             target.health -= dmg;
