@@ -26,7 +26,7 @@ namespace WizardNinjaSamurai
         {
             target.health -= 5;
             health += 5;
-            Console.WriteLine($"{Name} stole {target.Name}'s hit points for 5 damage!");
+            Console.WriteLine($"{Name} stole {target.Name}'s health points and caused 5 damage!");
         }
     }
 }

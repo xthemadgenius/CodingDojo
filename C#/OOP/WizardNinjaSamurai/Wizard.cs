@@ -14,7 +14,7 @@ namespace WizardNinjaSamurai
         {
             int dmg = Intelligence * 5;
             target.health -= dmg;
-            Console.WriteLine($"{Name} attacked {target.Name} for {dmg} hit points!");
+            Console.WriteLine($"{Name} attacked {target.Name} for {dmg} health points!");
             return target.health;
         }
 
@@ -22,7 +22,7 @@ namespace WizardNinjaSamurai
         {
             int heal = 10 * Intelligence;
             target.health += heal;
-            Console.WriteLine($"{Name} healed {target.Name} for {heal} hit points!");
+            Console.WriteLine($"{Name} healed {target.Name} for {heal} health points!");
             return target.health;
         }
     }
