@@ -27,7 +27,36 @@ namespace DeckOfCards
         }
         public List<Card> Cards
         {
-            get {return this.cards};
+            get {return this.cards;}
+        }
+
+        public void ShowDeck()
+        {
+            foreach (Card play in cards)
+            {
+                play.SayCard();
+            }
+        }
+
+        public Card Deal()
+        {
+            Card theCard = cards[0];
+            cards.RemoveAt(0);
+            return theCard;
+        }
+
+        public void Shuffle()
+        {
+            List<Card> cards2shuffle = this.cards;
+            List<Card> shuffled = new List<Card>();
+            Random rand = new Random();
+            while(cards2shuffle.Count > 0)
+            {
+                int idx = rand.Next(cards2shuffle.Count);
+                shuffled.Add(cards2shuffle[idx]);
+                cards2shuffle.RemoveAt(idx);
+            }
+            this.cards = shuffled;
         }
     }
 }
