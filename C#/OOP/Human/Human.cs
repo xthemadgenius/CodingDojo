@@ -35,7 +35,7 @@ namespace Human
 
         public int Attack(Human target)
         {
-            target.health = (5 * Strength);
+            target.health -= (5 * Strength);
             return target.health;
         }
     }
