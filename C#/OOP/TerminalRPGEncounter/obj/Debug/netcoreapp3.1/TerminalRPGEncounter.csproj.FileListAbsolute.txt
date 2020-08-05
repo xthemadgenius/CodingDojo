@@ -1,0 +1,13 @@
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\bin\Debug\netcoreapp3.1\TerminalRPGEncounter.exe
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\bin\Debug\netcoreapp3.1\TerminalRPGEncounter.deps.json
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\bin\Debug\netcoreapp3.1\TerminalRPGEncounter.runtimeconfig.json
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\bin\Debug\netcoreapp3.1\TerminalRPGEncounter.runtimeconfig.dev.json
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\bin\Debug\netcoreapp3.1\TerminalRPGEncounter.dll
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\bin\Debug\netcoreapp3.1\TerminalRPGEncounter.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\obj\Debug\netcoreapp3.1\TerminalRPGEncounter.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\obj\Debug\netcoreapp3.1\TerminalRPGEncounter.AssemblyInfoInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\obj\Debug\netcoreapp3.1\TerminalRPGEncounter.AssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\obj\Debug\netcoreapp3.1\TerminalRPGEncounter.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\obj\Debug\netcoreapp3.1\TerminalRPGEncounter.dll
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\obj\Debug\netcoreapp3.1\TerminalRPGEncounter.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\OOP\TerminalRPGEncounter\obj\Debug\netcoreapp3.1\TerminalRPGEncounter.genruntimeconfig.cache
