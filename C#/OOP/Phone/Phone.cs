@@ -39,7 +39,7 @@ namespace Phone
             }
         }
 
-        public string Ringtone {
+        public string RingTone {
             get 
             {
                 return _ringTone;
