@@ -11,5 +11,15 @@ namespace TerminalRPGEncounter
             Name = name;
             health = healthPoints;
         }
+
+        public void attack(Human target)
+        {
+            target.health -= 10;
+            Console.WriteLine($"{Name} attacks {target.Name} for 10 damage.");
+        }
+        public void IsDead()
+        {
+            Console.WriteLine($"{Name} is Defeated.");
+        }
     }
 }
