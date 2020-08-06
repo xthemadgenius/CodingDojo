@@ -33,7 +33,14 @@ namespace SinglyLinkedLists
 
         public void printValues()
         {
-            Console.WriteLine($"{Head}");
+            string Print = "";
+            SllNode runner = Head;
+            while(runner != null)
+            {
+                Print = $"{runner.Value}";
+                runner = runner.Next;
+            }
+            Console.WriteLine(Print);
         }
     }
 }
