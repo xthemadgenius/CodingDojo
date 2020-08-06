@@ -1,0 +1,13 @@
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\bin\Debug\netcoreapp3.1\SinglyLinkedLists.exe
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\bin\Debug\netcoreapp3.1\SinglyLinkedLists.deps.json
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\bin\Debug\netcoreapp3.1\SinglyLinkedLists.runtimeconfig.json
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\bin\Debug\netcoreapp3.1\SinglyLinkedLists.runtimeconfig.dev.json
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\bin\Debug\netcoreapp3.1\SinglyLinkedLists.dll
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\bin\Debug\netcoreapp3.1\SinglyLinkedLists.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\obj\Debug\netcoreapp3.1\SinglyLinkedLists.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\obj\Debug\netcoreapp3.1\SinglyLinkedLists.AssemblyInfoInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\obj\Debug\netcoreapp3.1\SinglyLinkedLists.AssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\obj\Debug\netcoreapp3.1\SinglyLinkedLists.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\obj\Debug\netcoreapp3.1\SinglyLinkedLists.dll
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\obj\Debug\netcoreapp3.1\SinglyLinkedLists.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\SinglyLinkedLists\obj\Debug\netcoreapp3.1\SinglyLinkedLists.genruntimeconfig.cache
