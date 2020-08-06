@@ -8,7 +8,8 @@ namespace SinglyLinkedLists
     public SllNode Next;
     public SllNode(int value) 
     {
-    // your code here
+        Value = value;
+        Next = null;
     }
 }
 }
