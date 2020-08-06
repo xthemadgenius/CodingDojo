@@ -28,12 +28,12 @@ namespace SinglyLinkedLists
         }
         public void Remove()
         {
-
+            Head = null;
         }
 
         public void printValues()
         {
-            
+            Console.WriteLine($"{Head}");
         }
     }
 }
