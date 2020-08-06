@@ -1,0 +1,13 @@
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\bin\Debug\netcoreapp3.1\Tries.exe
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\bin\Debug\netcoreapp3.1\Tries.deps.json
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\bin\Debug\netcoreapp3.1\Tries.runtimeconfig.json
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\bin\Debug\netcoreapp3.1\Tries.runtimeconfig.dev.json
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\bin\Debug\netcoreapp3.1\Tries.dll
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\bin\Debug\netcoreapp3.1\Tries.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\obj\Debug\netcoreapp3.1\Tries.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\obj\Debug\netcoreapp3.1\Tries.AssemblyInfoInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\obj\Debug\netcoreapp3.1\Tries.AssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\obj\Debug\netcoreapp3.1\Tries.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\obj\Debug\netcoreapp3.1\Tries.dll
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\obj\Debug\netcoreapp3.1\Tries.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\Tries\obj\Debug\netcoreapp3.1\Tries.genruntimeconfig.cache
