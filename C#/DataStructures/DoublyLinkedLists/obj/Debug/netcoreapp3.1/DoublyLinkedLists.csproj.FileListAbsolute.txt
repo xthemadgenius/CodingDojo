@@ -1,0 +1,13 @@
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\bin\Debug\netcoreapp3.1\DoublyLinkedLists.exe
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\bin\Debug\netcoreapp3.1\DoublyLinkedLists.deps.json
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\bin\Debug\netcoreapp3.1\DoublyLinkedLists.runtimeconfig.json
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\bin\Debug\netcoreapp3.1\DoublyLinkedLists.runtimeconfig.dev.json
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\bin\Debug\netcoreapp3.1\DoublyLinkedLists.dll
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\bin\Debug\netcoreapp3.1\DoublyLinkedLists.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\obj\Debug\netcoreapp3.1\DoublyLinkedLists.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\obj\Debug\netcoreapp3.1\DoublyLinkedLists.AssemblyInfoInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\obj\Debug\netcoreapp3.1\DoublyLinkedLists.AssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\obj\Debug\netcoreapp3.1\DoublyLinkedLists.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\obj\Debug\netcoreapp3.1\DoublyLinkedLists.dll
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\obj\Debug\netcoreapp3.1\DoublyLinkedLists.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\DataStructures\DoublyLinkedLists\obj\Debug\netcoreapp3.1\DoublyLinkedLists.genruntimeconfig.cache
