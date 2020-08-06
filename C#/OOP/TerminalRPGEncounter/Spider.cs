@@ -6,7 +6,7 @@ namespace TerminalRPGEncounter
     {
         public Spider(string name): base(name, 50)
         {
-            Console.WriteLine("I am Spider");
+            
         }
     }
 }

@@ -6,7 +6,7 @@ namespace TerminalRPGEncounter
     {
         public Ninja(string name) : base(name, 3,3,10,100)
         {
-            Console.WriteLine($"I a Ninja named {name}");
+            
         }
 
         public void Steal(Enemy target)
