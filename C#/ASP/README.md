@@ -31,7 +31,6 @@ Set up StartApp.cs
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -57,14 +56,22 @@ Set up HomeController.cs
         using Microsoft.AspNetCore.Mvc;
         namespace YourNamespace.Controllers     //be sure to use your own project's namespace!
         {
-            public class HomeController : Controller   //remember inheritance??copy
+            public class HomeController : Controller
             {
-                //for each route this controller is to handle:
-                [HttpGet]       //type of request
-                [Route("")]     //associated route string (exclude the leading /)
+                [HttpGet]    
+                [Route("")] 
                 public string Index()
                 {
                     return "Hello World from HomeController!";
                 }
             }
         }
+
+
+creates a new MVC
+
+dotnet new mvc
+
+dotnet new viewimports -o Views
+
+dotnet new viewstart -o Views
