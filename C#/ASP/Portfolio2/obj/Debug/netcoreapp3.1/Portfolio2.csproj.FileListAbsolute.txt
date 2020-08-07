@@ -18,3 +18,14 @@ C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\stat
 C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.dll
 C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.genruntimeconfig.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\bin\Debug\netcoreapp3.1\Portfolio2.Views.dll
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\bin\Debug\netcoreapp3.1\Portfolio2.Views.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.RazorAssemblyInfo.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.RazorAssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.TagHelpers.input.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.TagHelpers.output.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.RazorCoreGenerate.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.RazorTargetAssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.Views.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.csproj.CopyComplete
