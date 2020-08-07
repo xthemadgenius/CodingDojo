@@ -29,3 +29,5 @@ C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Razo
 C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.RazorTargetAssemblyInfo.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.Views.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Portfolio2.csproj.CopyComplete
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Razor\Views\Home\contact.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP\Portfolio2\obj\Debug\netcoreapp3.1\Razor\Views\Home\projects.cshtml.g.cs

@@ -20521,8 +20521,18 @@
   "RootNamespace": "Portfolio2",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP\\Portfolio2\\Views\\Home\\Projects.cshtml",
+      "TargetPath": "Views\\Home\\Projects.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP\\Portfolio2\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP\\Portfolio2\\Views\\Home\\Contact.cshtml",
+      "TargetPath": "Views\\Home\\Contact.cshtml",
       "FileKind": "mvc"
     }
   ],

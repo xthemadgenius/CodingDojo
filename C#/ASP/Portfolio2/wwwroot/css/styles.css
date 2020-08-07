@@ -1,0 +1,42 @@
+body{
+    color: green;
+}
+
+.info-left{
+    width: 600px;
+    float: left;
+    text-align: center;
+}
+.info-left img{
+    width: 500px;
+}
+
+.info-right{
+    width: 600px;
+    float: right;
+    text-align: center;
+}
+
+header{
+    text-align: center;
+}
+
+.bottom{
+    border-bottom: 1px green solid;
+}
+header ul li {
+    list-style: none;
+    display: inline-flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    color: green;
+    transition: 1s;
+    font-weight: 600;
+}
+
+header ul li a:hover{
+    color: rgb(223, 33, 223);
+}

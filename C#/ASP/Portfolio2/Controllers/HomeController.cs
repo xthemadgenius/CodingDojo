@@ -1,43 +1,28 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-namespace Portfolio2.Controllers     //be sure to use your own project's namespace!
+namespace Portfolio2.Controllers  
 {
-    public class HomeController : Controller   //remember inheritance??copy
+    public class HomeController : Controller 
     {
-        //for each route this controller is to handle:
-        [HttpGet]       //type of request
-        [Route("")]     //associated route string (exclude the leading /)
-        public string Index()
-        {
-            return "Hello World from HomeController!";
-        }
-
-        [HttpGet]       //type of request
-        [Route("about")]     //associated route string (exclude the leading /)
-        public ViewResult About()
+        [HttpGet]   
+        [Route("")]     
+        public ViewResult Index()
         {
             return View("Index");
         }
 
-        [HttpGet]       //type of request
-        [Route("goat")]     //associated route string (exclude the leading /)
-        public RedirectToActionResult Goat()
+        [HttpGet]      
+        [Route("projects")]     
+        public ViewResult Projects()
         {
-            return RedirectToAction("Index");
+            return View("Projects");
         }
 
-        // Show Json Objects
-        [HttpGet("displayanon")]
-        public JsonResult DisplayAnon()
+        [HttpGet]       
+        [Route("contact")]     
+        public ViewResult Contact()
         {
-            var AnonObject = new {
-                FirstName = "Raz",
-                LastName = "Aquato",
-                Age = 10
-            };
-            
-            return Json(AnonObject);
+            return View("Contact");
         }
-
     }
 }
