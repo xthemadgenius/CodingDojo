@@ -28,6 +28,7 @@ namespace Portfolio2
             }
 
             app.UseRouting();
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }

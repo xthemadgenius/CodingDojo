@@ -39,6 +39,7 @@ Set up StartApp.cs
                 app.UseDeveloperExceptionPage();
             }
             app.UseRouting();
+            app.UseStaticFiles();
             app.UseMvc();
             
 
