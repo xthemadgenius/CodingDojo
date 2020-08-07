@@ -8,7 +8,21 @@ namespace Portfolio1.Controllers     //be sure to use your own project's namespa
         [Route("")]     //associated route string (exclude the leading /)
         public string Index()
         {
-            return "Hello World from HomeController!";
+            return "This is my index";
+        }
+
+        [HttpGet]       //type of request
+        [Route("projects")]     //associated route string (exclude the leading /)
+        public string Project()
+        {
+            return "These are my Projects";
+        }
+
+        [HttpGet]       //type of request
+        [Route("contact")]     //associated route string (exclude the leading /)
+        public string Contact()
+        {
+            return "This is my Contact";
         }
     }
 }
