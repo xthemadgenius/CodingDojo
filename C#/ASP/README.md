@@ -24,7 +24,7 @@ dotnet watch run
 
 (helps uplad application faster)
 
-Set up Start App
+Set up StartApp.cs
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -49,4 +49,21 @@ Set up Start App
                     await context.Response.WriteAsync("Hello World!");
                 });
             });
+        }
+
+Set up HomeController.cs
+
+        using Microsoft.AspNetCore.Mvc;
+        namespace YourNamespace.Controllers     //be sure to use your own project's namespace!
+        {
+            public class HomeController : Controller   //remember inheritance??copy
+            {
+                //for each route this controller is to handle:
+                [HttpGet]       //type of request
+                [Route("")]     //associated route string (exclude the leading /)
+                public string Index()
+                {
+                    return "Hello World from HomeController!";
+                }
+            }
         }
