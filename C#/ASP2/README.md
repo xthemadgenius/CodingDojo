@@ -51,7 +51,12 @@ Set up StartApp.cs
         
 Set up HomeController.cs
 
+        using System;
+        using System.Collections.Generic;
         using Microsoft.AspNetCore.Mvc;
+        using Microsoft.AspNetCore.Http;
+        using NAMESPACE.Models;
+
         namespace YourNamespace.Controllers     //be sure to use your own project's namespace!
         {
             public class HomeController : Controller

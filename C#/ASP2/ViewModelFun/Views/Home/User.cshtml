@@ -8,8 +8,8 @@
 </head>
 <body>
     @using ViewModelFun.Models
-    @model string
-    <h1>Here is a Message</h1>
-    <h3>@Model</h3>
+    @model User
+    <h1>Here is a User</h1>
+    <h3>@Model.FirstName @Model.LastName</h3>
 </body>
 </html>

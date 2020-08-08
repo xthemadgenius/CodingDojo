@@ -8,8 +8,11 @@
 </head>
 <body>
     @using ViewModelFun.Models
-    @model string
-    <h1>Here is a Message</h1>
-    <h3>@Model</h3>
+    @model int[]
+    <h1>Here are some Numbers</h1>
+    @foreach(var number in Model)
+    {
+        <p>@number</p>
+    }
 </body>
 </html>
