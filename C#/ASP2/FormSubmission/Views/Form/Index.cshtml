@@ -1,0 +1,48 @@
+@model FormSubmission.Models.Forms
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <div>
+        <form asp-action="ResultSubmission" asp-controller="Form" method="POST">
+            <div>
+                <p><span asp-validation-for="FirstName"></span></p>
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" type="text" name="FirstName" id="FirstName">
+            </div>
+
+            <div>
+                <p><span asp-validation-for="LastName"></span></p>
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" type="text" name="LastName" id="LastName">
+            </div>
+
+            <div>
+                <p><span asp-validation-for="Age"></span></p>
+                <label asp-for="Age"></label>
+                <input asp-for="Age" type="number" name="Age" id="Age">
+            </div>
+
+            <div>
+                <p><span asp-validation-for="Email"></span></p>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" name="Email" id="Email" type="email">
+            </div>
+
+            <div>
+                <p><span asp-validation-for="Password"></span></p>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" name="Password" id="Password" type="password">
+            </div>
+            
+            <input type="submit" value="Submit User">
+        </form>
+    </div>
+</body>
+</html>
