@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show User</title>
+</head>
+<body>
+    @using DojoSurveyWithModel.Models
+    @model User
+
+    <h3>Name</h3>
+    <p>@Model.Name</p>
+    <h3>Location</h3>
+    <p>@Model.Location</p>
+    <h3>Language</h3>
+    <p>@Model.Language</p>
+    <h3>Comment</h3>
+    <p>@Model.Comment</p>
+</body>
+</html>

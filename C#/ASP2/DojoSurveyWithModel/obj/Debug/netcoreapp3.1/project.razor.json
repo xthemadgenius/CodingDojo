@@ -20519,6 +20519,22 @@
     "CSharpLanguageVersion": 800
   },
   "RootNamespace": "DojoSurveyWithModel",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\DojoSurveyWithModel\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\DojoSurveyWithModel\\Views\\Survey\\ResultSubmission.cshtml",
+      "TargetPath": "Views\\Survey\\ResultSubmission.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\DojoSurveyWithModel\\Views\\Survey\\Index.cshtml",
+      "TargetPath": "Views\\Survey\\Index.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

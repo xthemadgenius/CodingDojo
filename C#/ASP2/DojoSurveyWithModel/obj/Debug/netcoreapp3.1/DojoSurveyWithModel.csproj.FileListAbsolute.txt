@@ -18,3 +18,16 @@ C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcorea
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.dll
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.genruntimeconfig.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\bin\Debug\netcoreapp3.1\DojoSurveyWithModel.Views.dll
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\bin\Debug\netcoreapp3.1\DojoSurveyWithModel.Views.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.RazorAssemblyInfo.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.RazorAssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.TagHelpers.input.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.TagHelpers.output.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.RazorCoreGenerate.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\Razor\Views\Survey\Index.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.RazorTargetAssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.Views.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\DojoSurveyWithModel.csproj.CopyComplete
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\Razor\Views\Survey\ResultSubmission.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\DojoSurveyWithModel\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs

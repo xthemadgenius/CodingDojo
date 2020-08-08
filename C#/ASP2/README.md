@@ -69,3 +69,10 @@ Set up HomeController.cs
                 }
             }
         }
+
+
+dotnet new mvc
+
+dotnet new viewimports -o Views
+
+dotnet new viewstart -o Views
