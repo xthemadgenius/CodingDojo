@@ -30,3 +30,6 @@ C:\Users\javie\Desktop\CodingDojo\C#\ASP2\SimpleLoginRegistration\obj\Debug\netc
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\SimpleLoginRegistration\obj\Debug\netcoreapp3.1\SimpleLoginRegistration.Views.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\SimpleLoginRegistration\obj\Debug\netcoreapp3.1\SimpleLoginRegistration.csproj.CopyComplete
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\SimpleLoginRegistration\obj\Debug\netcoreapp3.1\Razor\Views\LogReg\Index.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\SimpleLoginRegistration\obj\Debug\netcoreapp3.1\Razor\Views\LogReg\LoginPartial.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\SimpleLoginRegistration\obj\Debug\netcoreapp3.1\Razor\Views\LogReg\RegisterPartial.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\SimpleLoginRegistration\obj\Debug\netcoreapp3.1\Razor\Views\LogReg\Success.cshtml.g.cs

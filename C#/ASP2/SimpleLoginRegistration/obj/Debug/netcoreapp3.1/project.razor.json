@@ -20526,6 +20526,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\SimpleLoginRegistration\\Views\\LogReg\\LoginPartial.cshtml",
+      "TargetPath": "Views\\LogReg\\LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\SimpleLoginRegistration\\Views\\LogReg\\RegisterPartial.cshtml",
+      "TargetPath": "Views\\LogReg\\RegisterPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\SimpleLoginRegistration\\Views\\LogReg\\Success.cshtml",
+      "TargetPath": "Views\\LogReg\\Success.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\SimpleLoginRegistration\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

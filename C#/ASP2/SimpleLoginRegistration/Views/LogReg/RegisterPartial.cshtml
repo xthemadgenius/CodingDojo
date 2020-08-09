@@ -1,0 +1,33 @@
+@using SimpleLoginRegistration.Models
+@model RegisterUser
+<div class="register">
+    <h2>Register</h2>
+    <form asp-action="Register" asp-controller="LogReg" method="POST">
+        <div>
+            <label asp-for="FirstName"></label>
+            <input type="text" asp-for="FirstName">
+        </div>
+        <div>
+            <label asp-for="LastName"></label>
+            <input type="text" asp-for="LastName">
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <input type="email" asp-for="Email">
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input type="password" asp-for="Password">
+        </div>
+        <div>
+            <label asp-for="ConfirmPassword"></label>
+            <input type="password" asp-for="ConfirmPassword">
+        </div>
+        <input type="submit" value="Register">
+    </form>
+    <span asp-validation-for="FirstName"></span><br>
+    <span asp-validation-for="LastName"></span><br>
+    <span asp-validation-for="Email"></span><br>
+    <span asp-validation-for="Password"></span><br>
+    <span asp-validation-for="ConfirmPassword"></span><br>
+</div>
