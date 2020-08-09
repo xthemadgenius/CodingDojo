@@ -18,3 +18,15 @@ C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.dll
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.genruntimeconfig.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\bin\Debug\netcoreapp3.1\RandomPasscode.Views.dll
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\bin\Debug\netcoreapp3.1\RandomPasscode.Views.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.RazorAssemblyInfo.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.RazorAssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.TagHelpers.input.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.TagHelpers.output.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.RazorCoreGenerate.cache
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\Razor\Views\Passcode\Index.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.RazorTargetAssemblyInfo.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.Views.pdb
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\RandomPasscode\obj\Debug\netcoreapp3.1\RandomPasscode.csproj.CopyComplete

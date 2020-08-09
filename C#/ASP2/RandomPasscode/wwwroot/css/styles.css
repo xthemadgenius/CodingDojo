@@ -1,0 +1,36 @@
+*{
+    text-align: center;
+}
+
+.btn-1,
+.btn-2{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(146, 38, 247);
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: 1s ease;
+}
+
+.passcode{
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    width: 250px;
+    color: rgb(146, 38, 247);
+    border-radius: 10px;
+    border: 2px solid rgb(146, 38, 247);
+    margin-bottom: 25px;
+}
+
+.btn-2{
+    padding: 10px 25px 10px 25px;
+}
+
+.btn-1:hover,
+.btn-2:hover{
+    background-color: white;
+    color:  rgb(146, 38, 247);
+    border:  rgb(146, 38, 247) solid 1px;
+}
