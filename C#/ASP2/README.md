@@ -26,6 +26,7 @@ Set up StartApp.cs
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
@@ -35,18 +36,19 @@ Set up StartApp.cs
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSession(); 
             app.UseRouting();
             app.UseStaticFiles();
             app.UseMvc();
             
 
-            app.UseEndpoints(endpoints =>
+            <!-- app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("Hello World!");
                 });
-            });
+            }); -->
         }
         
 Set up HomeController.cs
