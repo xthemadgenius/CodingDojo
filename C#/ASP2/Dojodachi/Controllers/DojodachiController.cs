@@ -66,9 +66,19 @@ namespace Dojodachi.Controllers     //be sure to use your own project's namespac
                 }
                 else
                 {
-                    
+                    int FullBelly = rand.Next(5,11);
+                    int? WellFeed = HttpContext.Session.GetInt32("Fullness") + FullBelly;
+                    HttpContext.Session.SetInt32("Fullness", (int)WellFeed);
+                    TempData["Message"] = $"Your Pets gained {FullBelly} fullness";
                 }
             }
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet("reset")]
+        public IActionResult Reset()
+        {
+            HttpContext.Session.Clear();
             return RedirectToAction("Index");
         }
     }
