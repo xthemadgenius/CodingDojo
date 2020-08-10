@@ -87,7 +87,7 @@ namespace Dojodachi.Controllers     //be sure to use your own project's namespac
             int chance = rand.Next(0, 4);
             if(chance == 0)
             {
-                TempData["Message"] = "You're Pet doesnt like the gametr another one";
+                TempData["Message"] = "You're Pet doesnt like the game try another one";
             }
             else
             {
@@ -104,8 +104,48 @@ namespace Dojodachi.Controllers     //be sure to use your own project's namespac
         [HttpGet("work")]
         public IActionResult Work()
         {
+            if(HttpContext.Session.GetInt32("Energy") <= 0)
+            {
+                TempData["Message"] = "Out of Energy cannot work";
+            }
+            Random rand = new Random();
+            int MealLvl = rand.Next(1,4);
+            int? MealsAte = HttpContext.Session.GetInt32("Meals") + MealLvl;
+            HttpContext.Session.SetInt32("Meals", (int)MealsAte);
+            TempData["Message"] = $"Pet has Eaten, used 5 Energy earned {MealLvl} meals";
+            int? EnergyLvl = HttpContext.Session.GetInt32("Energy") - 5;
+            HttpContext.Session.SetInt32("Energy", (int)EnergyLvl);
             return RedirectToAction("Index");
         }
+
+        [HttpGet("sleep")]
+        public IActionResult Sleep()
+        {
+            if(HttpContext.Session.GetInt32("Fullness") <= 0)
+            {
+                TempData["Message"] = "Your Fullness is 0 and you cannot fall asleep.";
+            }
+            else if(HttpContext.Session.GetInt32("Happiness") <= 0)
+            {
+                TempData["Message"] = "Your Happiness is 0 and you cannot fall asleep.";
+            }
+            else if (HttpContext.Session.GetInt32("Fullness") <= 0 && HttpContext.Session.GetInt32("Happiness") <= 0)
+            {
+                TempData["Message"] = "Your Happiness AND Fullness are 0 and you cannot fall asleep.";
+            }
+            int? EnergyLvl = HttpContext.Session.GetInt32("Energy") + 15;
+            HttpContext.Session.SetInt32("Energy", (int)EnergyLvl);
+
+            int? FullnessLvl = HttpContext.Session.GetInt32("Fullness") -5;
+            HttpContext.Session.SetInt32("Fullness", (int)FullnessLvl);
+
+            int? HappinessLvl = HttpContext.Session.GetInt32("Happiness") -5;
+            HttpContext.Session.SetInt32("Happiness", (int)HappinessLvl);
+
+            TempData["Message"] = "You gained 15 Energy and lost 5 Fullness and 5 Happiness.";
+            return RedirectToAction("Index");
+        }
+
 
         [HttpGet("reset")]
         public IActionResult Reset()

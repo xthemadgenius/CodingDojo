@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Opend</h1>
+    <div id="info"> 
+        <div class="stats">
+            <div>
+                <h3>Fullness</h3> 
+                <p>@TempData["Fullness"]</p>
+            </div>
+            <div>
+                <h3>Happiness</h3> 
+                <p>@TempData["Happiness"]</p>
+            </div>
+            <div>
+                <h3>Energy</h3> 
+                <p>@TempData["Energy"]</p>
+            </div>
+            <div>
+                <h3>Meals</h3>
+                <p>@TempData["Meals"]</p>
+            </div>
+        </div>
+        <div class="pet">
+            <img src="~/img/knuckles.png" alt="">
+        </div>
+        <div id="main">
+            <div id="status"><p>@TempData["Message"]</p></div>
+        </div>
+    </div>
+
+    @{
+        if(TempData["GameStatus"] == "playing")
+        {
+            <div id="buttons">
+            <a href="feed" class="btn btn-primary">Feed</a>
+            <a href="play" class="btn btn-primary">Play</a>
+            <a href="work" class="btn btn-primary">Work</a>
+            <a href="sleep" class="btn btn-primary">Sleep</a>
+            </div>
+        }
+        else if (TempData["GameStatus"] == "over")
+        {
+            <a href="reset" id="resetButton" class="btn btn-primary">Reset</a>
+        }
+    }
 </body>
 </html>

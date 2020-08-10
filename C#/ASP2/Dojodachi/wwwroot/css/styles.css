@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stats{
+    display: inline-flex;
+}
+.stats div{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+.pet{
+    text-align: center;
+}
+img{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(181, 60, 218);
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 10px 20px 10px 20px;
+    transition: 1s ease;
+}
+a:hover{
+    background-color: white;
+    color: rgb(181, 60, 218);
+    border: 1px solid rgb(181, 60, 218);
+}
+#main{
+    margin-bottom: 20px;
+    height: 40px;
+}
+#status p{
+    font-weight: 600px;
+    color: rgb(181, 60, 218);
+}
