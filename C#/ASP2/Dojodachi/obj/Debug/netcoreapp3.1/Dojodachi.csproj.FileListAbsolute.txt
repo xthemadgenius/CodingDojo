@@ -29,3 +29,4 @@ C:\Users\javie\Desktop\CodingDojo\C#\ASP2\Dojodachi\obj\Debug\netcoreapp3.1\Razo
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\Dojodachi\obj\Debug\netcoreapp3.1\Dojodachi.RazorTargetAssemblyInfo.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\Dojodachi\obj\Debug\netcoreapp3.1\Dojodachi.Views.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\Dojodachi\obj\Debug\netcoreapp3.1\Dojodachi.csproj.CopyComplete
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\Dojodachi\obj\Debug\netcoreapp3.1\Razor\Views\Dojodachi\Index.cshtml.g.cs
