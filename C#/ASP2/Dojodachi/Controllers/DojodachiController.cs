@@ -55,7 +55,8 @@ namespace Dojodachi.Controllers     //be sure to use your own project's namespac
             {
                 TempData["Message"] = "You Cant Feed your pet anymore";
             }
-            else{
+            else
+            {
                 int? MealsData = HttpContext.Session.GetInt32("Meals") - 1;
                 HttpContext.Session.SetInt32("Meals", (int)MealsData);
                 Random rand = new Random();
@@ -72,6 +73,37 @@ namespace Dojodachi.Controllers     //be sure to use your own project's namespac
                     TempData["Message"] = $"Your Pets gained {FullBelly} fullness";
                 }
             }
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet("play")]
+        public IActionResult Play()
+        {
+            if(HttpContext.Session.GetInt32("Energy") <= 0)
+            {
+                TempData["Message"] = "You're out of energy, You cant make any moves";
+            }
+            Random rand = new Random();
+            int chance = rand.Next(0, 4);
+            if(chance == 0)
+            {
+                TempData["Message"] = "You're Pet doesnt like the gametr another one";
+            }
+            else
+            {
+                int HappyLvl = rand.Next(5,11);
+                int? HappyPet = HttpContext.Session.GetInt32("Happiness") + HappyLvl;
+                HttpContext.Session.SetInt32("Happiness", (int)HappyPet);
+                TempData["Message"] = $"Your Pet gained {HappyLvl} Happiness";
+            }
+            int? EnergyLvl = HttpContext.Session.GetInt32("Energy") - 5;
+            HttpContext.Session.SetInt32("Energy", (int)EnergyLvl);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet("work")]
+        public IActionResult Work()
+        {
             return RedirectToAction("Index");
         }
 
