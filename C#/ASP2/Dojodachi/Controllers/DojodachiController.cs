@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using Dojodachi.Models;
 
 namespace Dojodachi.Controllers     //be sure to use your own project's namespace!
 {
@@ -11,7 +10,13 @@ namespace Dojodachi.Controllers     //be sure to use your own project's namespac
         [HttpGet("")] 
         public ViewResult Index()
         {
-            return View("Index");
+            TempData["GameStatus"] = "playing";
+            int? Happiness = HttpContext.Session.GetInt32("Happiness");
+            if(Happiness == null)
+            {
+                HttpContext.Session.SetInt32("Happiness", 20);
+            }
+            return View();
         }
     }
 }
