@@ -1,4 +1,4 @@
-# ASP 2 Set Up
+# ORM Set Up
 
 XX Open Database XX
 
@@ -85,6 +85,8 @@ dotnet new viewimports -o Views
 
 dotnet new viewstart -o Views
 
+# ORM SET UP Part II
+
 dotnet add package MySql.Data -v 8.0.16
 
 dotnet tool install dotnet-ef --global
@@ -115,6 +117,7 @@ Model Class
 Context class
 
 Models/Context.cs 
+
         using Microsoft.EntityFrameworkCore;
         namespace Monster.Models
         { 
