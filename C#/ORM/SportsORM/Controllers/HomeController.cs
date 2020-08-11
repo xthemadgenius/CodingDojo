@@ -38,6 +38,9 @@ namespace SportsORM.Controllers
             ViewBag.Five = _context.Leagues.Where(a => a.Name.Contains("Atlantic")).ToList();   
             ViewBag.Six = _context.Teams.Where(d => d.Location == "Dallas").ToList();
             ViewBag.Seven = _context.Teams.Where(r => r.TeamName == "Raptors").ToList();
+            ViewBag.Eight = _context.Teams.Where(c => c.Location.Contains("City")).ToList();
+            ViewBag.Nine = _context.Teams.Where(t => t.TeamName.StartsWith("T")).ToList();
+            ViewBag.Ten = _context.Teams.OrderBy(l => l.Location).ToList();
             return View();
         }
 

@@ -70,9 +70,48 @@
                         </tr>
                     }
                 </table>
-            <li>...all teams whose location includes "City"</li>
-            <li>...all teams whose names begin with "T"</li>
-            <li>...all teams, ordered alphabetically by location</li>
+            <li><h3>...all teams whose location includes "City"</h3></li>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Team Location</th>
+                        <th>Team Name</th>
+                    </tr>
+                    @foreach(var c in ViewBag.Eight)
+                    {
+                        <tr>
+                            <td>@c.Location</td>
+                            <td>@c.TeamName</td>
+                        </tr>
+                    }
+                </table>
+            <li><h3>...all teams whose names begin with "T"</h3></li>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Team Location</th>
+                        <th>Team Name</th>
+                    </tr>
+                    @foreach(var t in ViewBag.Nine)
+                    {
+                        <tr>
+                            <td>@t.Location</td>
+                            <td>@t.TeamName</td>
+                        </tr>
+                    }
+                </table>
+            <li><h3>...all teams, ordered alphabetically by location</h3></li>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Team Location</th>
+                        <th>Team Name</th>
+                    </tr>
+                    @foreach(var l in ViewBag.Ten)
+                    {
+                        <tr>
+                            <td>@l.Location</td>
+                            <td>@l.TeamName</td>
+                        </tr>
+                    }
+                </table>
             <li>...all teams, ordered by team name in reverse alphabetical order</li>
             <li>...every player with last name "Cooper"</li>
             <li>...every player with first name "Joshua"</li>
