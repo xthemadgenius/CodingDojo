@@ -9,9 +9,9 @@
         <ol>
             <li><h3>...all womens' leagues</h3></li>
                 <ul>
-                @foreach (League l in ViewBag.One)
+                @foreach (League w in ViewBag.One)
                 {
-                    <li>@l.Name</li>
+                    <li>@w.Name</li>
                 }
                 </ul>
             <li><h3>...all leagues where sport is any type of hockey</h3></li>
@@ -21,8 +21,20 @@
                     <li>@h.Name</li>
                     }
                 </ul>
-            <li>...all leagues where sport is something OTHER THAN football</li>
-            <li>...all leagues that call themselves "conferences"</li>
+            <li><h3>...all leagues where sport is something OTHER THAN football</h3></li>
+                <ul>
+                    @foreach (League f in ViewBag.Three)
+                    {
+                    <li>@f.Name</li>
+                    }
+                </ul>
+            <li><h3>...all leagues that call themselves "conferences"</h3></li>
+                <ul>
+                    @foreach (League c in ViewBag.Four)
+                    {
+                    <li>@c.Name</li>
+                    }
+                </ul>
             <li>...all leagues in the Atlantic region</li>
             <li>...all teams based in Dallas</li>
             <li>...all teams named the Raptors</li>
