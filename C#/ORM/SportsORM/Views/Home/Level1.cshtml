@@ -154,8 +154,34 @@
                         </tr>
                     }
                 </table>
-            <li>...every player with last name "Cooper" EXCEPT those with "Joshua" as the first name</li>
-            <li>...all players with first name "Alexander" OR first name "Wyatt"</li>
+            <li><h3>...every player with last name "Cooper" EXCEPT those with "Joshua" as the first name</h3></li>
+                <table class="table table-striped">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                    @foreach(var n in ViewBag.Fourteen)
+                    {
+                        <tr>
+                            <td>@n.FirstName</td>
+                            <td>@n.LastName</td>
+                        </tr>
+                    }
+                </table>
+            <li><h3>...all players with first name "Alexander" OR first name "Wyatt"</h3></li>
+                    <table class="table table-striped">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                    @foreach(var n in ViewBag.Fifteen)
+                    {
+                        <tr>
+                            <td>@n.FirstName</td>
+                            <td>@n.LastName</td>
+                        </tr>
+                    }
+                </table>
         </ol>
     </div>
 </div>

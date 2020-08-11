@@ -44,6 +44,8 @@ namespace SportsORM.Controllers
             ViewBag.Eleven = _context.Teams.OrderByDescending(b => b.TeamName).ToList();
             ViewBag.Twelve  = _context.Players.Where(c => c.LastName == "Cooper").ToList(); 
             ViewBag.Thirteen  = _context.Players.Where(j => j.FirstName == "Joshua").ToList();
+            ViewBag.Fourteen  = _context.Players.Where(n => n.LastName == "Cooper" && n.FirstName != "Joshua").ToList();
+            ViewBag.Fifteen  = _context.Players.Where(n => n.FirstName == "Alexander" || n.FirstName == "Wyatt").ToList();
             return View();
         }
 
