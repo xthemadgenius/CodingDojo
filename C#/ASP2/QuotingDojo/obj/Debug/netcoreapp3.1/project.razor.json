@@ -20524,6 +20524,16 @@
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\QuotingDojo\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\QuotingDojo\\Views\\QuotingDojo\\Quotes.cshtml",
+      "TargetPath": "Views\\QuotingDojo\\Quotes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ASP2\\QuotingDojo\\Views\\QuotingDojo\\Index.cshtml",
+      "TargetPath": "Views\\QuotingDojo\\Index.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
