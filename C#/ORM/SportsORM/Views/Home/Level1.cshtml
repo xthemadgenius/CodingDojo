@@ -35,9 +35,41 @@
                     <li>@c.Name</li>
                     }
                 </ul>
-            <li>...all leagues in the Atlantic region</li>
-            <li>...all teams based in Dallas</li>
-            <li>...all teams named the Raptors</li>
+            <li><h3>...all leagues in the Atlantic region</h3></li>
+                <ul>
+                    @foreach (League a in ViewBag.Five)
+                    {
+                    <li>@a.Name</li>
+                    }
+                </ul>
+            <li><h3>...all teams based in Dallas</h3></li>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Team Location</th>
+                        <th>Team Name</th>
+                    </tr>
+                    @foreach(var d in ViewBag.Six)
+                    {
+                        <tr>
+                            <td>@d.Location</td>
+                            <td>@d.TeamName</td>
+                        </tr>
+                    }
+                </table>
+            <li><h3>...all teams named the Raptors</h3></li>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Team Location</th>
+                        <th>Team Name</th>
+                    </tr>
+                    @foreach(var t in ViewBag.Seven)
+                    {
+                        <tr>
+                            <td>@t.Location</td>
+                            <td>@t.TeamName</td>
+                        </tr>
+                    }
+                </table>
             <li>...all teams whose location includes "City"</li>
             <li>...all teams whose names begin with "T"</li>
             <li>...all teams, ordered alphabetically by location</li>

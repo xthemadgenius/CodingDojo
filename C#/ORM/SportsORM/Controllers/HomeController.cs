@@ -35,6 +35,9 @@ namespace SportsORM.Controllers
             ViewBag.Two = _context.Leagues.Where(h => h.Name.Contains("Hockey")).ToList();
             ViewBag.Three = _context.Leagues.Where(f => !f.Name.Contains("Football")).ToList();
             ViewBag.Four = _context.Leagues.Where(c => c.Name.Contains("Conference")).ToList();
+            ViewBag.Five = _context.Leagues.Where(a => a.Name.Contains("Atlantic")).ToList();   
+            ViewBag.Six = _context.Teams.Where(d => d.Location == "Dallas").ToList();
+            ViewBag.Seven = _context.Teams.Where(r => r.TeamName == "Raptors").ToList();
             return View();
         }
 
