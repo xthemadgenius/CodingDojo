@@ -35,5 +35,5 @@ C:\Users\javie\Desktop\CodingDojo\C#\ASP2\QuotingDojo\obj\Debug\netcoreapp3.1\Ra
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\QuotingDojo\obj\Debug\netcoreapp3.1\QuotingDojo.RazorTargetAssemblyInfo.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\QuotingDojo\obj\Debug\netcoreapp3.1\QuotingDojo.Views.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ASP2\QuotingDojo\obj\Debug\netcoreapp3.1\QuotingDojo.csproj.CopyComplete
-C:\Users\javie\Desktop\CodingDojo\C#\ASP2\QuotingDojo\obj\Debug\netcoreapp3.1\Razor\Views\QuotingDojo\Index.cshtml.g.cs
-C:\Users\javie\Desktop\CodingDojo\C#\ASP2\QuotingDojo\obj\Debug\netcoreapp3.1\Razor\Views\QuotingDojo\Quotes.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\QuotingDojo\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ASP2\QuotingDojo\obj\Debug\netcoreapp3.1\Razor\Views\Home\Quotes.cshtml.g.cs

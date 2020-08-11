@@ -6,7 +6,7 @@ using QuotingDojo.Models;
 
 namespace QuotingDojo.Controllers     //be sure to use your own project's namespace!
 {
-    public class QuotingDojoController : Controller
+    public class HomeController : Controller
     {
         [HttpGet("")] 
         public ViewResult Index()

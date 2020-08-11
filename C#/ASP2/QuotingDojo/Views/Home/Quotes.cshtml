@@ -6,11 +6,14 @@
     <title>Quotes</title>
 </head>
 <body>
-    <h1>Here are the Quotes</h1>
+    <h1>Here are the Awesome Quotes</h1>
+    @foreach(var quote in ViewBag.Quotes)
+    {
     <div>
-        <h3>"RANDOM QUOTE"</h3>
-        <p>- NAME at DATE TIME</p>
+        <h3>"@quote["content"]"</h3>
+        <p> - @quote["user"] at @quote["created_at"]</p>
         <hr>
     </div>
+    }
 </body>
 </html>
