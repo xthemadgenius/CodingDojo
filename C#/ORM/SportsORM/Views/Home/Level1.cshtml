@@ -112,9 +112,48 @@
                         </tr>
                     }
                 </table>
-            <li>...all teams, ordered by team name in reverse alphabetical order</li>
-            <li>...every player with last name "Cooper"</li>
-            <li>...every player with first name "Joshua"</li>
+            <li><h3>...all teams, ordered by team name in reverse alphabetical order</h3></li>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Team Location</th>
+                        <th>Team Name</th>
+                    </tr>
+                    @foreach(var r in ViewBag.Eleven)
+                    {
+                        <tr>
+                            <td>@r.Location</td>
+                            <td>@r.TeamName</td>
+                        </tr>
+                    }
+                </table>
+            <li><h3>...every player with last name "Cooper"</h3></li>
+                <table class="table table-striped">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                    @foreach(var c in ViewBag.Twelve)
+                    {
+                        <tr>
+                            <td>@c.FirstName</td>
+                            <td>@c.LastName</td>
+                        </tr>
+                    }
+                </table>
+            <li><h3>...every player with first name "Joshua"</h3></li>
+                <table class="table table-striped">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                    @foreach(var j in ViewBag.Thirteen)
+                    {
+                        <tr>
+                            <td>@j.FirstName</td>
+                            <td>@j.LastName</td>
+                        </tr>
+                    }
+                </table>
             <li>...every player with last name "Cooper" EXCEPT those with "Joshua" as the first name</li>
             <li>...all players with first name "Alexander" OR first name "Wyatt"</li>
         </ol>
