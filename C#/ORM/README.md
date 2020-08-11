@@ -1,5 +1,11 @@
 # ASP 2 Set Up
 
+XX Open Database XX
+
+cd C:\"Program Files"\MySQL\"MySQL Server 8.0"\bin
+
+mysql -u root -p
+
 XX Set Up XX
 
 dotnet new web --no-https -o PROJNAME
