@@ -7,14 +7,20 @@
     <div class="card-body">
         <p>Using the SportsORM, complete all the following queries and show their results on Level1.cshtml.</p>
         <ol>
-            <li>...all womens' leagues</li>
+            <li><h3>...all womens' leagues</h3></li>
                 <ul>
                 @foreach (League l in ViewBag.One)
                 {
                     <li>@l.Name</li>
                 }
                 </ul>
-            <li>...all leagues where sport is any type of hockey</li>
+            <li><h3>...all leagues where sport is any type of hockey</h3></li>
+                <ul>
+                    @foreach (League h in ViewBag.Two)
+                    {
+                    <li>@h.Name</li>
+                    }
+                </ul>
             <li>...all leagues where sport is something OTHER THAN football</li>
             <li>...all leagues that call themselves "conferences"</li>
             <li>...all leagues in the Atlantic region</li>
