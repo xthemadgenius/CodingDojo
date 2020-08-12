@@ -161,58 +161,80 @@ create appsetting.json  (if it hasnt been created or filled out already and MAKE
 
 Set up Startup.cs
 
-        using Monster.Models;
+        using System;
+        using System.Collections.Generic;
+        using System.Linq;
+        using System.Threading.Tasks;
+        using Microsoft.AspNetCore.Builder;
+        using Microsoft.AspNetCore.Hosting;
+        using Microsoft.AspNetCore.Http;
+        using Microsoft.Extensions.DependencyInjection;
+        using Microsoft.Extensions.Hosting;
+        using Microsoft.Extensions.Configuration;
         using Microsoft.EntityFrameworkCore;
-        namespace Monsters
+        using CRUDelicious.Models;
+
+        namespace CRUDelicious
         {
             public class Startup
             {
-                public Startup (IConfiguration configuration)
+                public IConfiguration Configuration {get;}
+                public Startup(IConfiguration configuration)
                 {
                     Configuration = configuration;
                 }
-                public IConfiguration Configuration { get; }
-                public void ConfigureServices (IServiceCollection services)
+                // This method gets called by the runtime. Use this method to add services to the container.
+                // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+                public void ConfigureServices(IServiceCollection services)
                 {
-                    services.AddDbContext<mycontext>(options => options.UseMySql (Configuration["DBInfo:ConnectionString"]));
+                    services.AddSession();
+                    services.AddDbContext<MyContext>(options => options.UseMySql (Configuration["DBInfo:ConnectionString"]));
                     services.AddMvc(options => options.EnableEndpointRouting = false);
+
                 }
-                public void Configure (IApplicationBuilder app, IWebHostEnvironment env)
+
+                // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+                public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
                 {
                     if (env.IsDevelopment())
                     {
                         app.UseDeveloperExceptionPage();
                     }
+
+                    app.UseSession(); 
+                    app.UseRouting();
                     app.UseStaticFiles();
                     app.UseMvc();
                 }
             }
         }
 
+
 Set Up HomeController.cs
 
-        using Microsoft.EntityFrameworkCore;
-        using Monsters.Models;
+        using System;
         using System.Linq;
-        // Other using statements
-        namespace Monsters.Controllers
+        using System.Collections.Generic;
+        using Microsoft.AspNetCore.Mvc;
+        using Microsoft.AspNetCore.Http;
+        using Microsoft.EntityFrameworkCore;
+        using CRUDelicious.Models;
+
+        namespace CRUDelicious.Controllers
         {
-            publiccopy class HomeController : Controller
+            public class CrudController : Controller
             {
                 private MyContext _context;
-            
-                // here we can "inject" our context service into the constructor
-                public HomeController(MyContext context)
+
+                public CrudController(MyContext context)
                 {
                     _context = context;
                 }
-            
-                [HttpGet"")]
+
+                [HttpGet("")]
                 public IActionResult Index()
                 {
-                    List<Monster> AllMonsters = _context.Monsters.ToList();
-                    
-                    return View();
+                    return View("Index");
                 }
             }
         }
