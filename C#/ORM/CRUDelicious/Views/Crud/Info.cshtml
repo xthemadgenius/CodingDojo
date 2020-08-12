@@ -1,3 +1,5 @@
+@using CRUDelicious.Models
+@model Dish
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +8,16 @@
     <title>Info</title>
 </head>
 <body>
-    <a href="">Home</a>
-    <h1>FOOD NAME</h1>
-    <h3>CHEF NAME</h3>
+    <a href="/">Home</a>
+    <h1>@Model.Name</h1>
+    <h3>@Model.Chef</h3>
     <hr>
-    <p>DESCRIPTION</p>
-    <p><span>Calories:</span>####</p>
-    <p><span>Tastiness:</span>##</p>
+    <p><span>Description:</span>@Model.Description</p>
+    <p><span>Calories:</span>@Model.Calories</p>
+    <p><span>Tastiness:</span>@Model.Tastiness</p>
     <div>
-        <button>Delete</button>
-        <a href="">Edit</a>
+        <a href="/dish/@Model.DishId/delete">Delete</a>
+        <a href="/dish/@Model.DishId/edit">Edit</a>
     </div>
 </body>
 </html>

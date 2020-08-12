@@ -1,3 +1,5 @@
+@using CRUDelicious.Models
+@model Dish
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,25 +8,25 @@
     <title>Create Food</title>
 </head>
 <body>
-    <a href="">Home</a>
+    <a href="/">Home</a>
     <h1>Add a New Dish</h1>
     <div>
-        <form action="">
+        <form asp-action="Create" asp-controller="Crud" method="POST">
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label asp-for="Chef"></label>
+                <input asp-for="Chef" name="Chef" type="text">
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" name="Name" type="text">
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label asp-for="Calories"></label>
+                <input type="number" asp-for="Calories" name="Calories">
             </div>
             <div>
-                <label for=""></label>
-                <select name="" id="">
+                <label asp-for="Tastiness"></label>
+                <select asp-for="Tastiness" name="Tastiness" id="">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -33,11 +35,18 @@
                 </select>
             </div>
             <div>
-                <label for=""></label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" name="Description" id="Description" cols="30" rows="10"></textarea>
             </div>
-            <input type="text">
+            <input type="submit">
         </form>
+        <div>
+            <span class="text-danger" asp-validation-for="Name"></span>
+            <span class="text-danger" asp-validation-for="Chef"></span>
+            <span class="text-danger" asp-validation-for="Calories"></span>
+            <span class="text-danger" asp-validation-for="Tastiness"></span>
+            <span class="text-danger" asp-validation-for="Description"></span>
+        </div>
     </div>
 </body>
 </html>
