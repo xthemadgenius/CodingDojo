@@ -87,9 +87,19 @@ dotnet new viewstart -o Views
 
 # ORM SET UP Part II
 
-dotnet add package MySql.Data -v 8.0.16
+dotnet new web --no-https -o PROJNAME
 
-dotnet tool install dotnet-ef --global
+cd PROJNAME
+
+dotnet watch run    (dont forget this step)
+
+setx ASPNETCORE_ENVIRONMENT Development
+
+mkdir Views Controllers Models wwwroot
+
+dotnet new viewimports -o Views
+
+dotnet add package MySql.Data -v 8.0.16
 
 dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1.1
 
@@ -131,7 +141,7 @@ Models/Context.cs
             }
         }
 
-create appsetting.json
+create appsetting.json  (if it hasnt been created or filled out already and MAKE SURE TO RENAME DATABASE)
 
         {
         "Logging": {
@@ -206,3 +216,11 @@ Set Up HomeController.cs
                 }
             }
         }
+
+Migration Commands
+
+dotnet ef migrations add YourMigrationName
+
+dotnet ef migrations add FirstMigration
+
+dotnet ef database update
