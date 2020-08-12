@@ -1,0 +1,16 @@
+body{
+    display: inline;
+    color: blue;
+}
+
+nav ul{
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.login{
+    float: right;
+}
+.register{
+    float: left;
+}
