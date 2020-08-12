@@ -20526,8 +20526,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\CRUDelicious\\Views\\Crud\\Edit.cshtml",
+      "TargetPath": "Views\\Crud\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\CRUDelicious\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\CRUDelicious\\Views\\Crud\\Info.cshtml",
+      "TargetPath": "Views\\Crud\\Info.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\CRUDelicious\\Views\\Crud\\Create.cshtml",
+      "TargetPath": "Views\\Crud\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],

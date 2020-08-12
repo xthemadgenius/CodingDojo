@@ -59,3 +59,6 @@ C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\CR
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\CRUDelicious.Views.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\CRUDelicious.csproj.CopyComplete
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\Razor\Views\Crud\Index.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\Razor\Views\Crud\Create.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\Razor\Views\Crud\Edit.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\Razor\Views\Crud\Info.cshtml.g.cs
