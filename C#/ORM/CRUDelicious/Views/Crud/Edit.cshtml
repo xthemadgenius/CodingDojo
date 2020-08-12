@@ -9,12 +9,12 @@
 </head>
 <body>
     <a href="/">Home</a>
-    <h1>Edit @Model.DishId</h1>
+    <h1>Edit @Model.Name</h1>
     <div>
         <form asp-action="Update" asp-controller="Crud" method="POST">
             <div>
                 <label asp-for="Chef"></label>
-                <input asp-for="Chef" name="Chef" type="text" value="food">
+                <input asp-for="Chef" name="Chef" type="text">
             </div>
             <div>
                 <label asp-for="Name"></label>

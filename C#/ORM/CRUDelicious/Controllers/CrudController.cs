@@ -62,7 +62,7 @@ namespace CRUDelicious.Controllers
         public IActionResult Edit(int id)
         {
             Dish dish = _context.Dishes.FirstOrDefault(d => d.DishId == id);
-            return View("Edit");
+            return View("Edit", dish);
         }
 
         [HttpPost("/dish/{id}/update")]
