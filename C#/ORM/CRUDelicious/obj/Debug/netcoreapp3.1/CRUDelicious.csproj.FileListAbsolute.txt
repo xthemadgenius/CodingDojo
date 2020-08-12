@@ -58,3 +58,4 @@ C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\Ra
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\CRUDelicious.RazorTargetAssemblyInfo.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\CRUDelicious.Views.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\CRUDelicious.csproj.CopyComplete
+C:\Users\javie\Desktop\CodingDojo\C#\ORM\CRUDelicious\obj\Debug\netcoreapp3.1\Razor\Views\Crud\Index.cshtml.g.cs
