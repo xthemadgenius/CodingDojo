@@ -196,3 +196,8 @@ body {
         bottom: 100%;
     }
 }
+
+.error{
+    color: white;
+    text-align: center;
+}

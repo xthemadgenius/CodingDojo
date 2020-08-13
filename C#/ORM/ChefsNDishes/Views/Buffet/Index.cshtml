@@ -1,5 +1,5 @@
 @using ChefsNDishes.Models
-@model Chef
+@model List<Chef>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,15 +22,20 @@
             <th>Age</th>
             <th># of Dishes</th>
         </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>23</td>
-            <td>2</td>
-        </tr>
-        <tr>
-        <td>Centro comercial Moctezuma</td>
-        <td>19</td>
-        <td>24</td>
+        @foreach(var chef in Model)
+        {
+            var now = DateTime.Now;
+            var age = now.Year - @chef.DOB.Year;
+            if(@chef.DOB.Date > now.AddYears(-age))
+            {
+                age--;
+            }
+            <tr>
+                <td>@chef.FirstName @chef.LastName</td>
+                <td>@age</td>
+                <td>@chef.Dishes.Count</td>
+            </tr>
+        }
     </table>
 </body>
 </html>

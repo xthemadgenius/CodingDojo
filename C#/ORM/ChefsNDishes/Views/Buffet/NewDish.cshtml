@@ -15,19 +15,19 @@
             <a href="/dishes">Home</a>
             <h2>Add a Dish</h2>
         </div>
-        
-        <form asp-controller="Buffet" method="POST">
+        <form asp-action="CreateDish" asp-controller="Buffet" method="POST">
             <div class="user-box">
                 <input type="text" name="Name" id="Name" asp-for="Name">
                 <label asp-for="Name"></label>
             </div>
             <div class="user-box">
-                <select name="Preparer" asp-for="Preparer" id="Preparer">
-                    <option value="">Mexico</option>
-                    <option value="">Chef</option>
-                    <option value="">Chef</option>
+                <select name="ChefId" asp-for="ChefId" id="ChefId">
+                    @foreach (var chef in @ViewBag.AllChefs)
+                    {
+                        <option value="@chef.ChefId">@chef.FirstName @chef.LastName</option>
+                    }
                 </select>
-                <label for="Preparer">Chef</label>
+                <label asp-for="ChefId">Chef</label>
             </div>
             <div class="user-box">
                 <input type="number" name="Calories" id="Calories" asp-for="Calories">
@@ -54,6 +54,13 @@
                 Submit
             </button>
         </form>
+    </div>
+    <div>
+        <span class="error" asp-validation-for="Name"></span>
+        <span class="error" asp-validation-for="ChefId"></span>
+        <span class="error" asp-validation-for="Calories"></span>
+        <span class="error" asp-validation-for="Tastiness"></span>
+        <span class="error" asp-validation-for="Description"></span>
     </div>
 </body>
 </html>

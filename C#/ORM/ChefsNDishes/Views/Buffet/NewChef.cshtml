@@ -15,7 +15,7 @@
             <a href="/">Home</a>
             <h2>Add a Chef</h2>
         </div>
-        <form asp-controller="Buffet" method="POST">
+        <form asp-action="CreateChef" asp-controller="Buffet" method="POST">
             <div class="user-box">
                 <input asp-for="FirstName" type="text" name="FirstName" id="FirstName">
                 <label asp-for="FirstName"></label>
@@ -36,6 +36,11 @@
                 Submit
             </button>
         </form>
+    </div>
+    <div>
+        <span class="error" asp-validation-for="FirstName"></span>
+        <span class="error" asp-validation-for="LastName"></span>
+        <span class="error" asp-validation-for="DOB"></span>
     </div>
 </body>
 </html>

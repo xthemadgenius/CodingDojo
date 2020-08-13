@@ -18,6 +18,18 @@ tr:nth-child(odd) {
     display: inline-flex;
 }
 
+.headNav a{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: violet;
+    transition: ease 1s;
+}
+
+.headNav a:hover{
+    color: rgb(138, 16, 175);
+}
+
 h4{
     text-align: center;
 }

@@ -1,5 +1,5 @@
 @using ChefsNDishes.Models
-@model Dish
+@model List<Dish>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,18 +23,14 @@
             <th>Calories</th>
             <th>Tastiness</th>
         </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Alfreds Futterkiste</td>
-            <td>235</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Alfreds Futterkiste</td>
-            <td>1990</td>
-            <td>4</td>
-        </tr>
+        @foreach(var food in Model){
+            <tr>
+                <td>@food.Name</td>
+                <td>@food.Preparer.FirstName @food.Preparer.LastName</td>
+                <td>@food.Calories</td>
+                <td>@food.Tastiness</td>
+            </tr>
+        }
     </table>
 </body>
 </html>
