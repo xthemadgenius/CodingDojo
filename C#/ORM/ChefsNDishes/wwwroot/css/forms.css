@@ -7,13 +7,13 @@ a{
     text-decoration: none;
     font-weight: 600;
     color: white;
-    background-color: rgb(161, 51, 235);
+    background-color: #03e9f4;
     transition: 1s ease;
 }
 a:hover{
     background-color: white;
-    color: rgb(161, 51, 235);
-    border: 1px solid rgb(161, 51, 235); ;
+    color: #03e9f4;
+    border: 1px solid #03e9f4 ;
 }
 
 body {

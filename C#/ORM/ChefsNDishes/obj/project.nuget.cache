@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J+PLNUVhe1yPOPATsHM8WwWW40dEh5s+2zyUZgzEIkKwLO2NEQwFVDFlv8RAJZXmRfXDfHXzR4bmDp+46qTZNg==",
+  "dgSpecHash": "ziAVpSWgeQCAn4TokMvvVgHQtnYusMdDBqq+otP8ytcscRuqEiyLMzphV2I1HxlZN3gN6wAcLEGcmfAdnBCzRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ChefsNDishes\\ChefsNDishes.csproj",
+  "projectFilePath": "C:\\Users\\javie\\Desktop\\ChefsNDishes\\ChefsNDishes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\javie\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\javie\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",
