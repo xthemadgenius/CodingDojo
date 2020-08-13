@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\javie\\Desktop\\ChefsNDishes\\ChefsNDishes.csproj",
+  "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ChefsNDishes\\ChefsNDishes.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20521,33 +20521,33 @@
   "RootNamespace": "ChefsNDishes",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ChefsNDishes\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ChefsNDishes\\Views\\Buffet\\Dishes.cshtml",
-      "TargetPath": "Views\\Buffet\\Dishes.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ChefsNDishes\\Views\\Buffet\\NewChef.cshtml",
-      "TargetPath": "Views\\Buffet\\NewChef.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ChefsNDishes\\Views\\Buffet\\NewDish.cshtml",
-      "TargetPath": "Views\\Buffet\\NewDish.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ChefsNDishes\\Views\\Buffet\\NavPartial.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ChefsNDishes\\Views\\Buffet\\NavPartial.cshtml",
       "TargetPath": "Views\\Buffet\\NavPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ChefsNDishes\\Views\\Buffet\\Index.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ChefsNDishes\\Views\\Buffet\\Index.cshtml",
       "TargetPath": "Views\\Buffet\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ChefsNDishes\\Views\\Buffet\\Dishes.cshtml",
+      "TargetPath": "Views\\Buffet\\Dishes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ChefsNDishes\\Views\\Buffet\\NewChef.cshtml",
+      "TargetPath": "Views\\Buffet\\NewChef.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ChefsNDishes\\Views\\Buffet\\NewDish.cshtml",
+      "TargetPath": "Views\\Buffet\\NewDish.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ChefsNDishes\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     }
   ],
