@@ -22,5 +22,30 @@ namespace LoginAndRegistration.Controllers
         {
             return View("Index");
         }
+
+        [HttpGet("register")]
+        public IActionResult Register()
+        {
+            return View("Index");
+        }
+
+        [HttpGet("success")]
+        public IActionResult Success()
+        {
+            return View("Success");
+        }
+
+        [HttpGet("login")]
+        public IActionResult Login()
+        {
+            return View("Index");
+        }
+
+        [HttpGet("logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+        }
     }
 }
