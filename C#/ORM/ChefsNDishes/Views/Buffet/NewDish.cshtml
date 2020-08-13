@@ -1,3 +1,6 @@
+@using ChefsNDishes.Models
+@model Dish
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,42 +10,44 @@
     <title>New Dish</title>
 </head>
 <body>
-    <a href="/dishes">Home</a>
     <div class="login-box">
-        <h2>Add a Dish</h2>
-        <form action="">
+        <div>
+            <a href="/dishes">Home</a>
+            <h2>Add a Dish</h2>
+        </div>
+        
+        <form asp-controller="Buffet" method="POST">
             <div class="user-box">
-                <input type="text" name="" id="">
-                <label for="">Name of Dish</label>
+                <input type="text" name="Name" id="Name" asp-for="Name">
+                <label asp-for="Name"></label>
             </div>
             <div class="user-box">
-                <select name="" id="">
+                <select name="Preparer" asp-for="Preparer" id="Preparer">
                     <option value="">Mexico</option>
                     <option value="">Chef</option>
                     <option value="">Chef</option>
                 </select>
-                <label for="">Chef</label>
+                <label for="Preparer">Chef</label>
             </div>
             <div class="user-box">
-                <input type="text" name="" id="">
-                <label for=""># of Calories</label>
+                <input type="number" name="Calories" id="Calories" asp-for="Calories">
+                <label asp-for="Calories"></label>
             </div>
             <div class="user-box">
-                <select name="" id="">
+                <select name="Tastiness" id="Tastiness" asp-for="Tastiness">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <label for="">Tastiness</label>
+                <label asp-for="Tastiness"></label>
             </div>
             <div class="user-box">
-                <textarea name="" id="" cols="20" rows="10"></textarea>
-                <label for="">Description</label>
+                <textarea name="Description" id="Description" asp-for="Description"></textarea>
+                <label asp-for="Description"></label>
             </div>
-            <button>
-                <span></span>
+            <button type="submit">
                 <span></span>
                 <span></span>
                 <span></span>

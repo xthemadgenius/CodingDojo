@@ -1,3 +1,6 @@
+@using ChefsNDishes.Models
+@model Chef
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +10,25 @@
     <title>New Chef</title>
 </head>
 <body>
-    <a href="/">Home</a>
     <div class="login-box">
-        <h2>Add a Chef</h2>
-        <form action="">
+        <div>
+            <a href="/">Home</a>
+            <h2>Add a Chef</h2>
+        </div>
+        <form asp-controller="Buffet" method="POST">
             <div class="user-box">
-                <input type="text" name="" id="">
-                <label for="">First Name</label>
+                <input asp-for="FirstName" type="text" name="FirstName" id="FirstName">
+                <label asp-for="FirstName"></label>
             </div>
             <div class="user-box">
-                <input type="text" name="" id="">
-                <label for="">Last Name</label>
+                <input type="text" asp-for="LastName" name="LastName" id="LastName">
+                <label asp-for="LastName"></label>
             </div>
             <div class="user-box">
-                <input type="date" name="" id="">
-                <label for="">Date of Birth</label>
+                <input type="date" asp-for="DOB" name="DOB" id="DOB">
+                <label asp-for="DOB"></label>
             </div>
-            <button>
+            <button type="submit">
                 <span></span>
                 <span></span>
                 <span></span>
