@@ -61,3 +61,4 @@ C:\Users\javie\Desktop\CodingDojo\C#\ORM\LoginAndRegistration\obj\Debug\netcorea
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\LoginAndRegistration\obj\Debug\netcoreapp3.1\LoginAndRegistration.RazorTargetAssemblyInfo.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\LoginAndRegistration\obj\Debug\netcoreapp3.1\LoginAndRegistration.Views.pdb
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\LoginAndRegistration\obj\Debug\netcoreapp3.1\LoginAndRegistration.csproj.CopyComplete
+C:\Users\javie\Desktop\CodingDojo\C#\ORM\LoginAndRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Home\Success.cshtml.g.cs

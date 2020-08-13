@@ -1,10 +1,12 @@
 using System;
-using System.Linq;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
+using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using System.Linq;
 using LoginAndRegistration.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace LoginAndRegistration.Controllers
 {
@@ -23,21 +25,59 @@ namespace LoginAndRegistration.Controllers
             return View("Index");
         }
 
-        [HttpGet("register")]
-        public IActionResult Register()
+        [HttpPost("register")]
+        public IActionResult Register(User user)
         {
+            if(ModelState.IsValid)
+            {
+                if(_context.Users.Any(i => i.Email == user.Email))
+                {
+                    ModelState.AddModelError("Email", "Email is already in Use! Try Another one");
+                    return View("Index");
+                }
+                PasswordHasher<User> Hasher = new PasswordHasher<User>();
+                user.Password = Hasher.HashPassword(user, user.Password);
+                _context.Users.Add(user);
+                _context.SaveChanges();
+                HttpContext.Session.SetInt32("userId", user.UserId);
+                return RedirectToAction("Success");
+            }
             return View("Index");
         }
 
         [HttpGet("success")]
         public IActionResult Success()
         {
+            int? userId = HttpContext.Session.GetInt32("userId");
+            if(userId == null)
+            {
+                return RedirectToAction("Index");
+            }
+            User user = _context.Users.FirstOrDefault(i => i.UserId == userId);
             return View("Success");
         }
 
-        [HttpGet("login")]
-        public IActionResult Login()
+        [HttpPost("login")]
+        public IActionResult Login(LoginUser log_in)
         {
+            if(ModelState.IsValid)
+            {
+                User db_user = _context.Users.FirstOrDefault(i => i.Email == log_in.LoginEmail);
+                if(db_user == null)
+                {
+                    ModelState.AddModelError("LoginEmail", "Invalid Email! Try Another one");
+                    return View("Index");
+                }
+                var hasher = new PasswordHasher<LoginUser>();
+                var result = hasher.VerifyHashedPassword(log_in, db_user.Password, log_in.LoginPassword);
+                if(result == 0)
+                {
+                    ModelState.AddModelError("LoginPassword", "Invalid Password! Try Again");
+                    return View("Index");
+                }
+                HttpContext.Session.SetInt32("userId", db_user.UserId);
+                return RedirectToAction("Success");
+            }
             return View("Index");
         }
 

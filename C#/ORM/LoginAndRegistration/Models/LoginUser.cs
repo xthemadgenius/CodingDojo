@@ -8,12 +8,12 @@ namespace LoginAndRegistration.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "First Name:")]
-        public string Email { get; set; }
+        [Display(Name = "Email:")]
+        public string LoginEmail { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Last Name:")]
-        public string Password { get; set; }
+        [Display(Name = "Password:")]
+        public string LoginPassword { get; set; }
     }
 }
