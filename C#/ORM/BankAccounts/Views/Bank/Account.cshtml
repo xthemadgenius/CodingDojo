@@ -9,7 +9,7 @@
     <title>Account</title>
 </head>
 <body>
-    <a class="exit" href="/">Logout</a>
+    <a class="exit" href="/logout">Logout</a>
     <div class="user-box">
         <h5>UserName:</h5>
         <h2>@ViewBag.User.FirstName @ViewBag.User.LastName</h2>
@@ -34,7 +34,15 @@
             @foreach (Transaction trans in ViewBag.Transactions)
             {
                 <tr>
-                    <td>@string.Format("{0:C}", @trans.Amount)</td>
+                    @{
+                        if(trans.Amount < 0)
+                        {
+                            <td>-@{double newAmt = trans.Amount*-1;}@string.Format("{0:C}",@newAmt)</td>
+                        }
+                        else{
+                            <td>@string.Format("{0:C}", @trans.Amount)</td>
+                        }
+                    }
                     <td>@trans.CreatedAt</td>
                 </tr>
             }

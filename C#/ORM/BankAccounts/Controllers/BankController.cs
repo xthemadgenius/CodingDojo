@@ -111,6 +111,7 @@ namespace BankAccounts.Controllers
                     ModelState.AddModelError("Amount", "You cannot accend your current Balance");
                     return View("Account");
                 }
+                
                 newTrans.UserId = (int) userId;
                 _context.Transactions.Add(newTrans);
                 user.Balance += newTrans.Amount;

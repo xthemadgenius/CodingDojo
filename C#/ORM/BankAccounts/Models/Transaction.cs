@@ -13,7 +13,6 @@ namespace BankAccounts.Models
         [Required]
         [Display(Name = "Amount:")]
         [DataType(DataType.Currency)]
-        [Range(0, 999999999.99, ErrorMessage = "Amount must not exceed 9 digits")]
         public double Amount {get; set;}
 
         public int UserId {get; set;}
