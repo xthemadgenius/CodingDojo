@@ -17,10 +17,10 @@
         <h2>@string.Format("{0:C}", @ViewBag.User.Balance)</h2>
     </div>
     <div class="deposit">
-        <form action="">
+        <form asp-action="Process" method="POST" asp-controller="Bank">
             <div class="pay">
-                <h3><label for="">Deposit/Withdrawl</label></h3><br>
-                <input type="number">
+                <h3><label asp-for="Amount">New Transaction</label></h3><br>
+                <input type="number" asp-for="Amount" step=".01">
             </div>
             <input type="submit">
         </form>
@@ -31,10 +31,13 @@
                 <th>Amount</th>
                 <th>Date</th>
             </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-            </tr>
+            @foreach (Transaction trans in ViewBag.Transactions)
+            {
+                <tr>
+                    <td>@string.Format("{0:C}", @trans.Amount)</td>
+                    <td>@trans.CreatedAt</td>
+                </tr>
+            }
         </table>
     </div>
 </body>

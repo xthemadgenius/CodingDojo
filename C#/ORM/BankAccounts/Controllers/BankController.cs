@@ -47,7 +47,7 @@ namespace BankAccounts.Controllers
                 _context.Users.Add(user);
                 _context.SaveChanges();
                 HttpContext.Session.SetInt32("userId", user.UserId);
-                return RedirectToAction("Account");
+                return RedirectToAction("Account", new { userId = user.UserId });
             }
             return View("Index");
         }
@@ -71,12 +71,12 @@ namespace BankAccounts.Controllers
                     return View("Login");
                 }
                 HttpContext.Session.SetInt32("userId", db_user.UserId);
-                return RedirectToAction("Account");
+                return RedirectToAction("Account", new { userId = db_user.UserId });
             }
             return View("Login");
         }
 
-        [HttpGet("account")]
+        [HttpGet("account/{userId}")]
         public IActionResult Account()
         {
             int? userId = HttpContext.Session.GetInt32("userId");
@@ -91,7 +91,7 @@ namespace BankAccounts.Controllers
             return View("Account");
         }
 
-        [HttpGet("process")]
+        [HttpPost("accounts/{userId}/transaction")]
         public IActionResult Process(Transaction newTrans)
         {
             int? userId = HttpContext.Session.GetInt32("userId");
@@ -100,11 +100,23 @@ namespace BankAccounts.Controllers
                 return RedirectToAction("Index");
             }
             User user = _context.Users.FirstOrDefault(i => i.UserId == userId);
-            ViewBag.Transaction = _context.Transactions.Include(t => t.Owner)
+            ViewBag.Transactions = _context.Transactions.Include(t => t.Owner)
                                 .Where(t => t.UserId == userId)
                                 .OrderByDescending(t => t.CreatedAt);
             ViewBag.User = user;
-            
+            if(ModelState.IsValid)
+            {
+                if(user.Balance + newTrans.Amount < 0)
+                {
+                    ModelState.AddModelError("Amount", "You cannot accend your current Balance");
+                    return View("Account");
+                }
+                newTrans.UserId = (int) userId;
+                _context.Transactions.Add(newTrans);
+                user.Balance += newTrans.Amount;
+                _context.SaveChanges();
+                return RedirectToAction("Account");
+            }
             return View("Account");
         }
 
