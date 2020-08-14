@@ -27,7 +27,7 @@ namespace BankAccounts.Controllers
         }
 
         [HttpGet("login")]
-        public IActionResult Login()
+        public IActionResult Logs()
         {
             return View("Login");
         }
@@ -46,7 +46,7 @@ namespace BankAccounts.Controllers
                 user.Password = Hasher.HashPassword(user, user.Password);
                 _context.Users.Add(user);
                 _context.SaveChanges();
-                HttpContext.Session.SetInt32("UserId", user.UserId);
+                HttpContext.Session.SetInt32("userId", user.UserId);
                 return RedirectToAction("Account");
             }
             return View("Index");
@@ -70,7 +70,7 @@ namespace BankAccounts.Controllers
                     ModelState.AddModelError("Password", "Invalid Password! Try Again");
                     return View("Login");
                 }
-                HttpContext.Session.SetInt32("UserId", db_user.UserId);
+                HttpContext.Session.SetInt32("userId", db_user.UserId);
                 return RedirectToAction("Account");
             }
             return View("Login");
@@ -79,12 +79,32 @@ namespace BankAccounts.Controllers
         [HttpGet("account")]
         public IActionResult Account()
         {
-            int? UserId = HttpContext.Session.GetInt32("UserId");
-            if(UserId == null)
+            int? userId = HttpContext.Session.GetInt32("userId");
+            if(userId == null)
+            {
+                return View("Index");
+            }
+            ViewBag.User = _context.Users.FirstOrDefault(u => u.UserId == userId);
+            ViewBag.Transactions = _context.Transactions.Include(t => t.Owner)
+                                                    .Where(t => t.UserId == userId)
+                                                    .OrderByDescending(t => t.CreatedAt);
+            return View("Account");
+        }
+
+        [HttpGet("process")]
+        public IActionResult Process(Transaction newTrans)
+        {
+            int? userId = HttpContext.Session.GetInt32("userId");
+            if(userId == null)
             {
                 return RedirectToAction("Index");
             }
-            User user = _context.Users.FirstOrDefault(i => i.UserId == UserId);
+            User user = _context.Users.FirstOrDefault(i => i.UserId == userId);
+            ViewBag.Transaction = _context.Transactions.Include(t => t.Owner)
+                                .Where(t => t.UserId == userId)
+                                .OrderByDescending(t => t.CreatedAt);
+            ViewBag.User = user;
+            
             return View("Account");
         }
 
