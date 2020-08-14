@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap');
+
+body {
+    margin: 0px;
+    text-align: center;
+}
+/* end of nav bar code */
+h2,
+h3,
+h4,
+h5{
+    font-family: 'Balsamiq Sans', cursive;
+}
+h3{
+    color: rebeccapurple;
+    margin-bottom: 0px;
+}
+h5{
+    color: rgb(240, 226, 188);
+}
+
+.user-box{
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    border-radius: 10px;
+    background-color: #cc03f4;
+    border: black 2px solid;
+    color: white;
+}
+hr{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+    width: 500px;
+}
+
+.exit{
+    margin-right: 20px;
+    float: right;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background-color: #cc03f4;
+    transition: 1s ease;
+}
+.exit:hover{
+    background-color: white;
+    color: #cc03f4;
+    border: 1px solid #cc03f4;
+}
+
+.deposit{
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.pay{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+form {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+}
+form input {
+    flex: 1 1 10ch;
+    margin: .5rem;
+}
+form[type="number"] {
+    flex: 3 1 30ch;
+}
+input {
+    border: none;
+    background: hsl(0 0% 93%);
+    border-radius: .25rem;
+    padding: .75rem 1rem;
+}
+input[type="submit"] {
+    background: #cc03f4;
+    color: white;
+    box-shadow: 0 .75rem .5rem -.5rem hsl(0 50% 80%);
+    width: 100px;
+}
+
+.trans{
+    margin-top: 20px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}

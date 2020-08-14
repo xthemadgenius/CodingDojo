@@ -1,0 +1,41 @@
+@using BankAccounts.Models
+@model LoginUser
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-box">
+        <div>
+            <a href="/">Sign Up?</a>
+            <h2>Login</h2>
+        </div>
+        <form asp-action="Login" asp-controller="Bank" method="POST">
+            <div class="user-box">
+                <input asp-for="Email" type="email" name="Email" id="Email">
+                <label asp-for="Email"></label>
+            </div>
+            <div class="user-box">
+                <input type="password" asp-for="Password" name="Password" id="Password">
+                <label asp-for="Password"></label>
+            </div>
+            <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </button>
+        </form>
+    </div>
+    <div>
+        <span class="error" asp-validation-for="Email"></span>
+        <span class="error" asp-validation-for="Password"></span>
+    </div>
+</body>
+</html>
