@@ -113,8 +113,10 @@ namespace SportsORM.Controllers
                             .Where(pt => pt.TeamOfPlayer.CurrLeague.Name == "Atlantic Federation of Amateur Baseball Players")
                             .ToList();
             // all teams that have had 12 or more players, past and present.
-            ViewBag.Six = _context.Players.Include(p => p.AllTeams)
-                            .OrderByDescending(p => p.AllTeams.Count > 12)
+            ViewBag.Six = _context.Players.Include(p => p.CurrentTeam)
+                            .Include(s => s.AllTeams)
+                            .ThenInclude(pt => pt.TeamOfPlayer)
+                            .Where(e => e.CurrentTeam.CurrentPlayers.Count > 12)
                             .ToList();
             // all players, sorted by the number of teams they've played for
             ViewBag.Seven = _context.Players.Include(p => p.AllTeams)
