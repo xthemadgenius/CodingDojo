@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProductsAndCategories.Models;
 
@@ -65,6 +66,11 @@ namespace ProductsAndCategories.Controllers
             }
             return RedirectToAction("Category");
         }
+
+
+
+
+
         // Fails at showing Data for Model
         // Show Single Product Page
         [HttpGet("products/{ProductId}")]
@@ -90,7 +96,7 @@ namespace ProductsAndCategories.Controllers
             catAssociation.CategoryId = CategoryId;
             _context.Add(catAssociation);
             _context.SaveChanges();
-            return RedirectToAction($"/products/{ProductId}");
+            return Redirect($"/products/{ProductId}");
         }
         // Fails at showing Data for Model
         // Show Single Category Page
@@ -109,7 +115,10 @@ namespace ProductsAndCategories.Controllers
             return View("ShowCategory");
         }
 
-        [HttpPost("categories/{CategoryId}/add")]
+        [HttpPost("categories/{CategoryId}")]
+
+
+
 
         // Works at submitting Category Data
         public IActionResult NewProduct(int ProductId, int CategoryId)
@@ -119,7 +128,7 @@ namespace ProductsAndCategories.Controllers
             newAssociation.CategoryId = CategoryId;
             _context.Add(newAssociation);
             _context.SaveChanges();
-            return RedirectToAction($"/categories/{CategoryId}");
+            return Redirect($"/categories/{CategoryId}");
         }
 
     }
