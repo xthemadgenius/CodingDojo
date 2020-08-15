@@ -81,6 +81,45 @@ namespace SportsORM.Controllers
         [HttpGet("level_3")]
         public IActionResult Level3()
         {
+            // .all teams, past and present, that Samuel Evans has played with
+            ViewBag.One = _context.Players.Include(p => p.CurrentTeam)
+                            .Include(s => s.AllTeams)
+                            .ThenInclude(pt => pt.TeamOfPlayer)
+                            .Where(e => e.FirstName == "Samuel" && e.LastName == "Evans")
+                            .ToList();
+             // all players, past and present, with the Manitoba Tiger-Cats
+            ViewBag.Two = _context.Teams.Include(m => m.AllPlayers)
+                            .ThenInclude(pt => pt.PlayerOnTeam)
+                            .FirstOrDefault(t => t.Location == "Manitoba" && t.TeamName == "Tiger-Cats");
+            // all players who were formerly (but aren't currently) with the Wichita Vikings
+            ViewBag.Three = _context.PlayerTeams.Include(pt => pt.PlayerOnTeam)
+                            .ThenInclude(w => w.CurrentTeam)
+                            .Include(pt => pt.TeamOfPlayer)
+                            .Where(pt => pt.TeamOfPlayer.Location == "Wichita" && pt.TeamOfPlayer.TeamName == "Vikings")
+                            .Where(pt => pt.PlayerOnTeam.CurrentTeam.Location != "Wichita" && pt.PlayerOnTeam.CurrentTeam.TeamName != "Vikings")
+                            .ToList();
+            // every team that Jacob Gray played for before he joined the Oregon Colts
+            ViewBag.Four = _context.PlayerTeams.Include(pt => pt.PlayerOnTeam)
+                            .ThenInclude(j => j.CurrentTeam)
+                            .Include(pt => pt.TeamOfPlayer)
+                            .Where(pt => pt.PlayerOnTeam.FirstName == "Jacob" && pt.PlayerOnTeam.LastName == "Gray")
+                            .Where(pt => pt.TeamOfPlayer.Location != "Oregon" && pt.TeamOfPlayer.TeamName != "Colts")
+                            .ToList();
+            // everyone named "Joshua" who has ever played in the Atlantic Federation of Amateur Baseball Players
+            ViewBag.Five = _context.PlayerTeams.Include(pt => pt.TeamOfPlayer)
+                            .ThenInclude( j => j.CurrLeague)
+                            .Include(pt => pt.PlayerOnTeam)
+                            .Where(pt => pt.PlayerOnTeam.FirstName == "Joshua")
+                            .Where(pt => pt.TeamOfPlayer.CurrLeague.Name == "Atlantic Federation of Amateur Baseball Players")
+                            .ToList();
+            // all teams that have had 12 or more players, past and present.
+            ViewBag.Six = _context.Players.Include(p => p.AllTeams)
+                            .OrderByDescending(p => p.AllTeams.Count > 12)
+                            .ToList();
+            // all players, sorted by the number of teams they've played for
+            ViewBag.Seven = _context.Players.Include(p => p.AllTeams)
+                            .OrderByDescending(p => p.AllTeams.Count)
+                            .ToList();
             return View();
         }
 
