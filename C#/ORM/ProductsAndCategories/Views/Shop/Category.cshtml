@@ -1,25 +1,33 @@
+@using ProductsAndCategories.Models
+@model Category
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category Item</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+    <title>Categories</title>
 </head>
 <body>
-    <h1>Category Item</h1>
     <div>
-        <form action="">
+        <partial name="NavPartial"/>
+    </div>
+    <div>
+        <h1>New Categories</h1>
+        <form asp-action="AddCategory" asp-controller="Shop" method="POST">
             <div>
-                <label for="">Add Product</label>
-                <select>
-                    <option value="">NANE</option>
-                    <option value="">NANE</option>
-                    <option value="">NANE</option>
-                    <option value="">NANE</option>
-                </select>
+                <label asp-for="Name">Name</label>
+                <input type="text" asp-for="Name" name="Name" id="Name">
             </div>
-            <input type="submit" value="Add">
+            <input type="submit">
         </form>
+    </div>
+    <div>
+        <h1>Existing Categories</h1>
+            @foreach (var category in @ViewBag.Categories)
+            {
+                <p><a href="/categories/@category.CategoryId">@category.Name</a></p>
+            }
     </div>
 </body>
 </html>

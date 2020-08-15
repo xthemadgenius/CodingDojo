@@ -20531,6 +20531,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProductsAndCategories\\Views\\Shop\\ShowCategory.cshtml",
+      "TargetPath": "Views\\Shop\\ShowCategory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProductsAndCategories\\Views\\Shop\\Index.cshtml",
       "TargetPath": "Views\\Shop\\Index.cshtml",
       "FileKind": "mvc"
@@ -20538,11 +20543,6 @@
     {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProductsAndCategories\\Views\\Shop\\Category.cshtml",
       "TargetPath": "Views\\Shop\\Category.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProductsAndCategories\\Views\\Shop\\NewCategory.cshtml",
-      "TargetPath": "Views\\Shop\\NewCategory.cshtml",
       "FileKind": "mvc"
     },
     {

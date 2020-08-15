@@ -1,3 +1,5 @@
+@using ProductsAndCategories.Models
+@model Product
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,23 +12,30 @@
     <div>
         <partial name="NavPartial"/>
     </div>
-    <h1>Products</h1>
     <div>
-        <form action="">
+        <h1>New Products</h1>
+        <form asp-action="AddProduct" asp-controller="Shop" method="POST">
             <div>
-                <label for="">Name</label>
-                <input type="text" name="" id="">
+                <label asp-for="Name"></label>
+                <input type="text" asp-for="Name" name="Name" id="Name">
             </div>
             <div>
-                <label for="">Price</label>
-                <input type="number" name="" id="">
+                <label asp-for="Price"></label>
+                <input type="number" asp-for="Price" name="Price" id="Price">
             </div>
             <div>
-                <label for="">Description</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" name="Description" id="Description" cols="30" rows="10"></textarea>
             </div>
             <input type="submit">
         </form>
+    </div>
+    <div>
+        <h1>Existing Products</h1>
+            @foreach (var product in @ViewBag.Products)
+            {
+                <p><a href="/products/@product.ProductId">@product.Name</a></p>
+            }
     </div>
 </body>
 </html>

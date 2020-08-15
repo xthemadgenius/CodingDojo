@@ -58,8 +58,8 @@ C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\bin\Debug\netcore
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Category.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Index.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\obj\Debug\netcoreapp3.1\Razor\Views\Shop\NavPartial.cshtml.g.cs
-C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\obj\Debug\netcoreapp3.1\Razor\Views\Shop\NewCategory.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Product.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\obj\Debug\netcoreapp3.1\Razor\Views\Shop\ShowCategory.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ORM\ProductsAndCategories\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Category.cshtml.g.cs

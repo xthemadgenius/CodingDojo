@@ -1,0 +1,36 @@
+@using ProductsAndCategories.Models
+@model Category
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Item</title>
+</head>
+<body>
+    @* <h1>@Model.Name</h1> *@
+    <div>
+        <h3>Products</h3>
+        @* @foreach (var assoc in @Model.Associations)
+        {
+            <p>-@assoc.Product.Name</p>
+        } *@
+    </div>
+    <div>
+        <h3>Add A Product</h3>
+        <form asp-action="NewProduct" asp-controller="Shop" method="POST">
+            <div>
+                <label name="ProductId">Add Product</label>
+                <select name="ProductId">
+                    @foreach (var p in ViewBag.Products)
+                    {
+                        <option value="@p.ProductId">@p.Name</option>
+                    }
+                </select>
+            </div>
+            <input type="submit" value="Add Product">
+        </form>
+    </div>
+</body>
+</html>
