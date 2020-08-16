@@ -1,0 +1,36 @@
+@using ProdNCat.Models
+@model Wrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Model.Product.Name</title>
+</head>
+<body>
+    <h1>@Model.Product.Name  | <a href="/products"> Home</a></h1>
+    <div>
+        <h3>Categories:</h3>
+        <ul>
+            @foreach (Association association in Model.Product.Categories)
+            {
+                <li>@association.Category.Name</li>
+            }
+        </ul>
+    </div>
+    <div>
+        <h3>Add Category:</h3>
+        <form asp-action="AddCategory" asp-controller="Home" asp-route-id="@Model.Product.ProductId">
+            <div>
+                <select asp-for="Association.CategoryId">
+                    @foreach (Category category in Model.AllCategories)
+                    {
+                        <option value="@category.CategoryId">@category.Name</option>
+                    }
+                </select>
+            </div>
+            <button type="submit">Add Category</button>
+        </form>
+    </div>
+</body>
+</html>

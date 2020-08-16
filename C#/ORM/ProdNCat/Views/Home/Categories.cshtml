@@ -1,0 +1,35 @@
+@using ProdNCat.Models
+@model Wrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+</head>
+<body>
+    <h1><a href="/products">Products </a> | <a href="/categories"> Categories</a></h1>
+    <div>
+        <h2>New Category</h2>
+        <form asp-action="CreateCategory" asp-controller="Home">
+            <div>
+                <label asp-for="Category.Name"></label>
+                <input type="text" asp-for="Category.Name">
+            </div>
+            <button type="submit">Create</button>
+        </form>
+        <div>
+            <span asp-validation-for="Category.Name"></span>
+        </div>
+    </div>
+    <div>
+        <h2>Existing Categories</h2>
+        <ul>
+            @foreach (Category category in Model.AllCategories)
+            {
+                <li><a href="/categories/@category.CategoryId">@category.Name</a></li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

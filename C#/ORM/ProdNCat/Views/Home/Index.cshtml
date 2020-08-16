@@ -1,0 +1,45 @@
+@using ProdNCat.Models
+@model Wrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h1><a href="/products">Products </a> | <a href="/categories"> Categories</a></h1>
+    <div>
+        <h2>New Product</h2>
+        <form asp-action="CreateProduct" asp-controller="Home">
+            <div>
+                <label asp-for="Product.Name"></label>
+                <input type="text" asp-for="Product.Name">
+            </div>
+            <div>
+                <label asp-for="Product.Price"></label>
+                <input type="number" asp-for="Product.Price">
+            </div>
+            <div>
+                <label asp-for="Product.Description"></label>
+                <textarea asp-for="Product.Description"></textarea>
+            </div>
+            <button type="submit">Create</button>
+        </form>
+        <div>
+            <span asp-validation-for="Product.Name"></span>
+            <span asp-validation-for="Product.Description"></span>
+            <span asp-validation-for="Product.Price"></span>
+        </div>
+    </div>
+    <div>
+        <h2>Existing Products</h2>
+        <ul>
+            @foreach (Product product in Model.AllProducts)
+            {
+                <li><a href="/products/@product.ProductId">@product.Name</a></li>
+            }
+        </ul>
+    </div>
+</body>
+</html>
