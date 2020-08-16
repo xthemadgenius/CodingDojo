@@ -1,0 +1,47 @@
+@using ProdCat.Models
+@model WrapperViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>@Model.NewProducts.Name</h1>
+    <div>
+        <h3>Add Category:</h3>
+        @foreach(Products a in @Model.ListProducts)
+        {
+            @foreach(Associations b in a.myAssociation)
+            {
+                @if(b.ProductId == a.ProductId)
+                {
+                    <ul>
+                        <li>@b.getCategory.Name</li>
+                    </ul>
+                }
+            }
+        }
+    </div>
+    <div>
+        <h3>Categories:</h3>
+        <form asp-action="AddCategories" asp-controller="Home" method="Post" asp-route-ProductId="@Model.NewProducts.ProductId">
+            <div>
+                <select asp-for="association.CategoryId">
+                    @{foreach(Categories i in @Model.ListCategories)
+                        {
+                            @if(!@Model.NewProducts.myAssociation.Any(a => a.CategoryId == i.CategoryId))
+                            { 
+                                <option value="@i.CategoryId">@i.Name</option>
+                            }
+                        }
+                    }
+                </select>
+            </div>
+            <input type="submit" value="Add Category"/>
+        </form>
+    </div>
+</body>
+</html>

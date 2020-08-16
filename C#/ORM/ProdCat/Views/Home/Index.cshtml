@@ -1,0 +1,47 @@
+@using ProdCat.Models
+@model Products
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="/products">Products </a> | <a href="/categories"> Categories</a></h1>
+    <div>
+        <h1>New Product</h1>
+        <form asp-action="CreateProducts" asp-controller="Home" method="POST">
+            <div>
+                <label asp-for="Name"></label>
+                <input type="text" asp-for="Name" value=""/>
+            </div>
+            <div>
+                
+                <label asp-for="Price"></label>
+                <input type="number" asp-for="Price" value=""/>
+            </div>
+            <div>
+                <label asp-for="Description"></label>
+                <textarea type="text" asp-for="Description" value="" cols="30" rows="5"></textarea>
+            </div>
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+    <div class="error">
+        <span asp-validation-for="Name"></span>
+        <span asp-validation-for="Price"></span>
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div>
+        <h1>Existing Products</h1>
+        @foreach(var products in @ViewBag.Products)
+        {
+            <ul>
+                <li><a href="/products/@products.ProductId">@products.Name</a></li>
+            </ul>
+        }
+    </div>
+</body>
+</html>
