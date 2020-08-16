@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PIJ4sXvsS7rcOUQsUo/E4x5EVfJEZ0wxU65+lt1yj3XsJzzZXB1k8kAT57i9If54+Z6sWPQqE0IvVaJjH1Uc1Q==",
+  "dgSpecHash": "HKRlkKLqPyIe11x+tdhuwx/DsggDd5Z+ML8r73mrBrCkYFp7ai7pVXWe+W4WPlqHIxFd8lRmjEkiroWJegNw1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\javie\\Desktop\\ProdCat\\ProdCat.csproj",
+  "projectFilePath": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\ProdCat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\javie\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\javie\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",

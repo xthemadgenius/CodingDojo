@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\javie\\Desktop\\ProdCat\\ProdCat.csproj",
+  "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\ProdCat.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14186,28 +14186,28 @@
   "RootNamespace": "ProdCat",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ProdCat\\Views\\Home\\ViewCategories.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\Views\\Home\\ViewProducts.cshtml",
+      "TargetPath": "Views\\Home\\ViewProducts.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\Views\\Home\\ViewCategories.cshtml",
       "TargetPath": "Views\\Home\\ViewCategories.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ProdCat\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ProdCat\\Views\\Home\\Categories.cshtml",
-      "TargetPath": "Views\\Home\\Categories.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ProdCat\\Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\ProdCat\\Views\\Home\\ViewProducts.cshtml",
-      "TargetPath": "Views\\Home\\ViewProducts.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\Views\\Home\\Categories.cshtml",
+      "TargetPath": "Views\\Home\\Categories.cshtml",
       "FileKind": "mvc"
     }
   ],

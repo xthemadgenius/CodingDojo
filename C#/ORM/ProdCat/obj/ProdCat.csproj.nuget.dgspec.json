@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\javie\\Desktop\\ProdCat\\ProdCat.csproj": {}
+    "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\ProdCat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\javie\\Desktop\\ProdCat\\ProdCat.csproj": {
+    "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\ProdCat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\javie\\Desktop\\ProdCat\\ProdCat.csproj",
+        "projectUniqueName": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\ProdCat.csproj",
         "projectName": "ProdCat",
-        "projectPath": "C:\\Users\\javie\\Desktop\\ProdCat\\ProdCat.csproj",
+        "projectPath": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\ProdCat.csproj",
         "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\javie\\Desktop\\ProdCat\\obj\\",
+        "outputPath": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\ProdCat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config"
