@@ -182,6 +182,51 @@ namespace WeddingPlanner.Controllers
             return EditWedding(WeddingId);
         }
 
+        [HttpGet("weddings/{WeddingId}/rsvp")]
+        public RedirectToActionResult RSVP(int WeddingId)
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            Wedding NewGuest = _context.Weddings
+                        .Include(g => g.GuestsAttending)
+                        .FirstOrDefault(w => w.WeddingId == WeddingId);
+            if(NewGuest == null || NewGuest.UserId == (int)loggedUser || NewGuest.GuestsAttending.Any(g => g.UserId == (int)loggedUser))
+            {
+                return RedirectToAction("Dashboard");
+            }
+            RSVP NewRsvp = new RSVP();
+            NewRsvp.UserId = (int)loggedUser;
+            NewRsvp.WeddingId = WeddingId;
+            _context.Add(NewRsvp);
+            _context.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
+
+        [HttpGet("weddings/{WeddingId}/unrsvp")]
+        public RedirectToActionResult UNRSVP(int WeddingId)
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            Wedding UnAttend = _context.Weddings
+                        .Include(g => g.GuestsAttending)
+                        .FirstOrDefault(w => w.WeddingId == WeddingId);
+            if(UnAttend == null || !UnAttend.GuestsAttending.Any(g => g.UserId == (int)loggedUser))
+            {
+                return RedirectToAction("Dashboard");
+            }
+            RSVP NotGoing = _context.RSVPs
+                        .FirstOrDefault(u => u.UserId == (int)loggedUser && u.WeddingId == WeddingId);
+            _context.Remove(NotGoing);
+            _context.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
+
         [HttpGet("logout")]
         public IActionResult Logout()
         {
