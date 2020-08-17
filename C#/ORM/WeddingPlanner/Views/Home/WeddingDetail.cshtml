@@ -11,17 +11,20 @@
 <body>
     <div>
         <div>
-            <h1>Plan Your Wedding</h1>
+            <h1>@Model.WedderOne & @Model.WedderTwo</h1>
             <a href="/dashboard">Dashboard</a>
             <a href="/logout">Logout</a>
         </div>
+        <h3>Wdding Date</h3>
+        <h2>@Model.Date.Value.ToString("MMMM dd, yyyy")</h2>
         <div>
-            <h2>Guests</h2>
+            <h3>Guests</h3>
             <ul>
-                <li>Bob</li>
-                <li>Bob</li>
-                <li>Bob</li>
-                <li>Bob</li>
+                @{foreach(RSVP guests in @Model.GuestsAttending)
+                {
+                    <li>@guests.Guest.FirstName @guests.Guest.LastName</li>
+                }
+                }
             </ul>
         </div>
     </div>
