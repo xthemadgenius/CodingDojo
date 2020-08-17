@@ -1,0 +1,36 @@
+@using WeddingPlanner.Models
+@model WeddingWrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/dash.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome to Wedding Planner</h1>
+        <a href="/logout">Logout</a>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>Wedding</td>
+                <td>Date</td>
+                <td>Guest</td>
+                <td>Action</td>
+            </tr>
+            <tr>
+                <td><a href="/weddings/1">Rob & Joys</a></td>
+                <td>Oct 12,2021</td>
+                <td>11</td>
+                <td>RSVP</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <a href="/weddings/new">New Wedding</a>
+    </div>
+</body>
+</html>
