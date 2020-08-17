@@ -25,6 +25,26 @@ namespace WeddingPlanner.Controllers
             return View("Index");
         }
 
+        [HttpPost("register")]
+        public IActionResult Register(LogRegWrapper RegForm)
+        {
+            if(ModelState.IsValid)
+            {
+                if(_context.Users.Any(u => u.Email == RegForm.Register.Email))
+                {
+                    ModelState.AddModelError("Register.Email", "Try a different Email, Account already registered");
+                    return Index();
+                }
+                PasswordHasher<User> Hasher = new PasswordHasher<User>();
+                RegForm.Register.Password = Hasher.HashPassword(RegForm.Register, RegForm.Register.Password);
+                _context.Add(RegForm.Register);
+                _context.SaveChanges();
+                HttpContext.Session.SetInt32("UserId",  RegForm.Register.UserId);
+                return RedirectToAction("Dashboard");
+            }
+            return View("Index");
+        }
+
         [HttpGet("dashboard")]
         public IActionResult Dash()
         {
