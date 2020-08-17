@@ -14191,6 +14191,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\WeddingPlanner\\Views\\Home\\EditWedding.cshtml",
+      "TargetPath": "Views\\Home\\EditWedding.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\WeddingPlanner\\Views\\Home\\WeddingDetail.cshtml",
       "TargetPath": "Views\\Home\\WeddingDetail.cshtml",
       "FileKind": "mvc"

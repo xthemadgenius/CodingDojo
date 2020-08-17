@@ -142,6 +142,46 @@ namespace WeddingPlanner.Controllers
             return View("WeddingDetail", ShowWedding);
         }
 
+        [HttpGet("weddings/{WeddingId}/edit")]
+        public IActionResult EditWedding(int WeddingId)
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            Wedding EditWed = _context.Weddings.FirstOrDefault(w =>w.WeddingId == WeddingId);
+            if(EditWed == null || EditWed.UserId != (int)loggedUser)
+            {
+                return RedirectToAction("Dashboard");
+            }
+            return View("EditWedding", EditWed);
+        }
+
+        [HttpPost("weddings/{WeddingId}/update")]
+        public IActionResult UpdateWedding(int WeddingId, Wedding WedForm)
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            if(!_context.Weddings.Any(w => w.WeddingId == WeddingId && w.UserId == (int)loggedUser))
+            {
+                return RedirectToAction("Dashboard");
+            }
+            WedForm.UserId = (int)loggedUser;
+            if(ModelState.IsValid)
+            {
+                WedForm.WeddingId = WeddingId;
+                _context.Update(WedForm);
+                _context.Entry(WedForm).Property("CreatedAt").IsModified = false;
+                _context.SaveChanges();
+                return RedirectToAction("Dashboard");
+            }
+            return EditWedding(WeddingId);
+        }
+
         [HttpGet("logout")]
         public IActionResult Logout()
         {

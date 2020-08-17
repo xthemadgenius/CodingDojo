@@ -62,3 +62,4 @@ C:\Users\javie\Desktop\CodingDojo\C#\ORM\WeddingPlanner\obj\Debug\netcoreapp3.1\
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\WeddingPlanner\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\WeddingPlanner\obj\Debug\netcoreapp3.1\Razor\Views\Home\NewWedding.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\WeddingPlanner\obj\Debug\netcoreapp3.1\Razor\Views\Home\WeddingDetail.cshtml.g.cs
+C:\Users\javie\Desktop\CodingDojo\C#\ORM\WeddingPlanner\obj\Debug\netcoreapp3.1\Razor\Views\Home\EditWedding.cshtml.g.cs
