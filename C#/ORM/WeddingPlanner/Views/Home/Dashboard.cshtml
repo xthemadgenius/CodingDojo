@@ -27,7 +27,20 @@
                         <td><a href="/weddings/@wedding.WeddingId">@wedding.WedderOne & @wedding.WedderTwo</a></td>
                         <td>@wedding.Date.Value.ToString("MMM dd yyyy")</td>
                         <td>@wedding.GuestsAttending.Count</td>
-                        <td>RSVP</td>
+                        @{  
+                            if(wedding.UserId == Model.LoggedUser.UserId)
+                            {
+                                <td><a href="/weddings/@wedding.WeddingId/edit">EDIT</a></td>
+                            }
+                            else if(wedding.GuestsAttending.Any(r => r.UserId == Model.LoggedUser.UserId))
+                            {
+                                <td><a href="/weddings/@wedding.WeddingId/unrsvp">UN-RSVP</a></td>
+                            }
+                            else
+                            {
+                                <td><a href="/weddings/@wedding.WeddingId/rsvp">RSVP</a></td>
+                            }
+                        }
                     </tr>
                 }
             }
