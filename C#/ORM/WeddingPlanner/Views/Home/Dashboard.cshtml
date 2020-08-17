@@ -21,12 +21,16 @@
                 <td>Guest</td>
                 <td>Action</td>
             </tr>
-            <tr>
-                <td><a href="/weddings/1">Rob & Joys</a></td>
-                <td>Oct 12,2021</td>
-                <td>11</td>
-                <td>RSVP</td>
-            </tr>
+            @{foreach(Wedding wedding in Model.AllWeddings)
+                {
+                    <tr>
+                        <td><a href="/weddings/@wedding.WeddingId">@wedding.WedderOne & @wedding.WedderTwo</a></td>
+                        <td>@wedding.Date.Value.ToString("MMM dd yyyy")</td>
+                        <td>@wedding.GuestsAttending.Count</td>
+                        <td>RSVP</td>
+                    </tr>
+                }
+            }
         </table>
     </div>
     <div>

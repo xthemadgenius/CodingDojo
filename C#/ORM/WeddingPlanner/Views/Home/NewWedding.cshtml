@@ -15,7 +15,7 @@
         <a href="/logout">Logout</a>
     </div>
     <div>
-        <form asp-controller="Home" method="POST">
+        <form asp-action="CreateWedding" asp-controller="Home" method="POST">
             <div>
                 <label asp-for="WedderOne"></label>
                 <input type="text" asp-for="WedderOne" name="WedderOne" id="WedderOne">

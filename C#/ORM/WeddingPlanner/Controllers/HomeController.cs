@@ -64,27 +64,82 @@ namespace WeddingPlanner.Controllers
                     return Index();
                 }
                 HttpContext.Session.SetInt32("UserId",  db_user.UserId);
-                return View("Dashboard");
+                return Redirect("/dashboard");
             }
             return View("Index");
         }
 
         [HttpGet("dashboard")]
-        public IActionResult Dash()
+        public IActionResult Dashboard()
         {
-            return View("Dashboard");
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            WeddingWrapper WedWrap = new WeddingWrapper();
+            WedWrap.AllWeddings = _context.Weddings
+                            .Include(w => w.Planner)
+                            .Include(w => w.GuestsAttending)
+                            .ThenInclude(g => g.Guest)
+                            .Where(w => w.Date > DateTime.Today)
+                            .ToList();
+            WedWrap.LoggedUser = _context.Users
+                .FirstOrDefault(u => u.UserId == (int)loggedUser);
+            return View("Dashboard", WedWrap);
         }
 
         [HttpGet("weddings/new")]
-        public IActionResult NewWed()
+        public IActionResult NewWedding()
         {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
             return View("NewWedding");
         }
 
-        [HttpGet("weddings/1")]
-        public IActionResult Details()
+        [HttpPost("weddings/create")]
+        public IActionResult CreateWedding(Wedding WedForm)
         {
-            return View("WeddingDetail");
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            WedForm.UserId = (int)loggedUser;
+            if(ModelState.IsValid)
+            {
+                if(WedForm.Date < DateTime.Today)
+                {
+                    ModelState.AddModelError("Date", "You cant schedule your wedding in the past");
+                    return NewWedding();
+                }
+                _context.Add(WedForm);
+                _context.SaveChanges();
+                return Redirect("/dashboard");
+            }
+            return View("NewWedding");
+        }
+
+        [HttpGet("weddings/{WeddingId}")]
+        public IActionResult Details(int WeddingId)
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            Wedding ShowWedding = _context.Weddings
+                        .Include(w => w.GuestsAttending)
+                        .ThenInclude(g =>g.Guest)
+                        .FirstOrDefault(w => w.WeddingId == WeddingId);
+            if(ShowWedding == null)
+            {
+                return RedirectToAction("Dashboard");
+            }
+            return View("WeddingDetail", ShowWedding);
         }
 
         [HttpGet("logout")]
