@@ -1,0 +1,67 @@
+@using TheWall.Models
+@model LogRegWrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/logs.css">
+    <title>Log/Reg</title>
+    <link rel="stylesheet" href="~/css/log.css">
+</head>
+<body>
+    <div>
+        <div class="register">
+            <h1>Register</h1>
+            <form asp-controller="Wall" method="POST">
+                <div>
+                    <label asp-for="Register.FirstName"></label>
+                    <input type="text" asp-for="Register.FirstName" name="Register.FirstName" id="Register.FirstName">
+                </div>
+                <div>
+                    <label asp-for="Register.LastName"></label>
+                    <input type="text" asp-for="Register.LastName" name="Register.LastName" id="Register.LastName">
+                </div>
+                <div>
+                    <label asp-for="Register.Email"></label>
+                    <input type="email" asp-for="Register.Email" name="Register.Email" id="Register.Email">
+                </div>
+                <div>
+                    <label asp-for="Register.Password"></label>
+                    <input type="password" asp-for="Register.Password" name="Register.Password" id="Register.Password">
+                </div>
+                <div>
+                    <label asp-for="Register.Confirm"></label>
+                    <input type="password" asp-for="Register.Confirm" name="Register.Confirm" id="Register.Confirm">
+                </div>
+                <input type="submit" value="Register">
+            </form>
+            <div class="error">
+                <span asp-validation-for="Register.FirstName"></span>
+                <span asp-validation-for="Register.LastName"></span>
+                <span asp-validation-for="Register.Email"></span>
+                <span asp-validation-for="Register.Password"></span>
+                <span asp-validation-for="Register.Confirm"></span>
+            </div>
+        </div>
+        <div class="login">
+            <h1>Login</h1>
+            <form asp-controller="Wall" method="POST">
+                <div>
+                    <label asp-for="Login.Email"></label>
+                    <input type="email" asp-for="Login.Email" name="Login.Email" id="Login.Email">
+                </div>
+                <div>
+                    <label asp-for="Login.Password"></label>
+                    <input type="password" asp-for="Login.Password" name="Login.Password" id="Login.Password">
+                </div>
+                <input type="submit" value="Login">
+            </form>
+            <div class="error">
+                <span asp-validation-for="Login.Email"></span>
+                <span asp-validation-for="Login.Password"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
