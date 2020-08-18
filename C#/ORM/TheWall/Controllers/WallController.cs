@@ -77,7 +77,12 @@ namespace TheWall.Controllers
             {
                 return RedirectToAction("Index");
             }
-            return View("TheWall");
+            NotificationWrapper Wall  = new NotificationWrapper();
+            Wall.AllMessages = _context.messages.Include(m => m.Comments).ToList();
+            Wall.AllComments = _context.comments.ToList();
+            Wall.AllUsers = _context.users.ToList();
+            ViewBag.User = _context.users.FirstOrDefault(u => u.UserId == loggedUser);
+            return View("TheWall", Wall);
         }
 
         [HttpGet("logout")]

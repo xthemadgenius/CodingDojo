@@ -1,3 +1,5 @@
+@using TheWall.Models
+@model NotificationWrapper
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,7 @@
             <h2>Coding Dojo Wall</h2>
             <nav>
                 <ul>
-                    <li>FirstName LastName</li>
+                    <li>@ViewBag.User.FirstName @ViewBag.User.LastName</li>
                     <li><a href="/logout">Log Off</a></li>
                 </ul>
             </nav>
