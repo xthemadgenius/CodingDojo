@@ -85,6 +85,50 @@ namespace TheWall.Controllers
             return View("TheWall", Wall);
         }
 
+        [HttpPost("message")]
+        public IActionResult PostMsg()
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            if(ModelState.IsValid)
+            {
+                string post = Request.Form["MsgContent"];
+                Message msg = new Message();
+                msg.UserId = (int)loggedUser;
+                msg.MsgContent = post;
+                _context.Add(msg);
+                _context.SaveChanges();
+                return RedirectToAction("TheWall");
+            
+            }
+            return TheWall();
+        }
+
+        [HttpPost("comment")]
+        public IActionResult PostCmt(int MessageId)
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            if(ModelState.IsValid)
+            {
+                string response = Request.Form["ComContent"];
+                Comment comment = new Comment();
+                comment.MessageId = MessageId;
+                comment.UserId = (int)loggedUser; 
+                comment.ComContent = response;
+                _context.Add(comment);
+                _context.SaveChanges();
+                return RedirectToAction("TheWall");
+            }
+            return TheWall();
+        }
+
         [HttpGet("logout")]
         public IActionResult Logout()
         {

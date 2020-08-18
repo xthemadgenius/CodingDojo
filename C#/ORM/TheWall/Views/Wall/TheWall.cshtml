@@ -23,33 +23,39 @@
     <main>
         <div>
             <div>
-                <form action="">
+                <form asp-action="PostMsg" asp-controller="Wall" method="POST">
                 <h3>Post A Message</h3>
                 <div>
-                    <textarea name="" id="" cols="50" rows="10"></textarea>
+                    <textarea  name="MsgContent" id="MsgContent" cols="50" rows="10"></textarea>
                 </div>
                 <input type="submit">
                 </form>
             </div>
             <br>
             <div>
-                <div class="message">
-                    <h3>FIRST LAST - TIME</h3>
-                    <p>Message</p>
-                    <div class="comment">
-                        <h4>FIRST LAST - TIME</h4>
-                        <p>Comment</p>
-                    </div>
-                    <form class="comment" action="">
-                        <h5>Post A Comment</h5>
-                        <div>
-                            <label for=""></label>
-                            <textarea name="" id="" cols="40" rows="5"></textarea>
+                @{foreach(Message post in Model.AllMessages)
+                    {
+                        <div class="message">
+                            <h3>@post.Creator.FirstName @post.Creator.LastName  - @post.Creator.UpdatedAt </h3>
+                            <p>@post.MsgContent</p>
+                            @foreach(Comment reply in post.Comments)
+                            {
+                            <div class="comment">
+                                <h4>@reply.User.FirstName @reply.User.LastName | @reply.UpdatedAt</h4>
+                                <p>@reply.ComContent</p>
+                            </div>
+                            }
+                            <form class="comment" asp-action="PostCmt" asp-controller="Wall" method="POST" asp-route-MessageId="@post.MessageId">
+                                <h5>Post A Comment</h5>
+                                <div>
+                                    <textarea name="ComContent" id="ComContent" cols="40" rows="5"></textarea>
+                                </div>
+                                <input type="submit">
+                            </form>
                         </div>
-                        <input type="submit">
-                    </form>
-                    <hr>
-                </div>
+                        <hr>
+                    }
+                }
             </div>
         </div>
     </main>
