@@ -82,14 +82,16 @@
             <li><h3>...all teams that have had 12 or more players, past and present.</h3></li>
                 <table class="table table-striped col-5">
                     <tr>
+                        <th>Location</th>
                         <th>Team</th>
                         <th>Team Count</th>
                     </tr>
-                @foreach (Player p in ViewBag.Six)
+                @foreach (Team p in ViewBag.Six)
                     {
                         <tr>
-                            <td>@p.CurrentTeam.TeamName</td>
-                            <td>@p.CurrentTeam.AllPlayers.Count </td>
+                            <td>@p.Location</td>
+                            <td>@p.TeamName</td>
+                            <td>@p.AllPlayers.Count</td>
                         </tr>
                     }
                 </table>

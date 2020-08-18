@@ -106,17 +106,27 @@ namespace SportsORM.Controllers
                             .Where(pt => pt.TeamOfPlayer.Location != "Oregon" && pt.TeamOfPlayer.TeamName != "Colts")
                             .ToList();
             // everyone named "Joshua" who has ever played in the Atlantic Federation of Amateur Baseball Players
-            ViewBag.Five = _context.PlayerTeams.Include(pt => pt.TeamOfPlayer)
-                            .ThenInclude( j => j.CurrLeague)
-                            .Include(pt => pt.PlayerOnTeam)
-                            .Where(pt => pt.PlayerOnTeam.FirstName == "Joshua")
-                            .Where(pt => pt.TeamOfPlayer.CurrLeague.Name == "Atlantic Federation of Amateur Baseball Players")
-                            .ToList();
+            ViewBag.Five = _context.Players
+                            .Include(p => p.CurrentTeam)
+                            .ThenInclude(ct => ct.CurrLeague)
+                            .Include(p => p.AllTeams)
+                            .ThenInclude(at => at.TeamOfPlayer)
+                            .ThenInclude(tp => tp.CurrLeague)
+                            .Where(p => 
+                                p.FirstName == "Joshua"
+                                &&
+                                (
+                                    p.AllTeams
+                                        .Where(at => at.TeamOfPlayer.CurrLeague.Name == "Atlantic Federation of Amateur Baseball Players")
+                                        .Count() > 0
+                                    ||
+                                    p.CurrentTeam.CurrLeague.Name == "Atlantic Federation of Amateur Baseball Players"
+                                )
+                            );
             // all teams that have had 12 or more players, past and present.
-            ViewBag.Six = _context.Players.Include(p => p.CurrentTeam)
-                            .Include(s => s.AllTeams)
-                            .ThenInclude(pt => pt.TeamOfPlayer)
-                            .Where(e => e.CurrentTeam.CurrentPlayers.Count > 12)
+            ViewBag.Six = _context.Teams.Include(p => p.CurrentPlayers)
+                            .Include(s => s.AllPlayers)
+                            .Where(e => e.CurrentPlayers.Count > 12)
                             .ToList();
             // all players, sorted by the number of teams they've played for
             ViewBag.Seven = _context.Players.Include(p => p.AllTeams)
