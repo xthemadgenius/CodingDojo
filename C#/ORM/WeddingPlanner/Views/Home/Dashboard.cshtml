@@ -30,7 +30,10 @@
                         @{  
                             if(wedding.UserId == Model.LoggedUser.UserId)
                             {
-                                <td><a href="/weddings/@wedding.WeddingId/edit">EDIT</a></td>
+                                <td>
+                                    <a href="/weddings/@wedding.WeddingId/edit">EDIT</a>
+                                    <a href="/weddings/@wedding.WeddingId/delete">Cancel Wedding</a>
+                                </td>
                             }
                             else if(wedding.GuestsAttending.Any(r => r.UserId == Model.LoggedUser.UserId))
                             {

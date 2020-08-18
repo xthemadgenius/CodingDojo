@@ -227,6 +227,25 @@ namespace WeddingPlanner.Controllers
             return RedirectToAction("Dashboard");
         }
 
+        [HttpGet("weddings/{WeddingId}/delete")]
+        public RedirectToActionResult WeddingCancelled(int WeddingId)
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            Wedding Cancel = _context.Weddings
+                        .FirstOrDefault(w => w.WeddingId == WeddingId);
+            if(Cancel == null || Cancel.UserId != (int)loggedUser)
+            {
+                return RedirectToAction("Dashboard");
+            }
+            _context.Remove(Cancel);
+            _context.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
+
         [HttpGet("logout")]
         public IActionResult Logout()
         {
