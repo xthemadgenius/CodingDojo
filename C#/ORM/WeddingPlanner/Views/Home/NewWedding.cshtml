@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/create.css">
     <title>Create Wedding</title>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 </head>
 <body>
     <div>
@@ -41,5 +42,6 @@
         <span asp-validation-for="Date"></span>
         <span asp-validation-for="Address"></span>
     </div>
+    <script src="~/js/mapAuto.js"></script>
 </body>
 </html>
