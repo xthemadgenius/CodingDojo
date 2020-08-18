@@ -13,7 +13,7 @@
     <div>
         <div class="register">
             <h1>Register</h1>
-            <form asp-controller="Wall" method="POST">
+            <form asp-action="Register" asp-controller="Wall" method="POST">
                 <div>
                     <label asp-for="Register.FirstName"></label>
                     <input type="text" asp-for="Register.FirstName" name="Register.FirstName" id="Register.FirstName">
@@ -46,7 +46,7 @@
         </div>
         <div class="login">
             <h1>Login</h1>
-            <form asp-controller="Wall" method="POST">
+            <form asp-action="Login" asp-controller="Wall" method="POST">
                 <div>
                     <label asp-for="Login.Email"></label>
                     <input type="email" asp-for="Login.Email" name="Login.Email" id="Login.Email">
