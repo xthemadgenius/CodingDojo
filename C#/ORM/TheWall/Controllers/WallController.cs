@@ -40,7 +40,7 @@ namespace TheWall.Controllers
                 _context.Add(RegForm.Register);
                 _context.SaveChanges();
                 HttpContext.Session.SetInt32("UserId",  RegForm.Register.UserId);
-                return View("TheWall");
+                return RedirectToAction("TheWall");
             }
             return View("Index");
         }
