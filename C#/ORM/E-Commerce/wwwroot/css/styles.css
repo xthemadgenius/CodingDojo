@@ -45,7 +45,8 @@ button {
     margin-left: 20px;
 }
 .products{
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
 }
 .items{
     width: 120px;
@@ -56,4 +57,8 @@ button {
     max-height: 100px;
     min-width: 60px;
     min-height: 60px;
+}
+
+.errors{
+    color: red;
 }
