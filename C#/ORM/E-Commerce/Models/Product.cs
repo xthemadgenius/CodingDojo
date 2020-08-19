@@ -9,19 +9,19 @@ namespace E_Commerce.Models
         [Key]
         public int ProductId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Product name is required.")]
         [Display(Name = "Name:")]
         public string Name { get; set; }
 
-        [Required]
+        [Required (ErrorMessage = "Product Quantity is required.")]
         [Display(Name = "Initial Quantity:")]
         public int Quantity { get; set; }
 
-        [Required]
+        [Required (ErrorMessage = "Product ImageUrl is required.")]
         [Display(Name = "Image (url):")]
         public string ImageUrl { get; set; }
 
-        [Required]
+        [Required (ErrorMessage = "Product Description is required.")]
         [Display(Name = "Description:")]
         public string Description { get; set; }
 

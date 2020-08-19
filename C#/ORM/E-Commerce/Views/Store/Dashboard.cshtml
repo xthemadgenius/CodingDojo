@@ -35,13 +35,13 @@
                         </div>
                     }
                 }
-                <a href="/products">show more..</a>
             </div>
+            <a href="/products">show more..</a>
             <h3>Recent Orders</h3>
             <div class="r-orders">
                 @{foreach( Order buy in Model.RecentOrders)
                     {
-                        <h4>@buy.Buyer.Name purchased @buy.ItemBought.Quantity @buy.ItemBought.Name </h4>
+                        <h4>@buy.Buyer.Name purchased @buy.Quantity @buy.ItemBought.Name </h4>
                     }
                 }
                 <a href="/orders">show all orders</a>

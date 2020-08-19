@@ -25,7 +25,7 @@ namespace E_Commerce.Controllers
             DashWrapper wrap = new DashWrapper()
             {
                 AllProducts = _context.Products.Take(5).ToList(),
-                RecentOrders = _context.Orders.Include(b => b.Buyer).Include(i => i.ItemBought).OrderByDescending(o => o.CreatedAt).ToList(),
+                RecentOrders = _context.Orders.Include(b => b.Buyer).Include(i => i.ItemBought).OrderByDescending(o => o.CreatedAt).Take(3).ToList(),
                 NewCustomers = _context.Customers.OrderByDescending(c => c.CreatedAt).Take(3).ToList(),
             };
             return View("Dashboard", wrap);
@@ -45,9 +45,9 @@ namespace E_Commerce.Controllers
             if(ModelState.IsValid){
                 _context.Add(item.AddProduct);
                 _context.SaveChanges();
-                return RedirectToAction("Products");
+                return Redirect("/products");
             }
-            return View("Products");
+            return Products();
         }
 
         [HttpGet("orders")]
@@ -79,7 +79,7 @@ namespace E_Commerce.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Orders", PickProd);
             }
-            return View("Orders");
+            return Orders();
         }
 
         [HttpGet("customers")]
@@ -96,12 +96,17 @@ namespace E_Commerce.Controllers
         public IActionResult Shopper(CustomerWrapper shopper)
         {
             if(ModelState.IsValid){
+                if(_context.Customers.Any(s => s.Name == shopper.NewCustomer.Name))
+                    {
+                        ModelState.AddModelError("Name", "A Customer with that title already exists.");
+                        return Customers();
+                    }
                 CustomerWrapper wrap = new CustomerWrapper();
                 _context.Add(shopper.NewCustomer);
                 _context.SaveChanges();
                 return RedirectToAction("Customers", wrap);
             }
-            return View("Customers");
+            return Customers();
         }
 
         [HttpGet("customers/{CustomerId}/remove")]

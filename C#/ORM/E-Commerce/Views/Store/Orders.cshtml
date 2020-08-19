@@ -16,7 +16,7 @@
             <form asp-action="Purchases" asp-controller="Store" method="POST">
                 <h3>Orders</h3>
                 <div>
-                    <label asp-for="AddOrder.CustomerId"></label>
+                    <label asp-for="AddOrder.CustomerId">Buyer</label>
                     <select asp-for="AddOrder.CustomerId">
                         @{foreach (Customer shopper in Model.AllCustomers)
                             {
@@ -26,7 +26,7 @@
                     </select>
                 </div>
                 <div>
-                    <label asp-for="AddOrder.ProductId"></label>
+                    <label asp-for="AddOrder.ProductId">Product</label>
                     <select asp-for="AddOrder.ProductId">
                         @{foreach (Product prod in Model.AllProducts)
                             {
@@ -41,6 +41,13 @@
                 </div>
                 <input type="submit" value="Add Order">
             </form>
+            <div>
+                <div>
+                    <span asp-validation-for="AddOrder.CustomerId"></span>
+                    <span asp-validation-for="AddOrder.ProductId"></span>
+                    <span asp-validation-for="AddOrder.Quantity"></span>
+                </div>
+            </div>
         </div>
         <div>
             <h3>Search</h3>

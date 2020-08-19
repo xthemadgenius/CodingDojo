@@ -44,7 +44,9 @@ button {
 .push{
     margin-left: 20px;
 }
-
+.products{
+    display: inline-flex;
+}
 .items{
     width: 120px;
     text-align: center;

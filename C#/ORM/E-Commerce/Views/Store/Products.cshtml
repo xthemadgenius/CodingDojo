@@ -39,10 +39,16 @@
                 </div>
                 <input type="submit" value="Create">
             </form>
+            <div>
+                <span asp-validation-for="AddProduct.Name"></span>
+                <span asp-validation-for="AddProduct.ImageUrl"></span>
+                <span asp-validation-for="AddProduct.Quantity"></span>
+                <span asp-validation-for="AddProduct.Description"></span>
+            </div>
         </div>
     </aside>
     <main id="content">
-            <div class="push">
+            <div class="push products">
             @{foreach (Product prod in Model.AllProducts)
                 {
                     <div class="items">
