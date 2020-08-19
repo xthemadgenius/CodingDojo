@@ -104,6 +104,16 @@ namespace E_Commerce.Controllers
             return View("Customers");
         }
 
+        [HttpGet("customers/{CustomerId}/remove")]
+        public IActionResult RemoveUser(int CustomerId)
+        {
+            Customer DeleteCustomer = _context.Customers
+                        .FirstOrDefault(c => c.CustomerId == CustomerId);
+            _context.Remove(DeleteCustomer);
+            _context.SaveChanges();
+            return RedirectToAction("Customers");
+        }
+
         [HttpGet("settings")]
         public IActionResult Settings()
         {
