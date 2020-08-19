@@ -1,3 +1,5 @@
+@using E_Commerce.Models
+@model DashWrapper
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,27 +22,37 @@
     </aside>
     <main id="content">
         <div class="push">
-            <h1>Dashboard</h1>
+            <h3>Products</h3>
             <div class="products">
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <h5>Products</h5>
-                        <p>Item Left</p>
-                    </div>
-                </div>
+                @{foreach(Product prod in Model.AllProducts)
+                    {
+                        <div class="items">
+                            <img src="@prod.ImageUrl" alt="">
+                            <div>
+                                <h5>@prod.Name</h5>
+                                <p>(@prod.Quantity left)</p>
+                            </div>
+                        </div>
+                    }
+                }
                 <a href="/products">show more..</a>
             </div>
+            <h3>Recent Orders</h3>
             <div class="r-orders">
-                <h4>Customer purchased # Product (TIME)</h4>
-                <h4>Customer purchased # Product (TIME)</h4>
-                <h4>Customer purchased # Product (TIME)</h4>
+                @{foreach( Order buy in Model.RecentOrders)
+                    {
+                        <h4>@buy.Buyer.Name purchased @buy.ItemBought.Quantity @buy.ItemBought.Name </h4>
+                    }
+                }
                 <a href="/orders">show all orders</a>
             </div>
+            <h3>New Customers</h3>
             <div class="customers">
-                <h4>Customer Joined the store (TIME)</h4>
-                <h4>Customer purchased # Product (TIME)</h4>
-                <h4>Customer purchased # Product (TIME)</h4>
+                @{foreach(Customer customer in Model.NewCustomers)
+                    {
+                        <h4>@customer.Name joined the store</h4>
+                    }
+                }
                 <a href="/customers">show all customers</a>
             </div>
         </div>

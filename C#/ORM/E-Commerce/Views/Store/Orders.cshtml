@@ -1,3 +1,5 @@
+@using E_Commerce.Models
+@model ShopperWrapper
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,30 +13,33 @@
     <partial name="NavPartial"/>
     <main>
         <div>
-            <form>
+            <form asp-action="Purchases" asp-controller="Store" method="POST">
                 <h3>Orders</h3>
                 <div>
-                    <label for=""></label>
-                    <select>
-                        <option value="">NAME</option>
-                        <option value="">NAME</option>
-                        <option value="">NAME</option>
-                        <option value="">NAME</option>
+                    <label asp-for="AddOrder.CustomerId"></label>
+                    <select asp-for="AddOrder.CustomerId">
+                        @{foreach (Customer shopper in Model.AllCustomers)
+                            {
+                                <option value="@shopper.CustomerId">@shopper.Name</option>
+                            }
+                        }
                     </select>
                 </div>
                 <div>
-                    <select>
-                        <option value="">PRODUCT</option>
-                        <option value="">PRODUCT</option>
-                        <option value="">PRODUCT</option>
-                        <option value="">PRODUCT</option>
+                    <label asp-for="AddOrder.ProductId"></label>
+                    <select asp-for="AddOrder.ProductId">
+                        @{foreach (Product prod in Model.AllProducts)
+                            {
+                                <option value="@prod.ProductId">@prod.Name</option>
+                            }
+                        }
                     </select>
                 </div>
                 <div>
-                    <label for=""></label>
-                    <input type="number" id="" name="">
+                    <label asp-for="AddOrder.Quantity"></label>
+                    <input type="number" asp-for="AddOrder.Quantity" id="AddOrder.Quantity" name="AddOrder.Quantity">
                 </div>
-                <input type="submit">
+                <input type="submit" value="Add Order">
             </form>
         </div>
         <div>
@@ -43,20 +48,21 @@
         </div>
         <table id="myTable">
             <tr class="header">
-                <th>Company</th>
-                <th>Contact</th>
-                <th>Country</th>
+                <th>Customer Name</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Date</th>
             </tr>
-            <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>Ernst Handel</td>
-                <td>Roland Mendel</td>
-                <td>Austria</td>
-            </tr>
+            @{foreach (Order order in Model.AllOrders)
+                {
+                    <tr>
+                        <td>@order.Buyer.Name</td>
+                        <td>@order.ItemBought.Name</td>
+                        <td>@order.Quantity</td>
+                        <td>@order.CreatedAt</td>
+                    </tr>
+                }
+            }
         </table>
     </main>
 </body>

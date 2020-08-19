@@ -1,3 +1,5 @@
+@using E_Commerce.Models
+@model ProdWrapper
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,45 +14,46 @@
     <button title="Toggle sidebar">Menu</button>
     <aside id="sidebar" class="collapsed">
         <div>
-            <form>
-                <div>
-                    <input type="text" name="" id="">
-                </div>
-                <input type="submit">
-            </form>
+            <div>
+                <input type="text" name="" id="">
+            </div>
         </div>
         <div>
-            <form>
+            <form asp-action="Items" asp-controller="Store" method="Post">
                 <h4>Add A New Product</h4>
                 <div>
-                    <label for=""></label>
-                    <input type="text" name="" id="">
+                    <label asp-for="AddProduct.Name"></label>
+                    <input type="text" asp-for="AddProduct.Name" name="AddProduct.Name" id="AddProduct.Name">
                 </div>
                 <div>
-                    <label for=""></label>
-                    <input type="text" name="" id="">
+                    <label asp-for="AddProduct.ImageUrl"></label>
+                    <input type="text" asp-for="AddProduct.ImageUrl" name="AddProduct.ImageUrl" id="AddProduct.ImageUrl">
                 </div>
                 <div>
-                    <label for=""></label>
-                    <input type="text" name="" id="">
+                    <label asp-for="AddProduct.Quantity"></label>
+                    <input type="number" asp-for="AddProduct.Quantity" name="AddProduct.Quantity" id="AddProduct.Quantity">
                 </div>
                 <div>
-                    <label for=""></label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label asp-for="AddProduct.Description"></label>
+                    <textarea name="AddProduct.Description" asp-for="AddProduct.Description" id="AddProduct.Description" cols="30" rows="10"></textarea>
                 </div>
-                <input type="submit">
+                <input type="submit" value="Create">
             </form>
         </div>
     </aside>
     <main id="content">
             <div class="push">
-            <div>
-                <img src="" alt="">
-                <div>
-                    <h5>Products</h5>
-                    <p>Item Left</p>
-                </div>
-            </div>
+            @{foreach (Product prod in Model.AllProducts)
+                {
+                    <div class="items">
+                        <img src="@prod.ImageUrl" alt="">
+                        <div>
+                            <h5>@prod.Name</h5>
+                            <p>(@prod.Quantity left)</p>
+                        </div>
+                    </div>
+                }
+            }
         </div>
     </main>
 </body>
