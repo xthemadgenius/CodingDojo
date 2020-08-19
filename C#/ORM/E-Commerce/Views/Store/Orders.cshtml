@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="~/css/navbar.css">
+    <link rel="stylesheet" href="~/css/tables.css">
+</head>
+<body>
+    <partial name="NavPartial"/>
+    <main>
+        <div>
+            <form>
+                <h3>Orders</h3>
+                <div>
+                    <label for=""></label>
+                    <select>
+                        <option value="">NAME</option>
+                        <option value="">NAME</option>
+                        <option value="">NAME</option>
+                        <option value="">NAME</option>
+                    </select>
+                </div>
+                <div>
+                    <select>
+                        <option value="">PRODUCT</option>
+                        <option value="">PRODUCT</option>
+                        <option value="">PRODUCT</option>
+                        <option value="">PRODUCT</option>
+                    </select>
+                </div>
+                <div>
+                    <label for=""></label>
+                    <input type="number" id="" name="">
+                </div>
+                <input type="submit">
+            </form>
+        </div>
+        <div>
+            <h3>Search</h3>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        </div>
+        <table id="myTable">
+            <tr class="header">
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+        </table>
+    </main>
+</body>
+<script src="~/js/search.js"></script>
+</html>

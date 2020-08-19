@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <link rel="stylesheet" href="~/css/navbar.css">
+    <link rel="stylesheet" href="~/css/tables.css">
+</head>
+<body>
+    <partial name="NavPartial"/>
+    <h1>Customers</h1>
+    <div>
+        <form>
+            <div>
+                <label for=""></label>
+                <input type="text">
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <h3>Search</h3>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    </div>
+    <table id="myTable">
+        <tr class="header">
+            <th>Customer Name</th>
+            <th>Created Date</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>MON DAY YEAR</td>
+            <td>BUTTON</td>
+        </tr>
+        <tr>
+            <td>Steve Rodgers</td>
+            <td>MON DAY YEAR</td>
+            <td>BUTTON</td>
+        </tr>
+    </table>
+</body>
+<script src="~/js/search.js"></script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="~/css/navbar.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <partial name="NavPartial"/>
+    <button title="Toggle sidebar">Menu</button>
+    <aside id="sidebar" class="collapsed">
+        <form>
+            <div>
+                <input type="text">
+            </div>
+            <input type="submit">
+        </form>
+    </aside>
+    <main id="content">
+        <div class="push">
+            <h1>Dashboard</h1>
+            <div class="products">
+                <div>
+                    <img src="" alt="">
+                    <div>
+                        <h5>Products</h5>
+                        <p>Item Left</p>
+                    </div>
+                </div>
+                <a href="/products">show more..</a>
+            </div>
+            <div class="r-orders">
+                <h4>Customer purchased # Product (TIME)</h4>
+                <h4>Customer purchased # Product (TIME)</h4>
+                <h4>Customer purchased # Product (TIME)</h4>
+                <a href="/orders">show all orders</a>
+            </div>
+            <div class="customers">
+                <h4>Customer Joined the store (TIME)</h4>
+                <h4>Customer purchased # Product (TIME)</h4>
+                <h4>Customer purchased # Product (TIME)</h4>
+                <a href="/customers">show all customers</a>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="~/js/main.js"></script>
+</html>
