@@ -14392,18 +14392,18 @@
   "RootNamespace": "UserDashboard",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\DashManager.cshtml",
-      "TargetPath": "Views\\Home\\DashManager.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Admin\\MakeUser.cshtml",
+      "TargetPath": "Views\\Admin\\MakeUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Log\\Index.cshtml",
+      "TargetPath": "Views\\Log\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\UserNavPartial.cshtml",
       "TargetPath": "Views\\Home\\UserNavPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\NavPartial.cshtml",
-      "TargetPath": "Views\\Home\\NavPartial.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14417,23 +14417,28 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\Register.cshtml",
-      "TargetPath": "Views\\Home\\Register.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Log\\Register.cshtml",
+      "TargetPath": "Views\\Log\\Register.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\EditUser.cshtml",
-      "TargetPath": "Views\\Home\\EditUser.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Admin\\MasterTimeline.cshtml",
+      "TargetPath": "Views\\Admin\\MasterTimeline.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\Login.cshtml",
-      "TargetPath": "Views\\Home\\Login.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Admin\\NavPartial.cshtml",
+      "TargetPath": "Views\\Admin\\NavPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\MasterTImeline.cshtml",
-      "TargetPath": "Views\\Home\\MasterTImeline.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Admin\\EditUser.cshtml",
+      "TargetPath": "Views\\Admin\\EditUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Admin\\DashManager.cshtml",
+      "TargetPath": "Views\\Admin\\DashManager.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14442,13 +14447,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\Makeuser.cshtml",
-      "TargetPath": "Views\\Home\\Makeuser.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Admin\\MasterProfile.cshtml",
+      "TargetPath": "Views\\Admin\\MasterProfile.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14457,8 +14457,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\MasterProfile.cshtml",
-      "TargetPath": "Views\\Home\\MasterProfile.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Log\\Login.cshtml",
+      "TargetPath": "Views\\Log\\Login.cshtml",
       "FileKind": "mvc"
     }
   ],
