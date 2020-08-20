@@ -1,0 +1,37 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+
+.errors{
+    color: red;
+}
+
+.newuser{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background-color: #6512d1;
+    transition: 1s ease;
+    border: none;
+    float: right;
+    margin-bottom: 2rem;
+}
+.newuser:hover{
+    background-color: white;
+    color: #6512d1;
+    border: 1px solid #6512d1;
+}

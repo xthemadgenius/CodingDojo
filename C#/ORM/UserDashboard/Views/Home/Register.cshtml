@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/forms.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-box">
+        <div>
+            <a href="/">Home</a>
+            <a href="/login">Login?</a><br><br>
+            <h2>Sign Up</h2>
+        </div>
+        <form method="POST">
+            <div class="user-box">
+                <input  type="text" name="FirstName" id="FirstName">
+                <label>First Name</label>
+            </div>
+            <div class="user-box">
+                <input  type="text" name="LastName" id="LastName">
+                <label>Last Name</label>
+            </div>
+            <div class="user-box">
+                <input  type="email" name="Email" id="Email">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="Password" id="Password">
+                <label>Password:</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="Confirm" id="Confirm">
+                <label>Confirm Password:</label>
+            </div>
+            <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </button>
+        </form>
+    </div>
+    <div>
+        @*<span class="error" asp-validation-for="FirstName"></span>
+        <span class="error" asp-validation-for="LastName"></span>
+        <span class="error" asp-validation-for="Email"></span>
+        <span class="error" asp-validation-for="Confirm"></span>
+        <span class="error" asp-validation-for="Password"></span> *@
+    </div>
+</body>
+</html>

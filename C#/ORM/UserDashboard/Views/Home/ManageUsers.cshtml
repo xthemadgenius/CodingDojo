@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Manager</title>
+    <link rel="stylesheet" href="~/css/navbar.css">
+    <link rel="stylesheet" href="~/css/tables.css">
+</head>
+<body>
+    <partial name="NavPartial"/>
+    <a href="/newUser"><button class="newuser">Create User</button></a>
+    <table id="myTable">
+        <tr class="header">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="">FirstName LastName</a></td>
+            <td>Email</td>
+            <td>MMMM DD, YYYY</td>
+            <td>
+                <a href="">Edit</a>
+                <a href="">Remove</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/forms.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-box">
+        <div>
+            <a href="/">Home</a>
+            <a href="/register">SignUp?</a><br><br>
+            <h2>Login</h2>
+        </div>
+        <form method="POST">
+            <div class="user-box">
+                <input  type="email" name="Email" id="Email">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="Password" id="Password">
+                <label>Password:</label>
+            </div>
+            <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </button>
+        </form>
+    </div>
+    <div>
+        @* <span class="error" asp-validation-for="Email"></span>
+        <span class="error" asp-validation-for="Password"></span> *@
+    </div>
+</body>
+</html>

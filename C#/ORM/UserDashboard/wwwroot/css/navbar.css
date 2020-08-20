@@ -1,0 +1,19 @@
+header{
+    height: 60px;
+}
+nav{
+    float: left;
+}
+nav ul{
+    display: inline-flex;
+    list-style: none;
+}
+nav ul li{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.move-right{
+    margin-top: 15px;
+    margin-right: 20px;
+    float: right;
+}
