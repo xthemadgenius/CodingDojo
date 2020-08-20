@@ -8,22 +8,17 @@
     <link type="text/css" rel="stylesheet" href="~/css/navbar.css">
 </head>
 <body>
-    <partial name="NavPartial"/>
+    <partial name="UserNavPartial"/>
+    
     <main>
         <div class="background">
-            <div class="text">
-                <h1>Edit UserName</h1>
-            </div>
-            <div class="box2">
+            <h1>Edit Profile</h1>
+            <div class="box4">
                 <h1>Edit Info</h1>
                 <form action="/register" method="POST" class="form">
                     <input type="text" name="first_name" id="first_name" class="name" placeholder="First Name">
                     <input type="text" name="last_name" id="last_name" class="name" placeholder="Last Name">
                     <input type="email" name="email" id="email" class="email" placeholder="Email">
-                    <select name="cert" id="cert" class="cert">
-                        <option value="False">Normal</option>
-                        <option value="True">Admin</option>
-                    </select>
                     <input type="submit" value="Register">
                 </form>
             </div>
@@ -32,6 +27,13 @@
                 <form action="/login" method="POST" class="form">
                     <input type="password" name="password" id="password" class="password" placeholder="Password">
                     <input type="password" name="confirm_password" id="comfirm_password" class="password" placeholder="Confirm Password">
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+            <div class="box3">
+                <h1>Edit Descrpition</h1>
+                <form action="/login" method="POST" class="form">
+                    <textarea name="descrpition" id="descrpition" placeholder="descrpition" class="descrpition" cols="30" rows="10"></textarea>
                     <input type="submit" value="Login">
                 </form>
             </div>

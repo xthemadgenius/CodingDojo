@@ -42,9 +42,51 @@ namespace UserDashboard.Controllers
         }
 
         [HttpGet("dashManager")]
-        public IActionResult AdminDasboard()
+        public IActionResult DashManager()
         {
-            return View("ManageUsers");
+            return View("DashManager");
+        }
+        [HttpGet("dashboard")]
+        public IActionResult Dashboard()
+        {
+            return View("Dashboard");
+        }
+
+        [HttpGet("m-timeline/1")]
+        public IActionResult MasterTimeline()
+        {
+            return View("MasterTimeline");
+        }
+
+        [HttpGet("timeline/1")]
+        public IActionResult Timeline()
+        {
+            return View("Timeline");
+        }
+
+        [HttpGet("/user/1")]
+        public IActionResult EditUser()
+        {
+            return View("EditUser");
+        }
+
+        [HttpGet("/master/1")]
+        public IActionResult MasterProfile()
+        {
+            return View("MasterProfile");
+        }
+
+        [HttpGet("/profile/1")]
+        public IActionResult Profile()
+        {
+            return View("Profile");
+        }
+
+        [HttpGet("logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return Redirect("/");
         }
     }
 }

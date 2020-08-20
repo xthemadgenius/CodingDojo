@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #000000;
+}
+
+.background{
+    background: url('https://www.jakpost.travel/wimages/large/176-1763847_gfx-background-view-cool-background-wallpaper-cool-gfx.png') no-repeat;
+    background-size: cover;
+    height: 92vh;
+    display: flex;
+}
+nav{
+    margin-top: 20px;
+}
+/* tacos are good */
+.text,
+.box,
+.box2,
+.box3{
+    margin-top: 33vh;
+    flex: 1;
+}
+
+.text{
+    margin-left: 10%;
+    font-weight: 300px;
+}
+.box{
+    margin-left: 10%;
+}
+.box2{
+    margin-top: 18vh;
+    flex: 1;
+    margin-left: 15%;
+}
+.box3{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.box4{
+    margin-top: 33vh;
+    margin-left: 15%;
+}
+.text h1{
+    font-size: 70px;
+    color: #ffffff;
+    font-weight: 500;
+}
+h1,
+a{
+    color: white;
+}
+option{
+    color: black;
+}
+.text p{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 300;
+}
+.text p a{
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.form{
+    background: transparent;
+    color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+input,
+select,
+textarea{
+    margin: 20px 0;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.email,
+.name,
+.username,
+.password,
+.cert,
+.description{
+    border-bottom: 1px solid white;
+}
+
+input[type=submit]{
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 18px;
+}
+input[type=submit]:hover{
+    background-color: white;
+    color: black;
+}

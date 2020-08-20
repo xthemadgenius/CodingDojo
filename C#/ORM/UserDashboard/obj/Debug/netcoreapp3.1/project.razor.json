@@ -14392,6 +14392,11 @@
   "RootNamespace": "UserDashboard",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\DashManager.cshtml",
+      "TargetPath": "Views\\Home\\DashManager.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\UserNavPartial.cshtml",
       "TargetPath": "Views\\Home\\UserNavPartial.cshtml",
       "FileKind": "mvc"
@@ -14407,8 +14412,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\AllUsers.cshtml",
-      "TargetPath": "Views\\Home\\AllUsers.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\Dashboard.cshtml",
+      "TargetPath": "Views\\Home\\Dashboard.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14427,8 +14432,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\ManageUsers.cshtml",
-      "TargetPath": "Views\\Home\\ManageUsers.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\MasterTImeline.cshtml",
+      "TargetPath": "Views\\Home\\MasterTImeline.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\Profile.cshtml",
+      "TargetPath": "Views\\Home\\Profile.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14447,8 +14457,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\EditProfile.cshtml",
-      "TargetPath": "Views\\Home\\EditProfile.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\MasterProfile.cshtml",
+      "TargetPath": "Views\\Home\\MasterProfile.cshtml",
       "FileKind": "mvc"
     }
   ],
