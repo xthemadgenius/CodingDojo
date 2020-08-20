@@ -14,6 +14,8 @@ tr:nth-child(odd) {
     background-color: #dddddd;
 }
 
+
+/* this code is good below */
 .errors{
     color: red;
 }

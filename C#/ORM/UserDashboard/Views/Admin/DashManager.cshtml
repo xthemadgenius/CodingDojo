@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="~/css/tables.css">
 </head>
 <body>
-    <partial name="NavPartial"/>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/dashManager">Dashboard</a></li>
+                <li><a href="/master/1">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="move-right">
+            <a href="/logout">Logout</a>
+        </div>
+    </header>
     <a href="/newUser"><button class="newuser">Create User</button></a>
     <table id="myTable">
         <tr class="header">
@@ -17,6 +27,26 @@
             <th>Email</th>
             <th>Created At</th>
             <th>Actions</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="/m-timeline/1">FirstName LastName</a></td>
+            <td>Email</td>
+            <td>MMMM DD, YYYY</td>
+            <td>
+                <a href="/user/1">Edit</a>
+                <a href="">Remove</a>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="/m-timeline/1">FirstName LastName</a></td>
+            <td>Email</td>
+            <td>MMMM DD, YYYY</td>
+            <td>
+                <a href="/user/1">Edit</a>
+                <a href="">Remove</a>
+            </td>
         </tr>
         <tr>
             <td>1</td>

@@ -66,8 +66,6 @@ C:\Users\javie\Desktop\CodingDojo\C#\ORM\UserDashboard\obj\Debug\netcoreapp3.1\R
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\UserDashboard\obj\Debug\netcoreapp3.1\Razor\Views\Admin\MakeUser.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\UserDashboard\obj\Debug\netcoreapp3.1\Razor\Views\Admin\MasterProfile.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\UserDashboard\obj\Debug\netcoreapp3.1\Razor\Views\Admin\MasterTimeline.cshtml.g.cs
-C:\Users\javie\Desktop\CodingDojo\C#\ORM\UserDashboard\obj\Debug\netcoreapp3.1\Razor\Views\Admin\NavPartial.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\UserDashboard\obj\Debug\netcoreapp3.1\Razor\Views\Normal\Dashboard.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\UserDashboard\obj\Debug\netcoreapp3.1\Razor\Views\Normal\Profile.cshtml.g.cs
 C:\Users\javie\Desktop\CodingDojo\C#\ORM\UserDashboard\obj\Debug\netcoreapp3.1\Razor\Views\Normal\Timeline.cshtml.g.cs
-C:\Users\javie\Desktop\CodingDojo\C#\ORM\UserDashboard\obj\Debug\netcoreapp3.1\Razor\Views\Normal\UserNavPartial.cshtml.g.cs

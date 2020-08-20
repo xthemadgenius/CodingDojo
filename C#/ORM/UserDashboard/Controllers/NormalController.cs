@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using System.Linq;
-// using UserDashboard.Models;
+using UserDashboard.Models;
 using Microsoft.AspNetCore.Http;
 
 namespace UserDashboard.Controllers
@@ -40,7 +40,7 @@ namespace UserDashboard.Controllers
         [HttpGet("logout")]
         public IActionResult Logout()
         {
-            HttpContext.Session.Clear();
+            // HttpContext.Session.Clear();
             return Redirect("/");
         }
     }

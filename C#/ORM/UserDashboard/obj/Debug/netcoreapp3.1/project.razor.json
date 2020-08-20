@@ -14402,18 +14402,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\UserNavPartial.cshtml",
-      "TargetPath": "Views\\Home\\UserNavPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\Timeline.cshtml",
-      "TargetPath": "Views\\Home\\Timeline.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\Dashboard.cshtml",
-      "TargetPath": "Views\\Home\\Dashboard.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Normal\\Profile.cshtml",
+      "TargetPath": "Views\\Normal\\Profile.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14427,8 +14417,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Admin\\NavPartial.cshtml",
-      "TargetPath": "Views\\Admin\\NavPartial.cshtml",
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Normal\\Timeline.cshtml",
+      "TargetPath": "Views\\Normal\\Timeline.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14442,11 +14432,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Home\\Profile.cshtml",
-      "TargetPath": "Views\\Home\\Profile.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Admin\\MasterProfile.cshtml",
       "TargetPath": "Views\\Admin\\MasterProfile.cshtml",
       "FileKind": "mvc"
@@ -14454,6 +14439,11 @@
     {
       "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\Views\\Normal\\Dashboard.cshtml",
+      "TargetPath": "Views\\Normal\\Dashboard.cshtml",
       "FileKind": "mvc"
     },
     {
