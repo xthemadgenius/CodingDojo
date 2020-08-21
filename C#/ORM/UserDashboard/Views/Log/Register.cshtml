@@ -1,3 +1,5 @@
+@using UserDashboard.Models
+@model LogRegWrapper
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,24 +17,24 @@
         </div>
         <form method="POST">
             <div class="user-box">
-                <input  type="text" name="FirstName" id="FirstName">
-                <label>First Name</label>
+                <input  type="text" asp-for="Register.FirstName" name="Register.FirstName" id="Register.FirstName">
+                <label asp-for="Register.FirstName"></label>
             </div>
             <div class="user-box">
-                <input  type="text" name="LastName" id="LastName">
-                <label>Last Name</label>
+                <input  type="text" asp-for="Register.LastName" name="Register.LastName" id="Register.LastName">
+                <label asp-for="Register.LastName"></label>
             </div>
             <div class="user-box">
-                <input  type="email" name="Email" id="Email">
-                <label>Email</label>
+                <input  type="email" asp-for="Register.Email" name="Register.Email" id="Register.Email">
+                <label asp-for="Register.Email"></label>
             </div>
             <div class="user-box">
-                <input type="password" name="Password" id="Password">
-                <label>Password:</label>
+                <input type="password" asp-for="Register.Password" name="Register.Password" id="Register.Password">
+                <label asp-for="Register.Password"></label>
             </div>
             <div class="user-box">
-                <input type="password" name="Confirm" id="Confirm">
-                <label>Confirm Password:</label>
+                <input type="password" asp-for="Register.Confirm" name="Register.Confirm" id="Register.Confirm">
+                <label asp-for="Register.Confirm"></label>
             </div>
             <button type="submit">
                 <span></span>
@@ -44,11 +46,11 @@
         </form>
     </div>
     <div>
-        @*<span class="error" asp-validation-for="FirstName"></span>
-        <span class="error" asp-validation-for="LastName"></span>
-        <span class="error" asp-validation-for="Email"></span>
-        <span class="error" asp-validation-for="Confirm"></span>
-        <span class="error" asp-validation-for="Password"></span> *@
+        <span class="error" asp-validation-for="Register.FirstName"></span>
+        <span class="error" asp-validation-for="Register.LastName"></span>
+        <span class="error" asp-validation-for="Register.Email"></span>
+        <span class="error" asp-validation-for="Register.Password"></span>
+        <span class="error" asp-validation-for="Register.Confirm"></span>
     </div>
 </body>
 </html>

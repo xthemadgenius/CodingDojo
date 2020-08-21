@@ -38,6 +38,8 @@ namespace UserDashboard.Models
 
         public bool Role {get; set;}
 
+        public string Description {get; set;}
+
         public List<Message> Messages { get; set; }
         public List<Comment> Comments { get; set; }
 

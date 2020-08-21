@@ -1,3 +1,5 @@
+@using UserDashboard.Models
+@model LogRegWrapper
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +17,12 @@
         </div>
         <form method="POST">
             <div class="user-box">
-                <input  type="email" name="Email" id="Email">
-                <label>Email</label>
+                <input  type="email" asp-for="Login.Email" name="Login.Email" id="Login.Email">
+                <label asp-for="Login.Email"></label>
             </div>
             <div class="user-box">
-                <input type="password" name="Password" id="Password">
-                <label>Password:</label>
+                <input type="password" asp-for="Login.Password" name="Login.Password" id="Login.Password">
+                <label asp-for="Login.Password"></label>
             </div>
             <button type="submit">
                 <span></span>
@@ -32,8 +34,8 @@
         </form>
     </div>
     <div>
-        @* <span class="error" asp-validation-for="Email"></span>
-        <span class="error" asp-validation-for="Password"></span> *@
+        <span class="error" asp-validation-for="Login.Email"></span>
+        <span class="error" asp-validation-for="Login.Password"></span>
     </div>
 </body>
 </html>
