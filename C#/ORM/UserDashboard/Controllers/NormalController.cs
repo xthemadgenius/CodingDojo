@@ -12,17 +12,26 @@ namespace UserDashboard.Controllers
 {
     public class NormalController : Controller
     {
-        // private MyContext _context;
+        private MyContext _context;
 
-        // public NormalController(MyContext context)
-        // {
-        //     _context = context;
-        // }
+        public NormalController(MyContext context)
+        {
+            _context = context;
+        }
         
         [HttpGet("dashboard")]
         public IActionResult Dashboard()
         {
-            return View("Dashboard");
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return Redirect("/");
+            }
+            DashWrapper wrap = new DashWrapper();
+            wrap.Users = _context.Users
+                            .OrderBy(c => c.CreatedAt)
+                            .ToList();
+            return View("Dashboard", wrap);
         }
 
         [HttpGet("timeline/1")]

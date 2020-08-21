@@ -1,3 +1,5 @@
+@using UserDashboard.Models
+@model DashWrapper
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,36 +30,20 @@
             <th>Created At</th>
             <th>Actions</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td><a href="/m-timeline/1">FirstName LastName</a></td>
-            <td>Email</td>
-            <td>MMMM DD, YYYY</td>
-            <td>
-                <a href="/user/1">Edit</a>
-                <a href="">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td><a href="/m-timeline/1">FirstName LastName</a></td>
-            <td>Email</td>
-            <td>MMMM DD, YYYY</td>
-            <td>
-                <a href="/user/1">Edit</a>
-                <a href="">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td><a href="/m-timeline/1">FirstName LastName</a></td>
-            <td>Email</td>
-            <td>MMMM DD, YYYY</td>
-            <td>
-                <a href="/user/1">Edit</a>
-                <a href="">Remove</a>
-            </td>
-        </tr>
+        @{foreach(User u in Model.Users)
+            {
+                <tr>
+                    <td>@u.UserId</td>
+                    <td><a href="/timeline/1">@u.FirstName @u.LastName</a></td>
+                    <td>@u.Email</td>
+                    <td>@u.CreatedAt</td>
+                    <td>
+                        <a href="/user/1">Edit</a>
+                        <a href="">Remove</a>
+                    </td>
+                </tr>
+            }
+        }
     </table>
 </body>
 </html>

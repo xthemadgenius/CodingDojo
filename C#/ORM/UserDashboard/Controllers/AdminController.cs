@@ -11,17 +11,26 @@ namespace UserDashboard.Controllers
 {
     public class AdminController : Controller
     {
-        // private MyContext _context;
+        private MyContext _context;
 
-        // public AdminController(MyContext context)
-        // {
-        //     _context = context;
-        // }
+        public AdminController(MyContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet("dashManager")]
         public IActionResult DashManager()
         {
-            return View("DashManager");
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return Redirect("/");
+            }
+            DashWrapper wrap = new DashWrapper();
+            wrap.Users = _context.Users
+                            .OrderBy(c => c.CreatedAt)
+                            .ToList();
+            return View("DashManager", wrap);
         }
 
         [HttpGet("newUser")]

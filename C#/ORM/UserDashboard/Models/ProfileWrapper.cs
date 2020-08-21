@@ -6,7 +6,5 @@ namespace UserDashboard.Models
     public class ProfileWrapper
     {
         public List<User> Users { get; set; }
-
-        public string Description {get; set;}
     }
 }
