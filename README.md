@@ -2,7 +2,7 @@
 
 This Repo is made for all the projects, work, and documentation of all the effort and hard work that I have done in my time with coding Dojo
 
-## Web Fundamentals
+## Web Fundamentals (Frontend Stack)
 * HTML
 * CSS
 * JS
@@ -11,7 +11,7 @@ This Repo is made for all the projects, work, and documentation of all the effor
 * GIT
 * JQUERY
 
-## Python/ Django /V4
+## Python/ Django /V4 (1st Stack)
 * PYTHON
 * DJANNGO
 * AWS/EC2
@@ -24,7 +24,7 @@ This Repo is made for all the projects, work, and documentation of all the effor
 * GIT BASH
 * API
 
-## MERN
+## MERN (2nd Stack)
 * REACT
 * JSX
 * JS
@@ -42,7 +42,7 @@ This Repo is made for all the projects, work, and documentation of all the effor
 * GIT BASH
 * SOCKET.IO
 
-## CSharp/ ASP.NET CORE
+## CSharp/ ASP.NET CORE (3rd Stack)
 * C#
 * JS
 * HTML
@@ -56,7 +56,7 @@ This Repo is made for all the projects, work, and documentation of all the effor
 * POWERSHELL
 * ASP.NET CORE
 
-## ALGORITHS
+## ALGORITHMS (daily algoritms)
 * BUBBLE SORT
 * MERGE SORT
 * SELECTION SORT
