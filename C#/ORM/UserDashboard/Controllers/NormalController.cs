@@ -34,8 +34,8 @@ namespace UserDashboard.Controllers
             return View("Dashboard", wrap);
         }
 
-        [HttpGet("timeline/1")]
-        public IActionResult Timeline()
+        [HttpGet("timeline/{UserId}")]
+        public IActionResult Timeline(int? UserId)
         {
             return View("Timeline");
         }

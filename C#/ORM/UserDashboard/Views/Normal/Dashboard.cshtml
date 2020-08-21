@@ -33,7 +33,7 @@
             {
                 <tr>
                     <td>@u.UserId</td>
-                    <td><a href="/timeline/1">@u.FirstName @u.LastName</a></td>
+                    <td><a href="/timeline/@u.UserId">@u.FirstName @u.LastName</a></td>
                     <td>@u.Email</td>
                     <td>@u.CreatedAt</td>
                     @{if(u.Role == true){

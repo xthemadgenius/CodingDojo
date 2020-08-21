@@ -19,7 +19,7 @@ namespace UserDashboard.Controllers
         }
 
         [HttpGet("dashManager")]
-        public IActionResult DashManager()
+        public IActionResult DashManager(int UserId)
         {
             int? loggedUser = HttpContext.Session.GetInt32("UserId");
             if(loggedUser == null)
@@ -39,8 +39,8 @@ namespace UserDashboard.Controllers
             return View("MakeUser");
         }
 
-        [HttpGet("m-timeline/1")]
-        public IActionResult MasterTimeline()
+        [HttpGet("m-timeline/{UserId}")]
+        public IActionResult MasterTimeline( int? UserId)
         {
             return View("MasterTimeline");
         }
