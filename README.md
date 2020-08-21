@@ -2,10 +2,71 @@
 
 This Repo is made for all the projects, work, and documentation of all the effort and hard work that I have done in my time with coding Dojo
 
-# Web Fundamentals
+## Web Fundamentals
+* HTML
+* CSS
+* JS
+* AJAX
+* BOOTSTRAP
+* GIT
+* JQUERY
 
-# Python/ Django /V4
+## Python/ Django /V4
+* PYTHON
+* DJANNGO
+* AWS/EC2
+* HTML
+* CSS
+* BOOTSTRAP
+* JS
+* AJAX
+* JQUERY
+* GIT BASH
+* API
 
-# MERN
+## MERN
+* REACT
+* JSX
+* JS
+* JQUERY
+* API
+* YARN
+* HTML
+* CSS
+* BOOTSTRAP
+* EXPRESS
+* MONGO DB
+* AWS/EC2
+* NODE
+* NPM
+* GIT BASH
+* SOCKET.IO
 
-# CSharp/ ASP.NET CORE
+## CSharp/ ASP.NET CORE
+* C#
+* JS
+* HTML
+* CSS
+* BOOTSTRAP
+* AJAX
+* GOOGLE MAPS
+* MYSQL
+* AWS/EC2
+* MTSQL
+* POWERSHELL
+* ASP.NET CORE
+
+## ALGORITHS
+* BUBBLE SORT
+* MERGE SORT
+* SELECTION SORT
+* INSERTION SORT
+* PARTITION
+* QUICK SORT
+* INTERSECTED SORTED ARRAYS
+* UNION SORTED ARRAY
+* DIAGONAL DIFFERENCE
+* SYMMETRIC DIFFERENCE
+* FREQUENCY SORT
+* PALINDROMES
+* SPACE COMPARISON
