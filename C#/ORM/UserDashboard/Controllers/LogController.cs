@@ -48,9 +48,9 @@ namespace UserDashboard.Controllers
                 _context.Add(RegForm.Register);
                 _context.SaveChanges();
                 HttpContext.Session.SetInt32("UserId",  RegForm.Register.UserId);
-                return RedirectToAction("/dashboard");
+                return Redirect("/dashboard");
             }
-            return View("Register");
+            return RedirectToAction("Register");
         }
 
         [HttpGet("login")]
@@ -77,8 +77,14 @@ namespace UserDashboard.Controllers
                     ModelState.AddModelError("Login.Email", "Invalid Email, Try another one");
                     return Index();
                 }
+                if(db_user.Role == true)
+                {
+                    HttpContext.Session.SetInt32("UserId",  db_user.UserId);
+                    return Redirect("/dashManager");
+                }
                 HttpContext.Session.SetInt32("UserId",  db_user.UserId);
                 return Redirect("/dashboard");
+                
             }
             return View("Index");
         }

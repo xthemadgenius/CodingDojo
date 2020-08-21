@@ -40,7 +40,7 @@ namespace UserDashboard.Controllers
         [HttpGet("logout")]
         public IActionResult Logout()
         {
-            // HttpContext.Session.Clear();
+            HttpContext.Session.Clear();
             return Redirect("/");
         }
     }

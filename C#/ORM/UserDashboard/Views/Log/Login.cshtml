@@ -15,7 +15,7 @@
             <a href="/register">SignUp?</a><br><br>
             <h2>Login</h2>
         </div>
-        <form method="POST">
+        <form asp-action="Login" asp-controller="Log"  method="POST">
             <div class="user-box">
                 <input  type="email" asp-for="Login.Email" name="Login.Email" id="Login.Email">
                 <label asp-for="Login.Email"></label>
