@@ -30,6 +30,7 @@ namespace UserDashboard.Controllers
             wrap.Users = _context.Users
                             .OrderBy(c => c.CreatedAt)
                             .ToList();
+            ViewBag.User = _context.Users.FirstOrDefault(u => u.UserId == loggedUser);
             return View("DashManager", wrap);
         }
 
@@ -56,6 +57,7 @@ namespace UserDashboard.Controllers
             tl.AllMessages = _context.Messages.Include(m => m.Comments).ToList();
             tl.AllComments = _context.Comments.ToList();
             tl.AllUsers = _context.Users.ToList();
+            ViewBag.User = _context.Users.FirstOrDefault(u => u.UserId == loggedUser);
             return View("MasterTimeline", tl);
         }
 
@@ -65,7 +67,7 @@ namespace UserDashboard.Controllers
             int? loggedUser = HttpContext.Session.GetInt32("UserId");
             if(loggedUser == null)
             {
-                return RedirectToAction("Index");
+                return Redirect("/");
             }
             if(ModelState.IsValid)
             {
@@ -87,7 +89,7 @@ namespace UserDashboard.Controllers
             int? loggedUser = HttpContext.Session.GetInt32("UserId");
             if(loggedUser == null)
             {
-                return RedirectToAction("Index");
+                return Redirect("/");
             }
             if(ModelState.IsValid)
             {
@@ -109,9 +111,49 @@ namespace UserDashboard.Controllers
             return View("EditUser");
         }
 
-        [HttpGet("/master/1")]
-        public IActionResult MasterProfile()
+        // Update Profile
+        [HttpGet("/master/{UserId}")]
+        public IActionResult MasterProfile(int? UserId)
         {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return Redirect("/");
+            }
+            User wrap = _context.Users.FirstOrDefault(u => u.UserId == UserId);
+            return View("MasterProfile", wrap);
+        }
+
+        [HttpPost("/master/1/desc")]
+        public IActionResult MPDesc()
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return Redirect("/");
+            }
+            return View("MasterProfile");
+        }
+
+        [HttpPost("/master/1/pass")]
+        public IActionResult MPPass()
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return Redirect("/");
+            }
+            return View("MasterProfile");
+        }
+
+        [HttpPost("/master/1/info")]
+        public IActionResult MPInfo()
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return Redirect("/");
+            }
             return View("MasterProfile");
         }
     }

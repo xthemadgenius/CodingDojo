@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="/dashManager">Dashboard</a></li>
-                <li><a href="/master/1">Profile</a></li>
+                <li><a href="/master/@ViewBag.User.UserId">Profile</a></li>
             </ul>
         </nav>
         <div class="move-right">
@@ -32,7 +32,7 @@
             </div>
             <br>
             <div>
-                <form asp-action="MakeMsg" asp-controller="Normal" method="POST">
+                <form asp-action="MakeMsg" asp-controller="Admin" method="POST">
                     <h3>Post A Message</h3>
                     <div>
                         <textarea name="MsgContent" id="MsgContent" cols="50" rows="10"></textarea>
@@ -54,7 +54,7 @@
                                     <p>@reply.ComContent</p>
                                 </div>
                             }
-                            <form class="comment" asp-action="MakeCmt" asp-controller="Normal" method="POST" asp-route-MessageId="@post.MessageId">
+                            <form class="comment" asp-action="MakeCmt" asp-controller="Admin" method="POST" asp-route-MessageId="@post.MessageId">
                                 <h5>Post A Comment</h5>
                                 <div>
                                     <textarea name="ComContent" id="ComContent" cols="40" rows="5"></textarea>
