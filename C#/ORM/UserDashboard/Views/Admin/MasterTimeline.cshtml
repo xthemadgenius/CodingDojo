@@ -1,3 +1,5 @@
+@using UserDashboard.Models
+@model NotificationWrapper
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +24,11 @@
     <main>
         <div>
             <div>
-                <h1>USERNAME</h1>
-                <h3>Registered At: MM DD YYYY</h3>
-                <h3>User ID: #1</h3>
-                <h3>Email: EMAIL</h3>
-                <h3>Description: DESCRIPTION</h3>
+                <h1>@Model.Users.FirstName @Model.Users.LastName</h1>
+                <h3>@Model.Users.CreatedAt.ToString("MMMM dd, yyyy")</h3>
+                <h3>User ID: @Model.Users.UserId</h3>
+                <h3>Email: @Model.Users.Email</h3>
+                <h3>Description: @Model.Users.Description</h3>
             </div>
             <div>
                 <form method="POST">

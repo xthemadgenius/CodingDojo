@@ -34,8 +34,8 @@ namespace UserDashboard.Controllers
             return View("Dashboard", wrap);
         }
 
-        [HttpGet("timeline/{UserId}")]
-        public IActionResult Timeline(int? UserId)
+        [HttpGet("timeline/{SelectedId}")]
+        public IActionResult Timeline(int? SelectedId)
         {
             int? loggedUser = HttpContext.Session.GetInt32("UserId");
             if(loggedUser == null)
@@ -43,11 +43,15 @@ namespace UserDashboard.Controllers
                 return Redirect("/");
             }
             NotificationWrapper tl = new NotificationWrapper();
+            tl.Users = _context.Users.FirstOrDefault(u => u.UserId == SelectedId);
+            if(tl.Users == null)
+            {
+                return RedirectToAction("Dashboard");
+            }
             tl.AllMessages = _context.Messages.Include(m => m.Comments).ToList();
             tl.AllComments = _context.Comments.ToList();
             tl.AllUsers = _context.Users.ToList();
-            ViewBag.User = _context.Users.FirstOrDefault(u => u.UserId == loggedUser);
-            return View("Timeline");
+            return View("Timeline", tl);
         }
 
         [HttpGet("/profile/1")]

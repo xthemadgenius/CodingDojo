@@ -39,14 +39,28 @@ namespace UserDashboard.Controllers
             return View("MakeUser");
         }
 
-        [HttpGet("m-timeline/{SelectId}")]
-        public IActionResult MasterTimeline(int? SelectId)
+        [HttpGet("m-timeline/{SelectedId}")]
+        public IActionResult MasterTimeline(int? SelectedId)
         {
-            return View("MasterTimeline");
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return Redirect("/");
+            }
+            NotificationWrapper tl = new NotificationWrapper();
+            tl.Users = _context.Users.FirstOrDefault(u => u.UserId == SelectedId);
+            if(tl.Users == null)
+            {
+                return RedirectToAction("DashManager");
+            }
+            tl.AllMessages = _context.Messages.Include(m => m.Comments).ToList();
+            tl.AllComments = _context.Comments.ToList();
+            tl.AllUsers = _context.Users.ToList();
+            return View("MasterTimeline", tl);
         }
 
-        [HttpGet("/user/{SelectId}")]
-        public IActionResult EditUser(int? SelectId)
+        [HttpGet("/user/{SelectedId}")]
+        public IActionResult EditUser(int? SelectedId)
         {
             return View("EditUser");
         }

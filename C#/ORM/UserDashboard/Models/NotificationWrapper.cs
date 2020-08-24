@@ -5,6 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UserDashboard.Models{
     public class NotificationWrapper { 
+
+        public int UserId {get; set;}
+        public User Users { get; set; }
         public List<Message> AllMessages{get; set;}
 
         public List<Comment> AllComments{get; set;}
