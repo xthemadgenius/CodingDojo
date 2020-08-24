@@ -34,6 +34,7 @@ namespace UserDashboard.Controllers
             return View("Dashboard", wrap);
         }
 
+        // Time line Routes
         [HttpGet("timeline/{SelectedId}")]
         public IActionResult Timeline(int? SelectedId)
         {
@@ -52,6 +53,50 @@ namespace UserDashboard.Controllers
             tl.AllComments = _context.Comments.ToList();
             tl.AllUsers = _context.Users.ToList();
             return View("Timeline", tl);
+        }
+
+        [HttpPost("message")]
+        public IActionResult PostMsg()
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            if(ModelState.IsValid)
+            {
+                string post = Request.Form["MsgContent"];
+                Message msg = new Message();
+                msg.UserId = (int)loggedUser;
+                msg.MsgContent = post;
+                _context.Add(msg);
+                _context.SaveChanges();
+                return RedirectToAction("Dashboard");
+            
+            }
+            return RedirectToAction("Dashboard");
+        }
+
+        [HttpPost("comment")]
+        public IActionResult PostCmt(int MessageId)
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            if(ModelState.IsValid)
+            {
+                string response = Request.Form["ComContent"];
+                Comment comment = new Comment();
+                comment.MessageId = MessageId;
+                comment.UserId = (int)loggedUser; 
+                comment.ComContent = response;
+                _context.Add(comment);
+                _context.SaveChanges();
+                return RedirectToAction("Dashboard");
+            }
+            return RedirectToAction("Dashboard");
         }
 
         [HttpGet("/profile/1")]

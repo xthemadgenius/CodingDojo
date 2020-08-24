@@ -59,6 +59,50 @@ namespace UserDashboard.Controllers
             return View("MasterTimeline", tl);
         }
 
+        [HttpPost("m-message")]
+        public IActionResult MakeMsg()
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            if(ModelState.IsValid)
+            {
+                string post = Request.Form["MsgContent"];
+                Message msg = new Message();
+                msg.UserId = (int)loggedUser;
+                msg.MsgContent = post;
+                _context.Add(msg);
+                _context.SaveChanges();
+                return RedirectToAction("MasterTimeline");
+            
+            }
+            return RedirectToAction("MasterTimeline");
+        }
+
+        [HttpPost("m-comment")]
+        public IActionResult MakeCmt(int MessageId)
+        {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return RedirectToAction("Index");
+            }
+            if(ModelState.IsValid)
+            {
+                string response = Request.Form["ComContent"];
+                Comment comment = new Comment();
+                comment.MessageId = MessageId;
+                comment.UserId = (int)loggedUser; 
+                comment.ComContent = response;
+                _context.Add(comment);
+                _context.SaveChanges();
+                return RedirectToAction("MasterTimeline");
+            }
+            return RedirectToAction("MasterTimeline");
+        }
+
         [HttpGet("/user/{SelectedId}")]
         public IActionResult EditUser(int? SelectedId)
         {

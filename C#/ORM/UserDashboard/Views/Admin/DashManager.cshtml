@@ -36,7 +36,7 @@
                     <td>@u.UserId</td>
                     <td><a href="/m-timeline/@u.UserId">@u.FirstName @u.LastName</a></td>
                     <td>@u.Email</td>
-                    <td>@u.CreatedAt</td>
+                    <td>@u.CreatedAt.ToString("MMMM dd, yyyy")</td>
                     <td>
                         <a href="/user/@u.UserId">Edit</a>
                         <a href="">Remove</a>

@@ -35,7 +35,7 @@
                     <td>@u.UserId</td>
                     <td><a href="/timeline/@u.UserId">@u.FirstName @u.LastName</a></td>
                     <td>@u.Email</td>
-                    <td>@u.CreatedAt</td>
+                    <td>@u.CreatedAt.ToString("MMMM dd, yyyy")</td>
                     @{if(u.Role == true){
                             <td>Admin</td>
                         }

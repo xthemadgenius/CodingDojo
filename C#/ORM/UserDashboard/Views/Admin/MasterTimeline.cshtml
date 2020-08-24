@@ -30,13 +30,14 @@
                 <h3>Email: @Model.Users.Email</h3>
                 <h3>Description: @Model.Users.Description</h3>
             </div>
+            <br>
             <div>
-                <form method="POST">
-                <h3>Post A Message</h3>
-                <div>
-                    <textarea  name="" id="" cols="50" rows="10"></textarea>
-                </div>
-                <input type="submit">
+                <form asp-action="MakeMsg" asp-controller="Normal" method="POST">
+                    <h3>Post A Message</h3>
+                    <div>
+                        <textarea name="MsgContent" id="MsgContent" cols="50" rows="10"></textarea>
+                    </div>
+                    <input type="submit">
                 </form>
             </div>
             <br>
@@ -44,19 +45,19 @@
                 @{foreach(Message post in Model.AllMessages)
                     {
                         <div class="message">
-                            <h3><a href="">@post.Creator.FirstName @post.Creator.LastName</a>  - @post.Creator.UpdatedAt</h3>
+                            <h3><a href="/timeline/@post.Creator.UserId">@post.Creator.FirstName @post.Creator.LastName</a>  - @post.UpdatedAt</h3>
                             <p>@post.MsgContent</p>
                             @foreach(Comment reply in post.Comments)
                             {
                                 <div class="comment">
-                                    <h4><a href="">@reply.User.FirstName @reply.User.LastName</a> - @reply.User.UpdatedAt</h4>
+                                    <h4><a href="/timeline/@reply.User.UserId">@reply.User.FirstName @reply.User.LastName</a> - @reply.UpdatedAt</h4>
                                     <p>@reply.ComContent</p>
                                 </div>
                             }
-                            <form class="comment">
+                            <form class="comment" asp-action="MakeCmt" asp-controller="Normal" method="POST" asp-route-MessageId="@post.MessageId">
                                 <h5>Post A Comment</h5>
                                 <div>
-                                    <textarea name="" id="" cols="40" rows="5"></textarea>
+                                    <textarea name="ComContent" id="ComContent" cols="40" rows="5"></textarea>
                                 </div>
                                 <input type="submit">
                             </form>
