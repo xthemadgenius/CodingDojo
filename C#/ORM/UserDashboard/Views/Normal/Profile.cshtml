@@ -1,3 +1,5 @@
+@using UserDashboard.Models
+@model User
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +27,9 @@
             <div class="box4">
                 <h1>Edit Info</h1>
                 <form action="/register" method="POST" class="form">
-                    <input type="text" name="first_name" id="first_name" class="name" placeholder="First Name">
-                    <input type="text" name="last_name" id="last_name" class="name" placeholder="Last Name">
-                    <input type="email" name="email" id="email" class="email" placeholder="Email">
+                    <input type="text" name="first_name" id="first_name" class="name" placeholder="First Name" value="@Model.FirstName">
+                    <input type="text" name="last_name" id="last_name" class="name" placeholder="Last Name" value="@Model.LastName">
+                    <input type="email" name="email" id="email" class="email" placeholder="Email" value="@Model.Email">
                     <input type="submit" value="Register">
                 </form>
             </div>
@@ -42,7 +44,7 @@
             <div class="box3">
                 <h1>Edit Descrpition</h1>
                 <form action="/login" method="POST" class="form">
-                    <textarea name="descrpition" id="descrpition" placeholder="descrpition" class="descrpition" cols="30" rows="10"></textarea>
+                    <textarea name="descrpition" id="descrpition" placeholder="descrpition" class="descrpition" cols="30" rows="10">@Model.Description</textarea>
                     <input type="submit" value="Login">
                 </form>
             </div>
