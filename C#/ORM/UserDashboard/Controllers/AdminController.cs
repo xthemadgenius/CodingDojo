@@ -124,15 +124,20 @@ namespace UserDashboard.Controllers
             return View("MasterProfile", wrap);
         }
 
-        [HttpPost("/master/1/desc")]
-        public IActionResult MPDesc()
+        [HttpPost("/master/{UserId}/desc")]
+        public IActionResult MPDesc(int? UserId)
         {
             int? loggedUser = HttpContext.Session.GetInt32("UserId");
             if(loggedUser == null)
             {
                 return Redirect("/");
             }
-            return View("MasterProfile");
+            User EditDesc = _context.Users.FirstOrDefault(w =>w.UserId == UserId);
+            if(EditDesc == null || EditDesc.UserId != (int)loggedUser)
+            {
+                return RedirectToAction("DashManager");
+            }
+            return View("MasterProfile", EditDesc);
         }
 
         [HttpPost("/master/1/pass")]
