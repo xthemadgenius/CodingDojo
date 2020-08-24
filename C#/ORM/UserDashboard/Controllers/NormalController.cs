@@ -37,6 +37,16 @@ namespace UserDashboard.Controllers
         [HttpGet("timeline/{UserId}")]
         public IActionResult Timeline(int? UserId)
         {
+            int? loggedUser = HttpContext.Session.GetInt32("UserId");
+            if(loggedUser == null)
+            {
+                return Redirect("/");
+            }
+            NotificationWrapper tl = new NotificationWrapper();
+            tl.AllMessages = _context.Messages.Include(m => m.Comments).ToList();
+            tl.AllComments = _context.Comments.ToList();
+            tl.AllUsers = _context.Users.ToList();
+            ViewBag.User = _context.Users.FirstOrDefault(u => u.UserId == loggedUser);
             return View("Timeline");
         }
 

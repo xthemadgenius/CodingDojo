@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LQrlgiA+dk588hX4oWcsPu+d5LaKHRrVgSdSQqj8HRuxNt0tERio9gvIsLKG8k9bbF9Z7gNT4v1JBXwWRRVNFw==",
+  "dgSpecHash": "nXBwQ2FjLCVIwTLqaQOjWIOOSF+4PUdWy4F9jBQoo5351PIa5R9AJPGfPgNjO/ojuKz5Ak6GMnZL6isvxz6Wow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj",
+  "projectFilePath": "C:\\Users\\javie\\Desktop\\CodingDOjo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\javie\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\javie\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",

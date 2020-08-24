@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj": {}
+    "C:\\Users\\javie\\Desktop\\CodingDOjo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj": {
+    "C:\\Users\\javie\\Desktop\\CodingDOjo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj",
+        "projectUniqueName": "C:\\Users\\javie\\Desktop\\CodingDOjo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj",
         "projectName": "UserDashboard",
-        "projectPath": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj",
+        "projectPath": "C:\\Users\\javie\\Desktop\\CodingDOjo\\C#\\ORM\\UserDashboard\\UserDashboard.csproj",
         "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\javie\\Desktop\\CodingDojo\\C#\\ORM\\UserDashboard\\obj\\",
+        "outputPath": "C:\\Users\\javie\\Desktop\\CodingDOjo\\C#\\ORM\\UserDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config"

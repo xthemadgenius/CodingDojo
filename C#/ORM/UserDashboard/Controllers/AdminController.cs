@@ -39,14 +39,14 @@ namespace UserDashboard.Controllers
             return View("MakeUser");
         }
 
-        [HttpGet("m-timeline/{UserId}")]
-        public IActionResult MasterTimeline( int? UserId)
+        [HttpGet("m-timeline/{SelectId}")]
+        public IActionResult MasterTimeline(int? SelectId)
         {
             return View("MasterTimeline");
         }
 
-        [HttpGet("/user/1")]
-        public IActionResult EditUser()
+        [HttpGet("/user/{SelectId}")]
+        public IActionResult EditUser(int? SelectId)
         {
             return View("EditUser");
         }
