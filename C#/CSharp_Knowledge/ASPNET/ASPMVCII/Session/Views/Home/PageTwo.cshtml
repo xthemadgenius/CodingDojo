@@ -1,0 +1,16 @@
+@model string
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/clearsession">Clear Session</a>
+    <h1>@Model</h1>
+    <h2>@ViewBag.myNum</h2>
+    <h3>User Data from Session:</h3>
+    <p>Name: @ViewBag.myUser.Name</p>
+</body>
+</html>

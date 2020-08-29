@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojodachi</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script>
+        $(document).ready(function(){
+            function PopulatePage(response){
+                $("#fullness").html(response.fullness);
+                $("#happiness").html(response.happiness);
+                $("#meals").html(response.meals);
+                $("#energy").html(response.energy);
+
+                $("#message").html(response.message);
+                
+                if(response.gameOver){
+                    $("#actions").html(`<div class="col-sm-4 offset-sm-4"><button class="col-sm-12 btn btn-primary" id="reset">Reset</button></div>`);
+                } else {
+                    $("#actions").html(`<div class="col-sm-3"><button class="col-sm-12 btn btn-primary" id="feed">Feed</button></div>
+                                        <div class="col-sm-3"><button class="col-sm-12 btn btn-primary" id="play">Play</button></div>
+                                        <div class="col-sm-3"><button class="col-sm-12 btn btn-primary" id="work">Work</button></div>
+                                        <div class="col-sm-3"><button class="col-sm-12 btn btn-primary" id="sleep">Sleep</button></div>`)
+                }
+            }
+            $.get("/dachi/get", response => {
+                PopulatePage(response);
+            });
+
+            $(document).on("click", "#feed", function(){
+                $.get("/dachi/feed", response => {
+                    PopulatePage(response);
+                })
+            })
+            $(document).on("click", "#play", function(){
+                $.get("/dachi/play", response => {
+                    PopulatePage(response);
+                })
+            })
+            $(document).on("click", "#work", function(){
+                $.get("/dachi/work", response => {
+                    PopulatePage(response);
+                })
+            })
+            $(document).on("click", "#sleep", function(){
+                $.get("/dachi/sleep", response => {
+                    PopulatePage(response);
+                })
+            })
+
+
+            $(document).on("click", "#reset", function(){
+                $.get("/dachi/reset", response => {
+                    PopulatePage(response);
+                })
+            })
+
+            $(document).on("submit", "#someformname", function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: "/someroute",
+                    data: $(this).serialize(),
+                    method: post,
+                    success: response => {
+                        console.log("Do whatever you wanna do with idk")
+                    },
+                    error: response => {
+                        console.log("Do whatever you wanna do with an unsuccessful submission.");
+                    }
+                })
+            })
+
+            $.get("/dachi/save", response => {
+                if(response.message == "error")
+                {
+                    alert("No");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">Fullness: <span id="fullness"></span></div>
+            <div class="col-sm-3">Happiness: <span id="happiness"></span></div>
+            <div class="col-sm-3">Meals: <span id="meals"></span></div>
+            <div class="col-sm-3">Energy: <span id="energy"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="https://www.clipartkey.com/mpngs/m/35-356826_batman-face-png-batman-cartoon-face-png.png" alt="The God damned Batman">
+            </div>
+            <div class="col-sm-12">
+                <p id="message"></p>
+            </div>
+        </div>
+        <div class="row" id="actions">
+            
+        </div>
+
+        <form id="someformname" action="/someroute" method="post"></form>
+    </div>
+</body>
+</html>

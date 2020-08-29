@@ -1,0 +1,109 @@
+@using TVShows.Models
+@model ShowsWrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10">
+                <h1>Welcome, @Model.LoggedUser.FirstName</h1>
+            </div>
+            <div class="col-sm-2">
+                <a href="/logout">Log Out</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Other Users's Shows</h2>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table col-sm-10 offset-sm-1">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Networks</th>
+                        <th>User</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(Show show in Model.AllShows)
+                    {
+                        <tr>
+                            <td>@show.ShowId</td>
+                            <td><a asp-action="OneShow" asp-controller="TV" asp-route-id="@show.ShowId">@show.Title</a></td>
+                            <td>
+                                <ul>
+                                    @foreach(ShowOnNetwork net in show.ShowOnNetworks)
+                                    {
+                                        <li>@net.Network.Name</li>
+                                    }
+                                </ul>
+                            </td>
+                            <td>@show.User.FirstName @show.User.LastName</td>
+                            <td>@show.ReleaseDate.ToString("MMMM d, yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 offset-sm-1">
+                <a asp-action="NewShow" asp-controller="TV">Add a New Show</a>
+            </div>
+            <div class="col-sm-5">
+                <a asp-action="NewNetwork" asp-controller="TV">Add a New network</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Your Shows</h2>
+            </div>
+            <table class="table col-sm-10 offset-sm-1">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Networks</th>
+                        <th>User</th>
+                        <th>Release Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(Show show in Model.LoggedUser.Shows)
+                    {
+                        <tr>
+                            <td>@show.ShowId</td>
+                            <td><a asp-action="OneShow" asp-controller="TV" asp-route-id="@show.ShowId">@show.Title</a></td>
+                            <td>
+                                <ul>
+                                    @foreach(ShowOnNetwork net in show.ShowOnNetworks)
+                                    {
+                                        <li>@net.Network.Name</li>
+                                    }
+                                </ul>
+                            </td>
+                            <td>@show.User.FirstName @show.User.LastName</td>
+                            <td>@show.ReleaseDate.ToString("MMMM d, yyyy")</td>
+                            <td>
+                                <a asp-action="EditShow" asp-controller="TV" asp-route-id="@show.ShowId">Edit</a> |
+                                <a asp-action="DeleteShow" asp-controller="TV" asp-route-id="@show.ShowId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+@model ModelsNForms.Models.Alien;
+@* @model int *@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello there!</h1>
+    @* <h3>My number is @Model</h3> *@
+    <ul>
+        <li>Name: @Model.Name</li>
+        <li>Home Planet: @Model.HomePlanet</li>
+        <li>Distance from Home: @Model.DistanceFromHome au</li>
+    </ul>
+</body>
+</html>

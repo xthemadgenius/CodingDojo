@@ -1,0 +1,27 @@
+@model ModelsNForms.Models.Alien
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Your Alien!</h1>
+    <form asp-action="AlienSubmission" asp-controller="Home" method="post">
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+        <br>
+        <span asp-validation-for="HomePlanet"></span>
+        <label asp-for="HomePlanet"></label>
+        <input asp-for="HomePlanet">
+        <br>
+        <span asp-validation-for="DistanceFromHome"></span>
+        <label asp-for="DistanceFromHome"></label>
+        <input asp-for="DistanceFromHome">
+        <br>
+        <input type="submit" value="Submit Alien">
+    </form>
+</body>
+</html>

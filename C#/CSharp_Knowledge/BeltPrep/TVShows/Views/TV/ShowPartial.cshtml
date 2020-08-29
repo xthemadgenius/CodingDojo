@@ -1,0 +1,18 @@
+@using TVShows.Models
+@model Show
+
+<div class="form-group row">
+    <label asp-for="Title" class="col-sm-4"></label>
+    <span class="col-sm-8 text-danger" asp-validation-for="Title"></span>
+    <input asp-for="Title" class="col-sm-12 form-control">
+</div>
+<div class="form-group row">
+    <label asp-for="ReleaseDate" class="col-sm-4"></label>
+    <span class="col-sm-8 text-danger" asp-validation-for="ReleaseDate"></span>
+    <input asp-for="ReleaseDate" class="col-sm-12 form-control">
+</div>
+<div class="form-group row">
+    <label asp-for="Description" class="col-sm-4"></label>
+    <span class="col-sm-8 text-danger" asp-validation-for="Description"></span>
+    <input asp-for="Description" class="col-sm-12 form-control">
+</div>

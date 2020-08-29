@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to my page, @ViewBag.Name</h1>
+
+    <ul>
+        @foreach(string name in ViewBag.StringList)
+        {
+            if(name == "Tony")
+            {
+                <li>Not you</li>
+            }
+            else
+            {
+                <li>@name</li>
+            }
+        }
+    </ul>
+
+    @if(ViewBag.RealName == "A-aron")
+    {
+        <p>YO BUHLAKEY</p>
+    }
+    else 
+    {
+        <p>Pre-sent</p>
+    }
+</body>
+</html>

@@ -1,0 +1,32 @@
+@model LogRegPart.Models.User;
+
+<form asp-action="Register" asp-controller="Home" method="post">
+    <div class="form-group row">
+        <span class="col-sm-8 offset-sm-4 text-danger" asp-validation-for="FirstName"></span>
+        <label asp-for="FirstName" class="col-sm-4"></label>
+        <input asp-for="FirstName" class="col-sm-8 form-control">
+    </div>
+    <div class="form-group row">
+        <span class="col-sm-8 offset-sm-4 text-danger" asp-validation-for="LastName"></span>
+        <label asp-for="LastName" class="col-sm-4"></label>
+        <input asp-for="LastName" class="col-sm-8 form-control">
+    </div>
+    <div class="form-group row">
+        <span class="col-sm-8 offset-sm-4 text-danger" asp-validation-for="Email"></span>
+        <label asp-for="Email" class="col-sm-4"></label>
+        <input asp-for="Email" type="text" class="col-sm-8 form-control">
+    </div>
+    <div class="form-group row">
+        <span class="col-sm-8 offset-sm-4 text-danger" asp-validation-for="Password"></span>
+        <label asp-for="Password" class="col-sm-4"></label>
+        <input asp-for="Password" class="col-sm-8 form-control">
+    </div>
+    <div class="form-group row">
+        <span class="col-sm-8 offset-sm-4 text-danger" asp-validation-for="Confirm"></span>
+        <label asp-for="Confirm" class="col-sm-4"></label>
+        <input asp-for="Confirm" class="col-sm-8 form-control">
+    </div>
+    <div class="form-group row">
+        <input type="submit" value="Register" class="col-sm-4 offset-sm-4 btn btn-primary">
+    </div>
+</form>

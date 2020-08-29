@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-header bg-dark text-light">Level 3</div>
+    <div class="card-body">
+        <p>Using the SportsORM, complete all the following queries and show their results on Level3.cshtml.</p>
+        <ol>
+            <li>...all teams, past and present, that Samuel Evans has played with
+                <ul>
+                    @foreach(Team team in ViewBag.SamEvans)
+                    {
+                        <li>@team.Location @team.TeamName</li>
+                    }
+                </ul>
+            </li>
+            <li>...all players, past and present, with the Manitoba Tiger-Cats
+                <ul>
+                    @foreach(Player player in ViewBag.TigerCats)
+                    {
+                        <li>@player.FirstName @player.LastName - @player.CurrentTeam.TeamName</li>
+                    }
+                </ul>
+            </li>
+            <li>...all players who were formerly (but aren't currently) with the Wichita Vikings
+                <ul>
+                    @foreach(Player player in ViewBag.ExVikings)
+                    {
+                        <li>@ViewBag.FirstName @player.LastName - @player.CurrentTeam.TeamName</li>
+                    }
+                </ul>
+
+            </li>
+            <li>...every team that Jacob Gray played for before he joined the Oregon Colts
+                ... sike
+            </li>
+            <li>...everyone named "Joshua" who has ever played in the Atlantic Federation of Amateur Baseball Players
+                <ul>
+                    @foreach(Player josh in ViewBag.JoshAmBP)
+                    {
+                        <li>@josh.FirstName @josh.LastName</li>
+                    }
+                </ul>
+            </li>
+            <li>...all teams that have had 12 or more players, past and present.
+                <ul>
+                    @foreach(Team team in ViewBag.TwelvePlus)
+                    {
+                        <li>@team.Location @team.TeamName - @(team.CurrentPlayers.Count + team.AllPlayers.Count)</li>
+                    }
+                </ul>
+            </li>
+            <li>...all players, sorted by the number of teams they've played for
+                <ul>
+                    @foreach(Player player in ViewBag.AllSorted)
+                    {
+                        <li>@player.FirstName @player.LastName - @(player.AllTeams.Count+1)</li>
+                    }
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>

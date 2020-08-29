@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Passcode</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2 class="col-sm-12 text-center">Random passcode (passcode #@ViewBag.Counter)</h2>
+        </div>
+        <div class="row">
+            <h1 class="col-sm-12 text-center">@ViewBag.Passcode</h1>
+        </div>
+        <div class="row">
+            <form class="col-sm-12" asp-action="NewCode" asp-controller="Home" method="post">
+                <input type="submit" value="Generate" class="col-sm-4 offset-sm-4 btn btn-primary">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

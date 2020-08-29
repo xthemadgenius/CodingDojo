@@ -1,0 +1,72 @@
+@using EntityIntro.Models
+@model IndexWrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Intruderbook</h1>
+        <div class="row">
+            <div class="col-sm-10 offset-sm-1">
+                <table class="col-sm-12 table-dark">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Is High</th>
+                            <th>Catch Phrase</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(Intruder person in Model.TableModel)
+                        {
+                            <tr>
+                                <td>@person.IntruderId</td>
+                                <td><a href="/intruder/@person.IntruderId">@person.Name</a></td>
+                                <td>@person.Age</td>
+                                <td>@person.IsHigh</td>
+                                <td>@person.CatchPhrase</td>
+                                <td>placeholder</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <form asp-action="CreateIntruder" asp-controller="Home" method="post">
+                <div class="form-group row">
+                    <span class="col-sm-8 offset-sm-4 text-danger" asp-validation-for="FormModel.Name"></span>
+                    <label asp-for="FormModel.Name" class="col-sm-4"></label>
+                    <input asp-for="FormModel.Name" class="col-sm-8 form-control">
+                </div>
+                <div class="form-group row">
+                    <span class="col-sm-8 offset-sm-4 text-danger" asp-validation-for="FormModel.Age"></span>
+                    <label asp-for="FormModel.Age" class="col-sm-4"></label>
+                    <input asp-for="FormModel.Age" class="col-sm-8 form-control">
+                </div>
+                <div class="form-group row">
+                    <span class="col-sm-8 offset-sm-4 text-danger" asp-validation-for="FormModel.IsHigh"></span>
+                    <label asp-for="FormModel.IsHigh" class="col-sm-4"></label>
+                    <input asp-for="FormModel.IsHigh">
+                </div>
+                <div class="form-group row">
+                    <span class="col-sm-8 offset-sm-4 text-danger" asp-validation-for="FormModel.CatchPhrase"></span>
+                    <label asp-for="FormModel.CatchPhrase" class="col-sm-4"></label>
+                    <input asp-for="FormModel.CatchPhrase" class="col-sm-8 form-control">
+                </div>
+                <div class="form-group row">
+                    <input type="submit" value="Submit" class="col-sm-4 offset-sm-4 btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

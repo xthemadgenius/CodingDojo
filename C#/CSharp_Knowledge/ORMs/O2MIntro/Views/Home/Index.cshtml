@@ -1,0 +1,25 @@
+@model O2MIntro.Models.IndexWrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form asp-action="CreateAlien" asp-controller="Home" method="post">
+        <label asp-for="AlienForm.Name"></label>
+        <input asp-for="AlienForm.Name">
+        <br>
+        <label asp-for="AlienForm.HomePlanetId"></label>
+        <select asp-for="AlienForm.HomePlanetId">
+            @foreach(var planet in Model.PlanetsDropdown)
+            {
+                <option value="@planet.HomePlanetId">@planet.Name</option>
+            }
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
