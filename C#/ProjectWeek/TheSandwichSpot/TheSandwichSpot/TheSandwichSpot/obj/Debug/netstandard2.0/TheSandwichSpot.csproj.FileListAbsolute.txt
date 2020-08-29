@@ -1,0 +1,16 @@
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/TheSandwichSpot.csprojAssemblyReference.cache
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/Views/DetailsPage.xaml.g.cs
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/TheSandwichSpot.AssemblyInfoInputs.cache
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/TheSandwichSpot.AssemblyInfo.cs
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/TheSandwichSpot.csproj.CoreCompileInputs.cache
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/bin/Debug/netstandard2.0/TheSandwichSpot.deps.json
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/bin/Debug/netstandard2.0/TheSandwichSpot.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/bin/Debug/netstandard2.0/ref/TheSandwichSpot.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/bin/Debug/netstandard2.0/TheSandwichSpot.pdb
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/Views/LandingView.xaml.g.cs
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/TheSandwichSpot.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/ref/TheSandwichSpot.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot/obj/Debug/netstandard2.0/TheSandwichSpot.pdb

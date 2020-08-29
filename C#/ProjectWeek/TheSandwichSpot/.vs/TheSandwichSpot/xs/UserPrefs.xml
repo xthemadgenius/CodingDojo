@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{F1E90E18-CDDC-4C7F-8229-FC361AEE7797}|Default">
+  <MonoDevelop.Ide.ItemProperties.TheSandwichSpot.Android PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheSandwichSpot.iOS/Main.cs">
+    <Files>
+      <File FileName="TheSandwichSpot/Models/User.cs" Line="10" Column="1" />
+      <File FileName="TheSandwichSpot/Services/UserService.cs" />
+      <File FileName="TheSandwichSpot/ViewModels/BaseViewModel.cs" />
+      <File FileName="TheSandwichSpot/ViewModels/LoginViewModel.cs" />
+      <File FileName="TheSandwichSpot/App.xaml" />
+      <File FileName="TheSandwichSpot/Views/LoginView.xaml" />
+      <File FileName="TheSandwichSpot/Views/LoginView.xaml.cs" />
+      <File FileName="TheSandwichSpot.iOS/Main.cs" Line="14" Column="10" />
+      <File FileName="TheSandwichSpot.iOS/AppDelegate.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TheSandwichSpot" expanded="True">
+            <Node name="TheSandwichSpot" expanded="True">
+              <Node name="Img" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="LoginView.xaml" expanded="True" />
+                <Node name="ProductsView.xaml" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="TheSandwichSpot.Android" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+            <Node name="TheSandwichSpot.iOS" expanded="True">
+              <Node name="Main.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.TheSandwichSpot.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F199D344-CC0A-4521-B058-A97B463CEBBF" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

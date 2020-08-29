@@ -1,0 +1,92 @@
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/TheSandwichSpot.iOS.exe
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/TheSandwichSpot.iOS.pdb
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.pdb
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.pdb
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/ar/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/ca/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/cs/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/da/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/de/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/el/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/es/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/fi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/fr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/he/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/hi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/hr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/hu/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/id/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/it/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/ja/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/ko/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/ms/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/nb/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/nl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/pl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/pt/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/ro/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/ru/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/sk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/sv/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/th/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/tr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/uk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/vi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.PancakeView.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Material.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Material.pdb
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/MaterialComponents.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/TheSandwichSpot.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/TheSandwichSpot.pdb
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.pdb
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/ibtool/_BundleResourceWithLogicalName.items
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/actool/_PartialAppManifest.items
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/actool/_BundleResourceWithLogicalName.items
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/coremlc/_PartialAppManifest.items
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/coremlc/_BundleResourceWithLogicalName.items
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/add.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/arrow.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/cart.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/dessert.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/drinks.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/emptyheart.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/hamburgerMenu.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/heart.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/hookah.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/left.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/more.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/order.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/right.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/sand23.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/sandwich.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/search.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/star.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/user.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/TheSandwichSpot.iOS.csprojAssemblyReference.cache
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/TheSandwichSpot.iOS.csproj.CoreCompileInputs.cache
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/XamlC.stamp
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/TheSandwichSpot.iOS.csproj.CopyComplete
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/TheSandwichSpot.iOS.exe
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/TheSandwichSpot.iOS.pdb
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/sand1.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/sand2.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/sand3.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/sand4.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/sand5.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/sand6.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/modelo.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/whiteclaw.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/budlight.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/mojito.png
+/Users/javierjcalderonjr/Projects/TheSandwichSpot/TheSandwichSpot.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/sslogo.png
