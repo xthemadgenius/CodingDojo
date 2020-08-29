@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEROES</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>ADD HERO TO DATABANKS</h1>
+    <form action="/process_hero" method="POST">
+        {% csrf_token %}
+        <label for="alias">Alias:</label>
+        <input type="text" name="alias" id="alias"><br>
+        <label for="power">Main Power:</label>
+        <input type="text" name="power" id="power"><br>
+        <label for="alignment">Alignmnet:</label>
+        <input type="text" name="alignment" id="alignment"><br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email"><br>
+        <button>Submit!</button>
+    </form>
+    {% if messages %}
+        <ul>    
+            {% for message in messages %}    
+                <li>{{ message }}</li>    
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <hr>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas non similique accusamus fugiat voluptatum eos vitae inventore? Officiis, deleniti non? Eligendi vitae voluptatum est doloremque error, asperiores quia quibusdam expedita.</p>
+        {% if 1 == 2 %}
+            <h2>math broke</h2>
+        {% endif %}
+
+
+    <h1>All heroes in databanks!</h1>
+    {% for hero in all_heroes %}
+        <p>{{hero.alias}} - {{hero.power}} | {{hero.email}} <a href="/delete_hero" id="delete">Delete</a></p>
+    {% endfor %}
+</body>
+</html>

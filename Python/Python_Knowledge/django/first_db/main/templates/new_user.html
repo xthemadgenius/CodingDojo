@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMY FORM</title>
+</head>
+<body>
+    <a href="/">GO HOME</a>
+    <a href="/process/dummy">Make a dummy user!</a>
+    <h1>MAKE A NEW USER</h1>
+    <form action="/process" method="POST">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email"><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"><br>
+        <label for="dog_name">Dog Name:</label>
+        <input type="text" name="dog_name" id="dog_name"><br>
+        <label for="is_cool">Are they fly?</label>
+        <select name="is_cool" id="is_cool">
+            <option value="True">Totes McFly status</option>
+            <option value="False">Nwgatory, super bummber</option>
+        </select><br>
+        <label for="num_of_cars">Number of cars owned:</label>
+        <input type="number" name="num_of_cars" id="num_of_cars"><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

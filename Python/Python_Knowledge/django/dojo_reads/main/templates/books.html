@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKS</title>
+</head>
+<body>
+    <h1>Welcome, {{user.first_name}}</h1>
+    <a href="/logout">Logout</a>
+    <a href="/add_book">Add a Book</a>
+    <h2>All Books</h2>
+    {% for book in all_books %}
+        <p><a href="/book/{{book.id}}">{{book.title}}</a> | {{book.description}}</p>
+    {% endfor %}
+</body>
+</html>

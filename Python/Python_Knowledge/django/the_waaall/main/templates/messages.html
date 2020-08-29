@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESSAGES</title>
+</head>
+<body>
+    <h2>Coding Dojo Wall!</h2>
+    <h3>Welcome {{user.first_name}}</h3>
+    <a href="/logout">Log Off</a>
+    <a href="/comments">View Messages with Comments!</a>
+    <h3>Post a message!</h3>
+    <form action="/process_message" method="POST">
+        {% csrf_token %}
+        <label for="messsage_content">Message:</label>
+        <input type="text" name="message_content" id="message_content">
+        <button>Submit!</button>
+    </form>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% for message in all_messages %}
+        <p>{{message.poster.first_name}} {{message.poster.last_name}} - {{message.created_at}}</p>
+        <p>{{message.content}}</p>
+    {% endfor %}
+</body>
+</html>

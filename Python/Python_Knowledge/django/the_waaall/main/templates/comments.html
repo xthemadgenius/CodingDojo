@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESSAGES</title>
+    <style>
+        .message {
+            color: cornflowerblue;
+        }
+        .comments {
+            color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h2>Coding Dojo Wall!</h2>
+    <h3>Welcome {{user.first_name}}</h3>
+    <a href="/logout">Log Off</a>
+
+    <h3 class="message">Post a message!</h3>
+    <form action="/process_message" method="POST">
+        {% csrf_token %}
+        <label for="messsage_content">Message:</label>
+        <input type="text" name="message_content" id="message_content">
+        <button>Submit!</button>
+    </form>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% for message in all_messages %}
+    <p class="message">{{message.poster.first_name}} {{message.poster.last_name}} - {{message.created_at}}</p>
+    <p class="message">{{message.content}}</p>
+    <h3 class="comments">Comments:</h3>
+        {% for comment in message.comments.all %}
+            <p class="comments">{{comment.writer.first_name}} {{comment.writer.last_name}} - {{comment.created_at}}</p>
+            <p class="comments">{{comment.content}}</p>
+        {% endfor %}
+        <form action="/process_comment" method="POST">
+            {% csrf_token %}
+            <label for="comment_content">Add Comment:</label>
+            <input type="text" name="comment_content" id="comment_content">
+            <input type="hidden" name="message_id" value="{{message.id}}">
+            <button>Add Comment!</button>
+        </form>
+    {% endfor %}
+</body>
+</html>

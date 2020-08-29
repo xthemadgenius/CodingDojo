@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTENSILS!!</title>
+</head>
+<a href="/">Go home!</a>
+<body>
+    <h1>This is the page for {{one_utensil.name}}!</h1>
+    <p>Name: {{one_utensil.name}} </p>
+    <p>Is it sharp: {{one_utensil.is_sharp}}</p>
+    <h2>List of chefs!</h2>
+    <p>Chef ID | Chef Name - Cuisine</p>
+    {% for chef in one_utensil.users.all %}
+        <p>{{chef.id}} | {{chef.name}} - {{chef.cuisine}} <a href="/remove/{{one_utensil.id}}/{{chef.id}}">Remove this sucka</a></p>
+    {% endfor %}
+    <h2>Add a chef below!</h2>
+    <form action="/utensil/user/add" method="POST">
+        {% csrf_token %}
+        <select name="chef_id" id="chef_id">
+            <option disabled selected>Haha you don't get a choice here!</option>
+            {% for chef in all_chefs %}
+                <option value="{{chef.id}}">{{chef.name}}</option>
+            {% endfor %}
+        </select>
+        <input type="hidden" name="utensil_id" value="{{one_utensil.id}}">
+        <button>Select chef!</button>
+    </form>
+</body>
+</html>

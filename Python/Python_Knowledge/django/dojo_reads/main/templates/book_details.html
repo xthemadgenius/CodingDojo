@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK</title>
+</head>
+<body>
+    <h1>Welcome, {{user.first_name}}</h1>
+    <a href="/books">Dashboard</a>
+    <a href="/logout">Logout</a>
+
+    {% if request.session.user_id == this_book.poster.id %}
+    <form action="/edit/{{this_book.id}}" method="post">
+        {% csrf_token %}
+        <h1>Title: <input type="text" name="title" id="title" value="{{this_book.title}}"></h1>
+        <p>Added By: {{this_book.poster.first_name}} {{this_book.poster.last_name}}</p>
+        <p>Added On: {{this_book.created_at}}</p>
+        <p>Last Updated: {{this_book.updated_at}}</p>
+        <p>Description: <input type="text" name="description" id="description" value="{{this_book.description}}"></p>
+        <p>How: <input type="text" name="how" id="how"></p>
+        <button>Edit</button>
+    </form>
+    <a href="/delete/{{this_book.id}}">Delete</a>
+    {% endif %}
+
+    {% if request.session.user_id != this_book.poster.id %}
+    <h1>{{this_book.title}}</h1>
+    <p>Added By: {{this_book.poster.first_name}} {{this_book.poster.last_name}}</p>
+    <p>Added On: {{this_book.created_at}}</p>
+    <p>Last Updated: {{this_book.updated_at}}</p>
+    <p>Description: {{this_book.description}}</p>
+    {% endif %}
+
+
+    <a href="/like/{{user.id}}/{{this_book.id}}">Like this book</a>
+    <h2>This is the logged in users id: {{request.session.user_id}}</h2>
+    <p>Users who like this book:</p>
+    {% for user in this_book.liked_by.all %}
+        <p>{{user.id}} - {{user.first_name}} {{user.last_name}} {% if request.session.user_id == user.id %} <a href="/unlike/{{user.id}}/{{this_book.id}}">Un-favorite</a> {% endif %}</p>
+    {% endfor %}
+</body>
+</html>

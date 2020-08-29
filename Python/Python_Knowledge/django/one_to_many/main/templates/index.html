@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a chef!</h1>
+    <form action="/process_chef" method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="cuisine">Cuisine:</label>
+        <input type="text" name="cuisine" id="cuisine"><br>
+        <label for="rank">Rank:</label>
+        <input type="text" name="rank" id="rank"><br>
+        <input type="submit" value="Add chef!">
+    </form>
+    <h1>WOOO HERES SOOME CHEFS</h1>
+    {% for chef in all_chefs %}
+        <p>{{chef.name}} - {{chef.cuisine}}</p>
+        <p>{{chef.dishes.all}}</p>
+    {% endfor %}
+    <hr>
+    <h2>Add a dish!</h2>
+    <form action="/process_dish" method="POST">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="tastiness_level">tastiness_level</label>
+        <input type="number" name="tastiness-level" id="tastiness_level"><br>
+        <label for="spice">spice</label>
+        <input type="number" name="spice" id="spice"><br>
+        <label for="maker">Maker:</label>
+        <select name="maker" id="maker">
+            {% for chef in all_chefs %}
+                <option value="{{chef.id}}">{{chef.name}}</option>
+            {% endfor %}
+        </select><br>
+        <button>Submit</button>
+    </form>
+    <h1>AND THE DISHES!!</h1>
+    {% for dish in all_dishes %}
+        <p><a href="/dish/{{dish.id}}">{{dish.name}}</a> - {{dish.spice}}</p>
+    {% endfor %}
+
+    <hr>
+
+    <h1>Add a utensil!!</h1>
+    <form action="/process_utensil" method="post">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <label for="is_sharp">Sharp?</label>
+        <select name="is_sharp" id="is_sharp">
+            <option value="True">Slicey Dicey Mode</option>
+            <option value="False">Negatory, butter knife</option>
+        </select>
+        <button>Add!</button>
+        <h2>Here's the stuff from the DB with the Utensil stuff!</h2>
+        {% for ut in all_utensils %}
+            <p><a href="/utensil/{{ut.id}}">{{ut.name}}</a> - {{ut.is_sharp}}</p>
+        {% endfor %}
+    </form>
+</body>
+</html>

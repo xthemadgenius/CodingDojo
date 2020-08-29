@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS MANG</title>
+</head>
+<body>
+    {{first_user.birthday}}
+    {{form_date}}
+    <H2>Here's a form!!</H2>
+    <form action="/process" method="POST">
+        {% csrf_token %}
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="first_name" value="{{first_user.first_name}}"><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="last_name" value="{{first_user.last_name}}"><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value="{{first_user.email}}"><br>
+        <label for="birthday">Birthday:</label>
+        <input type="date" name="birthday" id="birthday" value="{{form_date}}"><br>
+        <input type="hidden" name="user_id" value="{{first_user.id}}">
+        <button>Submit!</button>
+    </form>
+</body>
+</html>
