@@ -55,6 +55,11 @@ This Repo is made for all the projects, work, and documentation of all the effor
 * MTSQL
 * POWERSHELL
 * ASP.NET CORE
+* Xamrin
+* iOS
+* Android
+* Java
+* XML
 
 ## ALGORITHMS (daily algoritms)
 * BUBBLE SORT
